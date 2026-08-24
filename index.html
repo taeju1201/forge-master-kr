@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0d1320" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Forge Master 한국어 플래너</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <button id="menuBtn" class="icon-btn mobile-only" aria-label="메뉴 열기">☰</button>
+      <div class="brand">
+        <span class="brand-mark">⚒️</span>
+        <div>
+          <strong>Forge Master KR</strong>
+          <span>2.8.2 플래너</span>
+        </div>
+      </div>
+      <div class="top-actions">
+        <span id="dataStatus" class="status-pill loading">데이터 불러오는 중</span>
+        <button id="resetBtn" class="ghost-btn" title="저장된 설정 초기화">초기화</button>
+      </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+      <nav id="nav"></nav>
+      <div class="sidebar-foot">
+        <small>팬메이드 도구 · 게임과 무관한 비공식 사이트</small>
+        <small>🔒 내 설정은 이 브라우저에만 저장됩니다. 다른 클랜원에게 보이지 않습니다.</small>
+      </div>
+    </aside>
+    <div id="backdrop" class="backdrop"></div>
+
+    <main class="content">
+      <section id="home" class="page active">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">FORGE MASTER 한국어 종합 도구</p>
+            <h1>기술·클랜·무기·보상을 한곳에서</h1>
+            <p class="hero-copy">기술 트리와 클랜 기술을 설정하면 대장간, 스킬, 펫, 탈것, 이동속도와 공격범위 계산에 바로 반영됩니다. 같은 링크를 써도 각자 설정은 자기 기기에만 저장됩니다.</p>
+          </div>
+          <div class="hero-badge">Lv.35<br><span>대장간 MAX</span></div>
+        </div>
+
+        <div id="summaryCards" class="summary-grid"></div>
+
+        <div class="panel">
+          <div class="panel-head"><h2>빠른 이동</h2></div>
+          <div class="quick-grid" id="quickGrid"></div>
+        </div>
+
+        <div class="notice">
+          <strong>데이터 기준</strong>
+          <span>Forge Master 2.8.2의 게임 설정 구조와 2026-08-21 파싱 설정을 기준으로 표시합니다. 게임 업데이트 뒤 수치가 바뀔 수 있습니다.</span>
+        </div>
+      </section>
+
+      <section id="profile" class="page">
+        <div class="page-title"><div><p class="eyebrow">내 설정</p><h1>플래너 기본값</h1></div></div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-head"><h2>기본 설정</h2></div>
+            <div class="form-grid">
+              <label class="field"><span>현재 대장간 레벨</span><select id="profileForgeLevel"></select></label>
+              <label class="field"><span>기본 이동속도</span><input id="baseMoveSpeed" type="number" min="0" step="0.01" value="1" /></label>
+            </div>
+            <p class="hint">기본 이동속도의 절대값은 설정 파일에서 확정하지 못해 직접 입력하도록 했습니다. 증가율 계산은 적용됩니다.</p>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2>현재 적용 효과</h2></div>
+            <div id="bonusSummary" class="stat-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="player-tech" class="page">
+        <div class="page-title"><div><p class="eyebrow">기술</p><h1>기술 트리 효과</h1></div><button class="ghost-btn" data-reset="playerTech">기술 설정 초기화</button></div>
+        <div class="toolbar"><input id="playerTechSearch" class="search" placeholder="기술 이름 검색" /><select id="playerTechFilter"><option value="all">전체</option><option value="active">설정한 기술만</option></select></div>
+        <div id="playerTechList" class="card-list"><div class="skeleton">기술 데이터 불러오는 중…</div></div>
+      </section>
+
+      <section id="guild-tech" class="page">
+        <div class="page-title"><div><p class="eyebrow">클랜</p><h1>클랜 기술</h1></div><button class="ghost-btn" data-reset="guildTech">클랜 기술 초기화</button></div>
+        <div class="toolbar"><input id="guildTechSearch" class="search" placeholder="클랜 기술 검색" /><select id="guildTechFilter"><option value="all">전체</option><option value="active">설정한 기술만</option></select></div>
+        <div id="guildTechList" class="card-list"><div class="skeleton">클랜 기술 데이터 불러오는 중…</div></div>
+      </section>
+
+      <section id="weapons" class="page">
+        <div class="page-title"><div><p class="eyebrow">전투</p><h1>무기 · 공격속도 · 공격범위</h1></div></div>
+        <div class="toolbar"><input id="weaponSearch" class="search" placeholder="시대/무기 번호 검색" /><select id="weaponRangeFilter"><option value="all">전체 무기</option><option value="melee">근접</option><option value="ranged">원거리</option></select></div>
+        <div class="panel note-panel">
+          <span>공격주기 = 설정의 <b>AttackDuration</b>, 초당 공격횟수 = 1 ÷ 공격주기(계산값). 공격범위에는 선택한 기술/클랜의 가산 보너스를 적용합니다.</span>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>무기</th><th>구분</th><th>선딜</th><th>공격주기</th><th>초당 공격</th><th>기본 범위</th><th>증가</th><th>최종 범위</th></tr></thead><tbody id="weaponRows"></tbody></table></div>
+      </section>
+
+      <section id="forge" class="page">
+        <div class="page-title"><div><p class="eyebrow">대장간</p><h1>Lv.1 ~ Lv.35 업그레이드 계산</h1></div></div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="form-grid">
+              <label class="field"><span>현재 레벨</span><select id="forgeFrom"></select></label>
+              <label class="field"><span>목표 레벨</span><select id="forgeTo"></select></label>
+            </div>
+            <div id="forgeResult" class="result-box"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2>적용 중인 대장간 효과</h2></div>
+            <div id="forgeBonusInfo" class="stat-list"></div>
+          </div>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>업그레이드</th><th>비용</th><th>기본 시간</th><th>보정 시간</th><th>티어</th></tr></thead><tbody id="forgeRows"></tbody></table></div>
+      </section>
+
+      <section id="skills" class="page">
+        <div class="page-title"><div><p class="eyebrow">스킬</p><h1>스킬 도감 · 보정 계산</h1></div></div>
+        <div class="toolbar"><input id="skillSearch" class="search" placeholder="스킬 검색" /><select id="skillRarity"><option value="all">전체 등급</option></select></div>
+        <div id="skillList" class="card-list"><div class="skeleton">스킬 데이터 불러오는 중…</div></div>
+      </section>
+
+      <section id="companions" class="page">
+        <div class="page-title"><div><p class="eyebrow">동료</p><h1>펫 · 탈것</h1></div></div>
+        <div class="tabs"><button class="tab active" data-subtab="pets">펫</button><button class="tab" data-subtab="mounts">탈것</button></div>
+        <div id="petsPane" class="subpane active"><div id="petBonusInfo" class="summary-grid compact"></div><div id="petList" class="card-list"></div></div>
+        <div id="mountsPane" class="subpane"><div id="mountBonusInfo" class="summary-grid compact"></div><div id="mountList" class="card-list"></div></div>
+      </section>
+
+      <section id="movement" class="page">
+        <div class="page-title"><div><p class="eyebrow">스탯</p><h1>이동속도 · 공격범위 비교</h1></div></div>
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-head"><h2>🏃 이동속도</h2></div>
+            <label class="field"><span>기본 이동속도</span><input id="moveBaseCalc" type="number" min="0" step="0.01" /></label>
+            <div id="moveCalc" class="compare-box"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h2>🎯 공격범위</h2></div>
+            <label class="field"><span>기본 공격범위 직접 입력</span><input id="rangeBaseCalc" type="number" min="0" step="0.01" value="1" /></label>
+            <div id="rangeCalc" class="compare-box"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dungeons" class="page">
+        <div class="page-title"><div><p class="eyebrow">보상</p><h1>던전 단계별 보상</h1></div></div>
+        <div class="toolbar"><select id="dungeonType"><option value="Hammer">망치 던전</option><option value="Skill">스킬 던전</option><option value="Potion">기술 포션 던전</option><option value="Pet">펫알 던전</option></select><input id="dungeonLevel" type="number" min="0" step="1" value="0" /></div>
+        <div id="dungeonSummary" class="summary-grid"></div>
+        <div class="panel note-panel"><span>보상은 설정의 <b>RewardBase + (단계 × RewardIncrease)</b>로 표시합니다. 단계 전투력(피해/체력)은 각 던전 BattleLibrary에서 가져옵니다.</span></div>
+        <div class="table-wrap"><table><thead><tr><th>단계</th><th>적 피해</th><th>적 체력</th><th>보상</th></tr></thead><tbody id="dungeonRows"></tbody></table></div>
+      </section>
+
+      <section id="arena" class="page">
+        <div class="page-title"><div><p class="eyebrow">리그</p><h1>리그별 순위 보상</h1></div></div>
+        <div class="toolbar"><select id="arenaLeague"></select><input id="arenaSearch" class="search" placeholder="순위 검색 (예: 1, 10)" /></div>
+        <div id="arenaInfo" class="summary-grid compact"></div>
+        <div class="table-wrap"><table><thead><tr><th>순위</th><th>보상</th></tr></thead><tbody id="arenaRows"></tbody></table></div>
+      </section>
+
+      <section id="guild-rewards" class="page">
+        <div class="page-title"><div><p class="eyebrow">클랜전</p><h1>클랜 등급별 승리 · 패배 보상</h1></div></div>
+        <div class="toolbar"><select id="guildTier"></select></div>
+        <div id="guildRewardHeader" class="summary-grid compact"></div>
+        <div class="reward-columns">
+          <div class="panel win"><div class="panel-head"><h2>🏆 승리 보상</h2></div><div id="guildWinRewards" class="reward-list"></div></div>
+          <div class="panel lose"><div class="panel-head"><h2>🛡️ 패배 보상</h2></div><div id="guildLoseRewards" class="reward-list"></div></div>
+        </div>
+        <p class="hint">클랜 기술의 승리/패배 보상 증가 효과를 적용한 예상값과 기본값을 함께 표시합니다.</p>
+      </section>
+
+      <section id="data" class="page">
+        <div class="page-title"><div><p class="eyebrow">정보</p><h1>데이터 · 상태</h1></div></div>
+        <div class="panel">
+          <div class="panel-head"><h2>불러온 설정 파일</h2><button id="reloadData" class="ghost-btn">다시 불러오기</button></div>
+          <div id="dataFileList" class="data-files"></div>
+        </div>
+        <div class="panel">
+          <div class="panel privacy-panel"><div class="panel-head"><h2>🔒 개인 설정 저장 방식</h2></div><ul class="plain-list"><li>내 기술/클랜기술/레벨 설정은 이 기기의 브라우저 저장공간(localStorage)에만 저장됩니다.</li><li>같은 웹앱 링크를 쓰는 다른 클랜원은 내 설정을 볼 수 없습니다.</li><li>로그인, 비밀번호, 사용자 계정 서버가 없습니다.</li><li>브라우저 데이터 삭제·시크릿 모드·다른 기기에서는 설정이 따로 보입니다.</li><li>게임 설정 데이터 확인을 위한 공개 정적 데이터 요청에는 개인 설정값을 보내지 않습니다.</li></ul></div>
+        <div class="panel-head"><h2>계산 주의사항</h2></div>
+          <ul class="plain-list">
+            <li>게임 내부의 절대 기본 이동속도는 확정하지 못해 직접 입력값을 기준으로 계산합니다.</li>
+            <li>기술 효과의 합산/가산/나눗셈 방식은 설정의 StatNature와 알려진 구조를 우선 적용하며, 검증이 필요한 계산은 화면에 ‘예상’으로 표시합니다.</li>
+            <li>게임 업데이트 후 서버 설정이 변경되면 이 버전의 수치와 달라질 수 있습니다.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status"></div>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>

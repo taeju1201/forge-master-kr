@@ -1,0 +1,10 @@
+{
+  "name": "Forge Master 한국어 플래너",
+  "short_name": "ForgeMaster KR",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0a0f18",
+  "theme_color": "#0d1320",
+  "lang": "ko",
+  "description": "Forge Master 2.8.2 한국어 기술·클랜·대장간·보상 플래너"
+}
