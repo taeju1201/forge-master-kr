@@ -1,359 +1,46 @@
-'use strict';
+"use strict";
+const D=window.FM_DATA;const STATE_KEY="fmkr_v3_personal";
+const defaults={name:"",forgeLevel:1,asc:{Forge:0,Skills:0,Pets:0,Mounts:0},playerTech:{},clanTech:{},daily:{Hammers:0,Coins:0,SkillSummonTickets:0,Eggshells:0,TechPotions:0,ClockWinders:0},schedule:[],baseDamage:10,baseHealth:80};
+let S=load();let current="home";let built=new Set(["home"]);
+const navGroups=[['기본',[['home','🏠','홈'],['profile','👤','내 설정'],['progress','📈','성장 예측'],['schedule','🗓️','일정']]],['플래너',[['tech','🧪','기술 트리'],['stats','📊','스탯'],['equipment','🛡️','장비'],['weekly','📦','주간 획득량'],['summon','🎟️','소환 계산'],['forge','🔨','대장간 계산'],['war','⚔️','클랜전 계산'],['gems','💎','보석 계산'],['eggs','🥚','알 계획'],['companions','🐾','펫 & 탈것'],['battle','🎯','전투 시뮬'],['offline','🌙','오프라인 계산']]],['정보',[['dungeons','🗝️','던전'],['league','🏆','리그'],['guild','🏰','클랜 등급 / 보상'],['ascension','⭐','승천'],['wiki','📚','도감'],['unlocks','🔓','해금'],['colors','🎨','등급 색상'],['data','ℹ️','데이터 정보']]]];
+const CURRENCY={Hammers:'망치',Coins:'코인',SkillSummonTickets:'스킬 재화',Eggshells:'펫알 재화',TechPotions:'기술 포션',ClockWinders:'탈것 열쇠',GuildPotions:'클랜 포션',Gems:'보석'};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+function esc(x){return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function n(v,d=0){v=Number(v);return Number.isFinite(v)?v:d}function clamp(v,a,b){return Math.max(a,Math.min(b,v))}function fmt(v){v=n(v);let a=Math.abs(v);if(a>=1e9)return (v/1e9).toFixed(2).replace(/0+$/,'').replace(/\.$/,'')+'B';if(a>=1e6)return (v/1e6).toFixed(2).replace(/0+$/,'').replace(/\.$/,'')+'M';if(a>=1e3)return (v/1e3).toFixed(2).replace(/0+$/,'').replace(/\.$/,'')+'K';return v.toLocaleString('ko-KR',{maximumFractionDigits:2})}function time(sec){sec=n(sec);let d=Math.floor(sec/86400),h=Math.floor(sec%86400/3600),m=Math.floor(sec%3600/60),s=Math.round(sec%60);return [d&&d+'일',h&&h+'시간',m&&m+'분',!d&&!h&&!m&&s+'초'].filter(Boolean).join(' ')}
+function load(){try{return {...structuredClone(defaults),...JSON.parse(localStorage.getItem(STATE_KEY)||'{}')}}catch{return structuredClone(defaults)}}function save(){localStorage.setItem(STATE_KEY,JSON.stringify(S));homeStats()}function toast(t){let e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('show'),1400)}
+function rewardHtml(obj){return Object.entries(obj||{}).map(([k,v])=>`<div class="reward"><span>${CURRENCY[k]||k}</span><b>${fmt(v)}</b></div>`).join('')}
+function metric(label,val,sub=''){return `<div class="metric"><small>${label}</small><b>${val}</b>${sub?`<small>${sub}</small>`:''}</div>`}
+function title(k,t,sub=''){return `<div class="title"><div><span class="pill">${k}</span><h1>${t}</h1>${sub?`<p>${sub}</p>`:''}</div></div>`}
+function openDrawer(v=true){$('#drawer').classList.toggle('open',v);$('#shade').classList.toggle('show',v)}
+function go(id){if(!document.getElementById(id))id='home';current=id;$$('.page').forEach(x=>x.classList.toggle('active',x.id===id));$$('.navbtn').forEach(x=>x.classList.toggle('active',x.dataset.id===id));if(!built.has(id)){build(id);built.add(id)}openDrawer(false);scrollTo({top:0,behavior:'instant'});history.replaceState(null,'','#'+id)}
+function initNav(){let h='';for(const[g,items]of navGroups){h+=`<div class="navgroup">${g}</div>`+items.map(([id,ico,name])=>`<button class="navbtn" data-id="${id}"><span class="ico">${ico}</span>${name}</button>`).join('')}$('#nav').innerHTML=h;$('#nav').onclick=e=>{let b=e.target.closest('.navbtn');if(b)go(b.dataset.id)};$('#menuBtn').onclick=()=>openDrawer(true);$('#closeBtn').onclick=()=>openDrawer(false);$('#shade').onclick=()=>openDrawer(false);$('#homeBtn').onclick=()=>go('home')}
+function homeStats(){let pt=Object.values(S.playerTech||{}).reduce((a,b)=>a+n(b),0),ct=Object.values(S.clanTech||{}).reduce((a,b)=>a+n(b),0);$('#homeStats').innerHTML=metric('대장간',`Lv.${S.forgeLevel||1}/35`)+metric('기술 트리',`${pt} 레벨`)+metric('클랜 기술',`${ct} 레벨`)+metric('승천 별',`${Object.values(S.asc||{}).reduce((a,b)=>a+n(b),0)}개`)}
+function quick(){let ids=['tech','forge','league','guild','ascension','dungeons','equipment','wiki'];let map=Object.fromEntries(navGroups.flatMap(x=>x[1]).map(x=>[x[0],x]));$('#quick').innerHTML=ids.map(id=>`<button data-go="${id}"><span>${map[id][1]}</span>${map[id][2]}</button>`).join('');$('#quick').onclick=e=>{let b=e.target.closest('[data-go]');if(b)go(b.dataset.go)}}
+function playerBonus(name){let t=D.playerTech.find(x=>x.name===name);return t?n(S.playerTech[t.id])*t.value:0}function clanBonus(key){let t=D.clanTech.find(x=>x.key===key);return t?n(S.clanTech[key])*t.value:0}
 
-const CONFIG_STAMP = '2026_08_21_00_29';
-const CONFIG_BASE = `https://raw.githubusercontent.com/1vcian/fm/refs/heads/main/public/parsed_configs/${CONFIG_STAMP}/`;
-const CACHE_PREFIX = 'fmkr_cfg_v1_';
-const STATE_KEY = 'fmkr_personal_state_v2';
-const LEGACY_STATE_KEY = 'fmkr_state_v1';
+function build(id){({profile:buildProfile,progress:buildProgress,tech:buildTech,schedule:buildSchedule,stats:buildStats,equipment:buildEquipment,weekly:buildWeekly,summon:buildSummon,forge:buildForge,war:buildWar,gems:buildGems,eggs:buildEggs,companions:buildCompanions,battle:buildBattle,offline:buildOffline,dungeons:buildDungeons,league:buildLeague,guild:buildGuild,ascension:buildAscension,wiki:buildWiki,unlocks:buildUnlocks,colors:buildColors,data:buildData}[id]||(()=>{}))()}
+function buildProfile(){let e=$('#profile');e.innerHTML=title('내 설정','개인 프로필','이 내용은 서버가 아니라 현재 브라우저에만 저장됩니다.')+`<div class="grid2"><div class="panel"><label class="field"><span>이름 / 닉네임</span><input id="pName" value="${esc(S.name)}"></label><label class="field"><span>현재 대장간 레벨</span><select id="pForge">${Array.from({length:35},(_,i)=>`<option ${S.forgeLevel==i+1?'selected':''}>${i+1}</option>`).join('')}</select></label><button id="pSave" class="btn primary">저장</button></div><div class="panel"><h2>내 설정 백업</h2><p class="muted">기기 변경 전에 JSON으로 내보내고 새 기기에서 가져올 수 있습니다.</p><div class="toolbar"><button id="exp" class="btn">내보내기</button><button id="imp" class="btn">가져오기</button><button id="reset" class="btn danger">전체 초기화</button></div></div></div>`;$('#pSave').onclick=()=>{S.name=$('#pName').value.trim();S.forgeLevel=n($('#pForge').value,1);save();toast('저장 완료')};$('#exp').onclick=()=>{let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S,null,2)],{type:'application/json'}));a.download='forge-master-profile.json';a.click();URL.revokeObjectURL(a.href)};$('#imp').onclick=()=>{let i=document.createElement('input');i.type='file';i.accept='.json,application/json';i.onchange=async()=>{try{S={...structuredClone(defaults),...JSON.parse(await i.files[0].text())};save();built=new Set(['home']);go('profile');toast('가져오기 완료')}catch{toast('파일을 확인해줘')}};i.click()};$('#reset').onclick=()=>{if(confirm('이 브라우저의 모든 설정을 초기화할까?')){S=structuredClone(defaults);save();built=new Set(['home']);go('profile')}}}
+function buildProgress(){let e=$('#progress');e.innerHTML=title('성장','성장 예측','현재 일일 획득량을 기준으로 며칠 뒤 자원을 계산합니다.')+`<div class="panel"><div class="grid3"><label class="field"><span>예측 일수</span><input id="prDays" type="number" value="7" min="1"></label><label class="field"><span>현재 망치</span><input id="prH" type="number" value="0"></label><label class="field"><span>현재 스킬 재화</span><input id="prS" type="number" value="0"></label></div><div id="prOut" class="metric-grid"></div></div>`;let calc=()=>{let d=n($('#prDays').value,7);$('#prOut').innerHTML=metric('예상 망치',fmt(n($('#prH').value)+n(S.daily.Hammers)*d))+metric('예상 스킬 재화',fmt(n($('#prS').value)+n(S.daily.SkillSummonTickets)*d))+metric('예상 펫알 재화',fmt(n(S.daily.Eggshells)*d))+metric('예상 탈것 열쇠',fmt(n(S.daily.ClockWinders)*d))};e.oninput=calc;calc()}
+function buildTech(){let e=$('#tech');e.innerHTML=title('기술 트리','찍기 편한 기술 트리','대장간 / 힘 / 스킬, 펫 & 기술 / 클랜기술. 이동속도·공격범위 항목은 요청대로 제외했습니다.')+`<div class="tech-summary"><div><b id="techUsed">0</b><small class="muted"> 총 레벨</small></div><button id="techReset" class="btn">현재 탭 초기화</button></div><div class="tabs" id="techTabs"><button class="tab active" data-t="대장간">대장간</button><button class="tab" data-t="힘">힘</button><button class="tab" data-t="스킬, 펫 & 기술">스킬, 펫 & 기술</button><button class="tab" data-t="클랜기술">클랜기술</button></div><div class="toolbar"><input id="techSearch" placeholder="기술 이름 검색"></div><div id="techNodes" class="cardgrid"></div>`;let tab='대장간';function render(){let q=$('#techSearch').value.trim().toLowerCase();let list=tab==='클랜기술'?D.clanTech:D.playerTech.filter(x=>x.category===tab);if(q)list=list.filter(x=>x.name.toLowerCase().includes(q));$('#techUsed').textContent=tab==='클랜기술'?Object.values(S.clanTech).reduce((a,b)=>a+n(b),0):Object.values(S.playerTech).reduce((a,b)=>a+n(b),0);$('#techNodes').innerHTML=list.map(t=>{let isClan=tab==='클랜기술',key=isClan?t.key:t.id,lv=n(isClan?S.clanTech[key]:S.playerTech[key]),val=isClan?t.value:t.value;return `<div class="tech-node" data-key="${key}" data-clan="${isClan?1:0}"><div class="tech-top"><div><div class="tech-name">${esc(t.name)}</div><div class="tech-desc">${esc(t.desc||'')}</div></div><div class="level">Lv.${lv}/${t.max}${t.infinite?' +∞':''}</div></div><div class="badge-line"><span class="tag">효과 ${val>=1?fmt(val):fmt(val*100)+'%'} / Lv</span>${isClan?`<span class="tag">포인트 ${fmt(t.points)}/Lv</span><span class="tag">${t.group}</span>`:''}</div><div class="tech-controls"><button data-d="-1">-1</button><button data-d="1">+1</button><button data-d="5">+5</button><button class="max" data-max="1">MAX</button></div></div>`}).join('')||'<div class="empty">검색 결과 없음</div>'}$('#techTabs').onclick=ev=>{let b=ev.target.closest('[data-t]');if(!b)return;tab=b.dataset.t;$$('#techTabs .tab').forEach(x=>x.classList.toggle('active',x===b));render()};$('#techSearch').oninput=render;$('#techNodes').onclick=ev=>{let b=ev.target.closest('button'),card=ev.target.closest('.tech-node');if(!b||!card)return;let clan=card.dataset.clan==='1',key=card.dataset.key,t=clan?D.clanTech.find(x=>x.key===key):D.playerTech.find(x=>String(x.id)===key);let obj=clan?S.clanTech:S.playerTech,cur=n(obj[key]),next=b.dataset.max? t.max:cur+n(b.dataset.d);obj[key]=clamp(next,0,t.max);save();render()};$('#techReset').onclick=()=>{if(tab==='클랜기술')S.clanTech={};else D.playerTech.filter(x=>x.category===tab).forEach(x=>delete S.playerTech[x.id]);save();render()};render()}
+function buildSchedule(){let e=$('#schedule');e.innerHTML=title('일정','클랜전 & 개인 일정','클랜전 주간 흐름과 개인 메모를 같이 관리합니다.')+`<div class="panel"><h2>클랜전 기본 흐름</h2><div class="chips">${['화 1일차','수 2일차','목 3일차','금 4일차','토 5일차','일 6일차','월 쿨다운'].map(x=>`<span class="chip">${x}</span>`).join('')}</div></div><div class="panel"><div class="toolbar"><input id="schText" placeholder="예: 스킬 소환 저장"><button id="schAdd" class="btn primary">추가</button></div><div id="schList"></div></div>`;function r(){ $('#schList').innerHTML=(S.schedule||[]).map((x,i)=>`<div class="reward"><span>${esc(x)}</span><button class="mini" data-i="${i}">삭제</button></div>`).join('')||'<div class="empty">등록한 일정 없음</div>'}$('#schAdd').onclick=()=>{let v=$('#schText').value.trim();if(v){S.schedule.push(v);$('#schText').value='';save();r()}};$('#schList').onclick=x=>{let b=x.target.closest('[data-i]');if(b){S.schedule.splice(+b.dataset.i,1);save();r()}};r()}
+function buildStats(){let e=$('#stats');e.innerHTML=title('스탯','내 스탯 계산','기술 트리와 클랜 기술에서 확인 가능한 피해/체력 보정을 간단 비교합니다.')+`<div class="grid2"><div class="panel"><label class="field"><span>기본 피해</span><input id="stD" type="number" value="${S.baseDamage}"></label><label class="field"><span>기본 체력</span><input id="stH" type="number" value="${S.baseHealth}"></label></div><div class="panel"><div id="stOut" class="metric-grid"></div></div></div>`;function r(){S.baseDamage=n($('#stD').value,10);S.baseHealth=n($('#stH').value,80);let skill=playerBonus('스킬 피해 숙련')+clanBonus('SkillDamage'),health=playerBonus('스킬 패시브 체력');$('#stOut').innerHTML=metric('기본 피해',fmt(S.baseDamage))+metric('스킬 피해 보정',fmt(skill*100)+'%')+metric('기본 체력',fmt(S.baseHealth))+metric('패시브 체력 보정',fmt(health*100)+'%');save()}e.oninput=r;r()}
+function classify(name,weapons){if(weapons.includes(name))return'무기';if(/헬멧|모자|가면|마스크|투구|왕관|머리|후광|오버헤드|화환|바이저/.test(name))return'투구';if(/부츠|샌들|신발|발 |발$|스톰퍼|여행자|각반/.test(name))return'신발';if(/벨트|허리/.test(name))return'벨트';if(/장갑|건틀릿|철권|임팩터|임플란트|손아귀|발톱/.test(name))return'장갑';if(/반지/.test(name))return'반지';if(/목걸이|부적|보석|시계|열쇠|에메랄드|삼위일체|군번줄|펜던트|칼라|초커|아뮬렛|볼트/.test(name))return'장신구';return'방어구'}
+function buildEquipment(){let e=$('#equipment');e.innerHTML=title('장비','장비 & 무기 도감','XAPK 한국어 명칭과 실제 게임 시대별 이미지 시트를 함께 표시합니다. 무기는 이름과 선딜/공격주기를 별도 표로 제공합니다.')+`<div class="tabs" id="eqTabs">${D.ages.map((a,i)=>`<button class="tab ${i?'':'active'}" data-i="${i}">${a.name}</button>`).join('')}</div><div class="toolbar"><input id="eqQ" placeholder="장비 이름 검색"></div><div id="eqAge"></div><div class="panel"><h2>무기별 공격속도</h2><p class="muted small">공격주기(AttackDuration)는 1.5초. 선딜(WindupTime)은 2.8.2 WeaponLibrary 값입니다. 일부 항목은 매핑 검증이 남아 ‘확인 필요’로 표시합니다.</p><div class="tablewrap"><table><thead><tr><th>시대</th><th>무기 이름</th><th>선딜</th><th>공격주기</th><th>초당 공격</th></tr></thead><tbody id="weaponRows"></tbody></table></div></div>`;let age=0;function r(){let a=D.ages[age],q=$('#eqQ').value.trim();let items=a.items.filter(x=>!q||x.includes(q));let ws=D.weapons.filter(x=>x.age===age).map(x=>x.name);$('#eqAge').innerHTML=`<div class="panel gallery-age"><img class="bigthumb" loading="lazy" src="${a.img}" alt="${a.name} 실제 게임 장비 이미지"><div><h2>${a.name} 시대</h2><div class="cardgrid">${items.map(x=>`<div class="media-card card"><img class="thumb" loading="lazy" src="${a.img}" alt=""><div><b>${esc(x)}</b><div class="muted small">${classify(x,ws)}</div></div></div>`).join('')}</div></div></div>`;$('#weaponRows').innerHTML=D.weapons.filter(x=>x.age===age).map(x=>`<tr><td>${x.era}</td><td><b>${x.name}</b></td><td>${x.needsCheck?'<span class="warning">확인 필요</span>':x.windup.toFixed(3)+'초'}</td><td>${x.attackDuration.toFixed(1)}초</td><td>${(1/x.attackDuration).toFixed(3)}회/초</td></tr>`).join('')}$('#eqTabs').onclick=ev=>{let b=ev.target.closest('[data-i]');if(!b)return;age=+b.dataset.i;$$('#eqTabs .tab').forEach(x=>x.classList.toggle('active',x===b));r()};$('#eqQ').oninput=r;r()}
+function buildWeekly(){let e=$('#weekly');e.innerHTML=title('획득량','주간 획득량','일일 평균을 저장하면 7일 합계를 바로 보여줍니다.')+`<div class="grid2"><div class="panel" id="weeklyInputs"></div><div class="panel"><h2>7일 예상</h2><div id="weeklyOut" class="rewardlist"></div></div></div>`;let ks=Object.keys(S.daily);$('#weeklyInputs').innerHTML=ks.map(k=>`<label class="field"><span>${CURRENCY[k]||k} / 일</span><input data-k="${k}" type="number" value="${n(S.daily[k])}"></label>`).join('');function r(){ks.forEach(k=>S.daily[k]=n($(`[data-k="${k}"]`).value));save();$('#weeklyOut').innerHTML=rewardHtml(Object.fromEntries(ks.map(k=>[k,S.daily[k]*7])))}e.oninput=r;r()}
+function buildSummon(){let e=$('#summon');e.innerHTML=title('계산기','소환 계산','2.8.2 기본 소환 비용: 스킬 40, 펫알 100, 탈것 50.')+`<div class="grid3">${[['Skill','스킬','스킬 재화'],['Pet','펫알','펫알 재화'],['Mount','탈것','탈것 열쇠']].map(([k,nm,cur])=>`<div class="panel"><h2>${nm}</h2><label class="field"><span>${cur} 보유량</span><input data-sum="${k}" type="number" value="0"></label><div id="sum_${k}" class="kpi">0회</div><small class="muted">기본 비용 ${D.summonCosts[k]}</small></div>`).join('')}</div>`;function r(){for(const k of ['Skill','Pet','Mount']){let cost=D.summonCosts[k],red=k==='Skill'?playerBonus('스킬 소환 비용'):k==='Mount'?playerBonus('탈것 소환 비용'):0;let final=Math.max(1,cost*(1-red));$(`#sum_${k}`).textContent=Math.floor(n($(`[data-sum="${k}"]`).value)/final).toLocaleString()+'회';}}e.oninput=r;r()}
+function buildForge(){let e=$('#forge');e.innerHTML=title('대장간','Lv.1~35 업그레이드 계산','‘제련 애니메이션 속도’와 ‘대장간 레벨 업 시간 단축(제련 타이머)’을 명확히 분리했습니다.')+`<div class="grid2"><div class="panel"><div class="grid2"><label class="field"><span>현재 Lv.</span><select id="fgFrom">${Array.from({length:34},(_,i)=>`<option>${i+1}</option>`).join('')}</select></label><label class="field"><span>목표 Lv.</span><select id="fgTo">${Array.from({length:34},(_,i)=>`<option ${i===33?'selected':''}>${i+2}</option>`).join('')}</select></label></div><div id="fgOut" class="metric-grid"></div></div><div class="panel"><h2>적용 효과</h2><div class="rewardlist" id="fgBonus"></div></div></div><div class="tablewrap"><table><thead><tr><th>구간</th><th>기본 비용</th><th>기본 시간</th></tr></thead><tbody>${D.forge.map(x=>`<tr><td>Lv.${x.from} → ${x.to}</td><td>${fmt(x.cost)}</td><td>${time(x.seconds)}</td></tr>`).join('')}</tbody></table></div>`;function r(){let f=n($('#fgFrom').value,1),t=n($('#fgTo').value,35);if(t<=f)t=f+1;let rows=D.forge.filter(x=>x.from>=f&&x.to<=t);let cost=rows.reduce((a,x)=>a+x.cost,0),sec=rows.reduce((a,x)=>a+x.seconds,0);let cr=playerBonus('제련 업그레이드 비용'),tr=playerBonus('제련 타이머');let c2=cost*Math.max(0,1-cr),s2=sec/Math.max(.01,1+tr);$('#fgOut').innerHTML=metric('기본 비용',fmt(cost))+metric('적용 비용',fmt(c2))+metric('기본 시간',time(sec))+metric('적용 시간',time(s2));$('#fgBonus').innerHTML=`<div class="reward"><span>대장간 레벨 업 비용 감소</span><b>${fmt(cr*100)}%</b></div><div class="reward"><span>대장간 레벨 업 시간 단축</span><b>${fmt(tr*100)}%</b></div><div class="reward"><span>제련 애니메이션 속도 (클랜기술)</span><b>${fmt(clanBonus('ForgeAnimationSpeed')*100)}%</b></div><p class="muted small">마지막 항목은 장비 제련 동작 속도이며 위의 ‘레벨 업 시간’ 계산에는 합산하지 않습니다.</p>`}e.onchange=r;r()}
+function buildWar(){let e=$('#war');e.innerHTML=title('클랜전','클랜전 준비 점수 계산','행동별 기본 점수를 직접 넣고, 선택한 클랜 기술 증가율을 적용해 비교합니다.')+`<div class="grid2"><div class="panel"><label class="field"><span>기본 획득 점수</span><input id="warBase" type="number" value="1000"></label><label class="field"><span>행동</span><select id="warType">${D.clanTech.filter(x=>x.group==='클랜전 준비'&&!x.key.startsWith('WarPointsOnDay')).map(x=>`<option value="${x.key}">${x.name}</option>`).join('')}</select></label><label class="field"><span>횟수</span><input id="warCount" type="number" value="1"></label></div><div class="panel"><div id="warOut" class="metric-grid"></div></div></div>`;function r(){let base=n($('#warBase').value)*n($('#warCount').value,1),key=$('#warType').value,bonus=clanBonus(key);$('#warOut').innerHTML=metric('기본 점수',fmt(base))+metric('클랜기술 증가',fmt(bonus*100)+'%')+metric('적용 점수',fmt(base*(1+bonus)))+metric('차이',fmt(base*bonus))}e.oninput=r;e.onchange=r;r()}
+function buildGems(){let e=$('#gems');e.innerHTML=title('계산기','보석 소비 계획','원본 플래너의 Gem Calc에 대응하는 간단 예산 계산기입니다.')+`<div class="grid2"><div class="panel"><label class="field"><span>현재 보석</span><input id="gemHave" type="number" value="0"></label><label class="field"><span>1회 비용</span><input id="gemCost" type="number" value="150"></label></div><div class="panel" id="gemOut"></div></div>`;function r(){let h=n($('#gemHave').value),c=Math.max(1,n($('#gemCost').value,1));$('#gemOut').innerHTML=metric('가능 횟수',Math.floor(h/c)+'회')+metric('남는 보석',fmt(h% c))}e.oninput=r;r()}
+function buildEggs(){let e=$('#eggs');e.innerHTML=title('알','알 계획','알 개수와 기본 부화시간을 입력하면 전체 대기시간을 계산합니다.')+`<div class="grid2"><div class="panel"><label class="field"><span>알 개수</span><input id="eggN" type="number" value="10"></label><label class="field"><span>알 1개 기본 시간(분)</span><input id="eggMin" type="number" value="60"></label><label class="field"><span>타이머 감소 기술 선택</span><select id="eggTech">${['일반','희귀','에픽','전설의','궁극의','신화의'].map(x=>`<option>${x} 알 타이머</option>`).join('')}</select></label></div><div class="panel" id="eggOut"></div></div>`;function r(){let tech=$('#eggTech').value,red=playerBonus(tech),total=n($('#eggN').value)*n($('#eggMin').value)*60/Math.max(1,1+red);$('#eggOut').innerHTML=metric('기술 보너스',fmt(red*100)+'%')+metric('전체 예상 시간',time(total))}e.oninput=r;e.onchange=r;r()}
+function buildCompanions(){let e=$('#companions');e.innerHTML=title('펫 & 탈것','펫 · 탈것 도감','실제 게임 이미지 아틀라스에서 잘라낸 WebP 썸네일을 사용합니다.')+`<div class="tabs"><button class="tab active" data-c="pets">펫</button><button class="tab" data-c="mounts">탈것</button></div><div id="compGrid" class="cardgrid"></div>`;let kind='pets';function r(){let list=D[kind];$('#compGrid').innerHTML=list.map((x,i)=>`<div class="media-card card"><img class="thumb" loading="lazy" src="${x.img}"><div><b>${x.name}</b><div class="muted small">${kind==='pets'?'펫':'탈것'} #${i+1}</div></div></div>`).join('')}e.querySelector('.tabs').onclick=ev=>{let b=ev.target.closest('[data-c]');if(!b)return;kind=b.dataset.c;e.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));r()};r()}
+function buildBattle(){let e=$('#battle');e.innerHTML=title('시뮬','전투 시뮬레이터','단순 DPS/체력 기반 비교용 베타. 게임의 모든 전투 판정까지 재현하는 것은 아닙니다.')+`<div class="grid2"><div class="panel"><h2>내 캐릭터</h2><label class="field"><span>피해</span><input id="bd1" type="number" value="${S.baseDamage}"></label><label class="field"><span>체력</span><input id="bh1" type="number" value="${S.baseHealth}"></label><label class="field"><span>공격주기(초)</span><input id="bi1" type="number" step=".01" value="1.5"></label></div><div class="panel"><h2>상대</h2><label class="field"><span>피해</span><input id="bd2" type="number" value="10"></label><label class="field"><span>체력</span><input id="bh2" type="number" value="80"></label><label class="field"><span>공격주기(초)</span><input id="bi2" type="number" step=".01" value="1.5"></label></div></div><div class="panel" id="bOut"></div>`;function r(){let d1=n($('#bd1').value),h1=n($('#bh1').value),i1=Math.max(.01,n($('#bi1').value,1.5)),d2=n($('#bd2').value),h2=n($('#bh2').value),i2=Math.max(.01,n($('#bi2').value,1.5));let t1=h2/(d1/i1||.0001),t2=h1/(d2/i2||.0001),win=t1<t2;$('#bOut').innerHTML=`<div class="kpi ${win?'check':'warning'}">${win?'예상 승리':'예상 패배'}</div><div class="metric-grid">${metric('상대 처치 예상',time(t1))+metric('내가 버티는 시간',time(t2))+metric('내 DPS',fmt(d1/i1))+metric('상대 DPS',fmt(d2/i2))}</div>`}e.oninput=r;r()}
+function buildOffline(){let e=$('#offline');e.innerHTML=title('오프라인','오프라인 보상 계산','기본 시간당 수치를 입력하면 기술 트리의 오프라인 보너스를 적용합니다.')+`<div class="grid3"><label class="field"><span>오프라인 시간</span><input id="offH" type="number" value="4"></label><label class="field"><span>기본 망치 / 시간</span><input id="offHammer" type="number" value="100"></label><label class="field"><span>기본 코인 / 시간</span><input id="offCoin" type="number" value="1000"></label></div><div id="offOut" class="metric-grid"></div>`;function r(){let h=n($('#offH').value,4),hb=playerBonus('망치 오프라인 보상'),cb=playerBonus('코인 오프라인 보상');$('#offOut').innerHTML=metric('망치',fmt(h*n($('#offHammer').value)*(1+hb)))+metric('코인',fmt(h*n($('#offCoin').value)*(1+cb)))+metric('망치 보너스',fmt(hb*100)+'%')+metric('코인 보너스',fmt(cb*100)+'%')}e.oninput=r;r()}
+function buildDungeons(){let e=$('#dungeons');e.innerHTML=title('던전','단계별 보상','2.8.2 DungeonRewardLibrary의 RewardBase + 단계×RewardIncrease를 사용합니다.')+`<div class="toolbar"><select id="dgType">${Object.entries(D.dungeons).map(([k,v])=>`<option value="${k}">${v.name}</option>`).join('')}</select><input id="dgStage" type="number" min="0" value="1"></div><div id="dgOut" class="metric-grid"></div><div class="tablewrap"><table><thead><tr><th>단계</th><th>보상</th></tr></thead><tbody id="dgRows"></tbody></table></div>`;function reward(type,stage){let x=D.dungeons[type],o={};x.currencies.forEach((c,i)=>o[c]=x.base[i]+stage*x.inc[i]);return o}function r(){let type=$('#dgType').value,s=n($('#dgStage').value,1),rw=reward(type,s);$('#dgOut').innerHTML=Object.entries(rw).map(([k,v])=>metric(CURRENCY[k],fmt(v))).join('');let lo=Math.max(0,s-5),hi=s+15;$('#dgRows').innerHTML=Array.from({length:hi-lo+1},(_,i)=>lo+i).map(st=>`<tr><td>${st}</td><td>${Object.entries(reward(type,st)).map(([k,v])=>`${CURRENCY[k]} ${fmt(v)}`).join(' · ')}</td></tr>`).join('')}e.oninput=r;e.onchange=r;r()}
+function buildLeague(){let e=$('#league');e.innerHTML=title('리그','리그 승급 · 유지 · 강등 · 보상','게임의 실제 한국어 리그명과 2.8.2 ArenaLeagueLibrary 기준을 사용합니다.')+`<div class="tabs" id="lgTabs">${D.leagues.map((x,i)=>`<button class="tab ${i?'':'active'}" data-i="${i}">${x.name}</button>`).join('')}</div><div id="lgCard" class="panel"></div>`;let idx=0;function r(){let x=D.leagues[idx];$('#lgCard').innerHTML=`<div class="league-card"><img loading="lazy" src="assets/league_${idx}.webp"><div><h2>${x.name}</h2><div class="criteria"><div><small>⬆ 승급</small><b>${x.promotion}</b></div><div><small>＝ 유지</small><b>${x.maintain}</b></div><div><small>⬇ 강등</small><b>${x.demotion}</b></div></div></div></div><div class="panel"><h3>1위 보상 (2.8.2 설정값)</h3><div class="rewardlist">${rewardHtml(x.topReward)}</div></div><p class="muted small">승급/강등 기준은 ArenaLeagueLibrary의 PromotionEnd / DemotionStart 값을 게임 순위(1~100위)로 표시했습니다.</p>`}$('#lgTabs').onclick=ev=>{let b=ev.target.closest('[data-i]');if(!b)return;idx=+b.dataset.i;$$('#lgTabs .tab').forEach(x=>x.classList.toggle('active',x===b));r()};r()}
+function buildGuild(){let e=$('#guild');e.innerHTML=title('클랜','클랜 등급 · 승리/패배 보상','상위 등급은 요청대로 S+ / S++ / S+++로 표시하고, 패배 티어 포인트도 정확히 표시합니다.')+`<div class="tabs" id="gtTabs">${D.guildTiers.map((x,i)=>`<button class="tab ${i?'':'active'}" data-i="${i}">${x.name}</button>`).join('')}</div><div id="gtCard"></div>`;let idx=0;function r(){let x=D.guildTiers[idx],wb=clanBonus('ClanWarWinRewards'),lb=clanBonus('ClanWarLoseRewards');let apply=(o,b)=>Object.fromEntries(Object.entries(o).map(([k,v])=>[k,Math.round(v*(1+b))]));$('#gtCard').innerHTML=`<div class="metric-grid">${metric('등급',x.name)+metric('필요 티어 포인트',x.required+'점')+metric('승리 시 티어 포인트',`+${x.winPoints}`)+metric('패배 시 티어 포인트',x.losePoints>0?`+${x.losePoints}`:`${x.losePoints}`)}</div><div class="grid2"><div class="panel"><h2>🏆 승리 보상</h2>${rewardHtml(apply(x.win,wb))}${wb?`<small class="muted">기본값에 클랜기술 +${fmt(wb*100)}% 적용</small>`:''}</div><div class="panel"><h2>🛡️ 패배 보상</h2>${rewardHtml(apply(x.lose,lb))}${lb?`<small class="muted">기본값에 클랜기술 +${fmt(lb*100)}% 적용</small>`:''}</div></div>`}$('#gtTabs').onclick=ev=>{let b=ev.target.closest('[data-i]');if(!b)return;idx=+b.dataset.i;$$('#gtTabs .tab').forEach(x=>x.classList.toggle('active',x===b));r()};r()}
+function buildAscension(){let e=$('#ascension');e.innerHTML=title('승천','대장간 · 스킬 · 펫 · 탈것 승천','2.8.2 AscensionConfigsLibrary에서 확인된 3단계 배율을 표시합니다. 대장간은 단계당 코인 3M 비용이 설정되어 있습니다.')+`<div class="cardgrid">${Object.entries(D.ascension).map(([k,x])=>`<div class="card cardbody" data-asc="${k}"><h2>${x.name} 승천</h2><div class="asc-stars">${[1,2,3].map(i=>`<button data-star="${i}">★</button>`).join('')}</div><div class="rewardlist">${x.mult.map((m,i)=>`<div class="reward"><span>★${i+1} 피해·체력 배율 기여</span><b>${fmt(m)}</b></div>`).join('')}</div><p class="muted small">${x.cost[0]!=null?'각 단계 비용: 코인 3M':'비용 조건은 이 설정 항목에서 직접 확인되지 않아 임의로 표시하지 않습니다.'}</p></div>`).join('')}</div>`;function r(){e.querySelectorAll('[data-asc]').forEach(c=>{let k=c.dataset.asc,lv=n(S.asc[k]);c.querySelectorAll('[data-star]').forEach(b=>b.classList.toggle('on',+b.dataset.star<=lv))})}e.onclick=ev=>{let b=ev.target.closest('[data-star]'),c=ev.target.closest('[data-asc]');if(!b||!c)return;let k=c.dataset.asc,st=+b.dataset.star;S.asc[k]=S.asc[k]===st?st-1:st;save();r()};r()}
+function buildWiki(){let e=$('#wiki');e.innerHTML=title('도감','통합 도감','스킬·펫·탈것·스킨·장비. 이미지가 있는 항목은 게임 아틀라스 기반 WebP를 같이 표시합니다.')+`<div class="tabs" id="wkTabs"><button class="tab active" data-w="skills">스킬</button><button class="tab" data-w="pets">펫</button><button class="tab" data-w="mounts">탈것</button><button class="tab" data-w="skins">스킨</button><button class="tab" data-w="items">장비</button></div><div class="toolbar"><input id="wkQ" placeholder="이름 검색"></div><div id="wkGrid" class="cardgrid"></div>`;let kind='skills';function r(){let q=$('#wkQ').value.trim(),html='';if(kind==='skills')html=D.skills.filter(x=>!q||x.name.includes(q)).map(x=>`<div class="media-card card"><img class="thumb" loading="lazy" src="${x.img}"><div><b>${x.name}</b><div class="muted small">${x.desc}</div></div></div>`).join('');if(kind==='pets'||kind==='mounts')html=D[kind].filter(x=>!q||x.name.includes(q)).map(x=>`<div class="media-card card"><img class="thumb" loading="lazy" src="${x.img}"><b>${x.name}</b></div>`).join('');if(kind==='skins')html=D.skins.filter(x=>!q||x.includes(q)).map(x=>`<div class="card cardbody"><b>🎭 ${x}</b><div class="muted small">XAPK 한국어 명칭</div></div>`).join('');if(kind==='items')html=D.ages.map(a=>`<details><summary>${a.name} 시대 · ${a.items.length}개</summary><div class="gallery-age"><img class="bigthumb" loading="lazy" src="${a.img}"><div class="chips">${a.items.filter(x=>!q||x.includes(q)).map(x=>`<span class="chip">${x}</span>`).join('')}</div></div></details>`).join('');$('#wkGrid').className=kind==='items'?'':'cardgrid';$('#wkGrid').innerHTML=html||'<div class="empty">검색 결과 없음</div>'}$('#wkTabs').onclick=ev=>{let b=ev.target.closest('[data-w]');if(!b)return;kind=b.dataset.w;$$('#wkTabs .tab').forEach(x=>x.classList.toggle('active',x===b));r()};$('#wkQ').oninput=r;r()}
+function buildUnlocks(){let e=$('#unlocks');e.innerHTML=title('진행','콘텐츠 해금','진행 스테이지별 주요 기능 해금 참고표.')+`<div class="tablewrap"><table><thead><tr><th>스테이지</th><th>해금</th></tr></thead><tbody>${D.unlocks.map(x=>`<tr><td><b>${x[0]}</b></td><td>${x[1]}</td></tr>`).join('')}</tbody></table></div>`}
+function buildColors(){let e=$('#colors');let cs=[['일반','#b7b7b7'],['희귀','#58a6ff'],['에픽','#bc74ff'],['전설','#ff9e45'],['궁극','#ff557c'],['신화','#f6df4a']];e.innerHTML=title('정보','등급 색상','도감에서 빠르게 구분할 수 있는 등급 색상 참고.')+`<div class="cardgrid">${cs.map(([n,c])=>`<div class="card cardbody"><div style="height:54px;border-radius:10px;background:${c}"></div><h2 style="margin-top:10px">${n}</h2><code>${c}</code></div>`).join('')}</div>`}
+function buildData(){let e=$('#data');e.innerHTML=title('데이터','데이터 정보 & 검증 상태','이 버전은 실행 중 제3자 GitHub JSON을 fetch하지 않습니다.')+`<div class="metric-grid">${metric('게임 버전',D.meta.gameVersion)+metric('설정 기준',D.meta.dataStamp)+metric('외부 실시간 fetch','없음')+metric('개인 데이터','localStorage')}</div><div class="panel"><h2>포함된 데이터</h2><div class="chips">${['대장간 1→35','기술 트리 한국어 명칭','클랜 기술','클랜 등급/승패 보상','리그 승급/유지/강등','리그 1위 보상','던전 보상 공식','승천 설정','무기 선딜/공격주기','펫/탈것/스킬 이미지','장비 시대별 이미지'].map(x=>`<span class="chip">${x}</span>`).join('')}</div></div><div class="panel"><h2>주의</h2><p class="muted">팬메이드 비공식 도구입니다. 한국어 명칭은 XAPK 로컬라이징을 우선 사용했습니다. 데이터가 애매한 항목은 임의 값을 만들지 않고 ‘확인 필요’로 표시합니다. 게임 업데이트 뒤에는 새 XAPK 기준으로 데이터 갱신이 필요합니다.</p></div>`}
 
-const REQUIRED = [
-  'ForgeUpgradeLibrary','WeaponLibrary','SkillLibrary','PetLibrary','MountLibrary',
-  'PlayerTechTreeNodeValuesLibrary','TechNodesLibrary','GuildTechTreeUpgradeLibrary',
-  'DungeonRewardLibrary','ArenaLeagueLibrary','ArenaRewardLibrary','GuildTierConfig'
-];
-
-const DUNGEON_FILES = {
-  Hammer: 'HammerThiefDungeonBattleLibrary',
-  Skill: 'SkillDungeonBattleLibrary',
-  Potion: 'PotionDungeonBattleLibrary',
-  Pet: 'EggDungeonBattleLibrary'
-};
-
-const data = {};
-const loadState = {};
-
-const DEFAULT_STATE = {
-  forgeLevel: 1,
-  baseMoveSpeed: 1,
-  playerTech: {},
-  guildTech: {},
-  petLevels: {},
-  mountLevels: {},
-  skillLevels: {}
-};
-let state = loadSavedState();
-
-const NAV = [
-  ['home','🏠','홈'],['profile','👤','내 설정'],['player-tech','🧪','기술 트리'],['guild-tech','🏰','클랜 기술'],
-  ['weapons','⚔️','무기 / 공격속도'],['movement','🏃','이속 / 공격범위'],['forge','🔨','대장간'],['skills','✨','스킬'],
-  ['companions','🐾','펫 / 탈것'],['dungeons','🗝️','던전 보상'],['arena','🏆','리그 보상'],['guild-rewards','🛡️','클랜 보상'],['data','ℹ️','데이터']
-];
-
-const CURRENCY_KR = {
-  Coins:'코인', Gems:'보석', Hammers:'망치', SkillSummonTickets:'스킬 소환권', TechPotions:'기술 포션',
-  PvpTickets:'PvP 티켓', ClockWinders:'탈것 열쇠', WarBattleTickets:'클랜전 티켓', Token:'토큰',
-  Eggshells:'펫알 재화', MissionEnergy:'미션 에너지', GuildPotions:'클랜 포션'
-};
-const RARITY_KR = {Common:'일반',Rare:'희귀',Epic:'영웅',Legendary:'전설',Ultimate:'궁극',Mythic:'신화'};
-const PET_TYPE_KR = {Balanced:'균형형',Damage:'공격형',Health:'체력형'};
-const SKILL_KR = {
-  Meat:'고기', Arrows:'화살', Shout:'외침', Berserk:'광전사', Heal:'회복', Healing:'회복', Fireball:'화염구',
-  Lightning:'번개', Meteor:'운석', Tornado:'회오리', Freeze:'빙결', Shield:'보호막', Poison:'독', Bomb:'폭탄',
-  Rage:'분노', Stun:'기절', Spear:'창', Sword:'검', Axe:'도끼'
-};
-
-const EXACT_KR = {
-  ForgeTimerSpeed:'대장간 업그레이드 시간 단축', ForgeUpgradeCost:'대장간 업그레이드 비용 감소', EquipmentSellPrice:'장비 판매가 증가',
-  HammerThiefHammerReward:'망치 던전 망치 보상 증가', HammerThiefCoinReward:'망치 던전 코인 보상 증가',
-  SkillDamage:'스킬 피해 증가', SkillPassiveDamage:'스킬 패시브 피해 증가', SkillPassiveHealth:'스킬 패시브 체력 증가',
-  PetBonusDamage:'펫 피해 증가', PetBonusHealth:'펫 체력 증가', MountDamage:'탈것 피해 증가', MountHealth:'탈것 체력 증가',
-  PlayerMoveSpeed:'플레이어 이동속도 증가', PlayerAttackRange:'플레이어 공격범위 증가', ForgeAnimationSpeed:'대장간 속도 증가',
-  WeaponBonus:'무기 보너스', HelmetBonus:'투구 보너스', BodyBonus:'갑옷 보너스', ShoeBonus:'신발 보너스', GloveBonus:'장갑 보너스',
-  BeltBonus:'벨트 보너스', NecklaceBonus:'목걸이 보너스', RingBonus:'반지 보너스', AutoForge:'자동 제작',
-  CommonEggTimer:'일반 알 부화시간 단축', RareEggTimer:'희귀 알 부화시간 단축', EpicEggTimer:'영웅 알 부화시간 단축',
-  LegendaryEggTimer:'전설 알 부화시간 단축', UltimateEggTimer:'궁극 알 부화시간 단축', MythicEggTimer:'신화 알 부화시간 단축',
-  PersonalWarRewards:'개인 클랜전 보상 증가', ClanWarWinRewards:'클랜전 승리 보상 증가', ClanWarLoseRewards:'클랜전 패배 보상 증가',
-  ClanWarDamage:'클랜전 피해 증가', ClanWarHealth:'클랜전 체력 증가', MissionDamage:'미션 피해 증가', MissionHealth:'미션 체력 증가',
-  MissionRewards:'미션 보상 증가', GuildTechRaceScoreMultiplier:'클랜 기술 레이스 점수 증가', GuildTechRaceRewardMultiplier:'클랜 기술 레이스 보상 증가',
-  SkillSummonCost:'스킬 소환 비용 감소', MountSummonCost:'탈것 소환 비용 감소', ExtraMountChance:'추가 탈것 획득 확률', TechResearchTimer:'기술 연구 시간 단축',
-  TechNodeUpgradeCost:'기술 업그레이드 비용 감소'
-};
-
-const TOKEN_KR = {
-  Player:'플레이어',Move:'이동',Speed:'속도',Attack:'공격',Range:'범위',Weapon:'무기',Helmet:'투구',Body:'갑옷',Shoe:'신발',Glove:'장갑',Belt:'벨트',Necklace:'목걸이',Ring:'반지',Bonus:'보너스',Damage:'피해',Health:'체력',Skill:'스킬',Passive:'패시브',Pet:'펫',Mount:'탈것',Forge:'대장간',Timer:'시간',Animation:'속도',Common:'일반',Rare:'희귀',Epic:'영웅',Legendary:'전설',Ultimate:'궁극',Mythic:'신화',Egg:'알',Tech:'기술',Potion:'포션',Cost:'비용',Summon:'소환',Level:'레벨',Auto:'자동',War:'클랜전',Points:'점수',Rewards:'보상',Reward:'보상',Win:'승리',Won:'승리',Lose:'패배',Lost:'패배',Mission:'미션',Dungeon:'던전',Hammer:'망치',Thief:'도둑',Ghost:'유령',Town:'마을',Invasion:'침공',Zombie:'좀비',Rush:'돌진',League:'리그',Guild:'클랜',Race:'레이스',Score:'점수',Multiplier:'배율',Personal:'개인',Forging:'제작',Spend:'소모',Hatch:'부화',Merge:'합성',Upgrade:'업그레이드',Price:'가격',Sell:'판매',Extra:'추가',Chance:'확률',Research:'연구',Node:'노드',Equipment:'장비',Coin:'코인',From:'획득',Day:'일차',On:'',All:'전체',Member:'멤버'
-};
-
-const FALLBACK_FORGE = (() => {
-  const durations=[300,900,1800,3600,7200,27200,47200,67200,87200,107200,127200,147200,167200,187200,207200,227200,247200,277200,307200,337200,367200,397200,427200,457200,487200,517200,547200,577200,607200,637200,667200,697200,727200,757200];
-  const costs=[400,700,1500,3500,10000,25000,50000,100000,150000,250000,350000,450000,600000,800000,910000,1020000,1130000,1240000,1350000,1460000,1570000,1680000,1790000,1900000,2010000,2120000,2230000,2340000,2450000,2560000,2670000,2780000,2890000,3000000];
-  const tiers=[1,1,1,1,1,1,1,3,3,3,3,4,4,5,5,6,7,8,9,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10];
-  return Object.fromEntries(durations.map((Duration,i)=>[String(i+1),{Level:i+1,Duration,Cost:costs[i],Tiers:tiers[i]}]));
-})();
-const FALLBACK_DUNGEON_REWARDS = {
-  Hammer:{DungeonType:'Hammer',CurrencyType:['Hammers','Coins'],RewardBase:[60,4000],RewardIncrease:[1,100]},
-  Skill:{DungeonType:'Skill',CurrencyType:['SkillSummonTickets'],RewardBase:[200],RewardIncrease:[2]},
-  Potion:{DungeonType:'Potion',CurrencyType:['TechPotions'],RewardBase:[100],RewardIncrease:[1]},
-  Pet:{DungeonType:'Pet',CurrencyType:['Eggshells'],RewardBase:[200],RewardIncrease:[0.65]}
-};
-const FALLBACK_GUILD_TECH = {
-  SkillDamage:{Type:'SkillDamage',MaxLevel:20,PointsPerLevel:1215,ValuePerLevel:.05},
-  PetBonusDamage:{Type:'PetBonusDamage',MaxLevel:20,PointsPerLevel:608,ValuePerLevel:.05},PetBonusHealth:{Type:'PetBonusHealth',MaxLevel:20,PointsPerLevel:608,ValuePerLevel:.05},
-  MountDamage:{Type:'MountDamage',MaxLevel:20,PointsPerLevel:608,ValuePerLevel:.05},MountHealth:{Type:'MountHealth',MaxLevel:20,PointsPerLevel:608,ValuePerLevel:.05},
-  ForgeAnimationSpeed:{Type:'ForgeAnimationSpeed',MaxLevel:20,PointsPerLevel:608,ValuePerLevel:.05},PlayerMoveSpeed:{Type:'PlayerMoveSpeed',MaxLevel:20,PointsPerLevel:608,ValuePerLevel:.05},
-  PlayerAttackRange:{Type:'PlayerAttackRange',MaxLevel:3,PointsPerLevel:4056,ValuePerLevel:1},ClanWarWinRewards:{Type:'ClanWarWinRewards',MaxLevel:10,PointsPerLevel:1622,ValuePerLevel:.01},ClanWarLoseRewards:{Type:'ClanWarLoseRewards',MaxLevel:10,PointsPerLevel:1622,ValuePerLevel:.01}
-};
-
-function $(id){return document.getElementById(id)}
-function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
-function num(v,d=0){const n=Number(v);return Number.isFinite(n)?n:d}
-function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function fmt(n,dec=2){n=Number(n);if(!Number.isFinite(n))return '-';const a=Math.abs(n);if(a>=1e9)return `${trim(n/1e9,2)}B`;if(a>=1e6)return `${trim(n/1e6,2)}M`;if(a>=1e3)return `${trim(n/1e3,2)}K`;return trim(n,dec)}
-function trim(n,d=2){return Number(n).toLocaleString('ko-KR',{maximumFractionDigits:d,minimumFractionDigits:0})}
-function pct(n){return `${trim(num(n)*100,1)}%`}
-function secText(s){s=num(s);if(s<60)return `${trim(s,1)}초`;const d=Math.floor(s/86400),h=Math.floor((s%86400)/3600),m=Math.floor((s%3600)/60);return [d&&`${d}일`,h&&`${h}시간`,m&&`${m}분`].filter(Boolean).join(' ')||`${Math.round(s)}초`}
-function splitCamel(s){return String(s).replace(/([a-z0-9])([A-Z])/g,'$1 $2').replace(/([A-Z]+)([A-Z][a-z])/g,'$1 $2').split(/[_\s]+/).filter(Boolean)}
-function krName(id){if(EXACT_KR[id])return EXACT_KR[id];if(SKILL_KR[id])return SKILL_KR[id];const parts=splitCamel(id);const out=parts.map(x=>TOKEN_KR[x]||x).filter(Boolean).join(' ');return out || id}
-function rarityKr(r){return RARITY_KR[r]||r}
-function currencyKr(c){return CURRENCY_KR[c]||krName(c)}
-function metric(label,value,sub=''){return `<div class="metric"><span class="label">${esc(label)}</span><div class="value">${value}</div>${sub?`<div class="sub">${sub}</div>`:''}</div>`}
-function statRow(label,value){return `<div class="stat-row"><span>${esc(label)}</span><b>${value}</b></div>`}
-function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),1600)}
-function loadSavedState(){
-  try{
-    let raw=localStorage.getItem(STATE_KEY);
-    if(!raw){
-      const legacy=localStorage.getItem(LEGACY_STATE_KEY);
-      if(legacy){raw=legacy;localStorage.setItem(STATE_KEY,legacy)}
-    }
-    return {...structuredClone(DEFAULT_STATE),...JSON.parse(raw||'{}')}
-  }catch{return structuredClone(DEFAULT_STATE)}
-}
-function saveState(){localStorage.setItem(STATE_KEY,JSON.stringify(state));renderComputed();}
-function selectedCount(obj){return Object.values(obj||{}).filter(v=>num(v?.level??v)>0).length}
-
-function cacheGet(name){try{const raw=localStorage.getItem(CACHE_PREFIX+name);if(!raw)return null;const x=JSON.parse(raw);if(Date.now()-x.t>7*864e5)return null;return x.v}catch{return null}}
-function cacheSet(name,v){try{const text=JSON.stringify(v);if(text.length<700000)localStorage.setItem(CACHE_PREFIX+name,JSON.stringify({t:Date.now(),v}))}catch{}}
-async function fetchConfig(name,{force=false,cache=true}={}){
-  if(data[name]&&!force)return data[name];
-  if(cache&&!force){const c=cacheGet(name);if(c){data[name]=c;loadState[name]='cache';return c}}
-  loadState[name]='loading';renderDataFiles();
-  try{
-    const r=await fetch(`${CONFIG_BASE}${name}.json`,{cache:force?'reload':'default',credentials:'omit',referrerPolicy:'no-referrer'});if(!r.ok)throw new Error(`${r.status}`);
-    const j=await r.json();data[name]=j;loadState[name]='ok';if(cache)cacheSet(name,j);renderDataFiles();return j;
-  }catch(e){loadState[name]='fail';renderDataFiles();throw e}
-}
-function installFallbacks(){
-  data.ForgeUpgradeLibrary ||= FALLBACK_FORGE;
-  data.DungeonRewardLibrary ||= FALLBACK_DUNGEON_REWARDS;
-  data.GuildTechTreeUpgradeLibrary ||= FALLBACK_GUILD_TECH;
-}
-
-function setupNav(){
-  $('nav').innerHTML=NAV.map(([id,icon,label])=>`<button class="nav-btn ${id==='home'?'active':''}" data-page="${id}"><span class="nav-icon">${icon}</span><span>${label}</span></button>`).join('');
-  document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
-  $('quickGrid').innerHTML=NAV.slice(2,12).map(([id,icon,label])=>`<button class="quick-btn" data-go="${id}"><strong>${icon} ${label}</strong><small>바로 열기</small></button>`).join('');
-  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
-}
-function go(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
-  $('sidebar').classList.remove('open');$('backdrop').classList.remove('show');window.scrollTo({top:0,behavior:'instant'});
-  if(id==='companions')ensureCompanionUpgrades();
-  if(id==='dungeons')ensureDungeon(dataOrDefault('dungeonType','Hammer'));
-}
-function dataOrDefault(id,d){return $(id)?.value||d}
-
-function getPlayerTechValue(type){
-  const cfg=data.PlayerTechTreeNodeValuesLibrary?.[type];const s=state.playerTech[type];if(!cfg||!s||num(s.level)<=0)return 0;
-  const tiers=cfg.Tiers||[];const ti=clamp(num(s.tier,1)-1,0,Math.max(0,tiers.length-1));const arr=tiers[ti]?.StatValuePerLevel||[];const li=clamp(num(s.level)-1,0,Math.max(0,arr.length-1));return num(arr[li]);
-}
-function getGuildTechValue(type){
-  const cfg=data.GuildTechTreeUpgradeLibrary?.[type];if(!cfg)return 0;const level=Math.max(0,num(state.guildTech[type]));const max=num(cfg.MaxLevel,0);
-  const regular=Math.min(level,max)*num(cfg.ValuePerLevel);const inf=Math.max(0,level-max)*num(cfg.ValuePerInfiniteLevel);return regular+inf;
-}
-function bonuses(){
-  return {
-    forgeSpeed:getPlayerTechValue('ForgeTimerSpeed')+getGuildTechValue('ForgeAnimationSpeed'),
-    forgeCost:getPlayerTechValue('ForgeUpgradeCost'),
-    skillDamage:getPlayerTechValue('SkillDamage')+getGuildTechValue('SkillDamage'),
-    skillPassiveDamage:getPlayerTechValue('SkillPassiveDamage'),skillPassiveHealth:getPlayerTechValue('SkillPassiveHealth'),
-    petDamage:getPlayerTechValue('PetBonusDamage')+getGuildTechValue('PetBonusDamage'),petHealth:getPlayerTechValue('PetBonusHealth')+getGuildTechValue('PetBonusHealth'),
-    mountDamage:getPlayerTechValue('MountDamage')+getGuildTechValue('MountDamage'),mountHealth:getPlayerTechValue('MountHealth')+getGuildTechValue('MountHealth'),
-    moveSpeed:getPlayerTechValue('PlayerMoveSpeed')+getGuildTechValue('PlayerMoveSpeed'),
-    attackRange:getPlayerTechValue('PlayerAttackRange')+getGuildTechValue('PlayerAttackRange'),
-    weapon:getPlayerTechValue('WeaponBonus')+getGuildTechValue('WeaponBonus'),
-    warWinRewards:getGuildTechValue('ClanWarWinRewards'),warLoseRewards:getGuildTechValue('ClanWarLoseRewards')
-  };
-}
-
-function renderSummary(){
-  const b=bonuses();$('summaryCards').innerHTML=[
-    metric('대장간',`Lv.${state.forgeLevel}`,'최대 Lv.35'),metric('대장간 속도 보너스',pct(b.forgeSpeed),'예상 시간 계산에 적용'),
-    metric('스킬 피해 보너스',pct(b.skillDamage),'기술 + 클랜 기술'),metric('이동속도 보너스',pct(b.moveSpeed),'기본값에 곱연산')
-  ].join('');
-}
-function renderProfile(){
-  fillForgeSelects();$('profileForgeLevel').value=state.forgeLevel;$('baseMoveSpeed').value=state.baseMoveSpeed;$('moveBaseCalc').value=state.baseMoveSpeed;
-  const b=bonuses();$('bonusSummary').innerHTML=[
-    statRow('대장간 속도',`+${pct(b.forgeSpeed)}`),statRow('대장간 비용 감소',`-${pct(b.forgeCost)}`),statRow('스킬 피해',`+${pct(b.skillDamage)}`),
-    statRow('펫 피해 / 체력',`+${pct(b.petDamage)} / +${pct(b.petHealth)}`),statRow('탈것 피해 / 체력',`+${pct(b.mountDamage)} / +${pct(b.mountHealth)}`),
-    statRow('이동속도',`+${pct(b.moveSpeed)}`),statRow('공격범위',`+${trim(b.attackRange,2)}`)
-  ].join('');
-}
-
-function techDescription(type,value){
-  const percentLike=!['PlayerAttackRange','AutoForge'].includes(type);
-  if(type==='PlayerAttackRange')return `공격범위 +${trim(value,2)}`;
-  if(type==='AutoForge')return `효과값 ${trim(value,2)}`;
-  return `${krName(type)} ${value>=0?'+':''}${percentLike?pct(value):trim(value)}`;
-}
-function renderPlayerTech(){
-  const lib=data.PlayerTechTreeNodeValuesLibrary;if(!lib){$('playerTechList').innerHTML='<div class="skeleton">기술 데이터를 불러오지 못했습니다.</div>';return}
-  const q=$('playerTechSearch').value.trim().toLowerCase(),active=$('playerTechFilter').value==='active';
-  const rows=Object.entries(lib).filter(([type])=>(!active||num(state.playerTech[type]?.level)>0)&&(!q||`${type} ${krName(type)}`.toLowerCase().includes(q)));
-  $('playerTechList').innerHTML=rows.map(([type,cfg])=>{
-    const tiers=cfg.Tiers||[];const s=state.playerTech[type]||{tier:1,level:0};const ti=clamp(num(s.tier,1),1,Math.max(1,tiers.length));const levels=tiers[ti-1]?.StatValuePerLevel||[];const lv=clamp(num(s.level),0,levels.length);const val=lv?num(levels[lv-1]):0;
-    return `<article class="data-card ${lv?'active-card':''}"><div class="card-head"><div><div class="card-title">${esc(krName(type))}</div><small class="internal">${esc(type)}</small></div><span class="badge">${tiers.length}티어</span></div>
-      <div class="card-controls"><div class="control-line"><label>티어</label><select data-pt-tier="${esc(type)}">${tiers.map((_,i)=>`<option value="${i+1}" ${i+1===ti?'selected':''}>티어 ${i+1}</option>`).join('')}</select></div>
-      <div class="control-line"><label>레벨</label><select data-pt-level="${esc(type)}"><option value="0">0</option>${levels.map((_,i)=>`<option value="${i+1}" ${i+1===lv?'selected':''}>${i+1}</option>`).join('')}</select></div></div>
-      <div class="effect-box">현재 효과: <strong>${lv?esc(techDescription(type,val)):'미적용'}</strong></div></article>`;
-  }).join('')||'<div class="skeleton">검색 결과가 없습니다.</div>';
-  document.querySelectorAll('[data-pt-tier]').forEach(el=>el.onchange=()=>{const t=el.dataset.ptTier;const cur=state.playerTech[t]||{level:0};state.playerTech[t]={tier:num(el.value,1),level:cur.level||0};saveState();renderPlayerTech()});
-  document.querySelectorAll('[data-pt-level]').forEach(el=>el.onchange=()=>{const t=el.dataset.ptLevel;const cur=state.playerTech[t]||{tier:1};state.playerTech[t]={tier:cur.tier||1,level:num(el.value)};saveState();renderPlayerTech()});
-}
-function renderGuildTech(){
-  const lib=data.GuildTechTreeUpgradeLibrary;if(!lib){$('guildTechList').innerHTML='<div class="skeleton">클랜 기술 데이터를 불러오지 못했습니다.</div>';return}
-  const q=$('guildTechSearch').value.trim().toLowerCase(),active=$('guildTechFilter').value==='active';
-  const rows=Object.entries(lib).filter(([type])=>(!active||num(state.guildTech[type])>0)&&(!q||`${type} ${krName(type)}`.toLowerCase().includes(q)));
-  $('guildTechList').innerHTML=rows.map(([type,cfg])=>{
-    const max=num(cfg.MaxLevel),lv=clamp(num(state.guildTech[type]),0,max+99),val=getGuildTechValue(type),pts=Math.min(lv,max)*num(cfg.PointsPerLevel)+Math.max(0,lv-max)*num(cfg.PointsPerInfiniteLevel);
-    return `<article class="data-card ${lv?'active-card':''}"><div class="card-head"><div><div class="card-title">${esc(krName(type))}</div><small class="internal">${esc(type)}</small></div><span class="badge">MAX ${max}${cfg.ValuePerInfiniteLevel!=null?' +∞':''}</span></div>
-      <div class="card-meta"><span class="mini">레벨당 ${formatEffectUnit(type,num(cfg.ValuePerLevel))}</span><span class="mini">포인트/레벨 ${fmt(cfg.PointsPerLevel,0)}</span></div>
-      <div class="card-controls one"><div class="control-line"><label>현재 레벨</label><input data-gt-level="${esc(type)}" type="number" min="0" max="${cfg.ValuePerInfiniteLevel!=null?max+99:max}" value="${lv}" /></div></div>
-      <div class="effect-box">누적 효과: <strong>${formatEffectUnit(type,val)}</strong> · 사용 포인트 약 ${fmt(pts,0)}</div></article>`;
-  }).join('')||'<div class="skeleton">검색 결과가 없습니다.</div>';
-  document.querySelectorAll('[data-gt-level]').forEach(el=>el.onchange=()=>{state.guildTech[el.dataset.gtLevel]=Math.max(0,num(el.value));saveState();renderGuildTech()});
-}
-function formatEffectUnit(type,v){return type==='PlayerAttackRange'?`+${trim(v,2)} 범위`:(type==='AutoForge'?trim(v,2):`+${pct(v)}`)}
-
-function weaponLabel(w){const id=w.ItemId||{};const age=num(id.Age);if(age<0)return `${age===-1001?'테스트 원거리':'테스트 근접'} #${id.Idx}`;return `시대 ${age} · 무기 #${id.Idx}`}
-function renderWeapons(){
-  const lib=data.WeaponLibrary;if(!lib){$('weaponRows').innerHTML='<tr><td colspan="8">무기 데이터를 불러오지 못했습니다.</td></tr>';return}
-  const q=$('weaponSearch').value.trim().toLowerCase(),f=$('weaponRangeFilter').value,b=bonuses();
-  const rows=Object.values(lib).filter(w=>{const label=weaponLabel(w).toLowerCase();return (!q||label.includes(q))&&(f==='all'||(f==='ranged'&&w.IsRanged)||(f==='melee'&&!w.IsRanged))}).sort((a,b)=>num(a.ItemId?.Age)-num(b.ItemId?.Age)||num(a.ItemId?.Idx)-num(b.ItemId?.Idx));
-  $('weaponRows').innerHTML=rows.map(w=>{const dur=num(w.AttackDuration),range=num(w.AttackRange),final=range+b.attackRange;return `<tr><td>${esc(weaponLabel(w))}</td><td>${w.IsRanged?'원거리':'근접'}</td><td class="num">${trim(w.WindupTime,3)}초</td><td class="num">${trim(dur,3)}초</td><td class="num">${dur?trim(1/dur,3):'-'}회/초</td><td>${trim(range,2)}</td><td class="positive">+${trim(b.attackRange,2)}</td><td><b>${trim(final,2)}</b></td></tr>`}).join('');
-}
-
-function fillForgeSelects(){
-  const opts=Array.from({length:35},(_,i)=>`<option value="${i+1}">Lv.${i+1}${i===34?' (MAX)':''}</option>`).join('');
-  ['profileForgeLevel','forgeFrom','forgeTo'].forEach(id=>{if($(id)&&!$(id).options.length)$(id).innerHTML=opts});
-  if(!$('forgeFrom').dataset.init){$('forgeFrom').value=state.forgeLevel;$('forgeTo').value=Math.min(35,Math.max(state.forgeLevel+1,35));$('forgeFrom').dataset.init='1'}
-}
-function forgeAdjusted(row){const b=bonuses();return {cost:num(row.Cost)*Math.max(0,1-b.forgeCost),duration:num(row.Duration)/(1+Math.max(0,b.forgeSpeed))}}
-function renderForge(){
-  fillForgeSelects();const lib=data.ForgeUpgradeLibrary||FALLBACK_FORGE;const from=clamp(num($('forgeFrom').value,state.forgeLevel),1,35),to=clamp(num($('forgeTo').value,35),1,35),a=Math.min(from,to),z=Math.max(from,to);
-  const steps=[];for(let lv=a;lv<z;lv++){if(lib[String(lv)])steps.push(lib[String(lv)])}
-  const baseCost=steps.reduce((s,r)=>s+num(r.Cost),0),baseTime=steps.reduce((s,r)=>s+num(r.Duration),0),adj=steps.reduce((s,r)=>{const x=forgeAdjusted(r);s.cost+=x.cost;s.time+=x.duration;return s},{cost:0,time:0}),b=bonuses();
-  $('forgeResult').innerHTML=`<div class="result-main">Lv.${a} → Lv.${z}</div><div class="result-grid"><div class="result-tile"><span>기본 비용</span><b>${fmt(baseCost,0)}</b></div><div class="result-tile"><span>기술 적용 예상 비용</span><b>${fmt(adj.cost,0)}</b></div><div class="result-tile"><span>기본 시간</span><b>${secText(baseTime)}</b></div><div class="result-tile"><span>기술 적용 예상 시간</span><b>${secText(adj.time)}</b></div></div>`;
-  $('forgeBonusInfo').innerHTML=statRow('대장간 시간 보너스',`+${pct(b.forgeSpeed)}`)+statRow('업그레이드 비용 감소',`-${pct(b.forgeCost)}`)+statRow('계산식','시간 ÷ (1 + 속도), 비용 × (1 - 감소율)');
-  $('forgeRows').innerHTML=steps.map(r=>{const x=forgeAdjusted(r);return `<tr><td>Lv.${r.Level} → Lv.${num(r.Level)+1}</td><td>${fmt(r.Cost,0)}</td><td>${secText(r.Duration)}</td><td>${secText(x.duration)}</td><td>${r.Tiers??'-'}</td></tr>`}).join('')||'<tr><td colspan="5">같은 레벨입니다.</td></tr>';
-}
-
-function skillLevelStats(skill,displayLevel){const idx=clamp(displayLevel-1,0,9999);return {damage:num(skill.DamagePerLevel?.[idx]),health:num(skill.HealthPerLevel?.[idx])}}
-function renderSkills(){
-  const lib=data.SkillLibrary;if(!lib){$('skillList').innerHTML='<div class="skeleton">스킬 데이터를 불러오지 못했습니다.</div>';return}
-  const rarities=[...new Set(Object.values(lib).map(x=>x.Rarity))];if($('skillRarity').options.length===1)rarities.forEach(r=>$('skillRarity').insertAdjacentHTML('beforeend',`<option value="${r}">${rarityKr(r)}</option>`));
-  const q=$('skillSearch').value.trim().toLowerCase(),rf=$('skillRarity').value,b=bonuses();
-  $('skillList').innerHTML=Object.entries(lib).filter(([id,s])=>(rf==='all'||s.Rarity===rf)&&(!q||`${id} ${krName(id)}`.toLowerCase().includes(q))).map(([id,s])=>{
-    const max=Math.max(s.DamagePerLevel?.length||0,s.HealthPerLevel?.length||0,1),lv=clamp(num(state.skillLevels[id],1),1,max),st=skillLevelStats(s,lv),fd=st.damage*(1+b.skillDamage),fh=st.health*(1+b.skillPassiveHealth);
-    return `<article class="data-card"><div class="card-head"><div><div class="card-title">${esc(krName(id))}</div><small class="internal">${esc(id)}</small></div><span class="badge">${rarityKr(s.Rarity)}</span></div>
-      <div class="card-meta"><span class="mini">쿨타임 ${trim(s.Cooldown,2)}초</span><span class="mini">지속 ${trim(s.ActiveDuration,2)}초</span><span class="mini">최대 Lv.${max}</span></div>
-      <div class="card-controls one"><div class="control-line"><label>레벨</label><input data-skill-level="${esc(id)}" type="number" min="1" max="${max}" value="${lv}"></div></div>
-      <div class="effect-box">${st.damage?`피해 ${fmt(st.damage)} → <strong>${fmt(fd)}</strong> (${pct(b.skillDamage)} 적용)`:''}${st.damage&&st.health?'<br>':''}${st.health?`체력 ${fmt(st.health)} → <strong>${fmt(fh)}</strong> (${pct(b.skillPassiveHealth)} 적용)`:''}</div></article>`
-  }).join('')||'<div class="skeleton">검색 결과가 없습니다.</div>';
-  document.querySelectorAll('[data-skill-level]').forEach(el=>el.onchange=()=>{state.skillLevels[el.dataset.skillLevel]=num(el.value,1);saveState();renderSkills()});
-}
-
-let companionLoading=false;
-async function ensureCompanionUpgrades(){if(companionLoading)return;companionLoading=true;try{await Promise.all([fetchConfig('PetUpgradeLibrary',{cache:false}),fetchConfig('MountUpgradeLibrary',{cache:false})])}catch{}finally{companionLoading=false;renderCompanions()}}
-function extractCompanionStats(upgradeLib,rarity,displayLv,kind){
-  const arr=upgradeLib?.[rarity]?.LevelInfo||[];const row=arr[clamp(displayLv-1,0,Math.max(0,arr.length-1))];const stats=row?.[`${kind}Stats`]?.Stats||[];const out={damage:0,health:0,exp:row?.Experience,max:arr.length};
-  for(const x of stats){const t=x?.StatNode?.UniqueStat?.StatType;if(t==='Damage')out.damage=num(x.Value);if(t==='Health')out.health=num(x.Value)}return out;
-}
-function renderCompanions(){
-  const b=bonuses();$('petBonusInfo').innerHTML=metric('펫 피해 보너스',`+${pct(b.petDamage)}`,'기술 + 클랜')+metric('펫 체력 보너스',`+${pct(b.petHealth)}`,'기술 + 클랜')+metric('펫 종류',data.PetLibrary?Object.keys(data.PetLibrary).length:'-','설정 데이터');
-  $('mountBonusInfo').innerHTML=metric('탈것 피해 보너스',`+${pct(b.mountDamage)}`,'기술 + 클랜')+metric('탈것 체력 보너스',`+${pct(b.mountHealth)}`,'기술 + 클랜')+metric('탈것 종류',data.MountLibrary?Object.keys(data.MountLibrary).length:'-','설정 데이터');
-  if(data.PetLibrary){$('petList').innerHTML=Object.values(data.PetLibrary).map(p=>{const id=p.PetId||{},key=`${id.Rarity}:${id.Id}`,max=data.PetUpgradeLibrary?.[id.Rarity]?.LevelInfo?.length||1,lv=clamp(num(state.petLevels[key],1),1,max),st=extractCompanionStats(data.PetUpgradeLibrary,id.Rarity,lv,'Pet');return `<article class="data-card"><div class="card-head"><div><div class="card-title">${rarityKr(id.Rarity)} 펫 #${id.Id+1}</div><small class="internal">${PET_TYPE_KR[p.Type]||p.Type}</small></div><span class="badge">${rarityKr(id.Rarity)}</span></div><div class="card-controls one"><div class="control-line"><label>레벨</label><input data-pet-level="${key}" type="number" min="1" max="${max}" value="${lv}"></div></div><div class="effect-box">${data.PetUpgradeLibrary?`피해 ${fmt(st.damage)} → <strong>${fmt(st.damage*(1+b.petDamage))}</strong><br>체력 ${fmt(st.health)} → <strong>${fmt(st.health*(1+b.petHealth))}</strong>`:'상세 레벨 데이터 불러오는 중…'}</div></article>`}).join('')}
-  if(data.MountLibrary){$('mountList').innerHTML=Object.values(data.MountLibrary).map(m=>{const id=m.MountId||{},key=`${id.Rarity}:${id.Id}`,max=data.MountUpgradeLibrary?.[id.Rarity]?.LevelInfo?.length||1,lv=clamp(num(state.mountLevels[key],1),1,max),st=extractCompanionStats(data.MountUpgradeLibrary,id.Rarity,lv,'Mount');return `<article class="data-card"><div class="card-head"><div><div class="card-title">${rarityKr(id.Rarity)} 탈것 #${id.Id+1}</div><small class="internal">Collider ${trim(m.ColliderRadius,2)}</small></div><span class="badge">${rarityKr(id.Rarity)}</span></div><div class="card-controls one"><div class="control-line"><label>레벨</label><input data-mount-level="${key}" type="number" min="1" max="${max}" value="${lv}"></div></div><div class="effect-box">${data.MountUpgradeLibrary?`피해 ${fmt(st.damage)} → <strong>${fmt(st.damage*(1+b.mountDamage))}</strong><br>체력 ${fmt(st.health)} → <strong>${fmt(st.health*(1+b.mountHealth))}</strong>`:'상세 레벨 데이터 불러오는 중…'}</div></article>`}).join('')}
-  document.querySelectorAll('[data-pet-level]').forEach(el=>el.onchange=()=>{state.petLevels[el.dataset.petLevel]=num(el.value,1);saveState();renderCompanions()});
-  document.querySelectorAll('[data-mount-level]').forEach(el=>el.onchange=()=>{state.mountLevels[el.dataset.mountLevel]=num(el.value,1);saveState();renderCompanions()});
-}
-
-function renderMovement(){const b=bonuses(),mb=Math.max(0,num($('moveBaseCalc').value,state.baseMoveSpeed)),rb=Math.max(0,num($('rangeBaseCalc').value,1)),mf=mb*(1+b.moveSpeed),rf=rb+b.attackRange;
-  $('moveCalc').innerHTML=`<div class="compare-item"><small>기본</small><b>${trim(mb,3)}</b></div><div class="compare-item"><small>증가</small><b class="positive">+${pct(b.moveSpeed)}</b></div><div class="compare-item"><small>최종</small><b>${trim(mf,3)}</b></div>`;
-  $('rangeCalc').innerHTML=`<div class="compare-item"><small>기본</small><b>${trim(rb,3)}</b></div><div class="compare-item"><small>증가</small><b class="positive">+${trim(b.attackRange,3)}</b></div><div class="compare-item"><small>최종</small><b>${trim(rf,3)}</b></div>`;
-}
-
-function playerDungeonBonus(type,currency){
-  const candidates=[];
-  if(type==='Hammer'&&currency==='Hammers')candidates.push('HammerThiefHammerReward');
-  if(type==='Hammer'&&currency==='Coins')candidates.push('HammerThiefCoinReward');
-  if(type==='Skill')candidates.push('SkillDungeonReward','SkillDungeonTicketReward','SkillSummonTicketsDungeonReward');
-  if(type==='Potion')candidates.push('PotionDungeonReward','TechPotionDungeonReward');
-  if(type==='Pet')candidates.push('EggDungeonReward','PetDungeonReward','EggshellDungeonReward');
-  for(const c of candidates){const v=getPlayerTechValue(c);if(v)return v}
-  const keys=Object.keys(state.playerTech||{}).filter(k=>num(state.playerTech[k]?.level)>0);
-  const words={Hammer:['HammerThief'],Skill:['Skill'],Potion:['Potion'],Pet:['Egg']}[type]||[];
-  const currencyWord={Hammers:'Hammer',Coins:'Coin',SkillSummonTickets:'Skill',TechPotions:'Potion',Eggshells:'Egg'}[currency]||'';
-  const match=keys.find(k=>words.some(w=>k.includes(w))&&k.includes('Reward')&&(!currencyWord||k.includes(currencyWord)));
-  return match?getPlayerTechValue(match):0;
-}
-function dungeonRewardsAt(type,level){const cfg=(data.DungeonRewardLibrary||FALLBACK_DUNGEON_REWARDS)[type];if(!cfg)return[];return (cfg.CurrencyType||[]).map((c,i)=>{const base=num(cfg.RewardBase?.[i])+level*num(cfg.RewardIncrease?.[i]);const bonus=playerDungeonBonus(type,c);return {type:c,base,bonus,final:base*(1+bonus)}})}
-async function ensureDungeon(type){const name=DUNGEON_FILES[type];if(!name||data[name]){renderDungeons();return}try{await fetchConfig(name)}catch{}renderDungeons()}
-function renderDungeons(){
-  const type=$('dungeonType').value,lib=data[DUNGEON_FILES[type]],max=lib?Math.max(...Object.values(lib).map(x=>num(x.Level))):0;let lv=clamp(Math.floor(num($('dungeonLevel').value)),0,max||999);$('dungeonLevel').value=lv;
-  const rewards=dungeonRewardsAt(type,lv),battle=lib?.[String(lv)]||Object.values(lib||{}).find(x=>num(x.Level)===lv);
-  $('dungeonSummary').innerHTML=metric('선택 단계',`${lv}`,'내부 단계값')+metric('적 피해',battle?fmt(battle.Damage,0):'-','BattleLibrary')+metric('적 체력',battle?fmt(battle.Health,0):'-','BattleLibrary')+metric('보상',rewards.map(r=>`${currencyKr(r.type)} ${fmt(r.final,1)}`).join('<br>')||'-','기술 보정 적용');
-  if(!lib){$('dungeonRows').innerHTML='<tr><td colspan="4">단계 데이터 불러오는 중…</td></tr>';return}
-  const vals=Object.values(lib).sort((a,b)=>num(a.Level)-num(b.Level));const start=Math.max(0,lv-12),end=Math.min(vals.length,start+25);$('dungeonRows').innerHTML=vals.slice(start,end).map(x=>{const rs=dungeonRewardsAt(type,num(x.Level));return `<tr ${num(x.Level)===lv?'class="selected"':''}><td>${x.Level}</td><td>${fmt(x.Damage,0)}</td><td>${fmt(x.Health,0)}</td><td>${rs.map(r=>`${currencyKr(r.type)} <b>${fmt(r.final,1)}</b>${r.bonus?` <span class="positive">(+${pct(r.bonus)})</span>`:''}`).join('<br>')}</td></tr>`}).join('');
-}
-
-function renderArena(){
-  const leagues=data.ArenaLeagueLibrary,rewards=data.ArenaRewardLibrary;if(!leagues||!rewards){$('arenaRows').innerHTML='<tr><td colspan="2">리그 데이터를 불러오지 못했습니다.</td></tr>';return}
-  if(!$('arenaLeague').options.length)$('arenaLeague').innerHTML=Object.keys(leagues).map(id=>`<option value="${id}">리그 ${num(id)+1}</option>`).join('');
-  const id=$('arenaLeague').value||'0',l=leagues[id],r=rewards[id],q=$('arenaSearch').value.trim();
-  $('arenaInfo').innerHTML=metric('선택 리그',`리그 ${num(id)+1}`,`내부 ID ${id}`)+metric('승급 기준',l.PromotionEnd<0?'최상위':`상위 ${l.PromotionEnd}%`,'설정값')+metric('강등 기준',l.DemotionStart<0?'없음':`${l.DemotionStart}%부터`,'설정값');
-  const ranks=r?.Rank||[];$('arenaRows').innerHTML=ranks.filter(x=>{if(!q)return true;const n=num(q)-1;return n>=num(x.FromRank)&&n<=num(x.ToRank)}).map(x=>{const a=num(x.FromRank)+1,b=num(x.ToRank)+1;return `<tr><td>${a===b?`${a}위`:`${a}~${b}위`}</td><td>${renderRewardInline(x.Rewards)}</td></tr>`}).join('')||'<tr><td colspan="2">해당 순위가 없습니다.</td></tr>';
-}
-function rewardMultiplierFor(type,win){let mult=1+(win?bonuses().warWinRewards:bonuses().warLoseRewards);if(type==='GuildPotions'){const extra=getGuildTechValue(win?'GuildPotionsFromClanWarWin':'GuildPotionsFromClanWarLose')||getGuildTechValue(win?'GuildPotionsFromWarWin':'GuildPotionsFromWarLose');mult*=1+extra}return mult}
-function renderRewardInline(rs){return (rs||[]).map(r=>`${currencyKr(r.Type)} <b>${fmt(r.Amount,0)}</b>`).join(' · ')}
-function renderGuildRewards(){
-  const lib=data.GuildTierConfig;if(!lib){$('guildWinRewards').innerHTML='클랜 등급 데이터를 불러오지 못했습니다.';return}
-  if(!$('guildTier').options.length)$('guildTier').innerHTML=Object.keys(lib).map(t=>`<option value="${t}">${t} 등급</option>`).join('');const tier=$('guildTier').value||Object.keys(lib)[0],cfg=lib[tier];if(!cfg)return;
-  $('guildRewardHeader').innerHTML=metric('클랜 등급',`${tier}`,'설정 데이터')+metric('필요 점수',fmt(cfg.RequiredPoints,0),'등급 진입 기준')+metric('등급점수',`승 +${cfg.TierPointsOnWin} / 패 +${cfg.TierPointsOnLose}`,'클랜전 결과');
-  const render=(rs,win)=>(rs||[]).map(r=>{const m=rewardMultiplierFor(r.Type,win),final=num(r.Amount)*m;return `<div class="reward-row"><div class="reward-name">${currencyKr(r.Type)}</div><div class="reward-val"><b>${fmt(final,1)}</b>${m!==1?`<span class="base">기본 ${fmt(r.Amount,0)} · +${pct(m-1)}</span>`:''}</div></div>`}).join('');
-  $('guildWinRewards').innerHTML=render(cfg.WarWonRewards,true);$('guildLoseRewards').innerHTML=render(cfg.WarLostRewards,false);
-}
-
-function renderDataFiles(){if(!$('dataFileList'))return;const names=[...new Set([...REQUIRED,...Object.values(DUNGEON_FILES),'PetUpgradeLibrary','MountUpgradeLibrary'])];$('dataFileList').innerHTML=names.map(n=>{const s=loadState[n]||(data[n]?'ok':'idle'),label={ok:'완료',cache:'캐시',loading:'로딩…',fail:'실패',idle:'필요 시 로드'}[s]||s;return `<div class="file-chip ${['ok','cache'].includes(s)?'ok':s==='fail'?'fail':''}"><span>${n}</span><span>${label}</span></div>`}).join('')}
-function renderComputed(){renderSummary();renderProfile();renderWeapons();renderForge();renderSkills();renderCompanions();renderMovement();renderDungeons();renderArena();renderGuildRewards()}
-
-async function loadCore(force=false){
-  $('dataStatus').className='status-pill loading';$('dataStatus').textContent='데이터 불러오는 중';
-  const settled=await Promise.allSettled(REQUIRED.map(n=>fetchConfig(n,{force})));
-  installFallbacks();const ok=settled.filter(x=>x.status==='fulfilled').length;
-  $('dataStatus').className=`status-pill ${ok===REQUIRED.length?'ok':'error'}`;$('dataStatus').textContent=ok===REQUIRED.length?'2.8.2 데이터 준비됨':`부분 로드 ${ok}/${REQUIRED.length}`;
-  renderAll();
-}
-function renderAll(){renderPlayerTech();renderGuildTech();renderComputed();renderDataFiles()}
-
-function bind(){
-  $('menuBtn').onclick=()=>{$('sidebar').classList.toggle('open');$('backdrop').classList.toggle('show')};$('backdrop').onclick=()=>{$('sidebar').classList.remove('open');$('backdrop').classList.remove('show')};
-  $('resetBtn').onclick=()=>{if(confirm('저장한 기술/클랜/레벨 설정을 모두 초기화할까요?')){state=structuredClone(DEFAULT_STATE);saveState();renderAll();toast('설정을 초기화했습니다')}};
-  document.querySelectorAll('[data-reset]').forEach(b=>b.onclick=()=>{const k=b.dataset.reset;if(k==='playerTech')state.playerTech={};if(k==='guildTech')state.guildTech={};saveState();renderAll();toast('초기화했습니다')});
-  $('profileForgeLevel').onchange=()=>{state.forgeLevel=num($('profileForgeLevel').value,1);$('forgeFrom').value=state.forgeLevel;saveState()};
-  $('baseMoveSpeed').onchange=()=>{state.baseMoveSpeed=Math.max(0,num($('baseMoveSpeed').value,1));$('moveBaseCalc').value=state.baseMoveSpeed;saveState()};
-  $('playerTechSearch').oninput=renderPlayerTech;$('playerTechFilter').onchange=renderPlayerTech;$('guildTechSearch').oninput=renderGuildTech;$('guildTechFilter').onchange=renderGuildTech;
-  $('weaponSearch').oninput=renderWeapons;$('weaponRangeFilter').onchange=renderWeapons;$('forgeFrom').onchange=renderForge;$('forgeTo').onchange=renderForge;
-  $('skillSearch').oninput=renderSkills;$('skillRarity').onchange=renderSkills;$('moveBaseCalc').oninput=renderMovement;$('rangeBaseCalc').oninput=renderMovement;
-  $('dungeonType').onchange=()=>ensureDungeon($('dungeonType').value);$('dungeonLevel').oninput=renderDungeons;$('arenaLeague').onchange=renderArena;$('arenaSearch').oninput=renderArena;$('guildTier').onchange=renderGuildRewards;
-  document.querySelectorAll('[data-subtab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-subtab]').forEach(x=>x.classList.toggle('active',x===b));$('petsPane').classList.toggle('active',b.dataset.subtab==='pets');$('mountsPane').classList.toggle('active',b.dataset.subtab==='mounts')});
-  $('reloadData').onclick=async()=>{Object.keys(localStorage).filter(k=>k.startsWith(CACHE_PREFIX)).forEach(k=>localStorage.removeItem(k));await loadCore(true);toast('데이터를 다시 불러왔습니다')};
-}
-
-async function init(){
-  setupNav();bind();installFallbacks();fillForgeSelects();renderAll();
-  if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
-  await loadCore(false);
-}
-init();
+document.addEventListener('DOMContentLoaded',()=>{initNav();quick();homeStats();let hash=location.hash.slice(1);if(hash&&document.getElementById(hash))go(hash);if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{})});
