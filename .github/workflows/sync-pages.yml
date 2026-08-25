@@ -1,0 +1,50 @@
+name: Sync Forge Master V72 to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/sync-pages.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download latest public planner
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://forge-master-kr.menam1407.chatgpt.site"
+          curl -fsSL "$base/forge-master.html" -o index.html
+          python3 - <<'PY'
+          import pathlib, re, urllib.request
+          html = pathlib.Path("index.html").read_text(encoding="utf-8")
+          paths = sorted(set(re.findall(r'(?:embedded-images|companion-icons)/[A-Za-z0-9._-]+', html)))
+          base = "https://forge-master-kr.menam1407.chatgpt.site/"
+          for rel in paths:
+              dest = pathlib.Path(rel)
+              dest.parent.mkdir(parents=True, exist_ok=True)
+              try:
+                  urllib.request.urlretrieve(base + rel, dest)
+              except Exception as exc:
+                  print(f"warning: {rel}: {exc}")
+          print(f"downloaded {len(paths)} referenced image assets")
+          PY
+          touch .nojekyll
+      - name: Publish synced files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html embedded-images companion-icons .nojekyll
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "V72 GitHub Pages 동기화"
+            git push
+          fi
