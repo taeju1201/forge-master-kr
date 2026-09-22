@@ -1,1 +1,8 @@
-{"name": "Forge Master KR 플래너", "short_name": "FM KR", "start_url": "./", "display": "standalone", "background_color": "#0d1118", "theme_color": "#0d1118", "lang": "ko-KR"}
+{
+  "name": "Forge Master KR",
+  "short_name": "FM KR",
+  "start_url": "./#/profile",
+  "display": "standalone",
+  "background_color": "#090d13",
+  "theme_color": "#0b0f16"
+}
