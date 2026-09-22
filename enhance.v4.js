@@ -135,6 +135,7 @@
     };
     return{L,damage,health,power,contextBonuses,dps,totalDps,activeSkillDps,skillBuffDps,skillHps,activeBreakdown,expectedHit,critChance,critMulti,blockChance:fairy.blockChance,reflectChance:fairy.reflectChance,attackSpeed,interval,isRanged,attackRange,attackDuration,attackWindup,itemD,itemH,petD,petH,mountD,mountH,skillD,skillH,fairy,skinD,skinH,setD,setH,setCounts};
   }
+  globalThis.__fmProfileCompute=compute;
   function equipOptions(map,slot,current){
     return `<option value="">미착용</option>`+Object.values(map).filter(x=>x.TypeName===slot).sort((a,b)=>a.Age-b.Age||a.Idx-b.Idx).map(x=>{const v=x.Age+':'+x.Idx;return `<option value="${v}" ${current&&current.age===x.Age&&current.idx===x.Idx?'selected':''}>${AGE[x.Age]||x.Age} · ${x.ItemName}</option>`}).join('');
   }

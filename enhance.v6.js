@@ -25,6 +25,7 @@
     for(const rows of Object.values(S.loadout.secondarySources||{}))for(const x of rows||[]){const k=AGG_MAP[x.statId];if(k)base[k]+=num(x.value)}
     S.loadout.secondary=Object.assign(S.loadout.secondary||{},base);
   }
+  globalThis.__fmAggregateSecondary=aggregate;
   function statEditor(kind,id,obj,D,title){
     const rows=rowsFor(kind,id,obj,D);
     if(!obj)return '';
