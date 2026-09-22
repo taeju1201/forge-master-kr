@@ -1,0 +1,83 @@
+name: Sync Forge Master 2.9 Game Assets
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sync-game-assets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout KR repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout 1vcian source
+        uses: actions/checkout@v4
+        with:
+          repository: 1vcian/fm
+          path: _source
+          fetch-depth: 1
+
+      - name: Copy exact 2.9.0 assets used by KR
+        shell: python
+        run: |
+          import json, shutil
+          from pathlib import Path
+
+          src = Path("_source/public")
+          tex = src / "Texture2D" / "2026_09_08_08_08"
+          dst = Path("assets/game")
+          items = dst / "items"
+          dst.mkdir(parents=True, exist_ok=True)
+          items.mkdir(parents=True, exist_ok=True)
+
+          mapping = json.loads((src / "parsed_configs" / "AutoItemMapping.json").read_text(encoding="utf-8"))
+          missing = []
+          copied = 0
+          for row in mapping.values():
+              name = row["SpriteName"] + ".png"
+              s = tex / name
+              if not s.exists():
+                  missing.append(name)
+                  continue
+              shutil.copy2(s, items / name)
+              copied += 1
+
+          common = [
+              "Pets.png","MountIcons.png","SkillIcons.png","SkinsUiIcons.png",
+              "FairyIconLora.png","FairyIconMira.png","FairyIconTira.png",
+              "TechTreeIcons.png","ClanTechTreeIcons.png",
+              "EmblemHolder.png","EmblemIcons.png","EmblemShapes.png"
+          ]
+          common += [f"SteppingStoneCharIcon{i}.png" for i in range(27)]
+          for name in common:
+              s = tex / name
+              if not s.exists():
+                  missing.append(name)
+                  continue
+              shutil.copy2(s, dst / name)
+
+          print(f"Copied {copied} equipment icons + {len(common)} shared assets")
+          if missing:
+              raise SystemExit("Missing source assets: " + ", ".join(sorted(set(missing))))
+
+      - name: Remove source checkout
+        run: rm -rf _source
+
+      - name: Commit synced assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/game
+          if git diff --cached --quiet; then
+            echo "No asset changes"
+            exit 0
+          fi
+          git commit -m "Sync Forge Master 2.9 game image assets"
+          git push
