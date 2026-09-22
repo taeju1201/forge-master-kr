@@ -1,0 +1,20 @@
+(function(){
+S.forgeCalc2=Object.assign({level:Math.max(1,num(S.forgeLevel,1)),hammers:1000,maxItemLevel:100},S.forgeCalc2||{});
+function pTech(type,pos,vals){let out=0;for(const [tn,td] of Object.entries(pos||{}))for(const n of td.Nodes||[])if(n.Type===type){const lv=Math.max(0,Math.floor(num(S.techTree?.[tn]?.[n.Id]))),a=vals?.[type]?.Tiers?.[n.Tier]?.StatValuePerLevel||[];if(lv&&a.length)out+=num(a[Math.min(lv,a.length)-1])}return out}
+pages.forge=async function(){
+ const e=$('#app'),[drops,up,itemCfg,pos,vals]=await Promise.all([j(`${CFG}/ItemAgeDropChancesLibrary.json`),j(`${CFG}/ForgeUpgradeLibrary.json`),j(`${CFG}/ItemBalancingConfig.json`),j(`${CFG}/PlayerTechTreePositionLibrary.json`),j(`${CFG}/PlayerTechTreeNodeValuesLibrary.json`)]);
+ const st=S.forgeCalc2;
+ function render(){
+  const maxLevel=Math.max(...Object.keys(drops).map(Number))+1,lv=Math.max(1,Math.min(maxLevel,Math.floor(num(st.level,1)))),hammers=Math.max(0,num(st.hammers)),free=Math.min(.95,pTech('FreeForgeChance',pos,vals)),eff=hammers/(1-free),row=drops[String(lv-1)]||{},sell=pTech('EquipmentSellPrice',pos,vals),basePrice=num(itemCfg.SellBasePrice,20),scale=num(itemCfg.LevelScalingBase,1.01),mil=Math.max(1,num(st.maxItemLevel,100));
+  const probs=AGE.map((a,i)=>({age:a,p:num(row['Age'+i])})).filter(x=>x.p>0),lowest=probs.length?Math.min(...probs.map(x=>x.p)):0,standard=1-lowest,stdMin=Math.max(1,mil-5),priceStd=basePrice*Math.pow(scale,stdMin-1),priceLow=basePrice,priceMax=basePrice*Math.pow(scale,mil-1),avgMin=(standard*priceStd+lowest*priceLow)*(1+sell),avgMax=priceMax*(1+sell),coinMin=avgMin*eff,coinMax=avgMax*eff;
+  const nxt=up[String(lv)],costRed=Math.min(.95,pTech('ForgeUpgradeCost',pos,vals)),speed=pTech('ForgeTimerSpeed',pos,vals),baseCost=num(nxt?.Cost),cost=Math.floor(baseCost*(1-costRed)),baseDur=num(nxt?.Duration),time=baseDur/(1+speed),rawH=Math.ceil(baseDur/.25),needH=Math.ceil(rawH*(1-free)),tiers=num(nxt?.Tiers,1),perTier=tiers?Math.floor(cost/tiers):cost;
+  e.innerHTML=`<div class="hero"><span class="chip">대장간 2.9.0</span><h1>대장간 / 망치 계산</h1><p class="muted">실제 드랍 확률과 기술트리의 무료 제련·판매가·강화비용·제련속도를 반영합니다.</p></div>
+  <div class="panel grid g3"><label class="field"><span>대장간 레벨</span><input id="f2lv" type="number" min="1" max="${maxLevel}" value="${lv}"></label><label class="field"><span>보유 망치</span><input id="f2h" type="number" min="0" value="${hammers}"></label><label class="field"><span>장비 최대레벨 가정</span><input id="f2ilv" type="number" min="1" max="300" value="${mil}"></label></div>
+  <div class="panel grid g4"><div class="metric"><small>무료 제련 확률</small><b>${fmt(free*100)}%</b></div><div class="metric"><small>망치 ${fmt(hammers)}개 → 기대 제련</small><b class="sum">${fmt(eff)}</b></div><div class="metric"><small>판매가 기술</small><b>+${fmt(sell*100)}%</b></div><div class="metric"><small>예상 판매 코인</small><b>${fmt(coinMin)} ~ ${fmt(coinMax)}</b></div></div>
+  <div class="panel"><h2>시대별 기대 제작량</h2><div class="grid g4">${probs.map(x=>`<div class="metric"><small>${x.age} · ${fmt(x.p*100)}%</small><b>${fmt(eff*x.p)}</b></div>`).join('')}</div></div>
+  ${nxt?`<div class="panel"><h2>Lv.${lv} → ${lv+1} 강화</h2><div class="grid g4"><div class="metric"><small>기본 코인</small><b>${fmt(baseCost)}</b></div><div class="metric"><small>기술 적용 코인</small><b>${fmt(cost)}</b><div class="muted small">-${fmt(costRed*100)}%</div></div><div class="metric"><small>필요 망치 기대값</small><b>${fmt(needH)}</b><div class="muted small">원시 ${fmt(rawH)}</div></div><div class="metric"><small>강화 시간</small><b>${(time/60).toFixed(1)}분</b><div class="muted small">속도 +${fmt(speed*100)}%</div></div><div class="metric"><small>강화 단계</small><b>${tiers}</b></div><div class="metric"><small>단계당 코인</small><b>${fmt(perTier)}</b></div><div class="metric"><small>코인/망치</small><b>${needH?fmt(cost/needH):'-'}</b></div></div></div>`:'<div class="notice">현재 대장간은 설정상 최대 레벨입니다.</div>'}`;
+  e.oninput=ev=>{if(ev.target.id==='f2lv'){st.level=num(ev.target.value);S.forgeLevel=st.level}if(ev.target.id==='f2h')st.hammers=num(ev.target.value);if(ev.target.id==='f2ilv')st.maxItemLevel=num(ev.target.value);save();render()}
+ }
+ render()
+};
+})();
