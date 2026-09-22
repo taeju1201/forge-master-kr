@@ -5,7 +5,7 @@
   let dataP=null;
   function data(){if(!dataP)dataP=Promise.all([j(`${CFG}/SkinsLibrary.json`),j(`${CFG}/SetsLibrary.json`),j(`${RAW}/parsed_configs/ManualSpriteMapping.json`)]).then(([skins,sets,map])=>({skins,sets,map}));return dataP}
   function entry(D,type,idx){return Object.values(D.skins||{}).find(x=>x.SkinId?.Type===type&&x.SkinId?.Idx===idx)}
-  function skinStyle(D,type,idx,size=72){const i=D.map?.skins?.mapping?.[type+'_'+idx];if(i==null)return'';return spriteStyle(`${TEX}/${D.map.skins.texture}`,i,D.map.skins.grid.columns,D.map.skins.sprite_size.width,size)}
+  function skinStyle(D,type,idx,size=72){const i=D.map?.skins?.mapping?.[type+'_'+idx];if(i==null)return'';return spriteStyle(`${GTEX}/${D.map.skins.texture}`,i,D.map.skins.grid.columns,D.map.skins.sprite_size.width,size)}
   function setInfo(D){
     const counts={};
     for(const type of ['Weapon','Helmet','Armour']){const sk=S.loadout.skins?.[type];if(!sk)continue;const en=entry(D,type,sk.idx);if(en?.BaseSetId)counts[en.BaseSetId]=(counts[en.BaseSetId]||0)+1}

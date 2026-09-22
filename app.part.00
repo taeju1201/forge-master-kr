@@ -3,6 +3,7 @@ const RAW='https://raw.githubusercontent.com/1vcian/fm/main/public';
 const VER='2026_09_08_08_08';
 const CFG=`${RAW}/parsed_configs/${VER}`;
 const TEX=`${RAW}/Texture2D/${VER}`;
+const GTEX='./assets/game';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],num=(v,d=0)=>Number.isFinite(+v)?+v:d,esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const STORE='fmkr_new_v1';
 const defaults={name:'',fairy:{name:null,level:1},clanTech:{},war:{day:1,counts:{}},resources:{Coins:0,SkillSummonTickets:0,Eggshells:0,TechPotions:0,ClockWinders:0},item:{age:0,type:'Weapon',level:1},wiki:{rarity:''}};

@@ -30,7 +30,7 @@
   function rectStyle(entry,size=58){
     if(!entry?.sprite_rect)return '';
     const r=entry.sprite_rect,ts=entry.texture_size||{width:1024,height:1024},cols=Math.max(1,Math.round(ts.width/r.width)),rows=Math.max(1,Math.round(ts.height/r.height)),col=Math.round(r.x/r.width),row=Math.round(r.y/r.height),px=cols>1?col*(100/(cols-1)):0,py=rows>1?row*(100/(rows-1)):0,tex=entry.texture||'ClanTechTreeIcons.png';
-    return `width:${size}px;height:${size}px;background-image:url('${TEX}/${tex}');background-position:${px}% ${py}%;background-size:${cols*100}% ${rows*100}%;background-repeat:no-repeat`;
+    return `width:${size}px;height:${size}px;background-image:url('${GTEX}/${tex}');background-position:${px}% ${py}%;background-size:${cols*100}% ${rows*100}%;background-repeat:no-repeat`;
   }
   function playerRectStyle(mapNode,map,size=58){
     if(!mapNode?.sprite_rect)return '';
