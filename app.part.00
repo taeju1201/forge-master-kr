@@ -1,0 +1,22 @@
+(()=>{'use strict';
+const RAW='https://raw.githubusercontent.com/1vcian/fm/main/public';
+const VER='2026_09_08_08_08';
+const CFG=`${RAW}/parsed_configs/${VER}`;
+const TEX=`${RAW}/Texture2D/${VER}`;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],num=(v,d=0)=>Number.isFinite(+v)?+v:d,esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const STORE='fmkr_new_v1';
+const defaults={name:'',fairy:{name:null,level:1},clanTech:{},war:{day:1,counts:{}},resources:{Coins:0,SkillSummonTickets:0,Eggshells:0,TechPotions:0,ClockWinders:0},item:{age:0,type:'Weapon',level:1},wiki:{rarity:''}};
+let S=(()=>{try{return Object.assign(structuredClone(defaults),JSON.parse(localStorage.getItem(STORE)||'{}'))}catch{return structuredClone(defaults)}})();S.fairy=Object.assign({},defaults.fairy,S.fairy||{});S.resources=Object.assign({},defaults.resources,S.resources||{});S.clanTech=Object.assign({},S.clanTech||{});S.war=Object.assign({},defaults.war,S.war||{});S.war.counts=Object.assign({},S.war.counts||{});S.item=Object.assign({},defaults.item,S.item||{});
+const save=()=>localStorage.setItem(STORE,JSON.stringify(S));
+const fmt=x=>{x=num(x);let a=Math.abs(x);if(a>=1e12)return(x/1e12).toFixed(2).replace(/\.00$/,'')+'T';if(a>=1e9)return(x/1e9).toFixed(2).replace(/\.00$/,'')+'B';if(a>=1e6)return(x/1e6).toFixed(2).replace(/\.00$/,'')+'M';if(a>=1e3)return(x/1e3).toFixed(2).replace(/\.00$/,'')+'K';return Number.isInteger(x)?String(x):x.toFixed(2).replace(/0+$/,'').replace(/\.$/,'')};
+function toast(t){let e=$('#toast');e.textContent=t;e.className='show';setTimeout(()=>e.className='',1300)}
+const AGE=['원시','중세','근세','현대','우주','성간','다중우주','양자','지하세계','신성'];
+const SLOT={Helmet:'투구',Armour:'갑옷',Gloves:'장갑',Necklace:'목걸이',Ring:'반지',Weapon:'무기',Shoes:'신발',Belt:'벨트'};
+const RKO={Common:'일반',Rare:'희귀',Epic:'에픽',Legendary:'전설',Ultimate:'궁극',Mythic:'신화'};
+const PET_KO={Panda:'판다',Chicken:'닭',Serpent:'뱀',Cerberus:'케르베로스',Kitsune:'키츠네',Electry:'일렉트리',Dog:'강아지',Cat:'고양이',Snail:'달팽이',Mouse:'생쥐',Turtle:'거북이',Hedgehog:'고슴도치',Bear:'곰',Ostrich:'타조',Spider:'거미',Scorpion:'전갈',Griffin:'그리핀',SaberTooth:'검치호',Unicorn:'유니콘',Tiger:'호랑이',Treant:'트렌트',EnchantedElk:'마법의 엘크',BabyDragon:'아기 용',Genie:'지니',SpectralTiger:'스펙트럴 타이거'};
+const MOUNT_KO={LilyPad:'수련잎',BrownHorse:'갈색 말',Dino:'공룡',LilyLeaf:'백합잎',BrownLeaf:'갈색 잎',Crab:'게',Turtle:'거북이',Pig:'돼지',Goat:'염소',Bike:'자전거',GiantBee:'거대 벌',OneWheelDroid:'드로이드',MiniDragon:'미니 드래곤',HoverDisk:'호버 디스크',HoverBoard:'호버보드'};
+const SKILL_KO={Meat:'고기',Morale:'사기',Arrows:'화살',Shout:'외침',Meteorite:'운석',Berserk:'광전사',Stampede:'쇄도',Thorns:'가시',Bomb:'폭탄',Worm:'벌레',Lightning:'번개',Buff:'버프',HigherMorale:'높은 사기',RainOfArrows:'화살비',Shuriken:'수리검',StrafeRun:'기총 소사',CannonBarrage:'포격',Drone:'드론'};
+const cache={};async function j(url){if(cache[url])return cache[url];let r=await fetch(url);if(!r.ok)throw Error(r.status+' '+url);return cache[url]=await r.json()}
+const nav=[['내 정보',[['profile','👤','프로필'],['progress','📈','성장 예측'],['pvp','🥊','PVP']]],['계산',[['forge','🔨','대장간'],['offline','🌙','오프라인'],['dungeons','🗝️','던전'],['guildwar','🏰','클랜전'],['clantech','🛡️','클랜 기술']]],['도감',[['items','⚔️','장비'],['pets','🐾','펫'],['mounts','🐎','탈것'],['skills','✨','스킬'],['fairies','🧚','요정'],['techtree','🧪','기술 트리'],['arena','🏆','아레나'],['skins','🎭','스킨']]],['정보',[['home','🏠','홈'],['configs','ℹ️','데이터 정보']]]];
+function initNav(){let h='';for(const[g,arr]of nav)h+=`<div class="navGroup">${g}</div>`+arr.map(([id,ic,nm])=>`<button class="navBtn" data-page="${id}"><span>${ic}</span>${nm}</button>`).join('');$('#nav').innerHTML=h;$('#nav').onclick=e=>{let b=e.target.closest('[data-page]');if(b)go(b.dataset.page)};$('#menu').onclick=()=>drawer(1);$('#close').onclick=()=>drawer(0);$('#shade').onclick=()=>drawer(0);$('#home').onclick=()=>go('home')}
+function drawer(v){$('#drawer').classList.toggle('open',!!v)

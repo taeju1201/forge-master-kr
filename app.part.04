@@ -1,0 +1,5 @@
+� 노드/티어/선행조건 구조로 재구성 중입니다.</p></div><div class="notice">클랜 기술은 이미 실제 2.9.0 설정값으로 동작합니다. 플레이어 기술 트리 UI는 다음 단계에서 원본 배치까지 연결합니다.</div>`}
+async function simple(title,desc){$('#app').innerHTML=`<div class="hero"><span class="chip">시스템</span><h1>${title}</h1><p class="muted">${desc}</p></div><div class="notice">새 KR 구조에 연결 중입니다. 데이터 계층은 1vcian 2.9.0 기준으로 교체했습니다.</div>`}
+const pages={home,profile,items,pets,mounts,skills,fairies,clantech,guildwar,techtree,progress:()=>simple('성장 예측','프로필 기반 성장·재화 예측'),pvp:()=>simple('PVP','장비·펫·탈것·스킬·요정을 포함한 비교 시뮬레이터'),forge:()=>simple('대장간','대장간 레벨·승천·제련 계산'),offline:()=>simple('오프라인 계산','기술 효과를 적용한 오프라인 보상'),dungeons:()=>simple('던전','던전별 난이도·보상·필요 전투력'),arena:()=>simple('아레나','리그·랭크·보상'),skins:()=>simple('스킨','인게임 스킨 이미지·세트 효과'),configs:()=>simple('데이터 정보','Forge Master 2.9.0 / 2026-09-08 설정')};
+initNav();window.addEventListener('hashchange',()=>go((location.hash||'#/home').slice(2)||'home'));go((location.hash||'#/home').slice(2)||'home');
+})();
