@@ -16,6 +16,7 @@
   S.loadout.equipment=Object.assign({},defaultEquip,S.loadout.equipment||{});
   S.loadout.secondary=Object.assign({damageMulti:0,healthMulti:0,meleeDamageMulti:0,rangedDamageMulti:0,criticalChance:0,criticalDamage:0,doubleDamageChance:0,attackSpeed:0,blockChance:0,skillDamageMulti:0,skillCooldownMulti:0,skillHealthMulti:0,lifeSteal:0,healthRegen:0},S.loadout.secondary||{});
   while(S.loadout.pets.length<3)S.loadout.pets.push(null);
+  S.loadout.skins=Object.assign({Weapon:null,Helmet:null,Armour:null},S.loadout.skins||{});
 
   let libsPromise=null;
   function libs(){
@@ -25,8 +26,8 @@
       j(`${CFG}/WeaponLibrary.json`),j(`${CFG}/PetLibrary.json`),j(`${CFG}/PetUpgradeLibrary.json`),j(`${CFG}/PetBalancingLibrary.json`),
       j(`${CFG}/MountUpgradeLibrary.json`),j(`${CFG}/SkillLibrary.json`),j(`${CFG}/SkillPassiveLibrary.json`),
       j(`${RAW}/parsed_configs/ManualSpriteMapping.json`),j(`${CFG}/PlayerTechTreePositionLibrary.json`),j(`${CFG}/PlayerTechTreeNodeValuesLibrary.json`),
-      j(`${CFG}/GuildTechTreeUpgradeLibrary.json`),j(`${CFG}/AscensionConfigsLibrary.json`)
-    ]).then(([itemCfg,itemLib,itemMap,weaponLib,petLib,petUp,petBal,mountUp,skillLib,skillPass,sprites,pos,vals,clib,asc])=>({itemCfg,itemLib,itemMap,weaponLib,petLib,petUp,petBal,mountUp,skillLib,skillPass,sprites,pos,vals,clib,asc}));
+      j(`${CFG}/GuildTechTreeUpgradeLibrary.json`),j(`${CFG}/AscensionConfigsLibrary.json`),j(`${CFG}/SkinsLibrary.json`),j(`${CFG}/SetsLibrary.json`)
+    ]).then(([itemCfg,itemLib,itemMap,weaponLib,petLib,petUp,petBal,mountUp,skillLib,skillPass,sprites,pos,vals,clib,asc,skins,sets])=>({itemCfg,itemLib,itemMap,weaponLib,petLib,petUp,petBal,mountUp,skillLib,skillPass,sprites,pos,vals,clib,asc,skins,sets}));
     return libsPromise;
   }
   function playerTech(type,L){
@@ -88,9 +89,14 @@
     const weaponM=isRanged?weaponD:weaponD*num(cfg.PlayerMeleeDamageMultiplier,1.6),other=itemD-weaponD;
     const equipD=(num(cfg.PlayerBaseDamage,10)+weaponM+other)*commonD*forgeD,equipH=(num(cfg.PlayerBaseHealth,80)+itemH)*commonH*forgeH;
     const sysD=(petD+mountD+skillD)*commonD,sysH=(petH+mountH+skillH)*commonH;
-    const specific=1+(isRanged?num(sec.rangedDamageMulti):num(sec.meleeDamageMulti)),damage=(equipD+sysD)*specific,health=equipH+sysH;
+    const specific=1+(isRanged?num(sec.rangedDamageMulti):num(sec.meleeDamageMulti));
+    let damage=(equipD+sysD)*specific,health=equipH+sysH,skinD=0,skinH=0,setD=0,setH=0;
+    const setCounts={};
+    for(const type of ['Weapon','Helmet','Armour']){const sk=S.loadout.skins?.[type];if(!sk)continue;const entry=Object.values(L.skins||{}).find(x=>x.SkinId?.Type===type&&x.SkinId?.Idx===sk.idx);if(!entry)continue;if(sk.statType==='Damage')skinD+=num(sk.value)/100;if(sk.statType==='Health')skinH+=num(sk.value)/100;if(entry.BaseSetId)setCounts[entry.BaseSetId]=(setCounts[entry.BaseSetId]||0)+1}
+    for(const [setId,count] of Object.entries(setCounts)){const set=L.sets?.[setId];for(const tier of set?.BonusTiers||[])if(count>=num(tier.RequiredPieces))for(const s of tier.BonusStats?.Stats||[]){const t=s.StatNode?.UniqueStat?.StatType;if(t==='Damage')setD+=num(s.Value);if(t==='Health')setH+=num(s.Value)}}
+    damage*=1+skinD+setD;health*=1+skinH+setH;
     const critChance=fairy.criticalChance,critMulti=1+num(cfg.PlayerBaseCritDamage,.2)+num(sec.criticalDamage),doubleChance=num(sec.doubleDamageChance),attackSpeed=1+num(sec.attackSpeed),interval=attackInterval(attackSpeed,attackDuration),expectedHit=damage*(1+critChance*(critMulti-1))*(1+doubleChance),dps=expectedHit/interval;
-    return{L,damage,health,dps,expectedHit,critChance,critMulti,blockChance:fairy.blockChance,reflectChance:fairy.reflectChance,attackSpeed,interval,isRanged,attackRange,attackDuration,attackWindup,itemD,itemH,petD,petH,mountD,mountH,skillD,skillH,fairy};
+    return{L,damage,health,dps,expectedHit,critChance,critMulti,blockChance:fairy.blockChance,reflectChance:fairy.reflectChance,attackSpeed,interval,isRanged,attackRange,attackDuration,attackWindup,itemD,itemH,petD,petH,mountD,mountH,skillD,skillH,fairy,skinD,skinH,setD,setH,setCounts};
   }
   function equipOptions(map,slot,current){
     return `<option value="">미착용</option>`+Object.values(map).filter(x=>x.TypeName===slot).sort((a,b)=>a.Age-b.Age||a.Idx-b.Idx).map(x=>{const v=x.Age+':'+x.Idx;return `<option value="${v}" ${current&&current.age===x.Age&&current.idx===x.Idx?'selected':''}>${AGE[x.Age]||x.Age} · ${x.ItemName}</option>`}).join('');
