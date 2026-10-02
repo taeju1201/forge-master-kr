@@ -79,7 +79,7 @@ const title=(tag,h,p='')=>`<div class="title"><span class="chip">${esc(tag)}</sp
 const metric=(k,v,cls='')=>`<div class="metric"><small>${esc(k)}</small><b class="${cls}">${v}</b></div>`;
 const rawCfg=name=>`${K.RAW}/parsed_configs/${S?.version||K.VERSION}/${name}`;
 const rootCfg=name=>`${K.RAW}/parsed_configs/${name}`;
-const asset=name=>{let enc=encodeURIComponent(name).replace(/%2F/g,'/');let local=/^(?:Pets|MegaPets|UltraPets|ApexPets|SkillIcons|MegaSkillIcons|UltraSkillIcons|ApexSkillIcons|MountIcons|MegaMountIcons|UltraMountIcons|ApexMountIcons|Eggs|MegaEggs|UltraEggs|ApexEggs|SkinsUiIcons|FairyIconLora|FairyIconMira|FairyIconTira|TechTreeIcons|ClanTechTreeIcons|EmblemHolder|EmblemIcons|EmblemShapes|Icons|SteppingStoneCharIcon\d+)\.png$/.test(name);return local?`./assets/game/${enc}?v=20260923b`:`${K.RAW}/Texture2D/${S?.version||K.VERSION}/${enc}`};
+const asset=name=>{let enc=encodeURIComponent(name).replace(/%2F/g,'/');let local=/^(?:Pets|MegaPets|UltraPets|ApexPets|SkillIcons|MegaSkillIcons|UltraSkillIcons|ApexSkillIcons|MountIcons|MegaMountIcons|UltraMountIcons|ApexMountIcons|Eggs|MegaEggs|UltraEggs|ApexEggs|SkinsUiIcons|FairyIconLora|FairyIconMira|FairyIconTira|TechTreeIcons|ClanTechTreeIcons|EmblemHolder|EmblemIcons|EmblemShapes|Icons|SteppingStoneCharIcon\d+)\.png$/.test(name);return local?`./assets/game/${enc}?v=20261002c`:`${K.RAW}/Texture2D/${S?.version||K.VERSION}/${enc}`};
 async function cfg(name,root=false){let key=(root?'r:':'v:')+name;if(CONFIG_CACHE.has(key))return CONFIG_CACHE.get(key);let p=fetch(root?rootCfg(name):rawCfg(name)).then(r=>{if(!r.ok)throw new Error(`${name} ${r.status}`);return r.json()});CONFIG_CACHE.set(key,p);return p}
 function toast(t){let e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('show'),1400)}
 function uid(){return Math.random().toString(36).slice(2,10)+Date.now().toString(36).slice(-4)}
@@ -110,7 +110,7 @@ function gameIcon(name,size=22){let p=GAME_ICON_POS[name];if(!p)return'';let idx
 function iconMetric(label,value,icon,cls=''){return `<div class="metric"><small style="display:flex;align-items:center;gap:5px">${gameIcon(icon,20)}${label}</small><b class="${cls}">${value}</b></div>`}
 
 function sentence(s){return String(s||'').replace(/([a-z])([A-Z])/g,'$1 $2').replace(/_/g,' ')}
-function itemImage(map){if(!map?.SpriteName)return'';let file=map.SpriteName+'.png';return `./assets/game/items/${encodeURIComponent(file)}?v=20260923b`}
+function itemImage(map){if(!map?.SpriteName)return'';let file=map.SpriteName+'.png';return `./assets/game/items/${encodeURIComponent(file)}?v=20261002c`}
 function itemKoName(map){return sentence(map?.ItemName||`${map?.TypeName||'장비'} ${Number(map?.Idx||0)+1}`)}
 function rarityChip(r){return `<span class="chip rarity" style="color:${K.rarityColor[r]||'#fff'}">${K.rarityKo[r]||r}</span>`}
 function compSprite(info,kind,asc=0,size=76){
