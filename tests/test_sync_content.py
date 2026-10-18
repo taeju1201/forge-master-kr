@@ -1,4 +1,5 @@
 import importlib.util
+import os
 from pathlib import Path
 import subprocess
 import tempfile
@@ -12,6 +13,33 @@ spec.loader.exec_module(sync)
 
 
 class SyncTests(unittest.TestCase):
+    def test_publisher_noop_and_failed_build_retry(self):
+        script = Path(__file__).parents[1] / 'scripts/publish_sync.sh'
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / 'repo'
+            repo.mkdir()
+            subprocess.run(['git', 'init', '-q', str(repo)], check=True)
+            (repo / 'index.html').write_text('same')
+            subprocess.run(['git', '-C', str(repo), 'add', '.'], check=True)
+            subprocess.run(['git', '-C', str(repo), '-c', 'user.name=test', '-c', 'user.email=test@example.com', 'commit', '-qm', 'baseline'], check=True)
+            head = subprocess.check_output(['git', '-C', str(repo), 'rev-parse', 'HEAD'], text=True).strip()
+            binary = root / 'bin'
+            binary.mkdir()
+            gh = binary / 'gh'
+            gh.write_text('#!/usr/bin/env python3\nimport json, os, sys\nfrom pathlib import Path\nwith Path(os.environ["CALL_LOG"]).open("a") as f: f.write(" ".join(sys.argv[1:]) + "\\n")\nprint(json.dumps({"commit": os.environ["TEST_HEAD"], "status": os.environ["TEST_STATUS"]}))\n')
+            gh.chmod(0o755)
+            log = root / 'calls'
+            env = dict(os.environ, PATH=str(binary) + os.pathsep + os.environ['PATH'],
+                       CALL_LOG=str(log), TEST_HEAD=head, TEST_STATUS='built',
+                       GITHUB_REPOSITORY='test/repo')
+            subprocess.run(['bash', str(script), 'index.html'], cwd=repo, env=env, check=True, capture_output=True)
+            self.assertNotIn('--method POST', log.read_text())
+            env['TEST_STATUS'] = 'errored'
+            subprocess.run(['bash', str(script), 'index.html'], cwd=repo, env=env, check=True, capture_output=True)
+            self.assertIn('--method POST', log.read_text())
+            self.assertEqual(subprocess.check_output(['git', '-C', str(repo), 'rev-parse', 'HEAD'], text=True).strip(), head)
+
     def test_error_html_rejected(self):
         with self.assertRaises(ValueError):
             sync.validate_html(b'<html>Access denied</html>')
