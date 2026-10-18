@@ -69,7 +69,10 @@ def stage_pages(stage):
                 paths.add(f'companion-icons/{kind}-{asc}-{index:02d}.png')
     def fetch(rel):
         download(BASE + '/' + rel, stage / rel, cookies)
-        validate_image(stage / rel)
+        try:
+            validate_image(stage / rel)
+        except Exception as error:
+            raise ValueError(f'Invalid downloaded image: {rel}: {error}') from error
     with ThreadPoolExecutor(max_workers=8) as pool:
         list(pool.map(fetch, sorted(paths)))
     (stage / '.nojekyll').touch()
