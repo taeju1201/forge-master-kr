@@ -1,30 +1,57 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101d25">
-  <meta name="description" content="원하는 장비, 펫, 스킬, 스킨, 탈것으로 자유롭게 전투하는 Forge Master KR 테스트 월드.">
-  <title>Forge Master KR · 테스트 월드</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="game/style.css?v=tw1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#42495b">
+  <meta name="description" content="포지 마스터의 원본 화면과 리소스로 플레이하는 KR 테스트 월드. 모든 장비, 펫, 스킬, 스킨, 탈것과 능력치를 자유롭게 설정하세요.">
+  <title>Forge Master KR · 테스트 월드</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="assets/ui-original/Baloo-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="game/style.css?v=original-ui-1">
+  <link rel="stylesheet" href="game/original-tech.css?v=original-ui-1">
 </head>
 <body>
-  <header class="topbar"><a class="brand" href="./" aria-label="Forge Master KR 테스트 월드"><span class="brand-mark" aria-hidden="true">F<span>✦</span></span><span><b>FORGE MASTER <em>KR</em></b><small>TEST WORLD <i>/</i> 나만의 전투 실험실</small></span></a><div class="top-actions"><span class="version-badge"><i></i> 2.12.1 데이터</span><a class="history-link" href="archive/">이전 작업 기록 ↗</a><button class="button small-button" id="save-menu">세팅 저장</button></div></header>
-  <main class="world-layout" id="world" aria-busy="true">
-    <section class="play-column" aria-label="전투 월드">
-      <div class="world-heading"><div><span class="eyebrow">모든 장비, 모든 가능성</span><h1>원하는 세팅으로, 바로 전투.</h1></div><span class="sandbox-stamp">SANDBOX <b>01</b></span></div>
-      <section class="arena-shell">
-        <div class="arena-hud"><div class="stage-heading"><span class="stage-symbol" aria-hidden="true">⚑</span><div><span id="stage-region">원시 시대</span><h2 id="stage-title">스테이지 1 · 웨이브 1</h2></div></div><button class="subtle-button" data-tab="stage">스테이지 변경 ↗</button></div>
-        <div class="battlefield" id="battlefield"><canvas id="battle-canvas" width="1200" height="620" aria-label="선택한 캐릭터와 적의 실시간 전투"></canvas><div class="canvas-top"><span class="field-status" id="field-status"><i></i> 출전 준비</span><span class="battle-clock" id="battle-clock">00:00.0</span></div><div class="battle-health"><span>내 캐릭터 <strong id="health-value">—</strong></span><div class="health-track"><i id="health-fill"></i></div></div><div class="battle-result" id="battle-result" hidden><span id="result-overline">BATTLE COMPLETE</span><h2 id="result-title">승리!</h2><p id="result-description"></p><div><button class="button primary" id="result-next">다음 웨이브 →</button><button class="button" id="result-retry">다시 전투</button></div></div><div class="load-cover" id="load-cover"><div class="forge-loader" aria-hidden="true">✦</div><h2>테스트 월드 준비 중</h2><p id="load-message">장비와 전투 데이터를 불러오고 있어요.</p></div></div>
-        <div class="battle-controls"><div class="play-buttons"><button class="button primary" id="play-button" disabled>▶ 전투 시작</button><button class="button square" id="restart-button" title="같은 세팅으로 전투 초기화" aria-label="전투 초기화" disabled>↻</button></div><div class="battle-options"><label class="auto-label"><input type="checkbox" id="auto-skills" checked><span>스킬 자동</span></label><label class="auto-label"><input type="checkbox" id="auto-next"><span>자동 진행</span></label><label class="speed-label"><span class="sr-only">전투 배속</span><select id="speed-select"><option value="0.5">0.5×</option><option value="1" selected>1× 속도</option><option value="2">2× 속도</option><option value="4">4× 속도</option></select></label></div></div>
-        <div class="skills-bar"><div class="skills-label"><b>액티브 스킬</b><span>눌러서 사용 · 1 / 2 / 3</span></div><div id="battle-skills" class="battle-skills"></div></div>
-      </section>
-      <section class="combat-summary" aria-label="실시간 전투 통계"><div><span>공격력</span><b id="stat-damage">—</b></div><div><span>최대 체력</span><b id="stat-health">—</b></div><div><span>평균 DPS</span><b id="stat-dps">0</b></div><div><span>누적 피해</span><b id="stat-total">0</b></div><button class="subtle-button" data-tab="stats">상세 능력치 ↗</button></section>
-      <section class="loadout-strip"><div class="section-line"><h2>지금 장착 중</h2><span id="loadout-caption">제한 없이 자유롭게 변경</span></div><div class="equipped-row" id="equipped-row"></div></section>
-      <details class="battle-log"><summary>전투 기록 <span id="log-count">0회 타격</span></summary><div id="battle-log-content">전투를 시작하면 피해와 스킬 사용 내역이 표시돼요.</div></details>
-      <footer class="world-foot"><span class="status-dot"></span><span>독립 테스트 월드 · 설정은 이 브라우저에 자동 저장</span><button id="about-button">구현 범위</button></footer>
+  <main class="world-layout" id="world" aria-busy="true" aria-label="포지 마스터 테스트 월드">
+    <section class="battlefield" id="battlefield" aria-label="실시간 전투">
+      <canvas id="battle-canvas" width="1080" height="1301" aria-label="선택한 캐릭터와 적의 실시간 전투"></canvas>
+      <header class="game-hud">
+        <button class="profile-button" id="test-menu" aria-label="테스트 월드 설정 메뉴">
+          <span class="profile-avatar"><img src="assets/ui-original/UnitIcon.png" alt=""></span>
+          <span class="profile-copy"><b class="outlined">테스트 월드</b><span class="profile-stat"><img src="assets/ui-original/fightPower.png" alt=""><span class="sr-only">공격력 </span><strong class="outlined" id="profile-power">0</strong></span></span>
+        </button>
+        <div class="currencies" aria-label="테스트 월드 재화 제한 없음">
+          <button class="currency-pill" data-collection aria-label="코인 무제한 · 전체 목록 열기"><img class="currency-icon" src="assets/ui-original/CoinIcon.png" alt=""><img class="currency-plus" src="assets/ui-original/PlusIcon.png" alt=""><b class="outlined">∞</b></button>
+          <button class="currency-pill" data-collection aria-label="보석 무제한 · 전체 목록 열기"><img class="currency-icon gem" src="assets/ui-original/gem.png" alt=""><img class="currency-plus" src="assets/ui-original/PlusIcon.png" alt=""><b class="outlined">∞</b></button>
+        </div>
+      </header>
+      <button class="stage-heading" data-tab="stage" aria-label="스테이지 및 훈련장 설정"><span class="sr-only" id="stage-region">원시 시대</span><h1 class="outlined" id="stage-title">전투 1-1</h1><span class="wave-progress" id="wave-progress" aria-label="웨이브 진행"></span></button>
+      <div class="battle-health sr-only"><span>내 캐릭터 <strong id="health-value">—</strong></span><div class="health-track"><i id="health-fill"></i></div></div>
+      <button class="offline-button" id="preset-button" aria-label="빠른 세팅과 최대 성장 프리셋"><img src="assets/ui-original/Hammer.png" alt=""><span class="sleep-mark outlined" aria-hidden="true">z<sup>z</sup></span></button>
+      <div class="field-skills"><button class="auto-skill-button outlined" id="auto-skill-button" aria-label="스킬 자동 사용" aria-pressed="true"><span>AUTO</span><b>ON</b></button><div id="battle-skills" class="battle-skills" aria-label="장착한 액티브 스킬"></div></div>
+      <div class="battle-result" id="battle-result" hidden><span id="result-overline"></span><h2 class="outlined" id="result-title">전투 승리!</h2><p id="result-description"></p><div class="result-actions"><button class="button primary" id="result-next">다음 웨이브</button><button class="button" id="result-retry">다시 전투</button></div></div>
     </section>
-    <aside class="workshop" aria-label="테스트 세팅"><div class="workshop-heading"><div><span class="eyebrow">BUILD YOUR WORLD</span><h2>테스트 세팅 <span>✦</span></h2></div><button class="subtle-button" id="preset-button">프리셋 ↗</button></div><nav class="editor-tabs" id="editor-tabs" aria-label="설정 종류"></nav><div class="editor-content" id="editor-content"><div class="editor-placeholder">준비되면 모든 장비를 선택할 수 있어요.</div></div><div class="editor-footer"><span class="status-dot"></span><span id="save-status" role="status">자동 저장 준비 중</span><button class="subtle-button" id="apply-button">전투에 적용 ↗</button></div></aside>
+    <section class="inventory-panel" aria-label="장비와 대장간"><h2 class="sr-only">장착 장비</h2><span class="sr-only" id="loadout-caption"></span><div class="equipped-row" id="equipped-row"></div><div class="forge-area">
+      <button class="gear-info" id="about-button" aria-label="테스트 월드 안내"><span aria-hidden="true">i</span></button>
+      <button class="forge-button" id="forge-button" aria-label="대장간 · 원하는 장비 바로 선택"><img class="forge-anvil" id="forge-anvil" src="assets/ui-original/Anvil.png" alt=""><img class="forge-hammer" id="forge-hammer" src="assets/ui-original/Hammer.png" alt=""><span class="forge-count outlined">∞</span></button>
+      <button class="forge-level-button button primary" data-tab="ascension"><span>대장간</span><b id="forge-level">Lv. 1</b></button>
+      <button class="auto-forge-button button" id="auto-forge-button" aria-label="자동 전투 설정"><span>자동</span><img src="assets/ui-original/AutoForge.png" alt=""></button>
+    </div></section>
+    <button class="game-chat" data-open-controls aria-label="전투 조작 및 기록 열기"><img src="assets/ui-original/ChatIcon.png" alt=""><span class="chat-copy"><b id="field-status">출전 준비</b><span>전투 조작 · 배속 · 기록</span></span><time id="battle-clock">00:00.0</time></button>
+    <nav class="game-nav" aria-label="게임 메뉴">
+      <button data-open-controls aria-label="전투"><img src="assets/ui-original/ArenaTabIcon.png" alt=""><span class="sr-only">전투</span></button>
+      <button data-tab="stage" aria-label="스테이지와 훈련장"><img src="assets/ui-original/DungeonTabIcon.png" alt=""><span class="sr-only">스테이지</span></button>
+      <button data-tab="skills" aria-label="스킬, 펫, 기술"><img src="assets/ui-original/SkillTabIcon.png" alt=""><span class="sr-only">스킬 · 펫 · 기술</span></button>
+      <button data-clan-research aria-label="클랜 기술"><span class="clan-emblem" aria-hidden="true"><img class="clan-holder" src="assets/ui-original/EmblemHolder.png" alt=""><span class="clan-shield"></span><img class="clan-star" src="assets/ui-original/AscensionStar.png" alt=""></span><span class="sr-only">클랜 기술</span></button>
+      <button data-collection aria-label="전체 장비와 동료 목록"><img src="assets/ui-original/ShopTabIcon.png" alt=""><span class="sr-only">전체 목록</span></button>
+    </nav>
+    <div class="load-cover" id="load-cover"><img src="assets/ui-original/TechTreeForge.png" alt=""><h2>테스트 월드 준비 중</h2><p id="load-message">장비와 전투 데이터를 불러오고 있어요.</p></div>
   </main>
-  <dialog id="picker-dialog" class="picker-dialog"><div class="dialog-heading"><div><span class="eyebrow" id="picker-eyebrow">LOADOUT</span><h2 id="picker-title">장비 선택</h2></div><button class="close-button" data-close="picker-dialog" aria-label="선택 창 닫기">×</button></div><div class="picker-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input id="picker-search" type="search" placeholder="이름으로 검색" aria-label="이름으로 검색"></label><select id="picker-filter" aria-label="시대 또는 등급 필터"></select></div><div class="picker-meta"><span id="picker-count"></span><button id="picker-clear" class="subtle-button">장착 해제</button></div><div id="picker-grid" class="picker-grid"></div></dialog>
-  <dialog id="utility-dialog" class="utility-dialog"><div class="dialog-heading"><h2 id="utility-title">세팅 저장</h2><button class="close-button" data-close="utility-dialog" aria-label="창 닫기">×</button></div><div id="utility-content"></div></dialog><div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="game/state.js?v=tw1"></script><script src="game/engine.js?v=tw1"></script><script src="game/renderer.js?v=tw1"></script><script src="game/main.js?v=tw1"></script>
+  <dialog id="editor-dialog" class="workshop" aria-labelledby="editor-title"><div class="dialog-heading"><span class="growth-currency" id="growth-currency-left" hidden><img src="assets/ui-original/SkillTicket.png" alt=""><b>∞</b></span><h2 id="editor-title">장비</h2><span class="growth-currency" id="growth-currency-right" hidden><img src="assets/ui-original/gem.png" alt=""><b>∞</b></span><button class="close-button" data-close="editor-dialog" aria-label="설정 창 닫기">×</button></div><nav class="editor-tabs" id="editor-tabs" aria-label="설정 종류"></nav><div class="editor-content" id="editor-content"></div><div class="growth-tabs" id="growth-tabs" hidden></div><div class="editor-footer"><span id="save-status" role="status">자동 저장 준비 중</span><button class="button small-button primary" id="apply-button">전투에 적용</button></div></dialog>
+  <dialog id="picker-dialog" class="picker-dialog" aria-labelledby="picker-title"><div class="dialog-heading"><div><span class="eyebrow" id="picker-eyebrow">전체 장비</span><h2 id="picker-title">장비 선택</h2></div><button class="close-button" data-close="picker-dialog" aria-label="선택 창 닫기">×</button></div><div class="picker-filters"><label class="search-field"><input id="picker-search" type="search" placeholder="이름으로 검색" aria-label="이름으로 검색"></label><select id="picker-filter" aria-label="시대 또는 등급 필터"></select></div><div class="picker-meta"><span id="picker-count"></span><button id="picker-clear" class="subtle-button">장착 해제</button></div><div id="picker-grid" class="picker-grid"></div></dialog>
+  <dialog id="controls-dialog" class="controls-dialog" aria-labelledby="controls-title"><div class="dialog-heading"><h2 id="controls-title">전투</h2><button class="close-button" data-close="controls-dialog" aria-label="전투 창 닫기">×</button></div><div class="battle-controls"><button class="button primary" id="play-button" disabled>전투 시작</button><button class="button" id="restart-button" disabled>다시 준비</button></div><div class="battle-options"><label class="auto-label"><input type="checkbox" id="auto-skills" checked> 스킬 자동</label><label class="auto-label"><input type="checkbox" id="auto-next"> 자동 진행</label><label class="speed-label"><span class="sr-only">전투 배속</span><select id="speed-select"><option value="0.5">0.5×</option><option value="1" selected>1× 속도</option><option value="2">2× 속도</option><option value="4">4× 속도</option></select></label></div><section class="combat-summary" aria-label="실시간 전투 통계"><div><span>공격력</span><b id="stat-damage">—</b></div><div><span>최대 체력</span><b id="stat-health">—</b></div><div><span>평균 DPS</span><b id="stat-dps">0</b></div><div><span>누적 피해</span><b id="stat-total">0</b></div></section><div class="utility-actions"><button class="button" data-tab="stats">능력치 설정</button><button class="button" data-tab="stage">스테이지 설정</button></div><details class="battle-log"><summary>전투 기록 <span id="log-count">0회 타격</span></summary><div id="battle-log-content">전투를 시작하면 피해와 스킬 사용 내역이 표시돼요.</div></details></dialog>
+  <dialog id="utility-dialog" class="utility-dialog" aria-labelledby="utility-title"><div class="dialog-heading"><h2 id="utility-title">테스트 월드</h2><button class="close-button" data-close="utility-dialog" aria-label="창 닫기">×</button></div><div id="utility-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="game/state.js?v=tw1"></script><script src="game/engine.js?v=tw1"></script><script src="game/renderer.js?v=original-ui-1"></script><script src="game/original-tech.js?v=original-ui-1"></script><script src="game/main.js?v=original-ui-1"></script>
 </body>
 </html>

@@ -1,0 +1,1397 @@
+{
+  "schemaVersion": 1,
+  "coordinateOrigin": "top-left",
+  "assetBase": "assets/releases/live_2_12_1/",
+  "sourceCommit": "8324dd087250f53fe97dd76b511c1da9b58a758d",
+  "sourceMaps": [
+    "public/parsed_configs/TechTreeMapping.json#node_sprites",
+    "public/parsed_configs/ClanTechTreeIconsMap.json#mapping"
+  ],
+  "labelNote": "Korean labels are descriptive translations for the test UI, not extracted official localization strings.",
+  "player": {
+    "EquipmentSellPrice": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_3",
+      "labelKo": "장비 판매 가격"
+    },
+    "WeaponBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_4",
+      "labelKo": "무기 능력치"
+    },
+    "HelmetBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_5",
+      "labelKo": "투구 체력"
+    },
+    "BodyBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_6",
+      "labelKo": "갑옷 체력"
+    },
+    "ShoeBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_7",
+      "labelKo": "신발 체력"
+    },
+    "TechResearchTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_9",
+      "labelKo": "기술 연구 시간"
+    },
+    "GloveBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_10",
+      "labelKo": "장갑 공격력"
+    },
+    "BeltBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_11",
+      "labelKo": "벨트 체력"
+    },
+    "NecklaceBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_12",
+      "labelKo": "목걸이 공격력"
+    },
+    "RingBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_13",
+      "labelKo": "반지 공격력"
+    },
+    "WeaponLevelUp": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_14",
+      "labelKo": "무기 레벨 상한"
+    },
+    "HelmetLevelUp": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_15",
+      "labelKo": "투구 레벨 상한"
+    },
+    "BodyLevelUp": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_16",
+      "labelKo": "갑옷 레벨 상한"
+    },
+    "ShoeLevelUp": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_17",
+      "labelKo": "신발 레벨 상한"
+    },
+    "GloveLevelUp": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_18",
+      "labelKo": "장갑 레벨 상한"
+    },
+    "BeltLevelUp": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_19",
+      "labelKo": "벨트 레벨 상한"
+    },
+    "NecklaceLevelUp": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_20",
+      "labelKo": "목걸이 레벨 상한"
+    },
+    "RingLevelUp": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_21",
+      "labelKo": "반지 레벨 상한"
+    },
+    "MountDamage": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_22",
+      "labelKo": "탈것 공격력"
+    },
+    "MountHealth": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_23",
+      "labelKo": "탈것 체력"
+    },
+    "ExtraMountChance": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_24",
+      "labelKo": "추가 탈것 확률"
+    },
+    "MountSummonCost": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_25",
+      "labelKo": "탈것 소환 비용"
+    },
+    "ForgeTimerSpeed": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_26",
+      "labelKo": "대장간 업그레이드 시간"
+    },
+    "ForgeUpgradeCost": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_27",
+      "labelKo": "대장간 업그레이드 비용"
+    },
+    "AutoForge": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_28",
+      "labelKo": "자동 제작"
+    },
+    "HammerOfflineReward": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_29",
+      "labelKo": "오프라인 망치"
+    },
+    "CoinOfflineReward": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_30",
+      "labelKo": "오프라인 코인"
+    },
+    "MaxOfflineReward": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_31",
+      "labelKo": "오프라인 보상 시간"
+    },
+    "FreeForgeChance": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_32",
+      "labelKo": "무료 제작 확률"
+    },
+    "HammerThiefHammerReward": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_33",
+      "labelKo": "망치 도둑 망치 보상"
+    },
+    "HammerThiefCoinReward": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_34",
+      "labelKo": "망치 도둑 코인 보상"
+    },
+    "SkillDamage": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_35",
+      "labelKo": "스킬 피해"
+    },
+    "SkillPassiveDamage": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_36",
+      "labelKo": "스킬 패시브 공격력"
+    },
+    "SkillPassiveHealth": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_37",
+      "labelKo": "스킬 패시브 체력"
+    },
+    "GhostTownSkillBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_38",
+      "labelKo": "유령 마을 스킬 보상"
+    },
+    "SkillSummonCost": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_39",
+      "labelKo": "스킬 소환 비용"
+    },
+    "PetBonusDamage": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_40",
+      "labelKo": "펫 공격력"
+    },
+    "PetBonusHealth": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_41",
+      "labelKo": "펫 체력"
+    },
+    "ExtraEggChance": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_42",
+      "labelKo": "추가 알 확률"
+    },
+    "CommonEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_43",
+      "labelKo": "일반 알 부화 시간"
+    },
+    "RareEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_44",
+      "labelKo": "희귀 알 부화 시간"
+    },
+    "EpicEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_45",
+      "labelKo": "영웅 알 부화 시간"
+    },
+    "LegendaryEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_46",
+      "labelKo": "전설 알 부화 시간"
+    },
+    "UltimateEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_47",
+      "labelKo": "궁극 알 부화 시간"
+    },
+    "MythicEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_48",
+      "labelKo": "신화 알 부화 시간"
+    },
+    "ZombieRushTechPotions": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_49",
+      "labelKo": "좀비 러시 기술 물약"
+    },
+    "TechNodeUpgradeCost": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_50",
+      "labelKo": "개인 기술 업그레이드 비용"
+    },
+    "HeroicEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_51",
+      "labelKo": "영웅급 알 부화 시간"
+    },
+    "InfiniteEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_52",
+      "labelKo": "무한 알 부화 시간"
+    },
+    "EternalEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "sprite": "TechTreeIcons_53",
+      "labelKo": "영원 알 부화 시간"
+    }
+  },
+  "clan": {
+    "WeaponBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "무기 능력치"
+    },
+    "HelmetBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "투구 체력"
+    },
+    "BodyBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "갑옷 체력"
+    },
+    "ShoeBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "신발 체력"
+    },
+    "GloveBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "장갑 공격력"
+    },
+    "BeltBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "벨트 체력"
+    },
+    "NecklaceBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "목걸이 공격력"
+    },
+    "RingBonus": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "반지 공격력"
+    },
+    "SkillDamage": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "스킬 피해"
+    },
+    "PetBonusDamage": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "펫 공격력"
+    },
+    "PetBonusHealth": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "펫 체력"
+    },
+    "MountDamage": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "탈것 공격력"
+    },
+    "MountHealth": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "탈것 체력"
+    },
+    "CommonEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "일반 알 부화 시간"
+    },
+    "RareEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "희귀 알 부화 시간"
+    },
+    "EpicEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "영웅 알 부화 시간"
+    },
+    "LegendaryEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "전설 알 부화 시간"
+    },
+    "UltimateEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "궁극 알 부화 시간"
+    },
+    "MythicEggTimer": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "신화 알 부화 시간"
+    },
+    "AutoForge": {
+      "texture": "TechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "자동 제작"
+    },
+    "ForgeAnimationSpeed": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "장비 제작 속도"
+    },
+    "PlayerMoveSpeed": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "이동 속도"
+    },
+    "PlayerAttackRange": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "공격 사거리"
+    },
+    "WarPointsFromForging": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "장비 제작 클랜전 점수"
+    },
+    "WarPointsFromSkillSummon": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "스킬 소환 클랜전 점수"
+    },
+    "WarPointsFromSkillUpgrade": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "스킬 강화 클랜전 점수"
+    },
+    "WarPointsFromTechUpgrade": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "기술 연구 클랜전 점수"
+    },
+    "WarPointsFromForgeSpend": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "망치 소비 클랜전 점수"
+    },
+    "WarPointsFromDungeonKey": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "던전 열쇠 사용 클랜전 점수"
+    },
+    "WarPointsFromEggHatch": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "알 부화 클랜전 점수"
+    },
+    "WarPointsFromPetMerge": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "펫 합성 클랜전 점수"
+    },
+    "WarPointsFromMountSummon": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "탈것 소환 클랜전 점수"
+    },
+    "WarPointsFromMountMerge": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "탈것 합성 클랜전 점수"
+    },
+    "WarPointsOnDay1": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "1일차 클랜전 점수"
+    },
+    "WarPointsOnDay2": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "2일차 클랜전 점수"
+    },
+    "WarPointsOnDay3": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "3일차 클랜전 점수"
+    },
+    "WarPointsOnDay4": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "4일차 클랜전 점수"
+    },
+    "WarPointsOnDay5": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "5일차 클랜전 점수"
+    },
+    "WarPointsOnDay6": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "6일차 클랜전 점수"
+    },
+    "ClanWarDamage": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "클랜전 공격력"
+    },
+    "ClanWarHealth": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "클랜전 체력"
+    },
+    "PersonalWarRewards": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "개인 클랜전 보상"
+    },
+    "ClanWarWinRewards": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "클랜전 승리 보상"
+    },
+    "ClanWarLoseRewards": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "클랜전 패배 보상"
+    },
+    "MissionDamage": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "임무 공격력"
+    },
+    "MissionHealth": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "임무 체력"
+    },
+    "MissionRewards": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "임무 보상"
+    },
+    "HammerThiefDungeonDamage": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 768,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "망치 도둑 공격력"
+    },
+    "HammerThiefDungeonHealth": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 896,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "망치 도둑 체력"
+    },
+    "GhostTownDungeonDamage": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 0,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "유령 마을 공격력"
+    },
+    "GhostTownDungeonHealth": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "유령 마을 체력"
+    },
+    "InvasionDungeonDamage": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "침공 공격력"
+    },
+    "InvasionDungeonHealth": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "침공 체력"
+    },
+    "ZombieRushDungeonDamage": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "좀비 러시 공격력"
+    },
+    "ZombieRushDungeonHealth": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 640,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "좀비 러시 체력"
+    },
+    "GuildPotionsFromMissions": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "임무 클랜 물약"
+    },
+    "GuildPotionsFromPersonalWar": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "개인 클랜전 클랜 물약"
+    },
+    "GuildPotionsFromClanWarWin": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 384,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "클랜전 승리 클랜 물약"
+    },
+    "GuildPotionsFromClanWarLose": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 512,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "클랜전 패배 클랜 물약"
+    },
+    "GuildTechRaceRewardMultiplier": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 128,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "기술 경주 보상"
+    },
+    "GuildTechRaceScoreMultiplier": {
+      "texture": "ClanTechTreeIcons.png",
+      "rect": {
+        "x": 256,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      },
+      "textureWidth": 1024,
+      "textureHeight": 1024,
+      "labelKo": "기술 경주 점수"
+    }
+  }
+}

@@ -3,6 +3,6 @@
   "short_name": "FM 테스트",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#101d25",
-  "theme_color": "#101d25"
+  "background_color": "#f4f4f4",
+  "theme_color": "#42495b"
 }
