@@ -1,0 +1,50 @@
+{
+  "id": "apk_2_11_1",
+  "gameVersion": "2.11.1",
+  "versionCode": 21101,
+  "packageName": "com.hariwn.legendofcivilizations",
+  "scope": "APK embedded base configuration; not a claim about later server LiveOps or seasonal effects",
+  "archiveCreatedUtc": "2026-10-20T11:38:07.060Z",
+  "configTableCount": 77,
+  "apkTextureCount": 286,
+  "supplementalTextureCount": 1,
+  "equipmentCount": 231,
+  "equipmentKoreanNameCount": 231,
+  "petCount": 25,
+  "mountCount": 15,
+  "skillCount": 18,
+  "inputs": [
+    {
+      "name": "Forge+Master_2.11.1_APKPure.xapk",
+      "bytes": 116914041,
+      "sha256": "1c4f11cafee2917d77a1164d2bccb1286e0b001d62474169bfefda3f67f96f77"
+    },
+    {
+      "name": "com.hariwn.legendofcivilizations.apk",
+      "bytes": 68484208,
+      "sha256": "aa9597960e1b8afa7fc93eb4eca844bcf1d46a12752959356d637f44c89ae66f"
+    },
+    {
+      "name": "assets/SharedGameConfig.mpa",
+      "bytes": 84215,
+      "sha256": "1415ce389e9771769f103eca03f02e10f71603f79f845303a3b0ae30d1a66c6c"
+    }
+  ],
+  "dataPath": "data/releases/apk_2_11_1",
+  "assetPath": "assets/releases/apk_2_11_1",
+  "schemaReference": {
+    "repository": "1vcian/fm",
+    "ref": "8324dd087250f53fe97dd76b511c1da9b58a758d",
+    "path": "public/parsed_configs/2026_10_27_09_45"
+  },
+  "configValuesFromApk": true,
+  "allConfigTablesRoundTripByteExact": true,
+  "supplementalAssets": {
+    "Icons.png": "Existing KR interface helper atlas; not extracted from this APK"
+  },
+  "limitations": [
+    "Server-delivered configuration and seasonal fairy effects are not part of this APK snapshot.",
+    "Profile summary is equipment Damage/Health, not a full combat simulation.",
+    "Summon expected amounts use the selected level probability row without simulating level progression."
+  ]
+}

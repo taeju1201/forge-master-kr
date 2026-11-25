@@ -1,5 +1,12 @@
 # Automated synchronization
 
+The current app defaults to the verified `apk_2_11_1` release. Its configuration
+and matching images live in `data/releases/apk_2_11_1` and
+`assets/releases/apk_2_11_1`; see [APK_DATA.md](APK_DATA.md). The hourly collector
+continues to maintain `assets/game`, but cannot replace the selected APK
+release's atlases or calculation data. A new game-data release must update the
+configs, mappings and images together after validation.
+
 After merge to main, upstream 1vcian/fm game images are checked hourly at :47
 UTC. GitHub schedules can be delayed and only run
 on the default branch. Public repository schedules may be disabled after 60 days
@@ -42,7 +49,9 @@ A build-request error fails visibly and leaves the previous deployment available
 Inspect the Pages build run for final deployment status.
 
 Local checks: install Pillow==11.3.0, then run
-`python -m unittest discover -s tests -v` and `bash -n scripts/publish_sync.sh`.
+`python -m unittest discover -s tests -v`,
+`node tests/test_profile_migration.cjs`, `node tests/test_game_math.cjs`,
+and `bash -n scripts/publish_sync.sh`.
 Use `python scripts/sync_content.py game --source PATH --check-only` to validate
 the real upstream snapshot without applying it. Pages source diagnosis is
 `python scripts/sync_content.py pages --check-only` and is expected to reject
