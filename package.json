@@ -1,0 +1,9 @@
+{
+  "name": "forge-master-kr-test-world",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev_server.cjs",
+    "test": "node tests/test_profile_migration.cjs && node tests/test_game_math.cjs && node tests/test_sandbox_state.cjs && node tests/test_sandbox_engine.cjs"
+  }
+}

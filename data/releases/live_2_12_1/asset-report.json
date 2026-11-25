@@ -1,0 +1,3677 @@
+{
+  "release": "live_2_12_1",
+  "sourceCommit": "8324dd087250f53fe97dd76b511c1da9b58a758d",
+  "sourceSnapshot": "2026_11_16_09_55",
+  "summary": {
+    "textureCount": 366,
+    "battleTextureCount": 364,
+    "selection": "BattleVisuals.textures plus equipment, companion, skin, GameTiers and tech icon references",
+    "pixelIdenticalReusedCount": 314,
+    "allPngsDecoded": true,
+    "allBattleSpriteRectsInBounds": true,
+    "skinIconCount": 114,
+    "battleSpriteCount": 1418
+  },
+  "files": [
+    {
+      "filename": "AgeIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/AgeIcons.png",
+      "sourcePngSha256": "4f030110fa7e7d967f6ddf2030d23dfa1c8c609108695b1a8a384878c95280a0",
+      "pngSha256": "4f030110fa7e7d967f6ddf2030d23dfa1c8c609108695b1a8a384878c95280a0",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "29c24c877f5c4279b0e7fb9909bfae38668a31723fd3ae1aa6d218bb36fab1b5",
+      "reusedFrom": null
+    },
+    {
+      "filename": "ApexEggs.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/ApexEggs.png",
+      "sourcePngSha256": "3834a0c89a1e22ad3d15bd7eabcc02e8dcbee69e4b60ed6b06528dee97e8d2f8",
+      "pngSha256": "3834a0c89a1e22ad3d15bd7eabcc02e8dcbee69e4b60ed6b06528dee97e8d2f8",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "dccff58be80a247d86f96949753e4db72037c05f1d40f80fe28d64472c0a0159",
+      "reusedFrom": null
+    },
+    {
+      "filename": "ApexMountIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/ApexMountIcons.png",
+      "sourcePngSha256": "807a0a22a39d5e94eab3e379341d24068e99b692c323b463f4cbbeaca7b6a92d",
+      "pngSha256": "807a0a22a39d5e94eab3e379341d24068e99b692c323b463f4cbbeaca7b6a92d",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "c3ca13f96747917b8bd6568994f8b85db31a251c3fdab449adbca82f7d91df11",
+      "reusedFrom": "assets/game/ApexMountIcons.png"
+    },
+    {
+      "filename": "ApexPets.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/ApexPets.png",
+      "sourcePngSha256": "38f5f493c76f1de1c2b65b3f28e6436568b1a6388118fc84ad85cf31e709cff9",
+      "pngSha256": "38f5f493c76f1de1c2b65b3f28e6436568b1a6388118fc84ad85cf31e709cff9",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "85c9b92092abcab8e566d2b390e60ca397167300542b2e7f290d9bca6de976a9",
+      "reusedFrom": "assets/game/ApexPets.png"
+    },
+    {
+      "filename": "ApexSkillIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/ApexSkillIcons.png",
+      "sourcePngSha256": "b186442f2850b191765bf6f096960d08de51affa4e0cd6654d90d77cc1b23842",
+      "pngSha256": "b186442f2850b191765bf6f096960d08de51affa4e0cd6654d90d77cc1b23842",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "c51666c238e6d486561c5e7cd0b23a1b3792cf20015ce2d141ffa8016c5c8073",
+      "reusedFrom": "assets/game/ApexSkillIcons.png"
+    },
+    {
+      "filename": "AtlasSkills.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/AtlasSkills.png",
+      "sourcePngSha256": "6c25c0e70f67fcce4cd08f83c236a67b8871609bab46336b6626da364734b8be",
+      "pngSha256": "6c25c0e70f67fcce4cd08f83c236a67b8871609bab46336b6626da364734b8be",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "0b5b097d409636bd36f21745e295deb97d2d8c42774b284d3a20b1671b750643",
+      "reusedFrom": null
+    },
+    {
+      "filename": "AtlasSkills1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/AtlasSkills1.png",
+      "sourcePngSha256": "509898aa7b25b4b691d8975f7e99452bdc91f4a213f3988e891d736d5826b26a",
+      "pngSha256": "509898aa7b25b4b691d8975f7e99452bdc91f4a213f3988e891d736d5826b26a",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "9eff98d9e2717a40986606f2a4e1dd623857a77ca0999aa123463a54596740f2",
+      "reusedFrom": null
+    },
+    {
+      "filename": "Base_Unit.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Base_Unit.png",
+      "sourcePngSha256": "75b107072d68f0e1e6d3269bbd0a0a003a979077c75d6fad1563ed117c2d8d41",
+      "pngSha256": "75b107072d68f0e1e6d3269bbd0a0a003a979077c75d6fad1563ed117c2d8d41",
+      "width": 512,
+      "height": 512,
+      "rgbaSha256": "de1ecc5e4e740b6c94278801caee9e5bcbf7aef859d0382348d2f60a9f94c3c9",
+      "reusedFrom": null
+    },
+    {
+      "filename": "Circle.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Circle.png",
+      "sourcePngSha256": "46801d326a326f27aa9465dc6485ab13c441b9dd44672827646147f71a371316",
+      "pngSha256": "46801d326a326f27aa9465dc6485ab13c441b9dd44672827646147f71a371316",
+      "width": 64,
+      "height": 64,
+      "rgbaSha256": "daf4f7db2ad6318b0b7f0d8725a74e5bfdf7212455d67588442870c0f996dc22",
+      "reusedFrom": null
+    },
+    {
+      "filename": "ClanTechTreeIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/ClanTechTreeIcons.png",
+      "sourcePngSha256": "ea6d9aee0afd4016c7c648d7c8f9bbde6f35ac5e8cffe2f41975683b24e0b7c2",
+      "pngSha256": "ea6d9aee0afd4016c7c648d7c8f9bbde6f35ac5e8cffe2f41975683b24e0b7c2",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "71c84b1a57e577e3e76c39d72eb8119d0fa491bb8170085a543bf5ef3dcc2dcd",
+      "reusedFrom": "assets/game/ClanTechTreeIcons.png"
+    },
+    {
+      "filename": "DivineAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/DivineAgeItems.png",
+      "sourcePngSha256": "df913ee2a0597f5f9ca2f2f51a33b45f8e1ce30a085cf7dce3135b1c9398ae82",
+      "pngSha256": "df913ee2a0597f5f9ca2f2f51a33b45f8e1ce30a085cf7dce3135b1c9398ae82",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "4c1c3439491969ddc9709cf0ac3cbfa5163694d75f46af977d275c75155f33dc",
+      "reusedFrom": null
+    },
+    {
+      "filename": "DragonMane0.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/DragonMane0.png",
+      "sourcePngSha256": "1d56335e9e1904c75ed8747a12984ae3f0ba6739877dea695d916fef6f2cdd9d",
+      "pngSha256": "1d56335e9e1904c75ed8747a12984ae3f0ba6739877dea695d916fef6f2cdd9d",
+      "width": 113,
+      "height": 83,
+      "rgbaSha256": "4a91040b4cb5854fb50ab161fa305206a81de215b98a59c6e8a89094605f77ea",
+      "reusedFrom": null
+    },
+    {
+      "filename": "DragonMane1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/DragonMane1.png",
+      "sourcePngSha256": "6e6a247b575416ea9c81c7c8b95ea9891e481aa280d05d237303cabf82cab0d1",
+      "pngSha256": "6e6a247b575416ea9c81c7c8b95ea9891e481aa280d05d237303cabf82cab0d1",
+      "width": 135,
+      "height": 65,
+      "rgbaSha256": "047a2be0bc917bb6ce7ec0fd378e88f5021412f362ff0fb5c4a295a98e34b9a7",
+      "reusedFrom": null
+    },
+    {
+      "filename": "DragonTail.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/DragonTail.png",
+      "sourcePngSha256": "2fdd26230bf2ddd894672b7efd8192d681cab95687a9717e62d98cee44515ca1",
+      "pngSha256": "2fdd26230bf2ddd894672b7efd8192d681cab95687a9717e62d98cee44515ca1",
+      "width": 240,
+      "height": 173,
+      "rgbaSha256": "f630465e387bb7e39092f1d35fe15afc9c32f01af0a24ee5741040099037a703",
+      "reusedFrom": null
+    },
+    {
+      "filename": "DragonWhisker.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/DragonWhisker.png",
+      "sourcePngSha256": "2f19ab2b9f4da5e7d3fc84557e0ad366be7dbc371bc9a3a2330f812574efe566",
+      "pngSha256": "2f19ab2b9f4da5e7d3fc84557e0ad366be7dbc371bc9a3a2330f812574efe566",
+      "width": 263,
+      "height": 80,
+      "rgbaSha256": "472b87ce2cb73b1e41d62bd2da366ccded483065d6e2a7bf2eea03702f882e2b",
+      "reusedFrom": null
+    },
+    {
+      "filename": "DungeonBackgrounds_0.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/DungeonBackgrounds_0.png",
+      "sourcePngSha256": "5df9caa346e1ce69909f90ee8786aa4d6049c20bb29c73466979b19b199bd4f0",
+      "pngSha256": "5df9caa346e1ce69909f90ee8786aa4d6049c20bb29c73466979b19b199bd4f0",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "ad0943010330a8f1d338610f3027edb8c70d35268eb325501c516f5d15abde2e",
+      "reusedFrom": null
+    },
+    {
+      "filename": "DungeonBackgrounds_1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/DungeonBackgrounds_1.png",
+      "sourcePngSha256": "c0871652c43c9c39824d9cbc52d5ea4dee9770bdb5eda6a5ab8ab07127908be3",
+      "pngSha256": "c0871652c43c9c39824d9cbc52d5ea4dee9770bdb5eda6a5ab8ab07127908be3",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "21de77aac7534b4304e23462a484ab2d544e32863e81900b088e5da47873732e",
+      "reusedFrom": null
+    },
+    {
+      "filename": "EarlyModernAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/EarlyModernAgeItems.png",
+      "sourcePngSha256": "ad22c3272591090a0158471b2da3997d271a167a1d5c46e5294e1e42db8c92f2",
+      "pngSha256": "ad22c3272591090a0158471b2da3997d271a167a1d5c46e5294e1e42db8c92f2",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "0b52811d3b4073738473cf3a4641944e622eb5a9ef6603fa82284561b73f420f",
+      "reusedFrom": null
+    },
+    {
+      "filename": "Eggs.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Eggs.png",
+      "sourcePngSha256": "f219dee4b641825f2ea984ba80b328edbe79fa336beb8a30a2edeb732bf6a338",
+      "pngSha256": "f219dee4b641825f2ea984ba80b328edbe79fa336beb8a30a2edeb732bf6a338",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "7bd7174a458788855c3f48d504c1fe5a83a04c59a98a93a988c37f1861dcb857",
+      "reusedFrom": "assets/game/Eggs.png"
+    },
+    {
+      "filename": "EternalAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/EternalAgeItems.png",
+      "sourcePngSha256": "63bdada270b60e1383276c3b2d88bf9e3fe383f92de72a3b109eb3b94b7883f2",
+      "pngSha256": "63bdada270b60e1383276c3b2d88bf9e3fe383f92de72a3b109eb3b94b7883f2",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "9365df8be012959d46cfd9d26f619da4e648b4e91a1ff822e4af779d5cadcad7",
+      "reusedFrom": null
+    },
+    {
+      "filename": "Fairies.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Fairies.png",
+      "sourcePngSha256": "fd80ca112971fb0c017fb509959993927ad4ae97bcca9b5d4eca5060aa8d59c0",
+      "pngSha256": "fd80ca112971fb0c017fb509959993927ad4ae97bcca9b5d4eca5060aa8d59c0",
+      "width": 512,
+      "height": 512,
+      "rgbaSha256": "5dcefe6f3bd67dc6c26c11f0fc1a0d14038079bd405770656a5bc8533dba5e10",
+      "reusedFrom": null
+    },
+    {
+      "filename": "GroundMask.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/GroundMask.png",
+      "sourcePngSha256": "7f16c49d590495c1158dfe6289bceb0593e0f31cd5c8002b449b0d0f1cd0d934",
+      "pngSha256": "7f16c49d590495c1158dfe6289bceb0593e0f31cd5c8002b449b0d0f1cd0d934",
+      "width": 2,
+      "height": 2,
+      "rgbaSha256": "5ac6a5945f16500911219129984ba8b387a06f24fe383ce4e81a73294065461b",
+      "reusedFrom": null
+    },
+    {
+      "filename": "GuildWarRoad.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/GuildWarRoad.png",
+      "sourcePngSha256": "b65b9bca56cca468f9b8c99ea21a8acbe80b8a7ca0341a64a39f29d4b86852ca",
+      "pngSha256": "b65b9bca56cca468f9b8c99ea21a8acbe80b8a7ca0341a64a39f29d4b86852ca",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "d7606f0f30213084b63858a58aa4150aebcbb2d982ada107281c09082168e3c6",
+      "reusedFrom": null
+    },
+    {
+      "filename": "HeroicAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/HeroicAgeItems.png",
+      "sourcePngSha256": "b4f7f39ba15a72f74dc839062f909ee178d0d532769e0c8f23c768ec72153422",
+      "pngSha256": "b4f7f39ba15a72f74dc839062f909ee178d0d532769e0c8f23c768ec72153422",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "9e07e526300ad59c2fb4b3b1d1a6619068c2f7b78fa7d9b5ecffc77856fdce1f",
+      "reusedFrom": null
+    },
+    {
+      "filename": "HeroicEternalInfiniteMountIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/HeroicEternalInfiniteMountIcons.png",
+      "sourcePngSha256": "79abd1f1868340d1fd8b0ba02e24c380feaad562d47920d6fa39655d662a29de",
+      "pngSha256": "79abd1f1868340d1fd8b0ba02e24c380feaad562d47920d6fa39655d662a29de",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "9db364af5646073fc7a4a259900c24dace313d51557a4336a6fbdfdf5f4383c4",
+      "reusedFrom": null
+    },
+    {
+      "filename": "HeroicEternalInfinitePets.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/HeroicEternalInfinitePets.png",
+      "sourcePngSha256": "8e6ba0702e84ee7ae01e432ffa694f605c3f5f9eb0ad88778fcfa60cd8c1f457",
+      "pngSha256": "8e6ba0702e84ee7ae01e432ffa694f605c3f5f9eb0ad88778fcfa60cd8c1f457",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "1d9d78bd7fa387094de9b0849e073378307263fcd61e55027c5465aea55419e6",
+      "reusedFrom": null
+    },
+    {
+      "filename": "HorseMane0.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/HorseMane0.png",
+      "sourcePngSha256": "ef142c6e485a52d0e5aea5aa258471b251e7913f7c8109ffbfc14a55d0fc27b9",
+      "pngSha256": "ef142c6e485a52d0e5aea5aa258471b251e7913f7c8109ffbfc14a55d0fc27b9",
+      "width": 184,
+      "height": 111,
+      "rgbaSha256": "6165dcd9e5ca937e55e0af3a698104f6e36820bd3ca6494feceb907049f36dd7",
+      "reusedFrom": null
+    },
+    {
+      "filename": "HorseMane1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/HorseMane1.png",
+      "sourcePngSha256": "1857b27e189f0f2f41e82b88a054311c26bcc610afdc35ab09691117d0005dbe",
+      "pngSha256": "1857b27e189f0f2f41e82b88a054311c26bcc610afdc35ab09691117d0005dbe",
+      "width": 88,
+      "height": 55,
+      "rgbaSha256": "b53ab9f660f7a7ba1a15b2ee43cd662eb82a60dfbd2dea3de094950f70cb7920",
+      "reusedFrom": null
+    },
+    {
+      "filename": "HorseTail.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/HorseTail.png",
+      "sourcePngSha256": "a0b44890d82499a36c74ee3a733e5b6da8cbc0a7402a397c2dc0001a784357c7",
+      "pngSha256": "a0b44890d82499a36c74ee3a733e5b6da8cbc0a7402a397c2dc0001a784357c7",
+      "width": 144,
+      "height": 175,
+      "rgbaSha256": "93e2dc3720c7b99c6f3091a7601f707ab9d9a6bbd132ad707ec4b335116c9f47",
+      "reusedFrom": null
+    },
+    {
+      "filename": "IconDivineArmorHolygown.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineArmorHolygown.png",
+      "sourcePngSha256": "df7543f3ae9e880567da4365ec0626adbae2817b42f1d1dec8ec343303feb018",
+      "pngSha256": "df7543f3ae9e880567da4365ec0626adbae2817b42f1d1dec8ec343303feb018",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f7df00f6359cbce8e518cb495cff33806cc7b6af431f14cbad863b81c9fc7a88",
+      "reusedFrom": "assets/game/items/IconDivineArmorHolygown.png"
+    },
+    {
+      "filename": "IconDivineArmorPaladinarmor.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineArmorPaladinarmor.png",
+      "sourcePngSha256": "d8a76685295c0006dc893ea5b0ee511bf97e54860b3480714613bc34716bdcf5",
+      "pngSha256": "d8a76685295c0006dc893ea5b0ee511bf97e54860b3480714613bc34716bdcf5",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f254275633e23cc591ddb353021bd815c838a804effa21f9a5ef800777256161",
+      "reusedFrom": "assets/game/items/IconDivineArmorPaladinarmor.png"
+    },
+    {
+      "filename": "IconDivineBeltSanctitybelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineBeltSanctitybelt.png",
+      "sourcePngSha256": "88010c08a5deecdb8b18b02a20815deea6c6306202f14656a15069db5e796cdb",
+      "pngSha256": "88010c08a5deecdb8b18b02a20815deea6c6306202f14656a15069db5e796cdb",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "91e7fc276e4df89e8183d8efb1d664c90b73baee1b19d7fce272b91e90251b75",
+      "reusedFrom": "assets/game/items/IconDivineBeltSanctitybelt.png"
+    },
+    {
+      "filename": "IconDivineBeltSorcererbelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineBeltSorcererbelt.png",
+      "sourcePngSha256": "8757ad091ec05b0cf76eb594ad43f3a63de20de119dc3a1e023da37458a82802",
+      "pngSha256": "8757ad091ec05b0cf76eb594ad43f3a63de20de119dc3a1e023da37458a82802",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5dfda2dbc4d53048664d623eb9e512b4c1edc7efacdbc7d2c47c6aea4a373a5a",
+      "reusedFrom": "assets/game/items/IconDivineBeltSorcererbelt.png"
+    },
+    {
+      "filename": "IconDivineFootCelestialtreaders.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineFootCelestialtreaders.png",
+      "sourcePngSha256": "a2d890e4c2732e08d557c3b0f5be34fd195cf6df17dbb231b26987c6708c744b",
+      "pngSha256": "a2d890e4c2732e08d557c3b0f5be34fd195cf6df17dbb231b26987c6708c744b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b9c8cb7b3e9b8901109260ae30faa8b0dcabe844971bf2c05620fd7ffcea9e3c",
+      "reusedFrom": "assets/game/items/IconDivineFootCelestialtreaders.png"
+    },
+    {
+      "filename": "IconDivineFootMercurysandals.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineFootMercurysandals.png",
+      "sourcePngSha256": "7b1f9f37f440ed377b22fca894ab53c946f061652c0f0043a51fe6fde61244f5",
+      "pngSha256": "7b1f9f37f440ed377b22fca894ab53c946f061652c0f0043a51fe6fde61244f5",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "cd159cbbb21efe47782df884f4f758d3496be0790f3423f35a03b0ad2e7c074d",
+      "reusedFrom": "assets/game/items/IconDivineFootMercurysandals.png"
+    },
+    {
+      "filename": "IconDivineGloveEnchantergloves.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineGloveEnchantergloves.png",
+      "sourcePngSha256": "e6e72fe9f33dd620bca102ae5c42f8135542a5b7e1b40043a822aebe9aa5a17f",
+      "pngSha256": "e6e72fe9f33dd620bca102ae5c42f8135542a5b7e1b40043a822aebe9aa5a17f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "0d070d1c4dd7f3c2727a215eb0c03ebd0a67b220667820d43c44b0fe539ccecf",
+      "reusedFrom": "assets/game/items/IconDivineGloveEnchantergloves.png"
+    },
+    {
+      "filename": "IconDivineGloveWorshipergloves.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineGloveWorshipergloves.png",
+      "sourcePngSha256": "609acadbeaad68d62347392208b4b1f12dd58e55cebf40ccbce89a0a5b079ab0",
+      "pngSha256": "609acadbeaad68d62347392208b4b1f12dd58e55cebf40ccbce89a0a5b079ab0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ef03d9e38ce30315dcc902a8266e040708fb5dd8350e5f2716050ec73fc9eaf7",
+      "reusedFrom": "assets/game/items/IconDivineGloveWorshipergloves.png"
+    },
+    {
+      "filename": "IconDivineHeadgearCelticoverhead.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineHeadgearCelticoverhead.png",
+      "sourcePngSha256": "81e144f8add454b4c16ba0534cfaabb642e29387e4819b3efedcc250940022c0",
+      "pngSha256": "81e144f8add454b4c16ba0534cfaabb642e29387e4819b3efedcc250940022c0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f85c6da27bacc4eca9e2584fa265bf2a2b5cdee54558b3fdcd443d60110c813c",
+      "reusedFrom": "assets/game/items/IconDivineHeadgearCelticoverhead.png"
+    },
+    {
+      "filename": "IconDivineHeadgearProtectivehalo.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineHeadgearProtectivehalo.png",
+      "sourcePngSha256": "d8a0689a8452ba3c35d9f29514ef2f86a354f02602239fd830607a6b8a5d3093",
+      "pngSha256": "d8a0689a8452ba3c35d9f29514ef2f86a354f02602239fd830607a6b8a5d3093",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "153ddb1e9580b26e6a155647f957a61151f3e645a62156c5e4947221ebed2505",
+      "reusedFrom": "assets/game/items/IconDivineHeadgearProtectivehalo.png"
+    },
+    {
+      "filename": "IconDivineHeadgearSerpentwreath.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineHeadgearSerpentwreath.png",
+      "sourcePngSha256": "70e23b6e47bd1a32ac9b3f8c0797a0b1fa2181ebf30c41ab6bdf004a150be52a",
+      "pngSha256": "70e23b6e47bd1a32ac9b3f8c0797a0b1fa2181ebf30c41ab6bdf004a150be52a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "bb1c0eefd1355df8efcec44d81fe7392575bc047146452aaf498455d72dfe847",
+      "reusedFrom": "assets/game/items/IconDivineHeadgearSerpentwreath.png"
+    },
+    {
+      "filename": "IconDivineHeadgearWhitehair.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineHeadgearWhitehair.png",
+      "sourcePngSha256": "5fdb49505614bb75a6723273710f7066cd539e6f61f92887b26502ea92b68d05",
+      "pngSha256": "5fdb49505614bb75a6723273710f7066cd539e6f61f92887b26502ea92b68d05",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "38a1398f25cb7effe79364bcfc53733f0d36e74dec149a75d3e4ae170928379b",
+      "reusedFrom": "assets/game/items/IconDivineHeadgearWhitehair.png"
+    },
+    {
+      "filename": "IconDivineHeadgearWizardshat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineHeadgearWizardshat.png",
+      "sourcePngSha256": "1b7c0df533317870dd2ecc60b2fc9b7411f8be3d145ddf5f44b59f2a155a4131",
+      "pngSha256": "1b7c0df533317870dd2ecc60b2fc9b7411f8be3d145ddf5f44b59f2a155a4131",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "1c30602f087e057ccdf74de6f67a97b164d44c7e3d29403880d97029ebc3d7e9",
+      "reusedFrom": "assets/game/items/IconDivineHeadgearWizardshat.png"
+    },
+    {
+      "filename": "IconDivineNeckTalonnecklace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineNeckTalonnecklace.png",
+      "sourcePngSha256": "37717c1853a9332884b53ea50135f0c215e3113a4a7984bc0dc32f3fb71f8cbb",
+      "pngSha256": "37717c1853a9332884b53ea50135f0c215e3113a4a7984bc0dc32f3fb71f8cbb",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "cabc3ee7f5d39885ba116518d8bd7101466d75dbba70a34ba1e33accb47083cb",
+      "reusedFrom": "assets/game/items/IconDivineNeckTalonnecklace.png"
+    },
+    {
+      "filename": "IconDivineNeckThoramulet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineNeckThoramulet.png",
+      "sourcePngSha256": "3dcb454394c5f48588cee517e10be6921bf7b5a9ae8b4e8fd47b26860457919f",
+      "pngSha256": "3dcb454394c5f48588cee517e10be6921bf7b5a9ae8b4e8fd47b26860457919f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b90cb38cc04e274ede1b7a53038be8f527296c3044a836ea07a4d07bb2a81dec",
+      "reusedFrom": "assets/game/items/IconDivineNeckThoramulet.png"
+    },
+    {
+      "filename": "IconDivineRingDivinityring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineRingDivinityring.png",
+      "sourcePngSha256": "64bbbe793ba6ed43f8daaaf6b59ee857a1481cce88946e6b9747e4f46fe09740",
+      "pngSha256": "64bbbe793ba6ed43f8daaaf6b59ee857a1481cce88946e6b9747e4f46fe09740",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "0db31d99fab241b80e9d26584a52581d7011f5afa7885febb95435072dfead1e",
+      "reusedFrom": "assets/game/items/IconDivineRingDivinityring.png"
+    },
+    {
+      "filename": "IconDivineRingNazarring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineRingNazarring.png",
+      "sourcePngSha256": "ec68f6cbe65f38206c688e72ad9ada92056261ecf858369af2622d698c885224",
+      "pngSha256": "ec68f6cbe65f38206c688e72ad9ada92056261ecf858369af2622d698c885224",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "c8f1b1637060053522bc36a75167b6439ab33c1459516f13a5414124a7cce61d",
+      "reusedFrom": "assets/game/items/IconDivineRingNazarring.png"
+    },
+    {
+      "filename": "IconDivineWeaponAngelicpitchfork.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineWeaponAngelicpitchfork.png",
+      "sourcePngSha256": "460872e3d219d940cc475bac3376a8d20b7378b01f50ee1bf14d2a22d573161b",
+      "pngSha256": "460872e3d219d940cc475bac3376a8d20b7378b01f50ee1bf14d2a22d573161b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "df41f1f40000c3a764111d96e8cf2a682753f75403ef50bd9a35169b7edb37b9",
+      "reusedFrom": "assets/game/items/IconDivineWeaponAngelicpitchfork.png"
+    },
+    {
+      "filename": "IconDivineWeaponDragondagger.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineWeaponDragondagger.png",
+      "sourcePngSha256": "99236e03f0c3f618d227fa549f8d85be62b6278d747ed10e54fe71a4756c31e7",
+      "pngSha256": "99236e03f0c3f618d227fa549f8d85be62b6278d747ed10e54fe71a4756c31e7",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5e26ba2ef39329d494b2b6a2be1fcb1726e922a34a06b2ec990aec381a9a87d2",
+      "reusedFrom": "assets/game/items/IconDivineWeaponDragondagger.png"
+    },
+    {
+      "filename": "IconDivineWeaponSerpentsword.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineWeaponSerpentsword.png",
+      "sourcePngSha256": "db3bc7199278105abd032cff7d2e4203c2c1e315cdb5ae238f1629de824fbaac",
+      "pngSha256": "db3bc7199278105abd032cff7d2e4203c2c1e315cdb5ae238f1629de824fbaac",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e15f7e85ba634e603bad90251189db6704957cc396934965368c1972a29c1157",
+      "reusedFrom": "assets/game/items/IconDivineWeaponSerpentsword.png"
+    },
+    {
+      "filename": "IconDivineWeaponSirenssong.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineWeaponSirenssong.png",
+      "sourcePngSha256": "4f359c5119a6ad67f54ebbbe9c57c5caae7ed9117055384401ee67711839d29c",
+      "pngSha256": "4f359c5119a6ad67f54ebbbe9c57c5caae7ed9117055384401ee67711839d29c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e1b18fee1466c0c095a5ad80892722dcc0b8033c4354ca5c28edebc8ac410131",
+      "reusedFrom": "assets/game/items/IconDivineWeaponSirenssong.png"
+    },
+    {
+      "filename": "IconDivineWeaponStaff.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineWeaponStaff.png",
+      "sourcePngSha256": "73e7032b359973d446d532b07bb578fd0c3d11c709b87d3235b999472a75df88",
+      "pngSha256": "73e7032b359973d446d532b07bb578fd0c3d11c709b87d3235b999472a75df88",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "55fef8a2c0023005c29074ff565a578987bf9f99f785c880e0e9bd8019a6ebd6",
+      "reusedFrom": "assets/game/items/IconDivineWeaponStaff.png"
+    },
+    {
+      "filename": "IconDivineWeaponStaffofwisdom.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconDivineWeaponStaffofwisdom.png",
+      "sourcePngSha256": "9ebe9bfdc34b68f61a06aa071ffb2c9b190a597bb63e498389bad4dd7eef0a31",
+      "pngSha256": "9ebe9bfdc34b68f61a06aa071ffb2c9b190a597bb63e498389bad4dd7eef0a31",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "cd9141d40a94158448e8660f6d16d552f0c431b171b9e33c6812d35bd3aca0b6",
+      "reusedFrom": "assets/game/items/IconDivineWeaponStaffofwisdom.png"
+    },
+    {
+      "filename": "IconEarlymodernArmorArmorskirt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernArmorArmorskirt.png",
+      "sourcePngSha256": "aed07f2174073d4c818d63224bcba9f5e9464a4d9e68c120e215506aa7a26573",
+      "pngSha256": "aed07f2174073d4c818d63224bcba9f5e9464a4d9e68c120e215506aa7a26573",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4dc91899c416fec7e2f202678ba98f8056940049c5f4f4719c6b7779656a0c4c",
+      "reusedFrom": "assets/game/items/IconEarlymodernArmorArmorskirt.png"
+    },
+    {
+      "filename": "IconEarlymodernArmorCavalrycardigan.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernArmorCavalrycardigan.png",
+      "sourcePngSha256": "78818d322ceabd3a4399a6a6dd750d88bf77238789b49e458d80bdbf3fe90a5b",
+      "pngSha256": "78818d322ceabd3a4399a6a6dd750d88bf77238789b49e458d80bdbf3fe90a5b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "33c4c9d0132768bdd42a7597db0c81b9f63b1433d4de72f373a7ecdf9b12b4dc",
+      "reusedFrom": "assets/game/items/IconEarlymodernArmorCavalrycardigan.png"
+    },
+    {
+      "filename": "IconEarlymodernBeltHaroldsharness.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernBeltHaroldsharness.png",
+      "sourcePngSha256": "2752ebab2aae4cfb5c746c124ff1a9a892462db35a9741957f63058247c584e0",
+      "pngSha256": "2752ebab2aae4cfb5c746c124ff1a9a892462db35a9741957f63058247c584e0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "04cc2b4cf09a40d49be4cc508e1077e298c2240bde9eff106da4626e7b0dfc8d",
+      "reusedFrom": "assets/game/items/IconEarlymodernBeltHaroldsharness.png"
+    },
+    {
+      "filename": "IconEarlymodernBeltLeatherbelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernBeltLeatherbelt.png",
+      "sourcePngSha256": "d04d8a5595f9e8b30ce04e50fcb4414507b1e5bc4f33218ac8920d85daae017d",
+      "pngSha256": "d04d8a5595f9e8b30ce04e50fcb4414507b1e5bc4f33218ac8920d85daae017d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5cd646a7fad9654ad7c0226bbcf46e5928068f4b0501a46832160d18ce4ca756",
+      "reusedFrom": "assets/game/items/IconEarlymodernBeltLeatherbelt.png"
+    },
+    {
+      "filename": "IconEarlymodernFootLeatherboots.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernFootLeatherboots.png",
+      "sourcePngSha256": "dee7162b96b8666553acbacf9713589dfaceaba6b1098dd19b905500bdcff74b",
+      "pngSha256": "dee7162b96b8666553acbacf9713589dfaceaba6b1098dd19b905500bdcff74b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "edf7d4c9541bc237d90cbf7e62c469e601292a216f2ced41e0ec978dbe573416",
+      "reusedFrom": "assets/game/items/IconEarlymodernFootLeatherboots.png"
+    },
+    {
+      "filename": "IconEarlymodernGloveFencermitts.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernGloveFencermitts.png",
+      "sourcePngSha256": "9d2cf80efbe9934e256913c288fd6b7db710a073bf6a99df71f644df425813be",
+      "pngSha256": "9d2cf80efbe9934e256913c288fd6b7db710a073bf6a99df71f644df425813be",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d55015d6159611272f232e6cb24d79aab79f71917e065bbadbc436717adbdaa6",
+      "reusedFrom": "assets/game/items/IconEarlymodernGloveFencermitts.png"
+    },
+    {
+      "filename": "IconEarlymodernGloveLeathergloves.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernGloveLeathergloves.png",
+      "sourcePngSha256": "a7d930837b45a62a3f42a677a68fb3482a4f7aff7885ed82c4834f98ef7536e1",
+      "pngSha256": "a7d930837b45a62a3f42a677a68fb3482a4f7aff7885ed82c4834f98ef7536e1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "67ea635b0e92ac0ca0cd747496f30183b2859d61dee6d33862dfb1edd687fd86",
+      "reusedFrom": "assets/game/items/IconEarlymodernGloveLeathergloves.png"
+    },
+    {
+      "filename": "IconEarlymodernHeadgearBattlehelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernHeadgearBattlehelmet.png",
+      "sourcePngSha256": "fa7420bf353049765d4d9c1a3e05bb74aae22c9523bf0dab7c95bb4734f3c76d",
+      "pngSha256": "fa7420bf353049765d4d9c1a3e05bb74aae22c9523bf0dab7c95bb4734f3c76d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ffa3b55c74e8adf4c1c4adbc17fe8be3c616d93c38bd680447d22ba72f74b19c",
+      "reusedFrom": "assets/game/items/IconEarlymodernHeadgearBattlehelmet.png"
+    },
+    {
+      "filename": "IconEarlymodernHeadgearCaptainshat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernHeadgearCaptainshat.png",
+      "sourcePngSha256": "4ee5448ba63c4b1a1804d071cbb37dda8a01feb516ea6a4f613172ca607c727c",
+      "pngSha256": "4ee5448ba63c4b1a1804d071cbb37dda8a01feb516ea6a4f613172ca607c727c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e106bff143e8ea03087b78b647cd10c203c4665e5bde17a6360ef56909def935",
+      "reusedFrom": "assets/game/items/IconEarlymodernHeadgearCaptainshat.png"
+    },
+    {
+      "filename": "IconEarlymodernHeadgearFeatherhat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernHeadgearFeatherhat.png",
+      "sourcePngSha256": "24e1fa07890054abd6b0235e5c6ff9a0b5f61f10743c87245a5a4236dc0db51f",
+      "pngSha256": "24e1fa07890054abd6b0235e5c6ff9a0b5f61f10743c87245a5a4236dc0db51f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "9186667f4d2969838978d5fcdedb74de948b40aecef653df751245a4309219e4",
+      "reusedFrom": "assets/game/items/IconEarlymodernHeadgearFeatherhat.png"
+    },
+    {
+      "filename": "IconEarlymodernHeadgearSlavichat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernHeadgearSlavichat.png",
+      "sourcePngSha256": "90f7d48fcce4c6316c115aa9167989d17b1d97e98d22741d8059f324b8010eb7",
+      "pngSha256": "90f7d48fcce4c6316c115aa9167989d17b1d97e98d22741d8059f324b8010eb7",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f3f87a09c48c20ac5c9cc307090ce40aed7d086391afe4b9b9285f0f371148ed",
+      "reusedFrom": "assets/game/items/IconEarlymodernHeadgearSlavichat.png"
+    },
+    {
+      "filename": "IconEarlymodernHeadgearTophat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernHeadgearTophat.png",
+      "sourcePngSha256": "b69d26fe22dbbc3e74d3157a067fc2d2812d12394fa2a79eae347f7d5533fdd4",
+      "pngSha256": "b69d26fe22dbbc3e74d3157a067fc2d2812d12394fa2a79eae347f7d5533fdd4",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4074a4b60b7f731057b2643cedfcb4df0f8160834b717ab33d3dbfc0c3adb805",
+      "reusedFrom": "assets/game/items/IconEarlymodernHeadgearTophat.png"
+    },
+    {
+      "filename": "IconEarlymodernNeckClock.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernNeckClock.png",
+      "sourcePngSha256": "4ff6bab4025f715d5048683294ff9868c29ba9aeba81be1d5a2d5f4e3474914e",
+      "pngSha256": "4ff6bab4025f715d5048683294ff9868c29ba9aeba81be1d5a2d5f4e3474914e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "499c3b9c215b67280aaf03ead1e043e44befaa3a91623153ef6b173b2dc49009",
+      "reusedFrom": "assets/game/items/IconEarlymodernNeckClock.png"
+    },
+    {
+      "filename": "IconEarlymodernNeckTreasurekey.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernNeckTreasurekey.png",
+      "sourcePngSha256": "0a4cc3aaa77eab8db674676ee87065516e04d43997a7f7b227a867969cdcddaa",
+      "pngSha256": "0a4cc3aaa77eab8db674676ee87065516e04d43997a7f7b227a867969cdcddaa",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "705a0452a0e8c98ba99acd4991a0b2cf4a026769916492ace9fe7813184e334b",
+      "reusedFrom": "assets/game/items/IconEarlymodernNeckTreasurekey.png"
+    },
+    {
+      "filename": "IconEarlymodernRingEmeraldeye.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernRingEmeraldeye.png",
+      "sourcePngSha256": "0effb11febc910fed9aac4bdb33ce66f1814e4c217123933e5481d5b4ec52ec7",
+      "pngSha256": "0effb11febc910fed9aac4bdb33ce66f1814e4c217123933e5481d5b4ec52ec7",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "604a23c6ce72e61e41e8c64a192a3072642bd5daaa952c331c8a00247d3c906a",
+      "reusedFrom": "assets/game/items/IconEarlymodernRingEmeraldeye.png"
+    },
+    {
+      "filename": "IconEarlymodernRingTrinityband.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernRingTrinityband.png",
+      "sourcePngSha256": "2bfbf875881e13ea497de42191ea558b8166298415d170954631ce06db91c776",
+      "pngSha256": "2bfbf875881e13ea497de42191ea558b8166298415d170954631ce06db91c776",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e26f99ca35a48666c9fe89922bc2faf36f310a84a5c8f2f8cdd0696644eca710",
+      "reusedFrom": "assets/game/items/IconEarlymodernRingTrinityband.png"
+    },
+    {
+      "filename": "IconEarlymodernWeaponCrossbow.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernWeaponCrossbow.png",
+      "sourcePngSha256": "dc733a07b8762d6d4d5d4634ddfa026eb0fde7fb4adedfca716a01396fcc9bdb",
+      "pngSha256": "dc733a07b8762d6d4d5d4634ddfa026eb0fde7fb4adedfca716a01396fcc9bdb",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "61ebd535a6e29dfb785253c29ee9714500524f6143ffaf2a1780e413019915b5",
+      "reusedFrom": "assets/game/items/IconEarlymodernWeaponCrossbow.png"
+    },
+    {
+      "filename": "IconEarlymodernWeaponDualpistols.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernWeaponDualpistols.png",
+      "sourcePngSha256": "9f906fba4069856f5248f46482413e32300a1c044f3f4c89943beaf730b2e0e4",
+      "pngSha256": "9f906fba4069856f5248f46482413e32300a1c044f3f4c89943beaf730b2e0e4",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ea8a33b7460fc71c06aaf677d8399929cce833ad6eff4def2ce01914ef4c49c6",
+      "reusedFrom": "assets/game/items/IconEarlymodernWeaponDualpistols.png"
+    },
+    {
+      "filename": "IconEarlymodernWeaponExecutioner.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernWeaponExecutioner.png",
+      "sourcePngSha256": "dd908c1cd0f5bcf4d653a8a7ed0f7137d2dc6993577b014e134923a7d75a6b66",
+      "pngSha256": "dd908c1cd0f5bcf4d653a8a7ed0f7137d2dc6993577b014e134923a7d75a6b66",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "15a620de3c8820414361a39cc1f7e968173241ace537950b8bf55ea1727d1a4a",
+      "reusedFrom": "assets/game/items/IconEarlymodernWeaponExecutioner.png"
+    },
+    {
+      "filename": "IconEarlymodernWeaponMusket.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernWeaponMusket.png",
+      "sourcePngSha256": "6fd8401fd630179657d0530d4938bb7e7adb58164c504022ca4eaa33ce7f5fd8",
+      "pngSha256": "6fd8401fd630179657d0530d4938bb7e7adb58164c504022ca4eaa33ce7f5fd8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "9b1162b2758a6111b3398009fb48f2751f3bedd5ef1b70730922bd4cd09d967e",
+      "reusedFrom": "assets/game/items/IconEarlymodernWeaponMusket.png"
+    },
+    {
+      "filename": "IconEarlymodernWeaponPiratessword.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernWeaponPiratessword.png",
+      "sourcePngSha256": "e46901872d7f85353f8b2a0d5ddc1227e16f738757a0b8a33d9b964c1ee60515",
+      "pngSha256": "e46901872d7f85353f8b2a0d5ddc1227e16f738757a0b8a33d9b964c1ee60515",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b60db962b15641b0efb8a3e9bf25d4d66875eef49394c38c37da94371bdc38d3",
+      "reusedFrom": "assets/game/items/IconEarlymodernWeaponPiratessword.png"
+    },
+    {
+      "filename": "IconEarlymodernWeaponRapier.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernWeaponRapier.png",
+      "sourcePngSha256": "ee8942bc1b30656d8853d90ef29f46eb4da2f586edffb7b5078e5ec232d6a304",
+      "pngSha256": "ee8942bc1b30656d8853d90ef29f46eb4da2f586edffb7b5078e5ec232d6a304",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a80936df92a497a81d678c7ca933407c6f2d25e7d83fdd844aa7f0a6a4270649",
+      "reusedFrom": "assets/game/items/IconEarlymodernWeaponRapier.png"
+    },
+    {
+      "filename": "IconEarlymodernlFootRidingboots.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEarlymodernlFootRidingboots.png",
+      "sourcePngSha256": "29341b79b642f9add1f1be884f3b2bbd2c57bfa7c8d550860b2e26bd0f57fcf8",
+      "pngSha256": "29341b79b642f9add1f1be884f3b2bbd2c57bfa7c8d550860b2e26bd0f57fcf8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "14d89f0b23d9c5530f628a5bbe2808aa017e5cc44f88875ceff65bb30e80fe43",
+      "reusedFrom": "assets/game/items/IconEarlymodernlFootRidingboots.png"
+    },
+    {
+      "filename": "IconEternalArmor1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalArmor1.png",
+      "sourcePngSha256": "4cdb4602b3491ea0dba534382458cf0e87fb088476c267a1eb9b71d951ff945a",
+      "pngSha256": "4cdb4602b3491ea0dba534382458cf0e87fb088476c267a1eb9b71d951ff945a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b83a6ddd222e5e639290b74218d0bf6477f3ff6c2a1fc8c048def5238e1e22a6",
+      "reusedFrom": "assets/game/items/IconEternalArmor1.png"
+    },
+    {
+      "filename": "IconEternalArmor2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalArmor2.png",
+      "sourcePngSha256": "bd633a76b1fd7dfe4e46d81be71a5523310a066eae1c0552e356454208bd13f9",
+      "pngSha256": "bd633a76b1fd7dfe4e46d81be71a5523310a066eae1c0552e356454208bd13f9",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "af1c5b719cbefd2cbcd94bf40496844ce0012f788898f107599c7d212dec7337",
+      "reusedFrom": "assets/game/items/IconEternalArmor2.png"
+    },
+    {
+      "filename": "IconEternalBelt1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalBelt1.png",
+      "sourcePngSha256": "4d87f848fff056b47cda43b4c2100cd4f87187f9f2dcca93cd85e7c0221619f9",
+      "pngSha256": "4d87f848fff056b47cda43b4c2100cd4f87187f9f2dcca93cd85e7c0221619f9",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "de59c976bb8d034969aee513ba9e38136461f0cd936dde261b8ea45f1a0419e6",
+      "reusedFrom": "assets/game/items/IconEternalBelt1.png"
+    },
+    {
+      "filename": "IconEternalBelt2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalBelt2.png",
+      "sourcePngSha256": "2709a7ff4fef01390f357930b7043e107ca3e83e0259babb2f268b474d9c9ac4",
+      "pngSha256": "2709a7ff4fef01390f357930b7043e107ca3e83e0259babb2f268b474d9c9ac4",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "148ee47d64f3b9f1af8aa52e890adc52082b83164d12353b28b990bc03593ff3",
+      "reusedFrom": "assets/game/items/IconEternalBelt2.png"
+    },
+    {
+      "filename": "IconEternalFoot1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalFoot1.png",
+      "sourcePngSha256": "a90106b9b8303854e34db6ebbaec145088b293984cfeab0c470d7d4afc993f7c",
+      "pngSha256": "a90106b9b8303854e34db6ebbaec145088b293984cfeab0c470d7d4afc993f7c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "47926b2bf11391cc29b19666d0931f56b7c221f6529f885b02391b46f2719eb7",
+      "reusedFrom": "assets/game/items/IconEternalFoot1.png"
+    },
+    {
+      "filename": "IconEternalFoot2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalFoot2.png",
+      "sourcePngSha256": "06a957a47420c35acb232b591fb0de8392ade946c5cecc668feac5abff9fca15",
+      "pngSha256": "06a957a47420c35acb232b591fb0de8392ade946c5cecc668feac5abff9fca15",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a03cbbb3cc5112e355f7b9c4ef3d8d538b6f3fdab20192ac5952011024c3aff1",
+      "reusedFrom": "assets/game/items/IconEternalFoot2.png"
+    },
+    {
+      "filename": "IconEternalGlove1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalGlove1.png",
+      "sourcePngSha256": "19ba750518e6018128d1e78ef2a4a75f6677bf03c0a662ab4da2e825dc946296",
+      "pngSha256": "19ba750518e6018128d1e78ef2a4a75f6677bf03c0a662ab4da2e825dc946296",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a29424c39308bd8ec4e45d7bd79eae8453acb163a480db338fbf708dcfab2cc4",
+      "reusedFrom": "assets/game/items/IconEternalGlove1.png"
+    },
+    {
+      "filename": "IconEternalGlove2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalGlove2.png",
+      "sourcePngSha256": "ff0725cc6216decbab5c72763fe76e96ed48ea5b6b657f85c7a6d4b2296d5c82",
+      "pngSha256": "ff0725cc6216decbab5c72763fe76e96ed48ea5b6b657f85c7a6d4b2296d5c82",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "9b0c99412e086e00fff27b37f089c0054169796d88b0aca71e19f96a54840388",
+      "reusedFrom": "assets/game/items/IconEternalGlove2.png"
+    },
+    {
+      "filename": "IconEternalHeadgear1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalHeadgear1.png",
+      "sourcePngSha256": "c7dc2ee511712938d1b36630b52230c7f731d1f1c8257fe8f35ae2b6a928fff0",
+      "pngSha256": "c7dc2ee511712938d1b36630b52230c7f731d1f1c8257fe8f35ae2b6a928fff0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "fe1462cbd9e958f594bf3723367731e774d11edacfff10322c762bdacabbd7e2",
+      "reusedFrom": "assets/game/items/IconEternalHeadgear1.png"
+    },
+    {
+      "filename": "IconEternalHeadgear2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalHeadgear2.png",
+      "sourcePngSha256": "b9486da7d18b8b5ed74583db3dfab333c7de87eee3beb65b5ed95eb335c02c1d",
+      "pngSha256": "b9486da7d18b8b5ed74583db3dfab333c7de87eee3beb65b5ed95eb335c02c1d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "0cbf854bf7fbc1c1606767619f32a01c72c7b6d21e78893908539ec27f6f4b79",
+      "reusedFrom": "assets/game/items/IconEternalHeadgear2.png"
+    },
+    {
+      "filename": "IconEternalHeadgear3.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalHeadgear3.png",
+      "sourcePngSha256": "433c8da69b89528170684d08330549d06ed65fef6094772c5361814ccff58904",
+      "pngSha256": "433c8da69b89528170684d08330549d06ed65fef6094772c5361814ccff58904",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "08124e310596213aed8b8337f46ec1d22ff245574d45c44c5638c1227c13f53d",
+      "reusedFrom": "assets/game/items/IconEternalHeadgear3.png"
+    },
+    {
+      "filename": "IconEternalHeadgear4.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalHeadgear4.png",
+      "sourcePngSha256": "cceec5f71f57f4407ff5d536662cd4da11046e6ec2fef0323cac1bc295f64ed5",
+      "pngSha256": "cceec5f71f57f4407ff5d536662cd4da11046e6ec2fef0323cac1bc295f64ed5",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "269180563648983667718940494991f8f19df2bae1f19d48548073b45a1c5911",
+      "reusedFrom": "assets/game/items/IconEternalHeadgear4.png"
+    },
+    {
+      "filename": "IconEternalNeck1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalNeck1.png",
+      "sourcePngSha256": "eb202329dea6f8da60838df96597e21f3aed060f746f0339d156f8e05e7353a9",
+      "pngSha256": "eb202329dea6f8da60838df96597e21f3aed060f746f0339d156f8e05e7353a9",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "6bc5a01e6c6be47114bb54c5e175807dd06568bb8acc5eaec8945d8f45818536",
+      "reusedFrom": "assets/game/items/IconEternalNeck1.png"
+    },
+    {
+      "filename": "IconEternalNeck2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalNeck2.png",
+      "sourcePngSha256": "12948a47cd4b686c9525990ddf280889b7f5f5e1ae43810ddcda09f2f897d653",
+      "pngSha256": "12948a47cd4b686c9525990ddf280889b7f5f5e1ae43810ddcda09f2f897d653",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "000b4a5951de81d25314f8bcb2be14b5ce7658e212948e570e8ccb02d4c4e882",
+      "reusedFrom": "assets/game/items/IconEternalNeck2.png"
+    },
+    {
+      "filename": "IconEternalRing1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalRing1.png",
+      "sourcePngSha256": "b0c0098f93a07feeca713f139e03213e97432c8c3c145cd1948c66754a5abb1d",
+      "pngSha256": "b0c0098f93a07feeca713f139e03213e97432c8c3c145cd1948c66754a5abb1d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "163df03a0a5e35d56921a0ec97c6d0983219d76e2c2e7f361d98094b43051b08",
+      "reusedFrom": "assets/game/items/IconEternalRing1.png"
+    },
+    {
+      "filename": "IconEternalRing2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalRing2.png",
+      "sourcePngSha256": "f4bd95684ff0a32cf15b55035e8725ac92c23a055dac05f19ff4ade2d34d3b16",
+      "pngSha256": "f4bd95684ff0a32cf15b55035e8725ac92c23a055dac05f19ff4ade2d34d3b16",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f68ba0cd922ec787fdf98deef0271166774184746901a7a163fa6deb3ac38b30",
+      "reusedFrom": "assets/game/items/IconEternalRing2.png"
+    },
+    {
+      "filename": "IconEternalWeapon1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalWeapon1.png",
+      "sourcePngSha256": "eea83da2fe24064659008997917565d06cb07c414a0459b84471ae67135b5a37",
+      "pngSha256": "eea83da2fe24064659008997917565d06cb07c414a0459b84471ae67135b5a37",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "01144012a54abe887cf5652d8dde60497d49e053efb02b3b45e7ecd4bab20fcd",
+      "reusedFrom": "assets/game/items/IconEternalWeapon1.png"
+    },
+    {
+      "filename": "IconEternalWeapon2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalWeapon2.png",
+      "sourcePngSha256": "d918dae784249a75a6f23363b94ef0fa09251425e25d5d81d9cf8fa8224b457f",
+      "pngSha256": "d918dae784249a75a6f23363b94ef0fa09251425e25d5d81d9cf8fa8224b457f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "86ec1d046cf67430770e50b52cae79e7fd0861da58f5550a253fd7cf95e95ff3",
+      "reusedFrom": "assets/game/items/IconEternalWeapon2.png"
+    },
+    {
+      "filename": "IconEternalWeapon3.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalWeapon3.png",
+      "sourcePngSha256": "629fd544910df7edde95c1bc483b9d3cedf10bdbe507045f235a3fab47f3148a",
+      "pngSha256": "629fd544910df7edde95c1bc483b9d3cedf10bdbe507045f235a3fab47f3148a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "fb7e4e79871114e9f332dc14d9ed767e8b57c08444ebf38ec3f8cfbd1f5b585f",
+      "reusedFrom": "assets/game/items/IconEternalWeapon3.png"
+    },
+    {
+      "filename": "IconEternalWeapon4.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalWeapon4.png",
+      "sourcePngSha256": "5aec9751c1fe5c960b1f0f549274eddcb056b02ffcd1f0ae8a39127fb932cd9b",
+      "pngSha256": "5aec9751c1fe5c960b1f0f549274eddcb056b02ffcd1f0ae8a39127fb932cd9b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7cc114971e7b380068ae23e58d30149690338ca157bcf89d0e085b86eab16a2b",
+      "reusedFrom": "assets/game/items/IconEternalWeapon4.png"
+    },
+    {
+      "filename": "IconEternalWeapon5.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconEternalWeapon5.png",
+      "sourcePngSha256": "e7db37258c7e07d5adb11c4ddb1fafb24482b93aa17a21f7f8ac9d6c92ab8f36",
+      "pngSha256": "e7db37258c7e07d5adb11c4ddb1fafb24482b93aa17a21f7f8ac9d6c92ab8f36",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "6c1456852a3c3b0e9a60358e5388968c88d149fa364ff14f3f4837fd3999acae",
+      "reusedFrom": "assets/game/items/IconEternalWeapon5.png"
+    },
+    {
+      "filename": "IconHeroicArmor1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicArmor1.png",
+      "sourcePngSha256": "ee5cf4e2ecd0cb88a08bff69b171677e06dc412bc3430cece9bc76ca68a594fe",
+      "pngSha256": "ee5cf4e2ecd0cb88a08bff69b171677e06dc412bc3430cece9bc76ca68a594fe",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d883ca8231300a67c53fc22f88152ac023e9a7a4a8a84b552fa1f81f6f835fe3",
+      "reusedFrom": "assets/game/items/IconHeroicArmor1.png"
+    },
+    {
+      "filename": "IconHeroicArmor2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicArmor2.png",
+      "sourcePngSha256": "b0d4a89f49e672eb8cadf02adaabbfc5ba4002dd8391e73ec9fe281556757fa1",
+      "pngSha256": "b0d4a89f49e672eb8cadf02adaabbfc5ba4002dd8391e73ec9fe281556757fa1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "6a2a8400881d5a8f8ddd1d871087305d793bcb86a0d14cf691e563143a512be8",
+      "reusedFrom": "assets/game/items/IconHeroicArmor2.png"
+    },
+    {
+      "filename": "IconHeroicBelt1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicBelt1.png",
+      "sourcePngSha256": "6fcd6e13eaca1d3fcdbab3f7aa4598d46a37d135ff9badd6e09a1c8491232cba",
+      "pngSha256": "6fcd6e13eaca1d3fcdbab3f7aa4598d46a37d135ff9badd6e09a1c8491232cba",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "92412f9c180e118a00b8ce4eec5b21b4af895812f9352cbb57b89225aedbd47b",
+      "reusedFrom": "assets/game/items/IconHeroicBelt1.png"
+    },
+    {
+      "filename": "IconHeroicBelt2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicBelt2.png",
+      "sourcePngSha256": "9b3e955412f8b2cceff963dcbce09c783469a0923463b93adaeadfeadf141a9c",
+      "pngSha256": "9b3e955412f8b2cceff963dcbce09c783469a0923463b93adaeadfeadf141a9c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "710a70e834e17dfb438f540c4e5a3303baf2f12cde1aaf4643a81816df6012f3",
+      "reusedFrom": "assets/game/items/IconHeroicBelt2.png"
+    },
+    {
+      "filename": "IconHeroicFoot1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicFoot1.png",
+      "sourcePngSha256": "bd2fa3d5c347a70164059a65a5076142ef1be0c6ef8a746f61cc66c6f7d4dc92",
+      "pngSha256": "bd2fa3d5c347a70164059a65a5076142ef1be0c6ef8a746f61cc66c6f7d4dc92",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "acb0cfb113aacd16d3ecca71a7b53d837de2310be0b87ed63d6c7f976ac53fed",
+      "reusedFrom": "assets/game/items/IconHeroicFoot1.png"
+    },
+    {
+      "filename": "IconHeroicFoot2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicFoot2.png",
+      "sourcePngSha256": "dd3869f651056be9d68e54c2f10998bf9d0c568236c2ff6ede234136021b3b10",
+      "pngSha256": "dd3869f651056be9d68e54c2f10998bf9d0c568236c2ff6ede234136021b3b10",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "359bad96e55fe3b0637047b3ad5a2a2de58a6b4b045776befad51565f9b42a16",
+      "reusedFrom": "assets/game/items/IconHeroicFoot2.png"
+    },
+    {
+      "filename": "IconHeroicGlove1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicGlove1.png",
+      "sourcePngSha256": "1d129d7f2825dc2227224ea252f17471a7f233d9dc3d6f1382d1fd9c2822fa17",
+      "pngSha256": "1d129d7f2825dc2227224ea252f17471a7f233d9dc3d6f1382d1fd9c2822fa17",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f8d74f5d2147550eb636d64cb70c110cab31b7760860d9d35b4304ce87da3660",
+      "reusedFrom": "assets/game/items/IconHeroicGlove1.png"
+    },
+    {
+      "filename": "IconHeroicGlove2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicGlove2.png",
+      "sourcePngSha256": "ddb77572dcb113f952a895736fcf91220ef7bc9f28e02532720d9a97a85f7f09",
+      "pngSha256": "ddb77572dcb113f952a895736fcf91220ef7bc9f28e02532720d9a97a85f7f09",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a243043adbcd650d137f9e9ecd399f3c151d4ff0ff676883d265a9f328d50748",
+      "reusedFrom": "assets/game/items/IconHeroicGlove2.png"
+    },
+    {
+      "filename": "IconHeroicHeadgear1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicHeadgear1.png",
+      "sourcePngSha256": "0d9d4ec8cbbfc44d6878ad2796985b6bf4602020af3863925ae732972bd94f29",
+      "pngSha256": "0d9d4ec8cbbfc44d6878ad2796985b6bf4602020af3863925ae732972bd94f29",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "68fd3c489590e53586bd5adc07afbf91a5d4252d73534acab5c431ba0dd11576",
+      "reusedFrom": "assets/game/items/IconHeroicHeadgear1.png"
+    },
+    {
+      "filename": "IconHeroicHeadgear2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicHeadgear2.png",
+      "sourcePngSha256": "b6140a02c97bf6a3857f0a474c2bfdf7f19dfacf2f141d2cd9ce41b62c1255e8",
+      "pngSha256": "b6140a02c97bf6a3857f0a474c2bfdf7f19dfacf2f141d2cd9ce41b62c1255e8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d3f54aaf48d6fb7f73c352cab3c009bb2b27899efbd392bbc327b216bd29006d",
+      "reusedFrom": "assets/game/items/IconHeroicHeadgear2.png"
+    },
+    {
+      "filename": "IconHeroicHeadgear3.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicHeadgear3.png",
+      "sourcePngSha256": "de8182695888b46b7a3f179cc742cafbc95657a68bff6fe7618560feeb0e187f",
+      "pngSha256": "de8182695888b46b7a3f179cc742cafbc95657a68bff6fe7618560feeb0e187f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "94d56cd15c24317139f0874525aa045ddbb445a5326da43ffb86a9384d603ee4",
+      "reusedFrom": "assets/game/items/IconHeroicHeadgear3.png"
+    },
+    {
+      "filename": "IconHeroicHeadgear4.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicHeadgear4.png",
+      "sourcePngSha256": "3c6b816c28d269b36dd2d12624b73bf92b83d685d24f531a94adc5b9b1673534",
+      "pngSha256": "3c6b816c28d269b36dd2d12624b73bf92b83d685d24f531a94adc5b9b1673534",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a3c48b6d2a5fa51c81af47709e4a94329e5628cd4ca5eebc3a37c3c950d65925",
+      "reusedFrom": "assets/game/items/IconHeroicHeadgear4.png"
+    },
+    {
+      "filename": "IconHeroicNeck1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicNeck1.png",
+      "sourcePngSha256": "41d6b4a9c9040a459ae78e100a0d4d42fde43b96e3fe5caa6fd8918bb1d565c3",
+      "pngSha256": "41d6b4a9c9040a459ae78e100a0d4d42fde43b96e3fe5caa6fd8918bb1d565c3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "65d01c62fc0d96459b89129e8174c6f4a5c091556f9b14efad4578e8076040a4",
+      "reusedFrom": "assets/game/items/IconHeroicNeck1.png"
+    },
+    {
+      "filename": "IconHeroicNeck2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicNeck2.png",
+      "sourcePngSha256": "b94fb92140149071005d5614b1fffc0f6b8d3305b232093fd22c1013e2a34aeb",
+      "pngSha256": "b94fb92140149071005d5614b1fffc0f6b8d3305b232093fd22c1013e2a34aeb",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f6757a56f77a5a228448062c606a44553f20416fd90d3b0f989ae9ec5b953437",
+      "reusedFrom": "assets/game/items/IconHeroicNeck2.png"
+    },
+    {
+      "filename": "IconHeroicRing1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicRing1.png",
+      "sourcePngSha256": "614520e7330a72b432f451c1cfc6c70ce032b2e429f7785329a63cd077540a7e",
+      "pngSha256": "614520e7330a72b432f451c1cfc6c70ce032b2e429f7785329a63cd077540a7e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "406d4ce62ba12773ee24c3f499854eb35a07d2a0d6514ff9b7a45c181bbb8e80",
+      "reusedFrom": "assets/game/items/IconHeroicRing1.png"
+    },
+    {
+      "filename": "IconHeroicRing2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicRing2.png",
+      "sourcePngSha256": "0f8000d317e32a19dee8966854549c088315f75fe1afd19fbb2cc32d7580b966",
+      "pngSha256": "0f8000d317e32a19dee8966854549c088315f75fe1afd19fbb2cc32d7580b966",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "29775ab8d01458e02c352dd8416498f68d21404de5dba1000cd03e9de96f0c14",
+      "reusedFrom": "assets/game/items/IconHeroicRing2.png"
+    },
+    {
+      "filename": "IconHeroicWeapon1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicWeapon1.png",
+      "sourcePngSha256": "f920af13a2919a193af5f75a489283421e84a83a9e02a3d25df7cac35fddccf3",
+      "pngSha256": "f920af13a2919a193af5f75a489283421e84a83a9e02a3d25df7cac35fddccf3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f5c5acac88fb6fc6e3b4484988c3473964ffd015e80091cf780a06bb623a6917",
+      "reusedFrom": "assets/game/items/IconHeroicWeapon1.png"
+    },
+    {
+      "filename": "IconHeroicWeapon2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicWeapon2.png",
+      "sourcePngSha256": "665c166fd5dd9919db47e3469767ee7d4e5e5507351e4c35e761ab6eb972d9b0",
+      "pngSha256": "665c166fd5dd9919db47e3469767ee7d4e5e5507351e4c35e761ab6eb972d9b0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "533577003966f645e385ab1cfee68784f3a73d45b1e9e586fad4aeab268d9e79",
+      "reusedFrom": "assets/game/items/IconHeroicWeapon2.png"
+    },
+    {
+      "filename": "IconHeroicWeapon3.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicWeapon3.png",
+      "sourcePngSha256": "475fb5053d732a576024f7fe6201190a90dc82658ad2d2102287dd7257c7184f",
+      "pngSha256": "475fb5053d732a576024f7fe6201190a90dc82658ad2d2102287dd7257c7184f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "bb8fa3a671e5190977e145a98b1d5a2a8c5c8fb54be1362c4d20668843fa6b89",
+      "reusedFrom": "assets/game/items/IconHeroicWeapon3.png"
+    },
+    {
+      "filename": "IconHeroicWeapon4.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicWeapon4.png",
+      "sourcePngSha256": "7ed2dd0fc49be7aa81ba3757c79a8858c2d946b22f977e42758555be38033ec3",
+      "pngSha256": "7ed2dd0fc49be7aa81ba3757c79a8858c2d946b22f977e42758555be38033ec3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a9aed3bb6f50bd4157964e70914afe35801d16288b59cc7fa2fe79fc9c31f099",
+      "reusedFrom": "assets/game/items/IconHeroicWeapon4.png"
+    },
+    {
+      "filename": "IconHeroicWeapon5.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicWeapon5.png",
+      "sourcePngSha256": "f73fac533ec7e8f1e05fc2c51e45698282e0659ea0b47d6fdca7679093c9ca30",
+      "pngSha256": "f73fac533ec7e8f1e05fc2c51e45698282e0659ea0b47d6fdca7679093c9ca30",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "1ab11ae16021468f5c62244220fca39496edd9e2b68367d9f7fa17ae60093978",
+      "reusedFrom": "assets/game/items/IconHeroicWeapon5.png"
+    },
+    {
+      "filename": "IconHeroicWeapon6.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconHeroicWeapon6.png",
+      "sourcePngSha256": "f48b66783776557805a2664ec4fb8fb35e9f2d2d8aa96d98dc1a80adf3fb84e9",
+      "pngSha256": "f48b66783776557805a2664ec4fb8fb35e9f2d2d8aa96d98dc1a80adf3fb84e9",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "55f5bb72f6024b26271cf0e8c158d025bfc11e0036ff737b792a34fb21fd0ee5",
+      "reusedFrom": "assets/game/items/IconHeroicWeapon6.png"
+    },
+    {
+      "filename": "IconInfiniteArmor1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteArmor1.png",
+      "sourcePngSha256": "a388c7aa222cc7fa5ead6fe90ae0fa0efa8e0961b8d63c1be929e035a1f97e5a",
+      "pngSha256": "a388c7aa222cc7fa5ead6fe90ae0fa0efa8e0961b8d63c1be929e035a1f97e5a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7b81cce429e72595f67c8ce910fb3a485969563dd76389e02129f0594564a922",
+      "reusedFrom": "assets/game/items/IconInfiniteArmor1.png"
+    },
+    {
+      "filename": "IconInfiniteArmor2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteArmor2.png",
+      "sourcePngSha256": "860922144e569246c75f864e0f975390514c1c49ec833ca36452a07eaf3f35e6",
+      "pngSha256": "860922144e569246c75f864e0f975390514c1c49ec833ca36452a07eaf3f35e6",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "cd8dceafa3fea8f9808306caf41b39c6814f01a1ed116a418415a6cd0c4f299e",
+      "reusedFrom": "assets/game/items/IconInfiniteArmor2.png"
+    },
+    {
+      "filename": "IconInfiniteBelt1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteBelt1.png",
+      "sourcePngSha256": "eae6c5c3f93e7c576591aab79e58cc677558e46fa20e318722334365b357787e",
+      "pngSha256": "eae6c5c3f93e7c576591aab79e58cc677558e46fa20e318722334365b357787e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "8aa697cdd0ba1abd4b9543b69edfe1ebc44b885e5486fd179c3f8d6626bcb570",
+      "reusedFrom": "assets/game/items/IconInfiniteBelt1.png"
+    },
+    {
+      "filename": "IconInfiniteBelt2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteBelt2.png",
+      "sourcePngSha256": "82cd8cc4ed703c0c36f657be50f24ff38b91c34db308acd6dc9b8250f37cdb8b",
+      "pngSha256": "82cd8cc4ed703c0c36f657be50f24ff38b91c34db308acd6dc9b8250f37cdb8b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "509a4cc5b5aa6e72261edfe129010c71ace5c88481b3d9adf02fc034fe5db22e",
+      "reusedFrom": "assets/game/items/IconInfiniteBelt2.png"
+    },
+    {
+      "filename": "IconInfiniteFoot1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteFoot1.png",
+      "sourcePngSha256": "76fe9b76b51c228dc1e46efab7e6895535fb799f70267de81de549c8c116a952",
+      "pngSha256": "76fe9b76b51c228dc1e46efab7e6895535fb799f70267de81de549c8c116a952",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "44bf11345a176e09e308221c64bd0ad268c3138384cf78681ab8114c45056f19",
+      "reusedFrom": "assets/game/items/IconInfiniteFoot1.png"
+    },
+    {
+      "filename": "IconInfiniteFoot2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteFoot2.png",
+      "sourcePngSha256": "7a61d036c9d52f9f505498c4035e67655842a86bdff14a1341a8e2c94ba360ac",
+      "pngSha256": "7a61d036c9d52f9f505498c4035e67655842a86bdff14a1341a8e2c94ba360ac",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "cff6bde4547415a52353a64386314c70e492adec70ed9a279bc3e9118784c6a1",
+      "reusedFrom": "assets/game/items/IconInfiniteFoot2.png"
+    },
+    {
+      "filename": "IconInfiniteGlove1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteGlove1.png",
+      "sourcePngSha256": "02e930ba30df7ccbd284ce8ae771f5afecdd71b1069da7c9394ed88f123d0eac",
+      "pngSha256": "02e930ba30df7ccbd284ce8ae771f5afecdd71b1069da7c9394ed88f123d0eac",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "205d2c7cd0d0dd3665226f3b6345458247cb8a8734403a8233deecad36dea2fc",
+      "reusedFrom": "assets/game/items/IconInfiniteGlove1.png"
+    },
+    {
+      "filename": "IconInfiniteGlove2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteGlove2.png",
+      "sourcePngSha256": "a2cfffcd8dc3bcd8015fb1127f213a2e6237e83e3b5185efa7617ce4044a50a1",
+      "pngSha256": "a2cfffcd8dc3bcd8015fb1127f213a2e6237e83e3b5185efa7617ce4044a50a1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "1ea56382499d448c65052e8f48781ed7a9bbfb3200a3f411df32ae4a5ae047bb",
+      "reusedFrom": "assets/game/items/IconInfiniteGlove2.png"
+    },
+    {
+      "filename": "IconInfiniteHeadgear1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteHeadgear1.png",
+      "sourcePngSha256": "efc96c91ba2315e8995f8a4acb8c331d7e2ffe5c682762951123327045506312",
+      "pngSha256": "efc96c91ba2315e8995f8a4acb8c331d7e2ffe5c682762951123327045506312",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4737d4067ae681882eb7430f5d2a0013f26cd44b41b2df7af18acc4ab4118361",
+      "reusedFrom": "assets/game/items/IconInfiniteHeadgear1.png"
+    },
+    {
+      "filename": "IconInfiniteHeadgear2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteHeadgear2.png",
+      "sourcePngSha256": "38674180776a15b874fdc0e4290e02642f4da98bbfae8a1da0d165ecbd7df29f",
+      "pngSha256": "38674180776a15b874fdc0e4290e02642f4da98bbfae8a1da0d165ecbd7df29f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d288666fce15e3eb0c4016743a7e27352eecd23c7235c19c9f7841050cfd227c",
+      "reusedFrom": "assets/game/items/IconInfiniteHeadgear2.png"
+    },
+    {
+      "filename": "IconInfiniteHeadgear3.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteHeadgear3.png",
+      "sourcePngSha256": "4812828c8515341814ae5f2452267f7b362adc785dca971a3b23a60029e505e8",
+      "pngSha256": "4812828c8515341814ae5f2452267f7b362adc785dca971a3b23a60029e505e8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "c222749c6435c7a76f8228a26f63c14764e574ec6f443df6460d58047a2506a9",
+      "reusedFrom": "assets/game/items/IconInfiniteHeadgear3.png"
+    },
+    {
+      "filename": "IconInfiniteHeadgear4.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteHeadgear4.png",
+      "sourcePngSha256": "1e849fdd47bca7b9cb75175c43a49720ea61dc93727bfd89779bea68a19b5cda",
+      "pngSha256": "1e849fdd47bca7b9cb75175c43a49720ea61dc93727bfd89779bea68a19b5cda",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e649442a3af9dd018f937754edc28758e3043de73006b388c1b70927487a3e39",
+      "reusedFrom": "assets/game/items/IconInfiniteHeadgear4.png"
+    },
+    {
+      "filename": "IconInfiniteNeck1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteNeck1.png",
+      "sourcePngSha256": "bbcaeec0a122a52f8ad6c632f11a9097cdb1a39982720533116fc8f61141e8a2",
+      "pngSha256": "bbcaeec0a122a52f8ad6c632f11a9097cdb1a39982720533116fc8f61141e8a2",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "0cb9f894163948ad7696e25e7bc76679c186b18a03de41cc609f78bfc112e245",
+      "reusedFrom": "assets/game/items/IconInfiniteNeck1.png"
+    },
+    {
+      "filename": "IconInfiniteNeck2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteNeck2.png",
+      "sourcePngSha256": "00f4d6c091e6318a0c42a05e89f1094e72a0b9fece82321467d1ddd1c0d65116",
+      "pngSha256": "00f4d6c091e6318a0c42a05e89f1094e72a0b9fece82321467d1ddd1c0d65116",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "0f83efac32a166fd149430c2ecc2ccd2543dfacd80daf11ffb1518ab550bfd74",
+      "reusedFrom": "assets/game/items/IconInfiniteNeck2.png"
+    },
+    {
+      "filename": "IconInfiniteRing1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteRing1.png",
+      "sourcePngSha256": "dcc8def91db9128d56ad84ebe398d7a77ba777a6142dcc677d9811ac8622f22f",
+      "pngSha256": "dcc8def91db9128d56ad84ebe398d7a77ba777a6142dcc677d9811ac8622f22f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "138d090962a1d8c2e92a8fddf549848de9914e19692b23c2c233b2b5a625d78e",
+      "reusedFrom": "assets/game/items/IconInfiniteRing1.png"
+    },
+    {
+      "filename": "IconInfiniteRing2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteRing2.png",
+      "sourcePngSha256": "03bdf7a26f246123828c669c4091385156d3e6de0a7f107ab49dedbd9c7e68b9",
+      "pngSha256": "03bdf7a26f246123828c669c4091385156d3e6de0a7f107ab49dedbd9c7e68b9",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4f960b0856470714992533e1e2fd57c2963c401467379fe90f308b880c4d71fc",
+      "reusedFrom": "assets/game/items/IconInfiniteRing2.png"
+    },
+    {
+      "filename": "IconInfiniteWeapon1.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteWeapon1.png",
+      "sourcePngSha256": "9d4091ba60dbde7607e6fd7e17f91eb165a3f9e0060b672108587d98e9b248ed",
+      "pngSha256": "9d4091ba60dbde7607e6fd7e17f91eb165a3f9e0060b672108587d98e9b248ed",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "998cc47b14c2b235fd86dbb40b7dc990a5f62ca098dc3e4162711adf4f530d08",
+      "reusedFrom": "assets/game/items/IconInfiniteWeapon1.png"
+    },
+    {
+      "filename": "IconInfiniteWeapon2.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteWeapon2.png",
+      "sourcePngSha256": "46f16e1a3bed243f2ef6ac5ca03416eb5c30f4ea16457295d78f7aadd79a8c33",
+      "pngSha256": "46f16e1a3bed243f2ef6ac5ca03416eb5c30f4ea16457295d78f7aadd79a8c33",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "02ffaffe2a4b053a94665999734886326f7ff843649ecdd95b49e826abcb0385",
+      "reusedFrom": "assets/game/items/IconInfiniteWeapon2.png"
+    },
+    {
+      "filename": "IconInfiniteWeapon3.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteWeapon3.png",
+      "sourcePngSha256": "d0a5cf797a545b47f21639a46c456e36c31d6b09392f94679e06c07a60c41e63",
+      "pngSha256": "d0a5cf797a545b47f21639a46c456e36c31d6b09392f94679e06c07a60c41e63",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4895b5f969a24a03f194199597696859fca53c258808803ea693cc57eda079da",
+      "reusedFrom": "assets/game/items/IconInfiniteWeapon3.png"
+    },
+    {
+      "filename": "IconInfiniteWeapon4.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteWeapon4.png",
+      "sourcePngSha256": "b81e0097c12669c34aa163064a77c9d51fc8b7b48f0f8048804f4a5287417328",
+      "pngSha256": "b81e0097c12669c34aa163064a77c9d51fc8b7b48f0f8048804f4a5287417328",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "211ff843074ef536f4e8e82f8a008b3147da212d16b8b01f0b3a1399637db56e",
+      "reusedFrom": "assets/game/items/IconInfiniteWeapon4.png"
+    },
+    {
+      "filename": "IconInfiniteWeapon5.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInfiniteWeapon5.png",
+      "sourcePngSha256": "35c177c2bdb40ea444fa6f8fd63f4af6b478a9a5d22d3a48964516d2ffc07fff",
+      "pngSha256": "35c177c2bdb40ea444fa6f8fd63f4af6b478a9a5d22d3a48964516d2ffc07fff",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "cae5792ee898393bd607f569904c31d97bb7cde09776d8fe70ea16ba7a5eccb3",
+      "reusedFrom": "assets/game/items/IconInfiniteWeapon5.png"
+    },
+    {
+      "filename": "IconInterstellarArmorAdamantiumsuit.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarArmorAdamantiumsuit.png",
+      "sourcePngSha256": "322ef88416fd47963dcbdfcf9b5ecb828e8df05a7de4099f897c2b337ea77138",
+      "pngSha256": "322ef88416fd47963dcbdfcf9b5ecb828e8df05a7de4099f897c2b337ea77138",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7696744deda708aaf181ace35d24c8115e15b0b5b3d07edc2184a118b8aa6529",
+      "reusedFrom": "assets/game/items/IconInterstellarArmorAdamantiumsuit.png"
+    },
+    {
+      "filename": "IconInterstellarArmorPlasmasuit.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarArmorPlasmasuit.png",
+      "sourcePngSha256": "2f3b1529fca175e7a1d16a64bb51187d1b047aa9bffb07bd9e17b31bcd312357",
+      "pngSha256": "2f3b1529fca175e7a1d16a64bb51187d1b047aa9bffb07bd9e17b31bcd312357",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f28e0951100510af1be9fab179c44cebee4dd4fc00f9ee598ef63788b7019952",
+      "reusedFrom": "assets/game/items/IconInterstellarArmorPlasmasuit.png"
+    },
+    {
+      "filename": "IconInterstellarBeltPelvicsynchronizer.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarBeltPelvicsynchronizer.png",
+      "sourcePngSha256": "1b4888a098edc8408fd3703f1b10c5687f34e36ce9ff4f99afc5f62a211b168e",
+      "pngSha256": "1b4888a098edc8408fd3703f1b10c5687f34e36ce9ff4f99afc5f62a211b168e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d28c7d0370b1fe6cc499e034f66f178747382fb7aec4095d2196677795698c8a",
+      "reusedFrom": "assets/game/items/IconInterstellarBeltPelvicsynchronizer.png"
+    },
+    {
+      "filename": "IconInterstellarBeltSpinalstabilizer.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarBeltSpinalstabilizer.png",
+      "sourcePngSha256": "a88795b67d316cebf82505e1c1221971a92a8edee5d90e4e9b1a61ca68bdd539",
+      "pngSha256": "a88795b67d316cebf82505e1c1221971a92a8edee5d90e4e9b1a61ca68bdd539",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "c841a3741e8c6e45feaa233cc6c794e197e897ef2a3900c525532027b0924b19",
+      "reusedFrom": "assets/game/items/IconInterstellarBeltSpinalstabilizer.png"
+    },
+    {
+      "filename": "IconInterstellarFootHydraulicfeet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarFootHydraulicfeet.png",
+      "sourcePngSha256": "d839ed0f94f3e93f34662fb882906bd98d2a209f822663bc1b61089d61b93083",
+      "pngSha256": "d839ed0f94f3e93f34662fb882906bd98d2a209f822663bc1b61089d61b93083",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d86699989d1a45ecf253c4bc7b3b9e8d05909d2bd7ea2ef1aa4ed9906e98928f",
+      "reusedFrom": "assets/game/items/IconInterstellarFootHydraulicfeet.png"
+    },
+    {
+      "filename": "IconInterstellarFootRobofeet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarFootRobofeet.png",
+      "sourcePngSha256": "f89d38d7fb35f70926fb5030031d6ee1d7e359e517ba7d9b2ab15ac8fa8d3714",
+      "pngSha256": "f89d38d7fb35f70926fb5030031d6ee1d7e359e517ba7d9b2ab15ac8fa8d3714",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5f6a245500e43fa2839e1ff185a7bec9830a6ab646873033ec994474fb7a48f2",
+      "reusedFrom": "assets/game/items/IconInterstellarFootRobofeet.png"
+    },
+    {
+      "filename": "IconInterstellarGloveManualimpactors.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarGloveManualimpactors.png",
+      "sourcePngSha256": "459ff2c450fea9aa50144a71513caa03dd0a9188a34d0e57b538f60c36287d7f",
+      "pngSha256": "459ff2c450fea9aa50144a71513caa03dd0a9188a34d0e57b538f60c36287d7f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "fd3e375ebdbe577fd5675ed4b5e01a499d4b3668b414a398eb383f8fcc533660",
+      "reusedFrom": "assets/game/items/IconInterstellarGloveManualimpactors.png"
+    },
+    {
+      "filename": "IconInterstellarGlovePalmimplants.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarGlovePalmimplants.png",
+      "sourcePngSha256": "b2214f6bb68591f90486ebff32e794cb993d25a182b0387daf351f3030409a5e",
+      "pngSha256": "b2214f6bb68591f90486ebff32e794cb993d25a182b0387daf351f3030409a5e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "46e32e6c71501f12474308ad117d8df685069c0dbe9c4964a764ad0ac21d70eb",
+      "reusedFrom": "assets/game/items/IconInterstellarGlovePalmimplants.png"
+    },
+    {
+      "filename": "IconInterstellarHeadgearAdvancedmech.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarHeadgearAdvancedmech.png",
+      "sourcePngSha256": "54842e75b1c4e4ee99e9007d0e78901b3a06f31d7a26b11100385426a8f77cc1",
+      "pngSha256": "54842e75b1c4e4ee99e9007d0e78901b3a06f31d7a26b11100385426a8f77cc1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "fda64bd761b76c72fe6da0a9ad792f5e01080e553c2db75d73231fabfde81872",
+      "reusedFrom": "assets/game/items/IconInterstellarHeadgearAdvancedmech.png"
+    },
+    {
+      "filename": "IconInterstellarHeadgearAlienhead.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarHeadgearAlienhead.png",
+      "sourcePngSha256": "5af21c817868091975a58f52572cca4d9ff145d602a81db5be93bb417899087e",
+      "pngSha256": "5af21c817868091975a58f52572cca4d9ff145d602a81db5be93bb417899087e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "6c8f45df2feaec646f5630f63bc380ff1246c1282c456d97709a9583a754ef59",
+      "reusedFrom": "assets/game/items/IconInterstellarHeadgearAlienhead.png"
+    },
+    {
+      "filename": "IconInterstellarHeadgearDestroyermask.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarHeadgearDestroyermask.png",
+      "sourcePngSha256": "ad0ce418c35aa56e60f7a45929d389cb497ee898a77db62d4382351c7b79dbaf",
+      "pngSha256": "ad0ce418c35aa56e60f7a45929d389cb497ee898a77db62d4382351c7b79dbaf",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f72bae07a2a0196c5b780f1313dfaadad7cdcdf89331f2bc4e1ed0d2722cbbf6",
+      "reusedFrom": "assets/game/items/IconInterstellarHeadgearDestroyermask.png"
+    },
+    {
+      "filename": "IconInterstellarHeadgearHeavyduty.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarHeadgearHeavyduty.png",
+      "sourcePngSha256": "203e89d1a9864773f58acc799ba3ac156ed1c04fbbc150c335bbb83977e33aa5",
+      "pngSha256": "203e89d1a9864773f58acc799ba3ac156ed1c04fbbc150c335bbb83977e33aa5",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "6a015863e168f1e46d356e87d323feb4a81aeff561743dd8b5d55bd20dc0d35d",
+      "reusedFrom": "assets/game/items/IconInterstellarHeadgearHeavyduty.png"
+    },
+    {
+      "filename": "IconInterstellarHeadgearRobohelm.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarHeadgearRobohelm.png",
+      "sourcePngSha256": "884f941cfb8ebca299bdcc7216faa69d5a8a527b2c349fefbf92a5e49e5e4a03",
+      "pngSha256": "884f941cfb8ebca299bdcc7216faa69d5a8a527b2c349fefbf92a5e49e5e4a03",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "c3ff5bd207fcd74c120ad29447548aad5fbbafb1bf3dd0b7acf537a2b3babdc8",
+      "reusedFrom": "assets/game/items/IconInterstellarHeadgearRobohelm.png"
+    },
+    {
+      "filename": "IconInterstellarHeadgearStellariumhelm.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarHeadgearStellariumhelm.png",
+      "sourcePngSha256": "a6d9c0ff7ace60df29a822919fcef7db07b8f3a97e110b670d8165e963dc48c0",
+      "pngSha256": "a6d9c0ff7ace60df29a822919fcef7db07b8f3a97e110b670d8165e963dc48c0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ae6a8b480cffb8801fa1e5651813285514af1510429726e5cbeddb913cf27d1b",
+      "reusedFrom": "assets/game/items/IconInterstellarHeadgearStellariumhelm.png"
+    },
+    {
+      "filename": "IconInterstellarNeckGammaartifactscollar.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarNeckGammaartifactscollar.png",
+      "sourcePngSha256": "9c8564dc63fbb5b2950ab682db392b2489458a0c17b3b4cdd9818dce01d2304e",
+      "pngSha256": "9c8564dc63fbb5b2950ab682db392b2489458a0c17b3b4cdd9818dce01d2304e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "de60ea57c4a735e5204e0651858e1cbde6f1509662a72dbe1137626fd2bed2f0",
+      "reusedFrom": "assets/game/items/IconInterstellarNeckGammaartifactscollar.png"
+    },
+    {
+      "filename": "IconInterstellarNeckPsichoker.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarNeckPsichoker.png",
+      "sourcePngSha256": "fcf115f49047fbf82286f4a853aa1d6289067e08c26ab92c05c4343f39651c70",
+      "pngSha256": "fcf115f49047fbf82286f4a853aa1d6289067e08c26ab92c05c4343f39651c70",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "64d383a9be0fb96ea14cf5442f735b79e171dd2412cd633d319001441f6649cb",
+      "reusedFrom": "assets/game/items/IconInterstellarNeckPsichoker.png"
+    },
+    {
+      "filename": "IconInterstellarRingEclipsering.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarRingEclipsering.png",
+      "sourcePngSha256": "ab9e52278d3c09454006f473719c624cdc87cb06aae5e132c53ca3c30e4e53b8",
+      "pngSha256": "ab9e52278d3c09454006f473719c624cdc87cb06aae5e132c53ca3c30e4e53b8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "bd0660cb6d3091c9d2375a32cd91f0d5f0bf17054bbee2811547544e7b9cd01e",
+      "reusedFrom": "assets/game/items/IconInterstellarRingEclipsering.png"
+    },
+    {
+      "filename": "IconInterstellarRingRariumring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarRingRariumring.png",
+      "sourcePngSha256": "a8193cf8c20b5a86b93e0a3162a6cfae8a1f9669aaf473606b3ad1f30e8e1b35",
+      "pngSha256": "a8193cf8c20b5a86b93e0a3162a6cfae8a1f9669aaf473606b3ad1f30e8e1b35",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b6c11a443d10b3082fbf6e97b189a999f10f75b9e0ae2b0eba0d4f92c6cb1669",
+      "reusedFrom": "assets/game/items/IconInterstellarRingRariumring.png"
+    },
+    {
+      "filename": "IconInterstellarWeaponDualwieldmelee.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarWeaponDualwieldmelee.png",
+      "sourcePngSha256": "09c0c35f2cba8b3b6af98e47a5365c67f631b71458f476e26ae2af948af8d13f",
+      "pngSha256": "09c0c35f2cba8b3b6af98e47a5365c67f631b71458f476e26ae2af948af8d13f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "0753999ce3f14275b2e5d20d3152035300dec8ef396a5c5c729dee8dae66ede1",
+      "reusedFrom": "assets/game/items/IconInterstellarWeaponDualwieldmelee.png"
+    },
+    {
+      "filename": "IconInterstellarWeaponIonicblaster.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarWeaponIonicblaster.png",
+      "sourcePngSha256": "e3bb953c29202a5b5ea88fe0de4e1e179318d5226bd6e77b071ca4c4283e716e",
+      "pngSha256": "e3bb953c29202a5b5ea88fe0de4e1e179318d5226bd6e77b071ca4c4283e716e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "38f0806edfdacc93383d5918a8de16b67daaafe67a8fa026201e344075aaa52e",
+      "reusedFrom": "assets/game/items/IconInterstellarWeaponIonicblaster.png"
+    },
+    {
+      "filename": "IconInterstellarWeaponIsobariccutter.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarWeaponIsobariccutter.png",
+      "sourcePngSha256": "70bb0cefa2b3f059f6bbdbc0dd0495353add263a8c99656a4e56175ef6eada6c",
+      "pngSha256": "70bb0cefa2b3f059f6bbdbc0dd0495353add263a8c99656a4e56175ef6eada6c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a87279e3effba582a1d016212cc72603bed6a11cdbc625d45898a56b3b18a998",
+      "reusedFrom": "assets/game/items/IconInterstellarWeaponIsobariccutter.png"
+    },
+    {
+      "filename": "IconInterstellarWeaponLightswordandshield.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarWeaponLightswordandshield.png",
+      "sourcePngSha256": "6211b09abb388254f8176ad51ead9ad71434ba6762b3755268ec90cd0de0ca1e",
+      "pngSha256": "6211b09abb388254f8176ad51ead9ad71434ba6762b3755268ec90cd0de0ca1e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "35e4ba54904d7d28f3718098b33962223c8155cba60415647030852c769e2bc1",
+      "reusedFrom": "assets/game/items/IconInterstellarWeaponLightswordandshield.png"
+    },
+    {
+      "filename": "IconInterstellarWeaponPlasmarifle.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarWeaponPlasmarifle.png",
+      "sourcePngSha256": "903d9bf438b4f0b73a9b73cb0830beb5642d9693802dd5cb5ac0aad2c01e6491",
+      "pngSha256": "903d9bf438b4f0b73a9b73cb0830beb5642d9693802dd5cb5ac0aad2c01e6491",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "25b49f2b47561e0677f12d0f0642870ee1adacc1b8fab58cf1a4b629a640040b",
+      "reusedFrom": "assets/game/items/IconInterstellarWeaponPlasmarifle.png"
+    },
+    {
+      "filename": "IconInterstellarWeaponRaygun.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconInterstellarWeaponRaygun.png",
+      "sourcePngSha256": "eba31512a40d46a8a2d4d7c09cf57e972c1a30f3f9bac5f8e26e21a25a1bfa43",
+      "pngSha256": "eba31512a40d46a8a2d4d7c09cf57e972c1a30f3f9bac5f8e26e21a25a1bfa43",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "105dc878f4e27b23993cf5a4f4e4a1f60263fed36c5ce36eea878088cac0b446",
+      "reusedFrom": "assets/game/items/IconInterstellarWeaponRaygun.png"
+    },
+    {
+      "filename": "IconMedievalArmorIronplates.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalArmorIronplates.png",
+      "sourcePngSha256": "3cdb72bdd1429fd10c329d1db206acb48905ffa027a44786f958d9a70e3f141f",
+      "pngSha256": "3cdb72bdd1429fd10c329d1db206acb48905ffa027a44786f958d9a70e3f141f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "15e1d5bcf8ee8a365c50275ba23728aa01d6035c37223acf917dfd68f51938ca",
+      "reusedFrom": "assets/game/items/IconMedievalArmorIronplates.png"
+    },
+    {
+      "filename": "IconMedievalArmorQuirass.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalArmorQuirass.png",
+      "sourcePngSha256": "294c99e737ec77bffb3008dc12fe08788e186469f03a940e4ce5ada5c20562cb",
+      "pngSha256": "294c99e737ec77bffb3008dc12fe08788e186469f03a940e4ce5ada5c20562cb",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "240a1f105a8a046b6ee4d325cf9474a5a44f82d11312a052cd0173732f251ad5",
+      "reusedFrom": "assets/game/items/IconMedievalArmorQuirass.png"
+    },
+    {
+      "filename": "IconMedievalBeltBeltofbaltazar.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalBeltBeltofbaltazar.png",
+      "sourcePngSha256": "c49fd07cfcd27d34042bf34cf93393c666ff45badfa9266c94d1827bbea3abbb",
+      "pngSha256": "c49fd07cfcd27d34042bf34cf93393c666ff45badfa9266c94d1827bbea3abbb",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ff2829e203e9d74be13b5355f7d1e88af6820ef4d58ec76b57342b762028a898",
+      "reusedFrom": "assets/game/items/IconMedievalBeltBeltofbaltazar.png"
+    },
+    {
+      "filename": "IconMedievalBeltBeltpouch.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalBeltBeltpouch.png",
+      "sourcePngSha256": "8ebfcce3a49e1d15c7d877c3b60e95b931c719f1045f3cec36e9dddc381ec24e",
+      "pngSha256": "8ebfcce3a49e1d15c7d877c3b60e95b931c719f1045f3cec36e9dddc381ec24e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f31f5d35b4d20d86b62792392935ccb96b18d0c7661b17fd5b5ec1115ab0a596",
+      "reusedFrom": "assets/game/items/IconMedievalBeltBeltpouch.png"
+    },
+    {
+      "filename": "IconMedievalFootSandals.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalFootSandals.png",
+      "sourcePngSha256": "dffb669958471b96ac483849057cd2d285385cf085c180dfa54441b46dd72e21",
+      "pngSha256": "dffb669958471b96ac483849057cd2d285385cf085c180dfa54441b46dd72e21",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "8a570b75957c5793fcaaabf83c13ee57e472a9e454532b6be6159c77e94283a6",
+      "reusedFrom": "assets/game/items/IconMedievalFootSandals.png"
+    },
+    {
+      "filename": "IconMedievalFootSpurredstomper.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalFootSpurredstomper.png",
+      "sourcePngSha256": "61880e0dc278403f8756c1d2a4822b46983178a2d715e51f96be4cfb26a12a47",
+      "pngSha256": "61880e0dc278403f8756c1d2a4822b46983178a2d715e51f96be4cfb26a12a47",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "020f335afcec18881370840938fbdd8daa70be7cbca007555d8eb88df57f891b",
+      "reusedFrom": "assets/game/items/IconMedievalFootSpurredstomper.png"
+    },
+    {
+      "filename": "IconMedievalGloveGauntlet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalGloveGauntlet.png",
+      "sourcePngSha256": "c7fb72de715dfad2ae8cb95df69cfe0dd8950b5b56b944a6b60775413963f10b",
+      "pngSha256": "c7fb72de715dfad2ae8cb95df69cfe0dd8950b5b56b944a6b60775413963f10b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "175b016ed7295a93a93c30c2b8e505da524fa02309ffaa6b69de9d75c4de07fc",
+      "reusedFrom": "assets/game/items/IconMedievalGloveGauntlet.png"
+    },
+    {
+      "filename": "IconMedievalGloveIronfist.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalGloveIronfist.png",
+      "sourcePngSha256": "e0e42f61779d22e736088b593f4f2cbae7a6ac53cd3d82e6f6314e2892d667fd",
+      "pngSha256": "e0e42f61779d22e736088b593f4f2cbae7a6ac53cd3d82e6f6314e2892d667fd",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "68d085b9931fed02ed45eb1ffb385513ca4716777d1a43ef3222ea0444f3a402",
+      "reusedFrom": "assets/game/items/IconMedievalGloveIronfist.png"
+    },
+    {
+      "filename": "IconMedievalHeadgearDeathshat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalHeadgearDeathshat.png",
+      "sourcePngSha256": "da1c4d4f61221f26dac763943272f4d0ef3fab3d578844af2105b14dd8749fd6",
+      "pngSha256": "da1c4d4f61221f26dac763943272f4d0ef3fab3d578844af2105b14dd8749fd6",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3e12e53753f56a85520d6b8c8894e6ab3fd53bce128d9e07361021f1150e6c5d",
+      "reusedFrom": "assets/game/items/IconMedievalHeadgearDeathshat.png"
+    },
+    {
+      "filename": "IconMedievalHeadgearGreekhelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalHeadgearGreekhelmet.png",
+      "sourcePngSha256": "1241f57951ad32ce5e9d211789b4f805badb59c1937db5a60b9ff8d455ed08e1",
+      "pngSha256": "1241f57951ad32ce5e9d211789b4f805badb59c1937db5a60b9ff8d455ed08e1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "063653f2d83df33bcec4975f51a0ee981ab7dac69ff064fe05316b24ed83bcd4",
+      "reusedFrom": "assets/game/items/IconMedievalHeadgearGreekhelmet.png"
+    },
+    {
+      "filename": "IconMedievalHeadgearKnighthelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalHeadgearKnighthelmet.png",
+      "sourcePngSha256": "5019c5a836be5dc3bff22aef6a0461fb596c44bf3d6f29046dc549b20f47263c",
+      "pngSha256": "5019c5a836be5dc3bff22aef6a0461fb596c44bf3d6f29046dc549b20f47263c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "fb9978bd6825f73f469b862925bec42a4ae06661796d87907f82746777abefa6",
+      "reusedFrom": "assets/game/items/IconMedievalHeadgearKnighthelmet.png"
+    },
+    {
+      "filename": "IconMedievalHeadgearRomanhelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalHeadgearRomanhelmet.png",
+      "sourcePngSha256": "ef692ac7990a0eec8d6582e8c1af8442b206c828b64b69b13cb29d54984197b3",
+      "pngSha256": "ef692ac7990a0eec8d6582e8c1af8442b206c828b64b69b13cb29d54984197b3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "689a35fdd1200b2eb285a205e6e7cea61f49f40245c584a492ddcfaa5c7412a0",
+      "reusedFrom": "assets/game/items/IconMedievalHeadgearRomanhelmet.png"
+    },
+    {
+      "filename": "IconMedievalHeadgearSamuraihelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalHeadgearSamuraihelmet.png",
+      "sourcePngSha256": "ffc53da4c30faff9c617629339a8bc03c3fa02648aba14a36bcd6fcb19e0e8ba",
+      "pngSha256": "ffc53da4c30faff9c617629339a8bc03c3fa02648aba14a36bcd6fcb19e0e8ba",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "8917b5b768c7b11ea20997d7387053bc1fc72e3acee10e28eeef093d26fe323f",
+      "reusedFrom": "assets/game/items/IconMedievalHeadgearSamuraihelmet.png"
+    },
+    {
+      "filename": "IconMedievalNeckLuckycharm.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalNeckLuckycharm.png",
+      "sourcePngSha256": "ea98a4f2922a7b141454060fe014bc1ef332cb04db1a4c667c7913727fd62685",
+      "pngSha256": "ea98a4f2922a7b141454060fe014bc1ef332cb04db1a4c667c7913727fd62685",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ee1bc25fa058043c9aa3a9dafc746aba0469ee0091579649ac8b1d116e029dc9",
+      "reusedFrom": "assets/game/items/IconMedievalNeckLuckycharm.png"
+    },
+    {
+      "filename": "IconMedievalNeckValorsigil.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalNeckValorsigil.png",
+      "sourcePngSha256": "701b7532f049cd3bac54451279b70713cda700d849f7914d48af8c27d4e49eeb",
+      "pngSha256": "701b7532f049cd3bac54451279b70713cda700d849f7914d48af8c27d4e49eeb",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "47d5f10f9f267d1454968f534b40b427d38552ca7e63dba8e12073a81db23cb6",
+      "reusedFrom": "assets/game/items/IconMedievalNeckValorsigil.png"
+    },
+    {
+      "filename": "IconMedievalRingBlessedgem.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalRingBlessedgem.png",
+      "sourcePngSha256": "0c12fe7a8acb7514d718f8eef17e4a4aebba5127d590a79e2e865161b358651a",
+      "pngSha256": "0c12fe7a8acb7514d718f8eef17e4a4aebba5127d590a79e2e865161b358651a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "02cbebb09ca419c310c44e7300e64f29fafb729dcac82c8afa370b1adb3b57c6",
+      "reusedFrom": "assets/game/items/IconMedievalRingBlessedgem.png"
+    },
+    {
+      "filename": "IconMedievalRingIronring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalRingIronring.png",
+      "sourcePngSha256": "5f5d9fa92171d994ce58a5eb98730b1b34036665baed93066c7a7bde172dc6b5",
+      "pngSha256": "5f5d9fa92171d994ce58a5eb98730b1b34036665baed93066c7a7bde172dc6b5",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "acd11e65c90c205212a0b4943c632fa75a5c2578d4cfdf510873fc957c133575",
+      "reusedFrom": "assets/game/items/IconMedievalRingIronring.png"
+    },
+    {
+      "filename": "IconMedievalWeaponBow.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalWeaponBow.png",
+      "sourcePngSha256": "d0f408d5ffe87c6a0d9516d699646bf3894571c8ff81984c13d3449f22ea8433",
+      "pngSha256": "d0f408d5ffe87c6a0d9516d699646bf3894571c8ff81984c13d3449f22ea8433",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "993497b071db7e4537d1b3816bef5b834f96c82fc4dd543cad45d060859630db",
+      "reusedFrom": "assets/game/items/IconMedievalWeaponBow.png"
+    },
+    {
+      "filename": "IconMedievalWeaponKatana.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalWeaponKatana.png",
+      "sourcePngSha256": "db6ec1ed45b8904854aaab6ebc275b4bd95f485e643384d81348b39cf4b5b138",
+      "pngSha256": "db6ec1ed45b8904854aaab6ebc275b4bd95f485e643384d81348b39cf4b5b138",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "efd155af0aae4ed6d07c2fd785a30674420680e5652ebfd8b35e29e4e4d92b99",
+      "reusedFrom": "assets/game/items/IconMedievalWeaponKatana.png"
+    },
+    {
+      "filename": "IconMedievalWeaponScythe.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalWeaponScythe.png",
+      "sourcePngSha256": "b6de4f36cdcbf7daedf237cdd2dacbc20924e86b1dd1def9f05029ec7ee02f6c",
+      "pngSha256": "b6de4f36cdcbf7daedf237cdd2dacbc20924e86b1dd1def9f05029ec7ee02f6c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7efe3b9169439f1f23376d02fbd12646bfa32d11a57638d58a9b12985d1354ff",
+      "reusedFrom": "assets/game/items/IconMedievalWeaponScythe.png"
+    },
+    {
+      "filename": "IconMedievalWeaponSpearandshield.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalWeaponSpearandshield.png",
+      "sourcePngSha256": "4a818b3f3089e220dffd854213ced7c745213c63129056104f8742acf07aa6c4",
+      "pngSha256": "4a818b3f3089e220dffd854213ced7c745213c63129056104f8742acf07aa6c4",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a16532f1a2d0fbaadab60195b8ab52a8ac0562ca7cb892f3187da420e8e35472",
+      "reusedFrom": "assets/game/items/IconMedievalWeaponSpearandshield.png"
+    },
+    {
+      "filename": "IconMedievalWeaponSwordandshield.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalWeaponSwordandshield.png",
+      "sourcePngSha256": "60ad68057c098f6454e5db5d703334eefcd6f1912e24eaea14cde890f7c1e7e7",
+      "pngSha256": "60ad68057c098f6454e5db5d703334eefcd6f1912e24eaea14cde890f7c1e7e7",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "0e83b2d4d80dad3c56e63f580e6e1a28ce2401b4168f6c73138170f3c2eb7390",
+      "reusedFrom": "assets/game/items/IconMedievalWeaponSwordandshield.png"
+    },
+    {
+      "filename": "IconMedievalWeaponTomahawk.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalWeaponTomahawk.png",
+      "sourcePngSha256": "1ea5e3fb3a5d7e8ea8b0448138ced9ccc6667f16d494f144f0843dda037ac26a",
+      "pngSha256": "1ea5e3fb3a5d7e8ea8b0448138ced9ccc6667f16d494f144f0843dda037ac26a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "9aa0904210328f01885906bd1da5f5b6f4d672278b7e007b9efa405172981dcf",
+      "reusedFrom": "assets/game/items/IconMedievalWeaponTomahawk.png"
+    },
+    {
+      "filename": "IconMedievalWeaponWarhammer.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMedievalWeaponWarhammer.png",
+      "sourcePngSha256": "44bacd28b6a547198896d9f29f39bf28e172d8ff4bfb850a3457c317ea6b269d",
+      "pngSha256": "44bacd28b6a547198896d9f29f39bf28e172d8ff4bfb850a3457c317ea6b269d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ce584f0042aafa80b9767a531f4b815e50ecf0fe5300bc46eb8f2c6eb52b60d0",
+      "reusedFrom": "assets/game/items/IconMedievalWeaponWarhammer.png"
+    },
+    {
+      "filename": "IconModernArmorCamouflage.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernArmorCamouflage.png",
+      "sourcePngSha256": "2cc049a537c4db6a5c040ef2a1c177b2f80c229b17960cee327181f260b7f9a3",
+      "pngSha256": "2cc049a537c4db6a5c040ef2a1c177b2f80c229b17960cee327181f260b7f9a3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5b12a8d3ae67610637c3646bfb5193b90d8635adb6c47f4d3468038b684514dc",
+      "reusedFrom": "assets/game/items/IconModernArmorCamouflage.png"
+    },
+    {
+      "filename": "IconModernArmorKevlar.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernArmorKevlar.png",
+      "sourcePngSha256": "ef8d2a37cde218c10be8ea0c02634fe6b60f4589c21e9ae514c71c190f2f5ea8",
+      "pngSha256": "ef8d2a37cde218c10be8ea0c02634fe6b60f4589c21e9ae514c71c190f2f5ea8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "327a1386d90bc03e67272121d9e089dfb5963dc45026927e9ee6743a3b996e57",
+      "reusedFrom": "assets/game/items/IconModernArmorKevlar.png"
+    },
+    {
+      "filename": "IconModernBeltAmmopouch.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernBeltAmmopouch.png",
+      "sourcePngSha256": "c3f261b16b2eef31d291d35f870633e368ca1efe7de78bceea5da0ad0143ebb6",
+      "pngSha256": "c3f261b16b2eef31d291d35f870633e368ca1efe7de78bceea5da0ad0143ebb6",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "efd17516afd0a8865759351efb584fb71d9651cca9486c46aad31d3b649d3799",
+      "reusedFrom": "assets/game/items/IconModernBeltAmmopouch.png"
+    },
+    {
+      "filename": "IconModernBeltTacticalbelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernBeltTacticalbelt.png",
+      "sourcePngSha256": "f7bc213cc02089c05573ca9575227362c6b08fbde7523564513e334620207387",
+      "pngSha256": "f7bc213cc02089c05573ca9575227362c6b08fbde7523564513e334620207387",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a92c7b1000ae3c0b35b1cc1c0d22ba089dd24a4e075d6c1bb0c6127c8f919a73",
+      "reusedFrom": "assets/game/items/IconModernBeltTacticalbelt.png"
+    },
+    {
+      "filename": "IconModernFootVeteranboots.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernFootVeteranboots.png",
+      "sourcePngSha256": "313c5cadb276859f4f60eb37125b79f3c38cfc959830c6bdd3b02e33547c4f38",
+      "pngSha256": "313c5cadb276859f4f60eb37125b79f3c38cfc959830c6bdd3b02e33547c4f38",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "48c6bfb0a76190a0a18c97009a551d665ba147952be7ec3ef3019c807888e70b",
+      "reusedFrom": "assets/game/items/IconModernFootVeteranboots.png"
+    },
+    {
+      "filename": "IconModernGloveCombatgloves.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernGloveCombatgloves.png",
+      "sourcePngSha256": "e7ec14d76ea488cc5bc77df2b0500c9fd884409e0aceda0cbc2dc40c384eca3f",
+      "pngSha256": "e7ec14d76ea488cc5bc77df2b0500c9fd884409e0aceda0cbc2dc40c384eca3f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "dd52ae697194ab3becf6b6fa9650bee5409442df0bb9f1bc12b55fa9b5d6242f",
+      "reusedFrom": "assets/game/items/IconModernGloveCombatgloves.png"
+    },
+    {
+      "filename": "IconModernGloveTacticalhalffingers.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernGloveTacticalhalffingers.png",
+      "sourcePngSha256": "24f5859c1d4027668372dda3e70b76f2edc0ad74e01aee047ac9c909ef3727ae",
+      "pngSha256": "24f5859c1d4027668372dda3e70b76f2edc0ad74e01aee047ac9c909ef3727ae",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "c09eec7722e924b9a355dcf8960827329670b913993e4970d42d67ce10d7da2b",
+      "reusedFrom": "assets/game/items/IconModernGloveTacticalhalffingers.png"
+    },
+    {
+      "filename": "IconModernHeadgearFedorahat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernHeadgearFedorahat.png",
+      "sourcePngSha256": "aa60f91e5384f943222203125b5a5e032e955a34c3338645d2e8dc3df67b2e31",
+      "pngSha256": "aa60f91e5384f943222203125b5a5e032e955a34c3338645d2e8dc3df67b2e31",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f0099ab66f9522f1b234ce7a4357ebb6891ebf2ad6a67e169f67fe8a78768d45",
+      "reusedFrom": "assets/game/items/IconModernHeadgearFedorahat.png"
+    },
+    {
+      "filename": "IconModernHeadgearKevlarhelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernHeadgearKevlarhelmet.png",
+      "sourcePngSha256": "8cdeca535cf1c3b7c7db090049793c84305cc83e86fdd66120b28c349f538fcd",
+      "pngSha256": "8cdeca535cf1c3b7c7db090049793c84305cc83e86fdd66120b28c349f538fcd",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e95a76821dad0423e5c7c52a14912fc2029385f1371de0309f278cbc9a2c7a24",
+      "reusedFrom": "assets/game/items/IconModernHeadgearKevlarhelmet.png"
+    },
+    {
+      "filename": "IconModernHeadgearOfficershat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernHeadgearOfficershat.png",
+      "sourcePngSha256": "3c32c00f7d2f1f5be82bd9585223f8ad9a3eb2d0cd07cca25c56c737c5cf20a0",
+      "pngSha256": "3c32c00f7d2f1f5be82bd9585223f8ad9a3eb2d0cd07cca25c56c737c5cf20a0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "be683554531bf234153f7b885533e28531fedd5f27204f8f919f84732c2f8bbc",
+      "reusedFrom": "assets/game/items/IconModernHeadgearOfficershat.png"
+    },
+    {
+      "filename": "IconModernHeadgearRiothelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernHeadgearRiothelmet.png",
+      "sourcePngSha256": "44ed3e80aaf19d039f287b2b1470ba8832591dc44fb60fe27b8024213f27ab97",
+      "pngSha256": "44ed3e80aaf19d039f287b2b1470ba8832591dc44fb60fe27b8024213f27ab97",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3841d87ff7ac2ba77b60340a31fb304db536bdaad9d2d292a10d3fca98e5a32d",
+      "reusedFrom": "assets/game/items/IconModernHeadgearRiothelmet.png"
+    },
+    {
+      "filename": "IconModernHeadgearSergeanthat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernHeadgearSergeanthat.png",
+      "sourcePngSha256": "69c36bbc5cffc6385a9bfbe9d336c4c21af8f158343bae8f3b4af539c6adcf8b",
+      "pngSha256": "69c36bbc5cffc6385a9bfbe9d336c4c21af8f158343bae8f3b4af539c6adcf8b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "96565b90c3fbd079be5ffe2630675529d9c99945c46bd3281b76023d572a73f7",
+      "reusedFrom": "assets/game/items/IconModernHeadgearSergeanthat.png"
+    },
+    {
+      "filename": "IconModernHeadgearSteelhelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernHeadgearSteelhelmet.png",
+      "sourcePngSha256": "35b1c551c5fc38c66ca683ba310d9ee868619b8cede4cf4030d3c463977cc628",
+      "pngSha256": "35b1c551c5fc38c66ca683ba310d9ee868619b8cede4cf4030d3c463977cc628",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "fc6210285db94d77a2f84511496bf14e3e84d3c7897d38b98a337644e0f596c7",
+      "reusedFrom": "assets/game/items/IconModernHeadgearSteelhelmet.png"
+    },
+    {
+      "filename": "IconModernHeadgearWinterhat.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernHeadgearWinterhat.png",
+      "sourcePngSha256": "974debbc843440350966a7b6753b23a26afc8ac381d23beca6ed2cc05932d633",
+      "pngSha256": "974debbc843440350966a7b6753b23a26afc8ac381d23beca6ed2cc05932d633",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f0bc2827a733657b8830ff671b288048a59c1f7b2bd9ceb83d15839658f70fe9",
+      "reusedFrom": "assets/game/items/IconModernHeadgearWinterhat.png"
+    },
+    {
+      "filename": "IconModernNeckDogtags.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernNeckDogtags.png",
+      "sourcePngSha256": "33a71955a3d502c7e7ac2bb216a753bab59ec6d9b0c3a77f3007612551978b63",
+      "pngSha256": "33a71955a3d502c7e7ac2bb216a753bab59ec6d9b0c3a77f3007612551978b63",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "25886718a1c09b972f2df8d82a04923dd0a89f4c9426f02bf1070cb856640ae9",
+      "reusedFrom": "assets/game/items/IconModernNeckDogtags.png"
+    },
+    {
+      "filename": "IconModernNeckFortunenecklace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernNeckFortunenecklace.png",
+      "sourcePngSha256": "66239ae3b494e8722d70a3a361f69ea0f14fa5accb6c0dc4fe7dc48c5dc2e3f1",
+      "pngSha256": "66239ae3b494e8722d70a3a361f69ea0f14fa5accb6c0dc4fe7dc48c5dc2e3f1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5c3879b6d5d9ef86d312fca7ab80406a06550f713000ea8999596e91cd9e813a",
+      "reusedFrom": "assets/game/items/IconModernNeckFortunenecklace.png"
+    },
+    {
+      "filename": "IconModernRingBolt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernRingBolt.png",
+      "sourcePngSha256": "08b50836619f678fc76531fdf643b500e46a2b1bbba7d0c6d5e01039dcc93ede",
+      "pngSha256": "08b50836619f678fc76531fdf643b500e46a2b1bbba7d0c6d5e01039dcc93ede",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7ce6d33c1695611d4d18737efe629f50c27e4b5c7fc6192fa15d95cc8ff876a6",
+      "reusedFrom": "assets/game/items/IconModernRingBolt.png"
+    },
+    {
+      "filename": "IconModernRingBrotherhoodring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernRingBrotherhoodring.png",
+      "sourcePngSha256": "d07a5a741ee2734e4c82c69cf24c899d72702d6dd531c149ff7d8fa907763272",
+      "pngSha256": "d07a5a741ee2734e4c82c69cf24c899d72702d6dd531c149ff7d8fa907763272",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "baa53b252e1a8977271dfe048c84a951a2d488771550034db4af5cc50ec3bab7",
+      "reusedFrom": "assets/game/items/IconModernRingBrotherhoodring.png"
+    },
+    {
+      "filename": "IconModernWeaponAk.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernWeaponAk.png",
+      "sourcePngSha256": "fb060e37e5a28b7342b009f5a8423c000088e45e6b5192cee6528da129a2f72c",
+      "pngSha256": "fb060e37e5a28b7342b009f5a8423c000088e45e6b5192cee6528da129a2f72c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b27657ea3835a555f0c7680d85b07a7d719c01390efdafd5b37f28a651d5fb90",
+      "reusedFrom": "assets/game/items/IconModernWeaponAk.png"
+    },
+    {
+      "filename": "IconModernWeaponBaton.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernWeaponBaton.png",
+      "sourcePngSha256": "beeae2c79fa6b6576a9371d7add7d4e90dc20167467d95a1447b9f196c08267b",
+      "pngSha256": "beeae2c79fa6b6576a9371d7add7d4e90dc20167467d95a1447b9f196c08267b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "90e0d18e0cc35462cdb4a0c7bb1c5de2bd50315fce1117ccbe71647fd2460f71",
+      "reusedFrom": "assets/game/items/IconModernWeaponBaton.png"
+    },
+    {
+      "filename": "IconModernWeaponKnuckledusters.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernWeaponKnuckledusters.png",
+      "sourcePngSha256": "a817581e6d73dbacc9ea121d0c9deb43b6e7f4fc3846ac716c6ad38541b229f2",
+      "pngSha256": "a817581e6d73dbacc9ea121d0c9deb43b6e7f4fc3846ac716c6ad38541b229f2",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "fa1c45ab562c9532633ed39755091b5aae0ad3e68e56335f0af8b8021d5c23df",
+      "reusedFrom": "assets/game/items/IconModernWeaponKnuckledusters.png"
+    },
+    {
+      "filename": "IconModernWeaponM4.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernWeaponM4.png",
+      "sourcePngSha256": "eaafb5f732353bb1ac43ce95099c6010727f676194ebe76524b00ed3a3fab433",
+      "pngSha256": "eaafb5f732353bb1ac43ce95099c6010727f676194ebe76524b00ed3a3fab433",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "6bd11e9122662e7d8df4264680d3183bdc9b9a84b03d46ce57e3029d23e8edf4",
+      "reusedFrom": "assets/game/items/IconModernWeaponM4.png"
+    },
+    {
+      "filename": "IconModernWeaponRiotshield.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernWeaponRiotshield.png",
+      "sourcePngSha256": "6852dc212a2bd05c04ee2c08e978c3fc0a54c6f2577e878c9fa19349fee0194f",
+      "pngSha256": "6852dc212a2bd05c04ee2c08e978c3fc0a54c6f2577e878c9fa19349fee0194f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "bab591cda4caa2de0006c9772c4f474d7f1269a25228df673b87681b647c9c8c",
+      "reusedFrom": "assets/game/items/IconModernWeaponRiotshield.png"
+    },
+    {
+      "filename": "IconModernWeaponSniper.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernWeaponSniper.png",
+      "sourcePngSha256": "2a4700c169886396dc3cb87b53569e28ada403db05f14d4a9ba8126c434d9b81",
+      "pngSha256": "2a4700c169886396dc3cb87b53569e28ada403db05f14d4a9ba8126c434d9b81",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "666120b5a1995a24dfe6f4344bc508fb6f2babd5b532f2dbddc2185e23143ffe",
+      "reusedFrom": "assets/game/items/IconModernWeaponSniper.png"
+    },
+    {
+      "filename": "IconModernWeaponUzi.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernWeaponUzi.png",
+      "sourcePngSha256": "9bc0aa9c151f2689770cf3a4ce6b30d9595e87931d83e72746ccb6df581cf8fc",
+      "pngSha256": "9bc0aa9c151f2689770cf3a4ce6b30d9595e87931d83e72746ccb6df581cf8fc",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "529a6decd74fafa610d93faaf9d35486b75bc03acede1714534140b8ee9fec39",
+      "reusedFrom": "assets/game/items/IconModernWeaponUzi.png"
+    },
+    {
+      "filename": "IconModernWeaponWrench.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernWeaponWrench.png",
+      "sourcePngSha256": "751bf92bba8668b0a27c9fa1e1a7de781d63283882ec4fe625dda67d26d3ba86",
+      "pngSha256": "751bf92bba8668b0a27c9fa1e1a7de781d63283882ec4fe625dda67d26d3ba86",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "02ea9d464902b25e5c2227d2fd688004063eb69c11a888233608ee0adf8af6c1",
+      "reusedFrom": "assets/game/items/IconModernWeaponWrench.png"
+    },
+    {
+      "filename": "IconModernlFootCombatboots.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconModernlFootCombatboots.png",
+      "sourcePngSha256": "725bebc757ffcc551410983b6e8bb90e9cb39a22eb27e2ca6cee9f6816889c2d",
+      "pngSha256": "725bebc757ffcc551410983b6e8bb90e9cb39a22eb27e2ca6cee9f6816889c2d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "c7e61d140e13ec8b8f1e9e920a0bc275573f7b745c1b65aae3efe8cf786eddea",
+      "reusedFrom": "assets/game/items/IconModernlFootCombatboots.png"
+    },
+    {
+      "filename": "IconMultiverseArmorHoloarmor.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseArmorHoloarmor.png",
+      "sourcePngSha256": "651b3574319806fb693a512270b632fb419edbc3ed871eded151ed62f84756f1",
+      "pngSha256": "651b3574319806fb693a512270b632fb419edbc3ed871eded151ed62f84756f1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "9017576b56afd129d0308e70b4d1708bccb5e4ff1f5a243c944d644a2f1bce01",
+      "reusedFrom": "assets/game/items/IconMultiverseArmorHoloarmor.png"
+    },
+    {
+      "filename": "IconMultiverseArmorSpectralplates.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseArmorSpectralplates.png",
+      "sourcePngSha256": "79a9a5591beb9799bf31714e46a408f7d28acdef24136649dece0fc7c0faaa68",
+      "pngSha256": "79a9a5591beb9799bf31714e46a408f7d28acdef24136649dece0fc7c0faaa68",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b8a8cfca3e6bdb100a268d7f29fe28980b2dfc22fb4b3a50d593c81462e40b27",
+      "reusedFrom": "assets/game/items/IconMultiverseArmorSpectralplates.png"
+    },
+    {
+      "filename": "IconMultiverseBeltOrbitbelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseBeltOrbitbelt.png",
+      "sourcePngSha256": "c808476e12f4551481694e89d547e73cbe68d33e81b974cc40ba6ff01ff1ead3",
+      "pngSha256": "c808476e12f4551481694e89d547e73cbe68d33e81b974cc40ba6ff01ff1ead3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "6fd386b6d28d676e52f5ddb171b6d316d07a9ee21f814685b22b8caf1b542213",
+      "reusedFrom": "assets/game/items/IconMultiverseBeltOrbitbelt.png"
+    },
+    {
+      "filename": "IconMultiverseBeltRealitybelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseBeltRealitybelt.png",
+      "sourcePngSha256": "4060d08e6d48180eff35a2f4cd59a881881e49d5b2926d8cc8db7e943f4b4f83",
+      "pngSha256": "4060d08e6d48180eff35a2f4cd59a881881e49d5b2926d8cc8db7e943f4b4f83",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "8d6b80a2bae01dfc15ba9c00e03de882dd7d208411cf2dee925312414973b774",
+      "reusedFrom": "assets/game/items/IconMultiverseBeltRealitybelt.png"
+    },
+    {
+      "filename": "IconMultiverseFootEtherealsocks.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseFootEtherealsocks.png",
+      "sourcePngSha256": "3146fe044e8adad327971aff13d3debaf02b30de90c12941503fdb80a582f244",
+      "pngSha256": "3146fe044e8adad327971aff13d3debaf02b30de90c12941503fdb80a582f244",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "35daf4678a1073d0ac3f2d98a97cc15a77234253a4b2ebfb4a50775d9d478e6f",
+      "reusedFrom": "assets/game/items/IconMultiverseFootEtherealsocks.png"
+    },
+    {
+      "filename": "IconMultiverseFootFasttravelshoes.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseFootFasttravelshoes.png",
+      "sourcePngSha256": "75d00381617d19a754fd72660ae67adf63c5213f32e62d22e50f746812ae8bb1",
+      "pngSha256": "75d00381617d19a754fd72660ae67adf63c5213f32e62d22e50f746812ae8bb1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "08ebe075abe6884af8d818a7f772d3e0e8e5229b204bf0ffdea485f72d842b31",
+      "reusedFrom": "assets/game/items/IconMultiverseFootFasttravelshoes.png"
+    },
+    {
+      "filename": "IconMultiverseGloveImpulsecontroller.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseGloveImpulsecontroller.png",
+      "sourcePngSha256": "bb8deb922ef96aee3c1eae0ab49b83ad48179235637c3439b5b289426c4dd658",
+      "pngSha256": "bb8deb922ef96aee3c1eae0ab49b83ad48179235637c3439b5b289426c4dd658",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "52d04bdde323b75cd7b7a4874b3fbc5fe6739d8da83812844ca66803bbe46c0f",
+      "reusedFrom": "assets/game/items/IconMultiverseGloveImpulsecontroller.png"
+    },
+    {
+      "filename": "IconMultiverseGloveRainbowgloves.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseGloveRainbowgloves.png",
+      "sourcePngSha256": "10fbaa21387dbeed4a93be6776df7a35f1f4d4f4258c114c2275cb98eceb2933",
+      "pngSha256": "10fbaa21387dbeed4a93be6776df7a35f1f4d4f4258c114c2275cb98eceb2933",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4c9389090962ad4982e94b56b1a81a8fdce78ae0c9ec8f2921cdba790d580f40",
+      "reusedFrom": "assets/game/items/IconMultiverseGloveRainbowgloves.png"
+    },
+    {
+      "filename": "IconMultiverseHeadgearFirewallmask.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseHeadgearFirewallmask.png",
+      "sourcePngSha256": "2283fd7217b9a1a4db669e1f6476899a0f990c89e7f574e0b0de426fe478cf0f",
+      "pngSha256": "2283fd7217b9a1a4db669e1f6476899a0f990c89e7f574e0b0de426fe478cf0f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3221069f4b9011d49059030fe014c6d1a793f2893ddbe89a77e69d3f4ec4f0df",
+      "reusedFrom": "assets/game/items/IconMultiverseHeadgearFirewallmask.png"
+    },
+    {
+      "filename": "IconMultiverseHeadgearSpeedrunnercasquette.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseHeadgearSpeedrunnercasquette.png",
+      "sourcePngSha256": "a7da150093f11e2d5e0d8762e98ada7ddfd968510057676e9a561d3b27799177",
+      "pngSha256": "a7da150093f11e2d5e0d8762e98ada7ddfd968510057676e9a561d3b27799177",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "2505261455a33f96b86cce26b43229515af2edbfe88f4eafa565998ee0ebe8ff",
+      "reusedFrom": "assets/game/items/IconMultiverseHeadgearSpeedrunnercasquette.png"
+    },
+    {
+      "filename": "IconMultiverseHeadgearStalkerhelm.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseHeadgearStalkerhelm.png",
+      "sourcePngSha256": "ab4ba73bc766296e8e85d4e80621b01c25337ff21d5a6e5632fa70b2a455aa88",
+      "pngSha256": "ab4ba73bc766296e8e85d4e80621b01c25337ff21d5a6e5632fa70b2a455aa88",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "8c623cafed693a2b3635e37546792c9616fd5ee2c41f57179d41f9faae899882",
+      "reusedFrom": "assets/game/items/IconMultiverseHeadgearStalkerhelm.png"
+    },
+    {
+      "filename": "IconMultiverseHeadgearVirtualhelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseHeadgearVirtualhelmet.png",
+      "sourcePngSha256": "d7a7cf7e0171965bdea2c0ef747d5abf2295b533cb4bcec3703de0a46b9859d6",
+      "pngSha256": "d7a7cf7e0171965bdea2c0ef747d5abf2295b533cb4bcec3703de0a46b9859d6",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7234e47268fc69d06e92f9b997651e6cfc6f38bb95f42be0e69db280d46f26c2",
+      "reusedFrom": "assets/game/items/IconMultiverseHeadgearVirtualhelmet.png"
+    },
+    {
+      "filename": "IconMultiverseNeckCrystallamulet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseNeckCrystallamulet.png",
+      "sourcePngSha256": "072880005fce558af140a02605c6df9d3808adbdcf22d7e8affeb4a85a7535c9",
+      "pngSha256": "072880005fce558af140a02605c6df9d3808adbdcf22d7e8affeb4a85a7535c9",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "84ed58dd647616f31130b532efdb64c5e3752c970b1c7a294587e092561a6138",
+      "reusedFrom": "assets/game/items/IconMultiverseNeckCrystallamulet.png"
+    },
+    {
+      "filename": "IconMultiverseNeckGlitchnecklace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseNeckGlitchnecklace.png",
+      "sourcePngSha256": "4c83090ac6620efa70d007b92056bb58ee19919d35d4aa8335f79d75b1a0d956",
+      "pngSha256": "4c83090ac6620efa70d007b92056bb58ee19919d35d4aa8335f79d75b1a0d956",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a2fc3000a81041e904e5e70d86f513d3a96a1a2e7649a9150b863d115482487b",
+      "reusedFrom": "assets/game/items/IconMultiverseNeckGlitchnecklace.png"
+    },
+    {
+      "filename": "IconMultiverseRingConnectionring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseRingConnectionring.png",
+      "sourcePngSha256": "94d2f6cc20b7dae66b16a66291dce273aeb44c668fe5fb8b88c711a875764286",
+      "pngSha256": "94d2f6cc20b7dae66b16a66291dce273aeb44c668fe5fb8b88c711a875764286",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3c61e58601da5f0240225de9bfa480400d612ad62c43485586ba44e71bd5bdbc",
+      "reusedFrom": "assets/game/items/IconMultiverseRingConnectionring.png"
+    },
+    {
+      "filename": "IconMultiverseRingMobeusring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseRingMobeusring.png",
+      "sourcePngSha256": "86359f1e985cb841075358a746bf2b35ec460cd99002f497d280baa5bd196d6e",
+      "pngSha256": "86359f1e985cb841075358a746bf2b35ec460cd99002f497d280baa5bd196d6e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a78305c7c885d73fe49112caf4945e0dbe080d4fd1434e2a99976700a0a3354f",
+      "reusedFrom": "assets/game/items/IconMultiverseRingMobeusring.png"
+    },
+    {
+      "filename": "IconMultiverseWeaponHolographictrident.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseWeaponHolographictrident.png",
+      "sourcePngSha256": "742bbcf5be0c9805094e352e9dbe55d44f279a571f11d350d9bbb5954437a8aa",
+      "pngSha256": "742bbcf5be0c9805094e352e9dbe55d44f279a571f11d350d9bbb5954437a8aa",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "aab91524be6c5630709ddef40f489d7932ca6a4f7447e0f25e415b28018ec7bf",
+      "reusedFrom": "assets/game/items/IconMultiverseWeaponHolographictrident.png"
+    },
+    {
+      "filename": "IconMultiverseWeaponMentalspear.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseWeaponMentalspear.png",
+      "sourcePngSha256": "96ecfa526207e0724e6b1b0d15d0d79e4a6c67115932787c11c027431094523c",
+      "pngSha256": "96ecfa526207e0724e6b1b0d15d0d79e4a6c67115932787c11c027431094523c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "c5fc705038f376a0425c9499788876a8dca35a4dd4b0f011a15a24dc6c1219c6",
+      "reusedFrom": "assets/game/items/IconMultiverseWeaponMentalspear.png"
+    },
+    {
+      "filename": "IconMultiverseWeaponProjectedcutlass.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseWeaponProjectedcutlass.png",
+      "sourcePngSha256": "c6c131cda9e397cce1ee349f6222ece544cf48781fd906c9e4932ee7b7dc92e8",
+      "pngSha256": "c6c131cda9e397cce1ee349f6222ece544cf48781fd906c9e4932ee7b7dc92e8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "306f1ce4ec41dfd4d07e233bc22878a6564cb341741b5c5631b39261ecdfdd99",
+      "reusedFrom": "assets/game/items/IconMultiverseWeaponProjectedcutlass.png"
+    },
+    {
+      "filename": "IconMultiverseWeaponSimulatedbow.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseWeaponSimulatedbow.png",
+      "sourcePngSha256": "2cf4fcd08ee1ca0d84e1e349d63c5ac9815d28b986bba1202df29f05f4c20f1d",
+      "pngSha256": "2cf4fcd08ee1ca0d84e1e349d63c5ac9815d28b986bba1202df29f05f4c20f1d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "81e85fee44ee09ef45bbc5c7416a2b19781e987e1c2caae7e710f51a93fea258",
+      "reusedFrom": "assets/game/items/IconMultiverseWeaponSimulatedbow.png"
+    },
+    {
+      "filename": "IconMultiverseWeaponVirtualgun.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseWeaponVirtualgun.png",
+      "sourcePngSha256": "7312698e36613f9654ef41055277853d74019479ca89648ad44f9b0de4205924",
+      "pngSha256": "7312698e36613f9654ef41055277853d74019479ca89648ad44f9b0de4205924",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "db848c0cf1cc8825bde1e6f2340d2608da6269bf82d646402eb79fe9b1aa7327",
+      "reusedFrom": "assets/game/items/IconMultiverseWeaponVirtualgun.png"
+    },
+    {
+      "filename": "IconMultiverseWeaponVirtualsword.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconMultiverseWeaponVirtualsword.png",
+      "sourcePngSha256": "be4cc2b97b99f032b006b201a0de7b466699be20475e35829f5f59172df8db4f",
+      "pngSha256": "be4cc2b97b99f032b006b201a0de7b466699be20475e35829f5f59172df8db4f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "976d0ad3509e725129a437ddb6ea23857e9dffdaa0d98892b4bdcea51afcaa6f",
+      "reusedFrom": "assets/game/items/IconMultiverseWeaponVirtualsword.png"
+    },
+    {
+      "filename": "IconPrimitiveArmorBearskin.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveArmorBearskin.png",
+      "sourcePngSha256": "b18abf778f0525211d5e53e10f7937eb046975d87ea9251e6dc4f5848237ae5d",
+      "pngSha256": "b18abf778f0525211d5e53e10f7937eb046975d87ea9251e6dc4f5848237ae5d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "9d15f8028e3962887567e171afafe4261ea93cd7d51d9e5ddaff67ac41fc9d29",
+      "reusedFrom": "assets/game/items/IconPrimitiveArmorBearskin.png"
+    },
+    {
+      "filename": "IconPrimitiveArmorHide.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveArmorHide.png",
+      "sourcePngSha256": "3059e9b4d4a0583f0451a54b424edc7ccb48a6c3375de37604ff76c1df6182d0",
+      "pngSha256": "3059e9b4d4a0583f0451a54b424edc7ccb48a6c3375de37604ff76c1df6182d0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "febbfb64c4ce00588f7a422f2ae71eb856fa8c63c167e51cad9ffcb84d5613ff",
+      "reusedFrom": "assets/game/items/IconPrimitiveArmorHide.png"
+    },
+    {
+      "filename": "IconPrimitiveBeltBoneskirt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveBeltBoneskirt.png",
+      "sourcePngSha256": "48f865ed4613ced44031511e5a1f5c7a537f021cd0df3351067c495ac7deeeab",
+      "pngSha256": "48f865ed4613ced44031511e5a1f5c7a537f021cd0df3351067c495ac7deeeab",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "10a359e89eee283156bf6cb96f6d3e2107c7a1698dfb936fb3ee8fe8dd394ab7",
+      "reusedFrom": "assets/game/items/IconPrimitiveBeltBoneskirt.png"
+    },
+    {
+      "filename": "IconPrimitiveBeltWaisttie.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveBeltWaisttie.png",
+      "sourcePngSha256": "13a4c62c3b21cc41a6409d0d3f201b29e4e10e29d3e0e1450a6beced0bd3c702",
+      "pngSha256": "13a4c62c3b21cc41a6409d0d3f201b29e4e10e29d3e0e1450a6beced0bd3c702",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b2db9e67d5594b953966abfb4bd93a55ce528c59599c65b0bcf3a4a3da262b37",
+      "reusedFrom": "assets/game/items/IconPrimitiveBeltWaisttie.png"
+    },
+    {
+      "filename": "IconPrimitiveFootIvoryshin.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveFootIvoryshin.png",
+      "sourcePngSha256": "7e68f9eb5f1256cc7e27bbcdc821cfa723e6f57d780ec0df6c1bebbf5af0d9ca",
+      "pngSha256": "7e68f9eb5f1256cc7e27bbcdc821cfa723e6f57d780ec0df6c1bebbf5af0d9ca",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "70a1e85b688ac421719888eb47e80bf69c6d2412dd0ae1f2a97501a3126820f3",
+      "reusedFrom": "assets/game/items/IconPrimitiveFootIvoryshin.png"
+    },
+    {
+      "filename": "IconPrimitiveFootWraps.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveFootWraps.png",
+      "sourcePngSha256": "7c2f460fcd03edae304c16e28109240091e7e2599bdacdb685818cf40a920a19",
+      "pngSha256": "7c2f460fcd03edae304c16e28109240091e7e2599bdacdb685818cf40a920a19",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "bf0216579a7d48049618c81e0b78383d7a8365fef06ce251d1aad02266843d41",
+      "reusedFrom": "assets/game/items/IconPrimitiveFootWraps.png"
+    },
+    {
+      "filename": "IconPrimitiveGloveBark.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveGloveBark.png",
+      "sourcePngSha256": "3bf53cd9fbe249041d78e286001b09f074a13f67b28532920004dfe8717b54a5",
+      "pngSha256": "3bf53cd9fbe249041d78e286001b09f074a13f67b28532920004dfe8717b54a5",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a63ace20b0d1caa638641f39f5a4a880604f243ed230e419f719347c85c0ba6b",
+      "reusedFrom": "assets/game/items/IconPrimitiveGloveBark.png"
+    },
+    {
+      "filename": "IconPrimitiveGloveBearpaw.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveGloveBearpaw.png",
+      "sourcePngSha256": "dad6ec470f8fe394a2a177423ce762a1271a3a0d521a79e485daba6a3ca1a87e",
+      "pngSha256": "dad6ec470f8fe394a2a177423ce762a1271a3a0d521a79e485daba6a3ca1a87e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4ddf9771bff0387282eda5c63553fca075857d48770fd4554d638908606cf0be",
+      "reusedFrom": "assets/game/items/IconPrimitiveGloveBearpaw.png"
+    },
+    {
+      "filename": "IconPrimitiveHeadgearBeard.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveHeadgearBeard.png",
+      "sourcePngSha256": "bb427ce57b56cfae79f0e7ffcdc7203f7b8607604a14de08d1918cd45bc89c87",
+      "pngSha256": "bb427ce57b56cfae79f0e7ffcdc7203f7b8607604a14de08d1918cd45bc89c87",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d9d483c953db5f0ac1d50a0f2eebab4a3034e6b672caa5c728e408fa553d45c8",
+      "reusedFrom": "assets/game/items/IconPrimitiveHeadgearBeard.png"
+    },
+    {
+      "filename": "IconPrimitiveHeadgearMask.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveHeadgearMask.png",
+      "sourcePngSha256": "1d1d0eb90678000700fb6914381c2eefd441594444e15d44e7616d39c128d388",
+      "pngSha256": "1d1d0eb90678000700fb6914381c2eefd441594444e15d44e7616d39c128d388",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d399e3fb7a3ad709bd78a6a513974c00626fc067b6cfb3c3826f7f4d92f2effb",
+      "reusedFrom": "assets/game/items/IconPrimitiveHeadgearMask.png"
+    },
+    {
+      "filename": "IconPrimitiveHeadgearPaint.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveHeadgearPaint.png",
+      "sourcePngSha256": "4b3ed2e8bd92525915fe7dd2402c7d72d508f260b0fdb9ad59bd45fadd0ade92",
+      "pngSha256": "4b3ed2e8bd92525915fe7dd2402c7d72d508f260b0fdb9ad59bd45fadd0ade92",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3c8efd30815699dd38523d39076e771f895d0a33bc9c094dd09e4e97a9c3534f",
+      "reusedFrom": "assets/game/items/IconPrimitiveHeadgearPaint.png"
+    },
+    {
+      "filename": "IconPrimitiveHeadgearSkull.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveHeadgearSkull.png",
+      "sourcePngSha256": "ff0b9b675ec10315c2cdedd337d6ad1368730ed9834d77f138dceb5373a38662",
+      "pngSha256": "ff0b9b675ec10315c2cdedd337d6ad1368730ed9834d77f138dceb5373a38662",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "942712a21564995b2451aa014a8043a1c80e2742120478e0fa8950c170a9d35f",
+      "reusedFrom": "assets/game/items/IconPrimitiveHeadgearSkull.png"
+    },
+    {
+      "filename": "IconPrimitiveNeckShamantalisman.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveNeckShamantalisman.png",
+      "sourcePngSha256": "b95a3470eeca3afed99cb2b231718642683322b18d7c573ea9dfe0d37885250d",
+      "pngSha256": "b95a3470eeca3afed99cb2b231718642683322b18d7c573ea9dfe0d37885250d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f47a48efe70413c2a7a6bffc34a119743346248d322164b67de3ef8571f6ee5b",
+      "reusedFrom": "assets/game/items/IconPrimitiveNeckShamantalisman.png"
+    },
+    {
+      "filename": "IconPrimitiveNeckToothnecklace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveNeckToothnecklace.png",
+      "sourcePngSha256": "1278f0e9e4ceba509f3db09b102961e512ae2774f7c9056bc97bf8b665ea5a7d",
+      "pngSha256": "1278f0e9e4ceba509f3db09b102961e512ae2774f7c9056bc97bf8b665ea5a7d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "09573a42121b92294556e4e5dedd12e612277cfdd4621143540ae0c5c483ae8d",
+      "reusedFrom": "assets/game/items/IconPrimitiveNeckToothnecklace.png"
+    },
+    {
+      "filename": "IconPrimitiveRingShardring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveRingShardring.png",
+      "sourcePngSha256": "5bc5d82ad427e8d990c02651746115cae9ffd9940a59244351c4f3310d03d8c3",
+      "pngSha256": "5bc5d82ad427e8d990c02651746115cae9ffd9940a59244351c4f3310d03d8c3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "2747b519d764a3fbf294d70d0efde3c90b6e6ee3e4ff410b8a039824cb1b0478",
+      "reusedFrom": "assets/game/items/IconPrimitiveRingShardring.png"
+    },
+    {
+      "filename": "IconPrimitiveRingSkullring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveRingSkullring.png",
+      "sourcePngSha256": "1874654cd634519fe353648fd8807b420500badbd80c6be358532a539ddbe971",
+      "pngSha256": "1874654cd634519fe353648fd8807b420500badbd80c6be358532a539ddbe971",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "58e59e1e96c37c76fb3435c2a07fb434b054bef06fc27e7739c512758179ab2d",
+      "reusedFrom": "assets/game/items/IconPrimitiveRingSkullring.png"
+    },
+    {
+      "filename": "IconPrimitiveWeaponAxe.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveWeaponAxe.png",
+      "sourcePngSha256": "35281e6a1e9c582279b1cbb39cd7cc7332c17eb5f43a13898a0e728154ecfad8",
+      "pngSha256": "35281e6a1e9c582279b1cbb39cd7cc7332c17eb5f43a13898a0e728154ecfad8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5eff220bea26892da29f087fbaf2d19fa77e6d3aa29cda74f5f865ac0ea680f6",
+      "reusedFrom": "assets/game/items/IconPrimitiveWeaponAxe.png"
+    },
+    {
+      "filename": "IconPrimitiveWeaponBlowgun.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveWeaponBlowgun.png",
+      "sourcePngSha256": "04af7205c155b4e2cd40890052c2dcf88effb84bef621233d7349c27cfc9bab5",
+      "pngSha256": "04af7205c155b4e2cd40890052c2dcf88effb84bef621233d7349c27cfc9bab5",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "80394fafeb1ac59a0c647d7fa505f0ee2fd9444c286968264c2bd830cf9c9f8b",
+      "reusedFrom": "assets/game/items/IconPrimitiveWeaponBlowgun.png"
+    },
+    {
+      "filename": "IconPrimitiveWeaponBone.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveWeaponBone.png",
+      "sourcePngSha256": "8a59bb2f727635eeff719c083956a417d057f9ce1d982bfe97d9f233e551c697",
+      "pngSha256": "8a59bb2f727635eeff719c083956a417d057f9ce1d982bfe97d9f233e551c697",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "13eeb67ac8ae7f016fd5b18524ce20596fe46edd40be4e6f92fa7503e22cacb2",
+      "reusedFrom": "assets/game/items/IconPrimitiveWeaponBone.png"
+    },
+    {
+      "filename": "IconPrimitiveWeaponBranch.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveWeaponBranch.png",
+      "sourcePngSha256": "cd1c385c801d52c3672f3ab0f90407b8e0730cd53f3c83f76685d0b3c6e263ee",
+      "pngSha256": "cd1c385c801d52c3672f3ab0f90407b8e0730cd53f3c83f76685d0b3c6e263ee",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5a8aa56df29f40b73f4a455c064e5492e637185ce15264ba690a301cd1f99174",
+      "reusedFrom": "assets/game/items/IconPrimitiveWeaponBranch.png"
+    },
+    {
+      "filename": "IconPrimitiveWeaponClub.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveWeaponClub.png",
+      "sourcePngSha256": "cc41bcc2e3f426917b778e9d47784c20122d25cc3f670fdbdbccc0dd58107056",
+      "pngSha256": "cc41bcc2e3f426917b778e9d47784c20122d25cc3f670fdbdbccc0dd58107056",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ba88d0f7f272c33fb241e64451eb7f2071c8be756f5dfe4d3aa84eb23d379c48",
+      "reusedFrom": "assets/game/items/IconPrimitiveWeaponClub.png"
+    },
+    {
+      "filename": "IconPrimitiveWeaponRock.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveWeaponRock.png",
+      "sourcePngSha256": "f171dd2b4b696767caee98ba32c0c690a55bade2dfef360870694530d2f1f314",
+      "pngSha256": "f171dd2b4b696767caee98ba32c0c690a55bade2dfef360870694530d2f1f314",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f4ca61db736c6e07a4b775b1457aa37c374b10d90fe39434c3c97aeed032fab4",
+      "reusedFrom": "assets/game/items/IconPrimitiveWeaponRock.png"
+    },
+    {
+      "filename": "IconPrimitiveWeaponSlinger.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconPrimitiveWeaponSlinger.png",
+      "sourcePngSha256": "34301ed732a56e0af4526f2d0873a0c83ede226dc8cae072e1d8dcd166dd5aea",
+      "pngSha256": "34301ed732a56e0af4526f2d0873a0c83ede226dc8cae072e1d8dcd166dd5aea",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "fd58bc95643e3b712446a215124ff3bde3a55ae8d7087dcb0a8a78b05f5a7712",
+      "reusedFrom": "assets/game/items/IconPrimitiveWeaponSlinger.png"
+    },
+    {
+      "filename": "IconQuantumArmorDeltaarmor.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumArmorDeltaarmor.png",
+      "sourcePngSha256": "cab678587693801e16940ee166de94cbf49fb278afde79c7bef491e093744d8e",
+      "pngSha256": "cab678587693801e16940ee166de94cbf49fb278afde79c7bef491e093744d8e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "023aea68c16a14f95f88af212426b28fb6100a2b923b98aa2b69618e711655d8",
+      "reusedFrom": "assets/game/items/IconQuantumArmorDeltaarmor.png"
+    },
+    {
+      "filename": "IconQuantumArmorOrbitersuit.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumArmorOrbitersuit.png",
+      "sourcePngSha256": "12fb72ed7f9ad0f06066ac08e0d8890a9a42cd1dddabc59ac43f2594095e1a74",
+      "pngSha256": "12fb72ed7f9ad0f06066ac08e0d8890a9a42cd1dddabc59ac43f2594095e1a74",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a7b7e52324459febebdb955da2b571a10d91793935994cfba242e7592a146c5e",
+      "reusedFrom": "assets/game/items/IconQuantumArmorOrbitersuit.png"
+    },
+    {
+      "filename": "IconQuantumBeltNeutrinobelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumBeltNeutrinobelt.png",
+      "sourcePngSha256": "1e4ee45a479c3530c19bc945328fb64aeff4f0d2b1d9df75b1ba0a2283f651d6",
+      "pngSha256": "1e4ee45a479c3530c19bc945328fb64aeff4f0d2b1d9df75b1ba0a2283f651d6",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "964c4b0f95685ce02c3a9e67e96943d881ef9fe6bdc8b577641e829c7c6eb778",
+      "reusedFrom": "assets/game/items/IconQuantumBeltNeutrinobelt.png"
+    },
+    {
+      "filename": "IconQuantumBeltUncertaintybelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumBeltUncertaintybelt.png",
+      "sourcePngSha256": "49607e4aecdacd7f7ef58c3eff6de00cffbcaaf431d409a510038d336d3b3c1c",
+      "pngSha256": "49607e4aecdacd7f7ef58c3eff6de00cffbcaaf431d409a510038d336d3b3c1c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ff9e6a94fdbb4200bbb4664bb8839cebd3fa4faf5ac298c447ee6d54895ae615",
+      "reusedFrom": "assets/game/items/IconQuantumBeltUncertaintybelt.png"
+    },
+    {
+      "filename": "IconQuantumFootAntimatterfeet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumFootAntimatterfeet.png",
+      "sourcePngSha256": "3d9acb0a3bb3f11fc3a812991b3e3d2ba942cac187e51710009064522c1f6190",
+      "pngSha256": "3d9acb0a3bb3f11fc3a812991b3e3d2ba942cac187e51710009064522c1f6190",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7b6c698668c48cfd734854fb4c20e52ff78e345a314b7c824f8b812049e50d39",
+      "reusedFrom": "assets/game/items/IconQuantumFootAntimatterfeet.png"
+    },
+    {
+      "filename": "IconQuantumFootAntiravityboots.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumFootAntiravityboots.png",
+      "sourcePngSha256": "c20a765a0c07d2bf2e975003af59c43960e2e3a4e88778d88fc0a8929dc1a20a",
+      "pngSha256": "c20a765a0c07d2bf2e975003af59c43960e2e3a4e88778d88fc0a8929dc1a20a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5d635056cc5add4bbfaf620d7adb6eea6648f4c8d79ac59f61bbb7a3144cfd34",
+      "reusedFrom": "assets/game/items/IconQuantumFootAntiravityboots.png"
+    },
+    {
+      "filename": "IconQuantumGloveGravitygloves.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumGloveGravitygloves.png",
+      "sourcePngSha256": "c63dec63f23190aa33360333882a369bbf060767a63fc04a2b7d50c372ceb4e8",
+      "pngSha256": "c63dec63f23190aa33360333882a369bbf060767a63fc04a2b7d50c372ceb4e8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "0f6164faaa84c963da6885453799f42746a2ff464e15d0e90b4306580a92d3bc",
+      "reusedFrom": "assets/game/items/IconQuantumGloveGravitygloves.png"
+    },
+    {
+      "filename": "IconQuantumGloveNeutronfingerprints.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumGloveNeutronfingerprints.png",
+      "sourcePngSha256": "3657127d2477ab1c0d99a4d131a3663716af7c0040691e4dfec39a9adf710951",
+      "pngSha256": "3657127d2477ab1c0d99a4d131a3663716af7c0040691e4dfec39a9adf710951",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "f22b2695d4f4197cba266ccabf9ef9fdd57221765ff9789d87ffa0e0506899c5",
+      "reusedFrom": "assets/game/items/IconQuantumGloveNeutronfingerprints.png"
+    },
+    {
+      "filename": "IconQuantumHeadgearEnergyhelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumHeadgearEnergyhelmet.png",
+      "sourcePngSha256": "3cca76149a409159a058a35c34fbfa023ea0b5851ce0536623e1d4400b5569ad",
+      "pngSha256": "3cca76149a409159a058a35c34fbfa023ea0b5851ce0536623e1d4400b5569ad",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7fa22634f588020f439f7a9eccee1230c46aec1b91dd73a81acbed588fe5367c",
+      "reusedFrom": "assets/game/items/IconQuantumHeadgearEnergyhelmet.png"
+    },
+    {
+      "filename": "IconQuantumHeadgearEntanglementhelm.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumHeadgearEntanglementhelm.png",
+      "sourcePngSha256": "b1f9e87a6fa0cb01ea191bdc9a0560a5b8b641bab0564c62306ec7e8ce7c9860",
+      "pngSha256": "b1f9e87a6fa0cb01ea191bdc9a0560a5b8b641bab0564c62306ec7e8ce7c9860",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "de1c91e3285cafc5ea484b3b5fd35ad77d5bc033baa5d5e339cb409c905467b4",
+      "reusedFrom": "assets/game/items/IconQuantumHeadgearEntanglementhelm.png"
+    },
+    {
+      "filename": "IconQuantumHeadgearHairbandana.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumHeadgearHairbandana.png",
+      "sourcePngSha256": "56467103d20606f42a7ed639627914d9aa13c6d604499af2c11e06663aac6d8e",
+      "pngSha256": "56467103d20606f42a7ed639627914d9aa13c6d604499af2c11e06663aac6d8e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "385290eaefd6d31e254410d60b88bb07b59b9dcf4f775442a71e7a01aee62add",
+      "reusedFrom": "assets/game/items/IconQuantumHeadgearHairbandana.png"
+    },
+    {
+      "filename": "IconQuantumHeadgearHairtied.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumHeadgearHairtied.png",
+      "sourcePngSha256": "c96121ecf6397ecee4df03de6b16d414e2561fec5b7ea399c36f123588f5f691",
+      "pngSha256": "c96121ecf6397ecee4df03de6b16d414e2561fec5b7ea399c36f123588f5f691",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "1d1da0f80a1a4689f57adf0cd1d1df2d046b3780f5440b308df7519791d22b48",
+      "reusedFrom": "assets/game/items/IconQuantumHeadgearHairtied.png"
+    },
+    {
+      "filename": "IconQuantumHeadgearSubfrequencymask.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumHeadgearSubfrequencymask.png",
+      "sourcePngSha256": "886bae5245a64b298b2dffd4961af21db61cd82a59d74557577be17fcf5d18a8",
+      "pngSha256": "886bae5245a64b298b2dffd4961af21db61cd82a59d74557577be17fcf5d18a8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5b958bf0240f48a102adf5ac4913fe65fedd3437bcc1c0f08a722224cc60bfbe",
+      "reusedFrom": "assets/game/items/IconQuantumHeadgearSubfrequencymask.png"
+    },
+    {
+      "filename": "IconQuantumNeckHiggsnecklace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumNeckHiggsnecklace.png",
+      "sourcePngSha256": "9c12537b8e6ad6c48651d3be180ec782c98d3dae774c9399b58202f6616d4be0",
+      "pngSha256": "9c12537b8e6ad6c48651d3be180ec782c98d3dae774c9399b58202f6616d4be0",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "2f796ae871f63d2f520b146f5e7eb1ee07e094b612993dc12394f6b91219ae79",
+      "reusedFrom": "assets/game/items/IconQuantumNeckHiggsnecklace.png"
+    },
+    {
+      "filename": "IconQuantumNeckVoidnecklace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumNeckVoidnecklace.png",
+      "sourcePngSha256": "da443932139544bfc8807efe6e2b10888e6f0bd6560e2b124c1ad3eef400631b",
+      "pngSha256": "da443932139544bfc8807efe6e2b10888e6f0bd6560e2b124c1ad3eef400631b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "90482dbc8e61430d3f729f188c894ccbe2a932fd43726b03e3248a2ecf5f4d65",
+      "reusedFrom": "assets/game/items/IconQuantumNeckVoidnecklace.png"
+    },
+    {
+      "filename": "IconQuantumRingAuraring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumRingAuraring.png",
+      "sourcePngSha256": "0adaaf78295e8194fef4c46cdfb6e88b7c8ebe61600dbe5c9f18ba2440ab2496",
+      "pngSha256": "0adaaf78295e8194fef4c46cdfb6e88b7c8ebe61600dbe5c9f18ba2440ab2496",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "1551918ec2e056e91f5f1097d646d25d39d1ca5acca963f7fe677ae784b800f5",
+      "reusedFrom": "assets/game/items/IconQuantumRingAuraring.png"
+    },
+    {
+      "filename": "IconQuantumRingProbabilityring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumRingProbabilityring.png",
+      "sourcePngSha256": "33457851d72cc32b8887b30f9e33531f5924ab2e59e021dc842bff13702d57bf",
+      "pngSha256": "33457851d72cc32b8887b30f9e33531f5924ab2e59e021dc842bff13702d57bf",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5c8700f6310d532d744afcd32c9f98a1cb2db6e2befa7017491af917d8b8b7f6",
+      "reusedFrom": "assets/game/items/IconQuantumRingProbabilityring.png"
+    },
+    {
+      "filename": "IconQuantumWeaponBlackbow.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumWeaponBlackbow.png",
+      "sourcePngSha256": "6040b9f6e32a97a215506886f3be095c97d0c7fdc5cdb727781e5a559e8e74dd",
+      "pngSha256": "6040b9f6e32a97a215506886f3be095c97d0c7fdc5cdb727781e5a559e8e74dd",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "2b86f5280feb36877447163093da08f789e37f3022f5f6a5d2945a6526595484",
+      "reusedFrom": "assets/game/items/IconQuantumWeaponBlackbow.png"
+    },
+    {
+      "filename": "IconQuantumWeaponBlackgun.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumWeaponBlackgun.png",
+      "sourcePngSha256": "1943328495e1b8b6d407c13bb7028f5902450b5141c0102d7fd5e3b97dee5525",
+      "pngSha256": "1943328495e1b8b6d407c13bb7028f5902450b5141c0102d7fd5e3b97dee5525",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "084a51bbb210b3720f287e7a03a65f41383d233b7fc9d14b02804a653974e338",
+      "reusedFrom": "assets/game/items/IconQuantumWeaponBlackgun.png"
+    },
+    {
+      "filename": "IconQuantumWeaponBlackhammer.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumWeaponBlackhammer.png",
+      "sourcePngSha256": "e0e62f0372ee32e9cc05533f67840c2a6e82f67a5d7ab652e47cb4f098000e20",
+      "pngSha256": "e0e62f0372ee32e9cc05533f67840c2a6e82f67a5d7ab652e47cb4f098000e20",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b84750b8cde52a8aadb701e3beea58cbdbab7b8ecbca37e13d1ee4b23f39b0ac",
+      "reusedFrom": "assets/game/items/IconQuantumWeaponBlackhammer.png"
+    },
+    {
+      "filename": "IconQuantumWeaponBlackspear.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumWeaponBlackspear.png",
+      "sourcePngSha256": "2502eba2f1ebb890d5ee71170f10653ad2b287f321540c32e384d836e5207661",
+      "pngSha256": "2502eba2f1ebb890d5ee71170f10653ad2b287f321540c32e384d836e5207661",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d0e34c835a7f3c893136510b0027aa5c08ca220f5eb1acf8b6612fbb8a9d5b6d",
+      "reusedFrom": "assets/game/items/IconQuantumWeaponBlackspear.png"
+    },
+    {
+      "filename": "IconQuantumWeaponBlackswordandshield.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumWeaponBlackswordandshield.png",
+      "sourcePngSha256": "6bb653bbe34a2b531d605e1773d4c4913a30a7cb7f9cd309a58131126e493906",
+      "pngSha256": "6bb653bbe34a2b531d605e1773d4c4913a30a7cb7f9cd309a58131126e493906",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7d44b33303b8449b9cdd337bbdc03f39d16713a0b105c83a985579180ade1a6f",
+      "reusedFrom": "assets/game/items/IconQuantumWeaponBlackswordandshield.png"
+    },
+    {
+      "filename": "IconQuantumWeaponQuantumstaff.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconQuantumWeaponQuantumstaff.png",
+      "sourcePngSha256": "d918caa084eb5864528478bb70883bbbb0d51cb95e0b848de9a5e13567ec58a1",
+      "pngSha256": "d918caa084eb5864528478bb70883bbbb0d51cb95e0b848de9a5e13567ec58a1",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e72d3552b0cac15c402e3ae8f021f58cd98f2090d5cd279ab5c2499c953322a1",
+      "reusedFrom": "assets/game/items/IconQuantumWeaponQuantumstaff.png"
+    },
+    {
+      "filename": "IconSpaceArmorExoskeleton.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceArmorExoskeleton.png",
+      "sourcePngSha256": "ba9d7d16a63977a991eb51bae4c859a2e718bd5255fb8f393a9feb715a0a40f2",
+      "pngSha256": "ba9d7d16a63977a991eb51bae4c859a2e718bd5255fb8f393a9feb715a0a40f2",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "dcc60db07c43b17c32508b3abf0511e9605b96370b2496b2aace2ff356a5acce",
+      "reusedFrom": "assets/game/items/IconSpaceArmorExoskeleton.png"
+    },
+    {
+      "filename": "IconSpaceArmorSpacesuit.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceArmorSpacesuit.png",
+      "sourcePngSha256": "b2190484a2ff744160522ed3d3d6d491f1d8204ab8e2d50f5b7838fe1faeb0fe",
+      "pngSha256": "b2190484a2ff744160522ed3d3d6d491f1d8204ab8e2d50f5b7838fe1faeb0fe",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a1d44f971de5666dbe68ae232460cb52238e17c32bc224b8a5d02eddee488705",
+      "reusedFrom": "assets/game/items/IconSpaceArmorSpacesuit.png"
+    },
+    {
+      "filename": "IconSpaceBeltAnabiosisstraps.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceBeltAnabiosisstraps.png",
+      "sourcePngSha256": "2944e56d16b176ecd7d92939d1655cd421696536dda6ac32192188204a4a5419",
+      "pngSha256": "2944e56d16b176ecd7d92939d1655cd421696536dda6ac32192188204a4a5419",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a9867091559f141723723b79b21fd2cf010fbb8fb982e2dab1911ee889fac12a",
+      "reusedFrom": "assets/game/items/IconSpaceBeltAnabiosisstraps.png"
+    },
+    {
+      "filename": "IconSpaceBeltSupportcorset.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceBeltSupportcorset.png",
+      "sourcePngSha256": "5fc692353c4c03f9f3ba99909eeecfbd45a791a48763833f386c364fddb8575d",
+      "pngSha256": "5fc692353c4c03f9f3ba99909eeecfbd45a791a48763833f386c364fddb8575d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e37b73db6d05b710c15a81c2d8383e2495ba32a41792a7aa91ab2c894159cfbf",
+      "reusedFrom": "assets/game/items/IconSpaceBeltSupportcorset.png"
+    },
+    {
+      "filename": "IconSpaceFootFeetthrusters.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceFootFeetthrusters.png",
+      "sourcePngSha256": "43b2c997eb0a286791d61da08de22b1e2b93cffe47892753c5d818d8c83cee2e",
+      "pngSha256": "43b2c997eb0a286791d61da08de22b1e2b93cffe47892753c5d818d8c83cee2e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4f26b44970f18371c9054ec59f50fe809b16f4049189e67d929c2314d93f9981",
+      "reusedFrom": "assets/game/items/IconSpaceFootFeetthrusters.png"
+    },
+    {
+      "filename": "IconSpaceFootSpaceshoes.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceFootSpaceshoes.png",
+      "sourcePngSha256": "b0cdff98abc81b6f0177d03a2d69b312dacefa5db01f2d010f539883542eed7e",
+      "pngSha256": "b0cdff98abc81b6f0177d03a2d69b312dacefa5db01f2d010f539883542eed7e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "053fd5715fcafb8817bc627fc6681533cbd5fd27cf9da3f29428189e86866250",
+      "reusedFrom": "assets/game/items/IconSpaceFootSpaceshoes.png"
+    },
+    {
+      "filename": "IconSpaceGloveRemote.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceGloveRemote.png",
+      "sourcePngSha256": "477da61e2861d71b299bbab04ca39a54ddb4b0ea5fc03f9450464422075ec45f",
+      "pngSha256": "477da61e2861d71b299bbab04ca39a54ddb4b0ea5fc03f9450464422075ec45f",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "6bc27af5d658f55c43eb61741e80770fb731c22bc153a6c98a494b4670eec61e",
+      "reusedFrom": "assets/game/items/IconSpaceGloveRemote.png"
+    },
+    {
+      "filename": "IconSpaceGloveSpacegloves.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceGloveSpacegloves.png",
+      "sourcePngSha256": "be17c23b053b1c6db720c8933b0d9708da363884b27a598e0a82911e2b27aa9e",
+      "pngSha256": "be17c23b053b1c6db720c8933b0d9708da363884b27a598e0a82911e2b27aa9e",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "38d1b7d04be65977c2bb6515459d0f2290315dbd54b6353c60b432133711c318",
+      "reusedFrom": "assets/game/items/IconSpaceGloveSpacegloves.png"
+    },
+    {
+      "filename": "IconSpaceHeadgearBiohelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceHeadgearBiohelmet.png",
+      "sourcePngSha256": "e98e29275a3804d27fc9066f146ba8c48eb3b9cdb486aa524cb62c979ce6ffd7",
+      "pngSha256": "e98e29275a3804d27fc9066f146ba8c48eb3b9cdb486aa524cb62c979ce6ffd7",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "4716dd7728aa7ca5f17282666f0ac0c5cfdb006eaec5e75fedc6b4c76a4a0ad5",
+      "reusedFrom": "assets/game/items/IconSpaceHeadgearBiohelmet.png"
+    },
+    {
+      "filename": "IconSpaceHeadgearGasmask.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceHeadgearGasmask.png",
+      "sourcePngSha256": "9245ab67b0c807b952c864c564f0826666c35c77f30e25a49176a64c65caccc3",
+      "pngSha256": "9245ab67b0c807b952c864c564f0826666c35c77f30e25a49176a64c65caccc3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "12bd6b29640e11328cf64fb5f7ad9438554ba13bc8ce2a0cdbf56f76d7848921",
+      "reusedFrom": "assets/game/items/IconSpaceHeadgearGasmask.png"
+    },
+    {
+      "filename": "IconSpaceHeadgearIronmech.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceHeadgearIronmech.png",
+      "sourcePngSha256": "fa901205e97271363bee23e3c62f9eb24fd93a92feb12321e19e99ace6f422de",
+      "pngSha256": "fa901205e97271363bee23e3c62f9eb24fd93a92feb12321e19e99ace6f422de",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "5b0836b94cdfb8a8d2d10f7343a2dda31ede641569d011577d24b9009e7257ae",
+      "reusedFrom": "assets/game/items/IconSpaceHeadgearIronmech.png"
+    },
+    {
+      "filename": "IconSpaceHeadgearSpacehelmet.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceHeadgearSpacehelmet.png",
+      "sourcePngSha256": "4619be9b0538097d9447e0e05b3d8615562f92bceb3e73884676b6ae7c4615db",
+      "pngSha256": "4619be9b0538097d9447e0e05b3d8615562f92bceb3e73884676b6ae7c4615db",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e5f7bc6088a9cd181b25d52aca2a1fdbe62a10d72fcf8279d51572a9a355fa15",
+      "reusedFrom": "assets/game/items/IconSpaceHeadgearSpacehelmet.png"
+    },
+    {
+      "filename": "IconSpaceNeckKuipernecklace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceNeckKuipernecklace.png",
+      "sourcePngSha256": "d2b827d1895d4711bddb74d6987a9e633b54e9a7394dc41f2dbb946cf4aad418",
+      "pngSha256": "d2b827d1895d4711bddb74d6987a9e633b54e9a7394dc41f2dbb946cf4aad418",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "bd3a380205372e909e9b5fe229ab25704492fe5f2ed4936f81c35cc98ef81328",
+      "reusedFrom": "assets/game/items/IconSpaceNeckKuipernecklace.png"
+    },
+    {
+      "filename": "IconSpaceNeckPulsarpendant.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceNeckPulsarpendant.png",
+      "sourcePngSha256": "64c8615ca1e88e852324c36fe4f5cda9493ee0bea20e2df74edb22f2a8516567",
+      "pngSha256": "64c8615ca1e88e852324c36fe4f5cda9493ee0bea20e2df74edb22f2a8516567",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "73904b4ffabdd655ab007a2a7ab14e06077b533077e8f9aa458bce4ae14a6ddd",
+      "reusedFrom": "assets/game/items/IconSpaceNeckPulsarpendant.png"
+    },
+    {
+      "filename": "IconSpaceRingIcarusring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceRingIcarusring.png",
+      "sourcePngSha256": "69f86bbac6bf04d10cbed4ce121acfd11be9c1ebcc20c3239933ff039c45487d",
+      "pngSha256": "69f86bbac6bf04d10cbed4ce121acfd11be9c1ebcc20c3239933ff039c45487d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "05e87443f67ccc552a2e183facc1c57c59440d229adcc6295f16fb99e941eea3",
+      "reusedFrom": "assets/game/items/IconSpaceRingIcarusring.png"
+    },
+    {
+      "filename": "IconSpaceRingSolariusring.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceRingSolariusring.png",
+      "sourcePngSha256": "5d80733ab3b5004349dc038d917fe0cec1402de995fba56af849fbff1485cff2",
+      "pngSha256": "5d80733ab3b5004349dc038d917fe0cec1402de995fba56af849fbff1485cff2",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7bedfd9a811560937287174972e11f123d9c22f314fd282cc9b9e1090a7047a4",
+      "reusedFrom": "assets/game/items/IconSpaceRingSolariusring.png"
+    },
+    {
+      "filename": "IconSpaceWeaponBlaster.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceWeaponBlaster.png",
+      "sourcePngSha256": "6f5609de1bf360ec1df6696e00531de1a212d11b0a2b3167548aab4ea8033d06",
+      "pngSha256": "6f5609de1bf360ec1df6696e00531de1a212d11b0a2b3167548aab4ea8033d06",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3699129cada2d6e776f372e0ffa5ae983badcbe17f8a7898a2b6c086a162572b",
+      "reusedFrom": "assets/game/items/IconSpaceWeaponBlaster.png"
+    },
+    {
+      "filename": "IconSpaceWeaponRobotsword.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceWeaponRobotsword.png",
+      "sourcePngSha256": "7083ef0ffbef9216d3e55fc7962d2ff2e5ab482a6245f9a174e7a1d47acea551",
+      "pngSha256": "7083ef0ffbef9216d3e55fc7962d2ff2e5ab482a6245f9a174e7a1d47acea551",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "120505bdbd1373bdf78bc3666dde030dbe49537a5025e627e9c28f5439f0e794",
+      "reusedFrom": "assets/game/items/IconSpaceWeaponRobotsword.png"
+    },
+    {
+      "filename": "IconSpaceWeaponSaber.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceWeaponSaber.png",
+      "sourcePngSha256": "6524ced893b02b26f86de4b7658855cbc26fd72e5b4790dd66660fcc43df0eea",
+      "pngSha256": "6524ced893b02b26f86de4b7658855cbc26fd72e5b4790dd66660fcc43df0eea",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "2efdf87c437d6668e6a5c7bf0a20f932b5482f57624935528686de8c9cfe470f",
+      "reusedFrom": "assets/game/items/IconSpaceWeaponSaber.png"
+    },
+    {
+      "filename": "IconSpaceWeaponSpacegun.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceWeaponSpacegun.png",
+      "sourcePngSha256": "f57d19308b4c7ad3ebe09a300fce2ecb370ec229c7538bcf61793e0439321eb2",
+      "pngSha256": "f57d19308b4c7ad3ebe09a300fce2ecb370ec229c7538bcf61793e0439321eb2",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "187890c1605c5ffc2f76aae3a85afa78b1dbb3f15696c4f7a3a477f75dfbc8ef",
+      "reusedFrom": "assets/game/items/IconSpaceWeaponSpacegun.png"
+    },
+    {
+      "filename": "IconSpaceWeaponSpacepistol.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconSpaceWeaponSpacepistol.png",
+      "sourcePngSha256": "6082bcb42c89ac74000926c93e9ae785dbab8b9ab6113f0702e2e94b2e498267",
+      "pngSha256": "6082bcb42c89ac74000926c93e9ae785dbab8b9ab6113f0702e2e94b2e498267",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "8df5a0968e26a443de8449cc4a42353aec632bb4fc7daeabffed9c95c1c47884",
+      "reusedFrom": "assets/game/items/IconSpaceWeaponSpacepistol.png"
+    },
+    {
+      "filename": "IconUnderworldArmorCape.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldArmorCape.png",
+      "sourcePngSha256": "578f3cdc121ff8b0a597681e1fdd957cc429a5b4463cc852d0a2cd288f28281a",
+      "pngSha256": "578f3cdc121ff8b0a597681e1fdd957cc429a5b4463cc852d0a2cd288f28281a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ae762de59824ddb63e7464d2e1903a635dac2396f5a8195ff00ef750222aa5e3",
+      "reusedFrom": "assets/game/items/IconUnderworldArmorCape.png"
+    },
+    {
+      "filename": "IconUnderworldArmorDoomplate.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldArmorDoomplate.png",
+      "sourcePngSha256": "19f89fecedc571998d75dde5c51164adf5ae375bd6934b5d6656d709a7363740",
+      "pngSha256": "19f89fecedc571998d75dde5c51164adf5ae375bd6934b5d6656d709a7363740",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "1937659a130b1b23a53cf0fca2396824d4e4fc2f1a2ca09dba4cb6fbcfb733f0",
+      "reusedFrom": "assets/game/items/IconUnderworldArmorDoomplate.png"
+    },
+    {
+      "filename": "IconUnderworldArmorMoltenPlates.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldArmorMoltenPlates.png",
+      "sourcePngSha256": "4a878505a55d10bd816fb52212995794f5abd5e7e5509ed39f448c5b1cb3afce",
+      "pngSha256": "4a878505a55d10bd816fb52212995794f5abd5e7e5509ed39f448c5b1cb3afce",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3e1fd14b416bcb3a22557b50b50d1841aaa1573f8802391a20933f1ed3f403ab",
+      "reusedFrom": "assets/game/items/IconUnderworldArmorMoltenPlates.png"
+    },
+    {
+      "filename": "IconUnderworldBeltCircleofPain.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldBeltCircleofPain.png",
+      "sourcePngSha256": "71dfc9c5bcc55afca8c82a2783f8d0138c9fc451ccc4e1e58a468f8d01ae95ae",
+      "pngSha256": "71dfc9c5bcc55afca8c82a2783f8d0138c9fc451ccc4e1e58a468f8d01ae95ae",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "b8c50d738d85069cfa28197733e153a27a2e80aa303f2acaf42e0eebc9f8b0c3",
+      "reusedFrom": "assets/game/items/IconUnderworldBeltCircleofPain.png"
+    },
+    {
+      "filename": "IconUnderworldBeltCrimsonBelt.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldBeltCrimsonBelt.png",
+      "sourcePngSha256": "430107af6a411a7d97ae4d0ff45406f3b7007c276d4fcc995af81fdc0492bb3b",
+      "pngSha256": "430107af6a411a7d97ae4d0ff45406f3b7007c276d4fcc995af81fdc0492bb3b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "11dce1c83ca85010ff148d4cb4ce789161feec7cc9aeb1dba9f772343942cf13",
+      "reusedFrom": "assets/game/items/IconUnderworldBeltCrimsonBelt.png"
+    },
+    {
+      "filename": "IconUnderworldFootDreadsteps.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldFootDreadsteps.png",
+      "sourcePngSha256": "e41f256a70ad60dcef7a21c7beb936559a504ee2bbfda9681a3ce35828f9b129",
+      "pngSha256": "e41f256a70ad60dcef7a21c7beb936559a504ee2bbfda9681a3ce35828f9b129",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "477e75f62082c24acccf2c9006eaea5aa247a0fdf1ae8e1464ae8e730caa9167",
+      "reusedFrom": "assets/game/items/IconUnderworldFootDreadsteps.png"
+    },
+    {
+      "filename": "IconUnderworldFootGreaves.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldFootGreaves.png",
+      "sourcePngSha256": "b6705d5b4ee4e7f9b7835c8f105f59b6a7e704bb64540d06cfe7f0374243df56",
+      "pngSha256": "b6705d5b4ee4e7f9b7835c8f105f59b6a7e704bb64540d06cfe7f0374243df56",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "90106e3544c58b431b4e3558ade0ff73379f3ab57919acf62ff0bb78db80e56e",
+      "reusedFrom": "assets/game/items/IconUnderworldFootGreaves.png"
+    },
+    {
+      "filename": "IconUnderworldGloveGripofTorment.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldGloveGripofTorment.png",
+      "sourcePngSha256": "52719e4938cb82d11e8c76c321e53dac6cb3911d23a9678b67cc0e98ea4e70ae",
+      "pngSha256": "52719e4938cb82d11e8c76c321e53dac6cb3911d23a9678b67cc0e98ea4e70ae",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "362c929807b47d9b9f15f1b09bbbb038abe28681f6a7fc0f128ffac54410a507",
+      "reusedFrom": "assets/game/items/IconUnderworldGloveGripofTorment.png"
+    },
+    {
+      "filename": "IconUnderworldGloveVoidClaw.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldGloveVoidClaw.png",
+      "sourcePngSha256": "55206db20d7b963c9c765d198d0fa679cf3ce299f5f770415409041fea013ea2",
+      "pngSha256": "55206db20d7b963c9c765d198d0fa679cf3ce299f5f770415409041fea013ea2",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "9bfdf98f611fdc42f9e3ca238a17b29b4652c802dfbaefee18705adda0857317",
+      "reusedFrom": "assets/game/items/IconUnderworldGloveVoidClaw.png"
+    },
+    {
+      "filename": "IconUnderworldHeadgearHellforgedHelm.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldHeadgearHellforgedHelm.png",
+      "sourcePngSha256": "2dccc9c7395c7e9443c9c45d4ef9837642b63729aff9981bf5721a4394be792b",
+      "pngSha256": "2dccc9c7395c7e9443c9c45d4ef9837642b63729aff9981bf5721a4394be792b",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "aa0943cc589f9cdda7fb039d0f777966b8fb0dbd59c5fe033aef2dff7d116d92",
+      "reusedFrom": "assets/game/items/IconUnderworldHeadgearHellforgedHelm.png"
+    },
+    {
+      "filename": "IconUnderworldHeadgearRotfangVisor.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldHeadgearRotfangVisor.png",
+      "sourcePngSha256": "4a29bbbb83118bc7aa29e5fa7e3e5c329332bbfd0469767ce10dc83baf4e4686",
+      "pngSha256": "4a29bbbb83118bc7aa29e5fa7e3e5c329332bbfd0469767ce10dc83baf4e4686",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "e0ecb11cf3436b63d96758f08863a12244edfde35050a86a8396204b8a7c9f1f",
+      "reusedFrom": "assets/game/items/IconUnderworldHeadgearRotfangVisor.png"
+    },
+    {
+      "filename": "IconUnderworldHeadgearSpiteCrown.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldHeadgearSpiteCrown.png",
+      "sourcePngSha256": "5ae3a8fd7920280945840a2b148998dfbd1ccccc8576d2da8501c6237a6d7d9c",
+      "pngSha256": "5ae3a8fd7920280945840a2b148998dfbd1ccccc8576d2da8501c6237a6d7d9c",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "8979971894fa00b670b344188c401ff90755c89d7292013cc8c5fc7c5402d783",
+      "reusedFrom": "assets/game/items/IconUnderworldHeadgearSpiteCrown.png"
+    },
+    {
+      "filename": "IconUnderworldHeadgearVenomCrest.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldHeadgearVenomCrest.png",
+      "sourcePngSha256": "ca5e52a0fbf45eee494cd45ae015d8597107ccf82d44ab706038ddb21d5a5ab8",
+      "pngSha256": "ca5e52a0fbf45eee494cd45ae015d8597107ccf82d44ab706038ddb21d5a5ab8",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "7ad87d1f5bc025a77ba0d7811ef5c182ccc1a3e3021b6701119721d1593f3bca",
+      "reusedFrom": "assets/game/items/IconUnderworldHeadgearVenomCrest.png"
+    },
+    {
+      "filename": "IconUnderworldNeckSpiteCollar.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldNeckSpiteCollar.png",
+      "sourcePngSha256": "86e2b152bfc15fc0c876f7c3be57834daa1c9bdd01f54f35675272571a04a912",
+      "pngSha256": "86e2b152bfc15fc0c876f7c3be57834daa1c9bdd01f54f35675272571a04a912",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3b719f1c15c065073c7a544bbfeeb274e42f1f33aa692417f65275f9a6768a7c",
+      "reusedFrom": "assets/game/items/IconUnderworldNeckSpiteCollar.png"
+    },
+    {
+      "filename": "IconUnderworldNeckThornNecklace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldNeckThornNecklace.png",
+      "sourcePngSha256": "3ed50c3a4a000f6fac2c1010fe3271b787bd6091a84421cf9df17fa38b9a6f8a",
+      "pngSha256": "3ed50c3a4a000f6fac2c1010fe3271b787bd6091a84421cf9df17fa38b9a6f8a",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "d918203eb23fd90f2c02199a5d58d04fd01b890e6e2218166ce3bcbed006b0bd",
+      "reusedFrom": "assets/game/items/IconUnderworldNeckThornNecklace.png"
+    },
+    {
+      "filename": "IconUnderworldRingPrismRing.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldRingPrismRing.png",
+      "sourcePngSha256": "13624ffa95bb262ffbc943b1e0670c051d5c0949299458da4d36c40b7a7135fd",
+      "pngSha256": "13624ffa95bb262ffbc943b1e0670c051d5c0949299458da4d36c40b7a7135fd",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "899f2581d9322b578843b01c720d819f4c7731a3b124feb035de306e40a2b701",
+      "reusedFrom": "assets/game/items/IconUnderworldRingPrismRing.png"
+    },
+    {
+      "filename": "IconUnderworldRingSkullbinder.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldRingSkullbinder.png",
+      "sourcePngSha256": "a0d3b856a988589cc1cb2064330a4b07ed34e6b6f2e521f6190f93113fda550d",
+      "pngSha256": "a0d3b856a988589cc1cb2064330a4b07ed34e6b6f2e521f6190f93113fda550d",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "428ad2a57c504362385a4b651e5ce284c7688fefa5c23bed3ccec9530075df4c",
+      "reusedFrom": "assets/game/items/IconUnderworldRingSkullbinder.png"
+    },
+    {
+      "filename": "IconUnderworldWeaponAbyssalFork.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldWeaponAbyssalFork.png",
+      "sourcePngSha256": "6b75c2c6f9b8e103420b9ab53c69a2722166bce5823c49c94bac63eb7299d8dc",
+      "pngSha256": "6b75c2c6f9b8e103420b9ab53c69a2722166bce5823c49c94bac63eb7299d8dc",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "ed70e586a1adb57a2d207bdbf6702ae350198237c5e553be8b0dae657a910069",
+      "reusedFrom": "assets/game/items/IconUnderworldWeaponAbyssalFork.png"
+    },
+    {
+      "filename": "IconUnderworldWeaponDoomMace.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldWeaponDoomMace.png",
+      "sourcePngSha256": "6269bc8718b646deae1b64146cbd88fd3ffa1e36149e914d7a9db3d69b461533",
+      "pngSha256": "6269bc8718b646deae1b64146cbd88fd3ffa1e36149e914d7a9db3d69b461533",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a2d3f3d8f4facc32fdafaa6271d099f07d45e10054a90cb120e6454e1878ca4e",
+      "reusedFrom": "assets/game/items/IconUnderworldWeaponDoomMace.png"
+    },
+    {
+      "filename": "IconUnderworldWeaponInfernalTrident.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldWeaponInfernalTrident.png",
+      "sourcePngSha256": "73d93fece116a0503d7b0c5fd8403a56cad5c63071442a11add0b4bfae282b92",
+      "pngSha256": "73d93fece116a0503d7b0c5fd8403a56cad5c63071442a11add0b4bfae282b92",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "79b069d9c4d6cf5827b2c267b5f9995d1d5bab7f36df11666e7eda06d882a861",
+      "reusedFrom": "assets/game/items/IconUnderworldWeaponInfernalTrident.png"
+    },
+    {
+      "filename": "IconUnderworldWeaponShadowScimitar.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldWeaponShadowScimitar.png",
+      "sourcePngSha256": "79f93e1c2261067600e79012c5accb9de2903c05cac59cd14409d12b0decce29",
+      "pngSha256": "79f93e1c2261067600e79012c5accb9de2903c05cac59cd14409d12b0decce29",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "a91521455f6eaf1d9e8a24dc9056b36c97f58fae21aca0ea1b509380b4a9b737",
+      "reusedFrom": "assets/game/items/IconUnderworldWeaponShadowScimitar.png"
+    },
+    {
+      "filename": "IconUnderworldWeaponSoulpiercer.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/IconUnderworldWeaponSoulpiercer.png",
+      "sourcePngSha256": "f11eb74604219c536f66f344378a2b1c360ad05c4814b85ac71c5d81e0ff3d52",
+      "pngSha256": "f11eb74604219c536f66f344378a2b1c360ad05c4814b85ac71c5d81e0ff3d52",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "67ac19e31c0c97bb729156aceb87615d8a6479acbfff95eee7c3754a2a6f4dc1",
+      "reusedFrom": "assets/game/items/IconUnderworldWeaponSoulpiercer.png"
+    },
+    {
+      "filename": "InfiniteAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/InfiniteAgeItems.png",
+      "sourcePngSha256": "4f4d7dfddf10e2c1b7a08dd3db57c9c0bb3022fad315c327e176f9cef71f9e6a",
+      "pngSha256": "4f4d7dfddf10e2c1b7a08dd3db57c9c0bb3022fad315c327e176f9cef71f9e6a",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "da1e1671d9d042cc7596e76577d460140adc639c41e2752cb1c22490cff60fc4",
+      "reusedFrom": null
+    },
+    {
+      "filename": "InterstellarAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/InterstellarAgeItems.png",
+      "sourcePngSha256": "5f53e1831de2b8d3c19f2d06bbe0f8112e35f32e2f7b0493ab40edee11466b56",
+      "pngSha256": "5f53e1831de2b8d3c19f2d06bbe0f8112e35f32e2f7b0493ab40edee11466b56",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "6b753a9425aa35cdd7d12b686f28eeb971410f8704b42d4f897e521041eb8886",
+      "reusedFrom": null
+    },
+    {
+      "filename": "JellyTentacle.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/JellyTentacle.png",
+      "sourcePngSha256": "9c7c7ecba7995b2b5a3863696d4732836837579f134174b6ee08db53ca2eb3f5",
+      "pngSha256": "9c7c7ecba7995b2b5a3863696d4732836837579f134174b6ee08db53ca2eb3f5",
+      "width": 142,
+      "height": 44,
+      "rgbaSha256": "ea0b1530ca557f96908df7301174d095376064d4efa9944fcf8ff49fbda076d4",
+      "reusedFrom": null
+    },
+    {
+      "filename": "KnightCapeH.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/KnightCapeH.png",
+      "sourcePngSha256": "65f23eba45f7846660d98a08f2e12b25a96224c1018a520c7699fabff887face",
+      "pngSha256": "65f23eba45f7846660d98a08f2e12b25a96224c1018a520c7699fabff887face",
+      "width": 256,
+      "height": 128,
+      "rgbaSha256": "6cb297b47abdd2c0ee6da77ec4e1d385ac146e5f239e9121ae61415228db0582",
+      "reusedFrom": null
+    },
+    {
+      "filename": "MedievalAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/MedievalAgeItems.png",
+      "sourcePngSha256": "6d4fabfc35e40661d7a7c4ccaaa87d56ac06258ed8b91f0f7d107c7c5104e991",
+      "pngSha256": "6d4fabfc35e40661d7a7c4ccaaa87d56ac06258ed8b91f0f7d107c7c5104e991",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "cefbf22e7d0bdbdf33ef0c58be98f76a84f237b90793f19ce67652acd05208f9",
+      "reusedFrom": null
+    },
+    {
+      "filename": "MegaEggs.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/MegaEggs.png",
+      "sourcePngSha256": "45bf6aab67656ac1a1a15fd116f965ec0bf6551f1c2a6c8d75e0c8032f97236f",
+      "pngSha256": "45bf6aab67656ac1a1a15fd116f965ec0bf6551f1c2a6c8d75e0c8032f97236f",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "13a314a65e8028037d753a52113900e1a5ede676050518d3abb3701b1c50647b",
+      "reusedFrom": "assets/game/MegaEggs.png"
+    },
+    {
+      "filename": "MegaMountIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/MegaMountIcons.png",
+      "sourcePngSha256": "473a2d7f46a17832ab13fe9029f1f1426c469e919eb4ef816ee4b780d7dcb63f",
+      "pngSha256": "473a2d7f46a17832ab13fe9029f1f1426c469e919eb4ef816ee4b780d7dcb63f",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "25097eb238404ec85e9db5db42d1f500aee3f286a641371842f380af43768a6a",
+      "reusedFrom": "assets/game/MegaMountIcons.png"
+    },
+    {
+      "filename": "MegaPets.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/MegaPets.png",
+      "sourcePngSha256": "c043abcd4cc98dc2cf39ae139b7e187668596fa936f29033110536cc366c3aaa",
+      "pngSha256": "c043abcd4cc98dc2cf39ae139b7e187668596fa936f29033110536cc366c3aaa",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "72cf9427e4806f2ccd6cd720477e0a6da2658e00a23421dd85856a76df53ef3c",
+      "reusedFrom": "assets/game/MegaPets.png"
+    },
+    {
+      "filename": "MegaSkillIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/MegaSkillIcons.png",
+      "sourcePngSha256": "b461b601a08ddd1b12012f3ce417921e72a54f6dd8b4ea87bbe30e12117b39b2",
+      "pngSha256": "b461b601a08ddd1b12012f3ce417921e72a54f6dd8b4ea87bbe30e12117b39b2",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "dc67697a573ecea179fee587e4e76066910870a616bd9199efe75c530eb93700",
+      "reusedFrom": "assets/game/MegaSkillIcons.png"
+    },
+    {
+      "filename": "ModernAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/ModernAgeItems.png",
+      "sourcePngSha256": "90e67116f6c724c982e187019effec629e9c3ef4ada1f6522fb085206afdf582",
+      "pngSha256": "90e67116f6c724c982e187019effec629e9c3ef4ada1f6522fb085206afdf582",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "51f57f860fd9a99c7012cd5c8eeaac1e373f69419904d403c4dc6a12fc3e5ed0",
+      "reusedFrom": null
+    },
+    {
+      "filename": "MountIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/MountIcons.png",
+      "sourcePngSha256": "723248a457b8be90fc4bfd44da8e69cf7a07ae2177fc69806009c02e1483481d",
+      "pngSha256": "723248a457b8be90fc4bfd44da8e69cf7a07ae2177fc69806009c02e1483481d",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "730c8e58b79c6340e51c6959a6b7e9989e6903466ed0bb0d7ae40507f9bb8df2",
+      "reusedFrom": "assets/game/MountIcons.png"
+    },
+    {
+      "filename": "Mounts.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Mounts.png",
+      "sourcePngSha256": "c002729d160796533526d1af231121acbff9f303bab4494b37d13f13dfe04f92",
+      "pngSha256": "c002729d160796533526d1af231121acbff9f303bab4494b37d13f13dfe04f92",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "89327c255cf8d2009be1ee2f75a05f27a3ca0f106758f45b0d68eae438b7159c",
+      "reusedFrom": null
+    },
+    {
+      "filename": "MultiverseAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/MultiverseAgeItems.png",
+      "sourcePngSha256": "e3151bf66774e9f49ed01fde3dd077ec8188402b691c587a40ecca4a598a103e",
+      "pngSha256": "e3151bf66774e9f49ed01fde3dd077ec8188402b691c587a40ecca4a598a103e",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "d48ad4260c96ab09bf5294fb2946b9c5eeeb71a1075c7c7807fb513e77efbb46",
+      "reusedFrom": null
+    },
+    {
+      "filename": "ParticleImpact.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/ParticleImpact.png",
+      "sourcePngSha256": "1fd84a3bfe3818bbd15880409fe841649762e930b3a5a08e86388aa61c261461",
+      "pngSha256": "1fd84a3bfe3818bbd15880409fe841649762e930b3a5a08e86388aa61c261461",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "2d15dbb887f36099ac6b5a954a804c0f87f883dd32b9183ad4b5d1eaa8ea4a98",
+      "reusedFrom": null
+    },
+    {
+      "filename": "Pets.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Pets.png",
+      "sourcePngSha256": "01c6c9917b54d5e11b58b36636c785b4649adab5a15a9ba4e92ca354af1176c5",
+      "pngSha256": "01c6c9917b54d5e11b58b36636c785b4649adab5a15a9ba4e92ca354af1176c5",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "65b0bc4f3eda64e398987bee3ba2de7eac824123fa8630d280c4f267fe2f4052",
+      "reusedFrom": "assets/game/Pets.png"
+    },
+    {
+      "filename": "PrimitiveAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/PrimitiveAgeItems.png",
+      "sourcePngSha256": "71e287dfd263dab7a80df7e29624fa8b90caae9a14fa86faf07e1d7e882fb943",
+      "pngSha256": "71e287dfd263dab7a80df7e29624fa8b90caae9a14fa86faf07e1d7e882fb943",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "a5ce7795dc5ddf533bc336f73c7bdf1fc31b1d4c545f0453b9a08258a25e010a",
+      "reusedFrom": null
+    },
+    {
+      "filename": "Props.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Props.png",
+      "sourcePngSha256": "3de46e86c1e9a704c38a4faf5aa81089bef28f0e823149a4031ea5cc439efe6c",
+      "pngSha256": "3de46e86c1e9a704c38a4faf5aa81089bef28f0e823149a4031ea5cc439efe6c",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "fa5da28397583a9ad5dd4f53971fb298f7a2c6d83f24e8c0f02ad99fe72d825c",
+      "reusedFrom": null
+    },
+    {
+      "filename": "QuantumAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/QuantumAgeItems.png",
+      "sourcePngSha256": "000e83622088d1d4d6c34526f5c38fcff1371335a2a25f8119035ab0f0ced8d7",
+      "pngSha256": "000e83622088d1d4d6c34526f5c38fcff1371335a2a25f8119035ab0f0ced8d7",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "c2327cf2ec40c4330b57b1f48a42040f6674d0284e9efebe470791b1cd7c5468",
+      "reusedFrom": null
+    },
+    {
+      "filename": "RoadDebrisUnderworld.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/RoadDebrisUnderworld.png",
+      "sourcePngSha256": "8637a45f0e925048dc68c28ef2e3a1d681528ac583dc083522f78ddbfe40d710",
+      "pngSha256": "8637a45f0e925048dc68c28ef2e3a1d681528ac583dc083522f78ddbfe40d710",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "a5e41846b7aeff50651eda4b2f9dd857443c3f4c5d864bf9af54a4d7b1d72701",
+      "reusedFrom": null
+    },
+    {
+      "filename": "RoadPiece.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/RoadPiece.png",
+      "sourcePngSha256": "d29dfa81193208690e130c78ffebb111ab9bac3fa98f0501a1ff18ddb2b9af96",
+      "pngSha256": "d29dfa81193208690e130c78ffebb111ab9bac3fa98f0501a1ff18ddb2b9af96",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "9cdcfe6e754a27ee4dbe47a0dbaa632cad77c558bd8e80f6cd18ecf7add4c37f",
+      "reusedFrom": null
+    },
+    {
+      "filename": "RoadPieceUnderworld.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/RoadPieceUnderworld.png",
+      "sourcePngSha256": "2be565fc1baf4b268332614432fbbf580a6c3e8d7c6cadad07c090726bdb0189",
+      "pngSha256": "2be565fc1baf4b268332614432fbbf580a6c3e8d7c6cadad07c090726bdb0189",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "81bf09ee4adff4c0058cae31125d738677ab2da4244ade88057a8788a8116f9f",
+      "reusedFrom": null
+    },
+    {
+      "filename": "SkillIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/SkillIcons.png",
+      "sourcePngSha256": "f9f4756ae2736760334914a60ce4300c36bd79dafbfb1c1b03d5955b10a925c2",
+      "pngSha256": "f9f4756ae2736760334914a60ce4300c36bd79dafbfb1c1b03d5955b10a925c2",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "8550658427e999b4439dc745d68dad161bc1c182ba2a16b567806efa3292996a",
+      "reusedFrom": "assets/game/SkillIcons.png"
+    },
+    {
+      "filename": "SkinsGameplayIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/SkinsGameplayIcons.png",
+      "sourcePngSha256": "3cb9e090169da493cf81834dbef2318b4c3b01de1e52c0c3dab202e3b55d44d2",
+      "pngSha256": "3cb9e090169da493cf81834dbef2318b4c3b01de1e52c0c3dab202e3b55d44d2",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "cbf45f48ec08d01b8e12632dd165f797ef4677f33a2ca7c9e81205838673b76d",
+      "reusedFrom": null
+    },
+    {
+      "filename": "SkinsUiIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/SkinsUiIcons.png",
+      "sourcePngSha256": "c926237c5b46bee50cae071d26bca69bb80c870ffe7c0ba8882864187d53c20d",
+      "pngSha256": "c926237c5b46bee50cae071d26bca69bb80c870ffe7c0ba8882864187d53c20d",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "507704cee7973f5b1d4f406e05ac0f072aa8477227cf2b7cf6bc7c517ce48062",
+      "reusedFrom": "assets/game/SkinsUiIcons.png"
+    },
+    {
+      "filename": "SpaceAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/SpaceAgeItems.png",
+      "sourcePngSha256": "0117798ab10d5ff852126d8bd09dcde3b7ff3a6cb114aed3c5913e290f1b7d0f",
+      "pngSha256": "0117798ab10d5ff852126d8bd09dcde3b7ff3a6cb114aed3c5913e290f1b7d0f",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "b714f71dd639293ca94d58f3283227bf3847dadef4eebd4408fb1376d68c085f",
+      "reusedFrom": null
+    },
+    {
+      "filename": "Square.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Square.png",
+      "sourcePngSha256": "cb2bbfc571c05d96fa2a6181b76564d245739fefdf625efc6e14b6fdd476f0b3",
+      "pngSha256": "cb2bbfc571c05d96fa2a6181b76564d245739fefdf625efc6e14b6fdd476f0b3",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "3b874d3ba46c638fc3094f8e92fb744ca974893873f8885f54e23760f9b6311b",
+      "reusedFrom": null
+    },
+    {
+      "filename": "Star.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/Star.png",
+      "sourcePngSha256": "ae0c69411a855642308575076f5dfd69167076ddcf7cecf2b0a0bf265ce8da46",
+      "pngSha256": "ae0c69411a855642308575076f5dfd69167076ddcf7cecf2b0a0bf265ce8da46",
+      "width": 128,
+      "height": 128,
+      "rgbaSha256": "a2b2b96ee7da41963444c10a70bf0d4e9db86fb697c52c266170e3c964d4a9da",
+      "reusedFrom": null
+    },
+    {
+      "filename": "StraightRoadPiece.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/StraightRoadPiece.png",
+      "sourcePngSha256": "fd99ce3c6f0d6a24b8079907c7c3849c49cb389fb67fd87f1ebced36e5fafb67",
+      "pngSha256": "fd99ce3c6f0d6a24b8079907c7c3849c49cb389fb67fd87f1ebced36e5fafb67",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "0c637acb66ce1e74691d0b79438d3e2bf88da3e02c97141c06cb53d5400ee43b",
+      "reusedFrom": null
+    },
+    {
+      "filename": "TechTreeIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/TechTreeIcons.png",
+      "sourcePngSha256": "8b66ee23edad857a35c867e2b6860fe5dc9947afe75a91105613dca9196a90ce",
+      "pngSha256": "8b66ee23edad857a35c867e2b6860fe5dc9947afe75a91105613dca9196a90ce",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "db72d4de7bffe8eb9ff66d220a162a061f983159625f000cc313a85f9830ff2a",
+      "reusedFrom": "assets/game/TechTreeIcons.png"
+    },
+    {
+      "filename": "ThiefItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/ThiefItems.png",
+      "sourcePngSha256": "f4ee013f6554000010d99a9efff2bde109f9573f5160e7867c483cbc574d3489",
+      "pngSha256": "f4ee013f6554000010d99a9efff2bde109f9573f5160e7867c483cbc574d3489",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "7617517645adf9d408d6c06edd12558577c3465c1758da2c844cdb4aef917369",
+      "reusedFrom": null
+    },
+    {
+      "filename": "UltraEggs.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/UltraEggs.png",
+      "sourcePngSha256": "fb21ce54b941b86b1bf6103ad36daa369a83b2ada4a51aab23ae368c7d45dfd9",
+      "pngSha256": "fb21ce54b941b86b1bf6103ad36daa369a83b2ada4a51aab23ae368c7d45dfd9",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "4a5d98bb43d54b5a150d997b0c4973a9a2ea0f81bd81969a03166b5f46fbfff6",
+      "reusedFrom": "assets/game/UltraEggs.png"
+    },
+    {
+      "filename": "UltraMountIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/UltraMountIcons.png",
+      "sourcePngSha256": "ab1ca32072ed46331152a5f29f9e39bb68d4f236befee4438cc57bbea6a5cd43",
+      "pngSha256": "ab1ca32072ed46331152a5f29f9e39bb68d4f236befee4438cc57bbea6a5cd43",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "3b7507c1a8d7e48947f2e7dce06be3eff7808c9fee69ad4d7709ffd5f1d299a7",
+      "reusedFrom": "assets/game/UltraMountIcons.png"
+    },
+    {
+      "filename": "UltraPets.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/UltraPets.png",
+      "sourcePngSha256": "add632725236a0b0ee3ce2ebf490dc5c88bd00103d556a1dbbeeb7fa0b1185c4",
+      "pngSha256": "add632725236a0b0ee3ce2ebf490dc5c88bd00103d556a1dbbeeb7fa0b1185c4",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "79c4b0bda2c13ebd1b9141b9754260a7a7186bd34937e663c6a7521e654d056a",
+      "reusedFrom": "assets/game/UltraPets.png"
+    },
+    {
+      "filename": "UltraSkillIcons.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/UltraSkillIcons.png",
+      "sourcePngSha256": "40be33fad8ac730dcb4a3a72ec7a78067ff376aae42439c8317c170c051a2146",
+      "pngSha256": "40be33fad8ac730dcb4a3a72ec7a78067ff376aae42439c8317c170c051a2146",
+      "width": 2048,
+      "height": 2048,
+      "rgbaSha256": "226ffe3f1176de458d6e82373640fab37fa0b378cb522ae8de1aecefd52c191b",
+      "reusedFrom": "assets/game/UltraSkillIcons.png"
+    },
+    {
+      "filename": "UnderworldAgeItems.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/UnderworldAgeItems.png",
+      "sourcePngSha256": "bc6d96911a33d581e70726ad0a3e8ea797f8a290dcf5bde226894d1c62e3d79d",
+      "pngSha256": "bc6d96911a33d581e70726ad0a3e8ea797f8a290dcf5bde226894d1c62e3d79d",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "e220070654418c25c4a838e1feedcc4554d2b27bc98f0bd75aa20b1ab2a9d2d8",
+      "reusedFrom": null
+    },
+    {
+      "filename": "WormRock.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/WormRock.png",
+      "sourcePngSha256": "459d113bdc9a208c0bdbf1a6942d802974582697e2ee1fa00ccb01de0847cafb",
+      "pngSha256": "459d113bdc9a208c0bdbf1a6942d802974582697e2ee1fa00ccb01de0847cafb",
+      "width": 256,
+      "height": 256,
+      "rgbaSha256": "80ead28b05de47170656ca087cab8c893535193698f070e61f2ca46fbfd6ac1a",
+      "reusedFrom": null
+    },
+    {
+      "filename": "guardianRibbon.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/guardianRibbon.png",
+      "sourcePngSha256": "7b7e416d2fa7123cd31603edb4d9d42546e8edfb5a36f33e0b2720a62782b93e",
+      "pngSha256": "7b7e416d2fa7123cd31603edb4d9d42546e8edfb5a36f33e0b2720a62782b93e",
+      "width": 230,
+      "height": 90,
+      "rgbaSha256": "8ec9b82b34912ebddf09f9748ce2b6220588f38abcbc600ef35e453b4c21c8ff",
+      "reusedFrom": null
+    },
+    {
+      "filename": "petAssets.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/petAssets.png",
+      "sourcePngSha256": "b202d751e6293deacf56638a09cb884ce14bf7e1af208b05ca6463a4c06d3303",
+      "pngSha256": "b202d751e6293deacf56638a09cb884ce14bf7e1af208b05ca6463a4c06d3303",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "aa8919c187bf9470c12dd6830dbb394338f9a5be8a01d726423911d889d6a1b5",
+      "reusedFrom": null
+    },
+    {
+      "filename": "petAssetsApex.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/petAssetsApex.png",
+      "sourcePngSha256": "5cd608e19072a812211da9cbfe61ac7b6b60ed32602080f17b15f7d45e9f4418",
+      "pngSha256": "5cd608e19072a812211da9cbfe61ac7b6b60ed32602080f17b15f7d45e9f4418",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "3ad2a2596132e504bf0e882706470a72678b616829c60d4f558e62f8729e443e",
+      "reusedFrom": null
+    },
+    {
+      "filename": "petAssetsHeroicEternalInfinite.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/petAssetsHeroicEternalInfinite.png",
+      "sourcePngSha256": "5750160db8d44db9cf2fad6a10eff2e264cf84f7ec85f7c3e8788e2dafaba122",
+      "pngSha256": "5750160db8d44db9cf2fad6a10eff2e264cf84f7ec85f7c3e8788e2dafaba122",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "2bbd7ddced4f625a063bbacd2d4ae3a5e0f1dcd458746c4e4e7660ef2584b85e",
+      "reusedFrom": null
+    },
+    {
+      "filename": "petAssetsUltra.png",
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/petAssetsUltra.png",
+      "sourcePngSha256": "f3cbe1a451620f046e9d8a638ef88aabbc3a8f29bb10e1670fc3964ef3a20bd2",
+      "pngSha256": "f3cbe1a451620f046e9d8a638ef88aabbc3a8f29bb10e1670fc3964ef3a20bd2",
+      "width": 1024,
+      "height": 1024,
+      "rgbaSha256": "6a9b8f96ded2c3fe09babf3d008ae4cddf12b4cc2c956cfe83024b79b57b3c39",
+      "reusedFrom": null
+    }
+  ]
+}
