@@ -1,0 +1,20 @@
+name: Validate synchronization
+on:
+  pull_request:
+    paths: ['.github/workflows/**', 'scripts/**', 'tests/**']
+  push:
+    branches: [main]
+    paths: ['.github/workflows/**', 'scripts/**', 'tests/**']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==11.3.0
+      - run: python -m unittest discover -s tests -v
+      - run: bash -n scripts/publish_sync.sh

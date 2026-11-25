@@ -1,83 +1,62 @@
-name: Sync Forge Master 2.9 Game Assets
+name: Sync Forge Master Game Assets
 
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 * * * *'
   push:
+    branches: [main]
     paths:
-      - ".github/workflows/sync-game-assets.yml"
+      - '.github/workflows/sync-game-assets.yml'
+      - 'scripts/sync_content.py'
+      - 'scripts/publish_sync.sh'
 
 permissions:
   contents: write
+  pages: write
+
+# Both writers share a lock and check out main AFTER acquiring it.
+concurrency:
+  group: forge-master-content-sync
+  cancel-in-progress: false
 
 jobs:
-  sync-assets:
+  sync:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Checkout KR repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
-      - name: Checkout 1vcian source
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==11.3.0
+      - name: Verify existing branch-based Pages configuration
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/pages" > "$RUNNER_TEMP/pages.json"
+          python - <<'CHECK'
+          import json, os
+          from pathlib import Path
+          pages = json.loads((Path(os.environ['RUNNER_TEMP']) / 'pages.json').read_text())
+          assert pages['build_type'] == 'legacy', 'Expected existing branch-based Pages deployment'
+          assert pages['source'] == {'branch': 'main', 'path': '/'}, 'Unexpected Pages source'
+          CHECK
+      - name: Checkout upstream data (read only)
         uses: actions/checkout@v4
         with:
           repository: 1vcian/fm
           path: _source
-          fetch-depth: 1
-
-      - name: Copy exact 2.9.0 assets used by KR
-        shell: python
-        run: |
-          import json, shutil
-          from pathlib import Path
-
-          src = Path("_source/public")
-          tex = src / "Texture2D" / "2026_09_08_08_08"
-          dst = Path("assets/game")
-          items = dst / "items"
-          dst.mkdir(parents=True, exist_ok=True)
-          items.mkdir(parents=True, exist_ok=True)
-
-          mapping = json.loads((src / "parsed_configs" / "AutoItemMapping.json").read_text(encoding="utf-8"))
-          missing = []
-          copied = 0
-          for row in mapping.values():
-              name = row["SpriteName"] + ".png"
-              s = tex / name
-              if not s.exists():
-                  missing.append(name)
-                  continue
-              shutil.copy2(s, items / name)
-              copied += 1
-
-          common = [
-              "Pets.png","MountIcons.png","SkillIcons.png","SkinsUiIcons.png",
-              "FairyIconLora.png","FairyIconMira.png","FairyIconTira.png",
-              "TechTreeIcons.png","ClanTechTreeIcons.png",
-              "EmblemHolder.png","EmblemIcons.png","EmblemShapes.png"
-          ]
-          common += [f"SteppingStoneCharIcon{i}.png" for i in range(27)]
-          for name in common:
-              s = tex / name
-              if not s.exists():
-                  missing.append(name)
-                  continue
-              shutil.copy2(s, dst / name)
-
-          print(f"Copied {copied} equipment icons + {len(common)} shared assets")
-          if missing:
-              raise SystemExit("Missing source assets: " + ", ".join(sorted(set(missing))))
-
-      - name: Remove source checkout
-        run: rm -rf _source
-
-      - name: Commit synced assets
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/game
-          if git diff --cached --quiet; then
-            echo "No asset changes"
-            exit 0
-          fi
-          git commit -m "Sync Forge Master 2.9 game image assets"
-          git push
+          persist-credentials: false
+          sparse-checkout: |
+            public/Texture2D
+            public/parsed_configs/AutoItemMapping.json
+      - name: Stage and validate complete snapshot
+        run: python scripts/sync_content.py game --source _source
+      - name: Commit changed content and request Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/publish_sync.sh assets/game

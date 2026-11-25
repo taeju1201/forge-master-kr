@@ -1,0 +1,157 @@
+import importlib.util
+import os
+from pathlib import Path
+import subprocess
+import tempfile
+import unittest
+from unittest.mock import patch
+from PIL import Image
+
+spec = importlib.util.spec_from_file_location('sync_content', Path(__file__).parents[1] / 'scripts/sync_content.py')
+sync = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(sync)
+
+
+class SyncTests(unittest.TestCase):
+    @staticmethod
+    def planner(store='fmkr_rebuild_v1', marker=True):
+        style = '<style id="fmkr-inline"></style>' if marker else ''
+        return ('<html><head><title>Forge Master KR</title>' + style +
+                '</head><body><script>const STORE = "' + store +
+                '";</script>' + ' ' * 10000 + '</body></html>')
+
+    def test_legacy_pages_rejected_before_download_and_preserves_profiles_app(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            current = self.planner()
+            (root / 'index.html').write_text(current)
+            (root / 'existing.png').write_bytes(b'keep existing asset')
+            before = {p.name: p.read_bytes() for p in root.iterdir()}
+            def fetch_html(command, **kwargs):
+                Path(command[command.index('-o') + 1]).write_text(
+                    self.planner('fmkr_personal_stable', marker=False))
+            with patch.object(sync.subprocess, 'run', side_effect=fetch_html), \
+                    patch.object(sync, 'download') as download:
+                with self.assertRaisesRegex(ValueError, 'Incompatible Pages source'):
+                    sync.sync('pages', root)
+            download.assert_not_called()
+            self.assertEqual({p.name: p.read_bytes() for p in root.iterdir()}, before)
+
+    def test_profile_contract_and_app_structure_are_required(self):
+        current = self.planner()
+        sync.validate_pages_compatibility(current, current)
+        candidates = [
+            self.planner('fmkr_personal_stable'),
+            self.planner(marker=False),
+            current.replace('const STORE =', 'const UNRELATED ='),
+        ]
+        for candidate in candidates:
+            with self.subTest(candidate=candidate[:180]), self.assertRaises(ValueError):
+                sync.validate_pages_compatibility(candidate, current)
+
+    def test_check_only_validates_but_does_not_apply_snapshot(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'index.html').write_text('current planner')
+            def valid_snapshot(stage, source):
+                (stage / 'index.html').write_text('new planner')
+                (stage / 'new.png').write_bytes(b'new asset')
+            with patch.object(sync, 'stage_game', side_effect=valid_snapshot) as stage_game:
+                sync.sync('game', root, root / 'source', check_only=True)
+            stage_game.assert_called_once()
+            self.assertEqual((root / 'index.html').read_text(), 'current planner')
+            self.assertEqual(list(root.iterdir()), [root / 'index.html'])
+
+    def test_publisher_noop_and_failed_build_retry(self):
+        script = Path(__file__).parents[1] / 'scripts/publish_sync.sh'
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / 'repo'
+            repo.mkdir()
+            subprocess.run(['git', 'init', '-q', str(repo)], check=True)
+            (repo / 'index.html').write_text('same')
+            subprocess.run(['git', '-C', str(repo), 'add', '.'], check=True)
+            subprocess.run(['git', '-C', str(repo), '-c', 'user.name=test', '-c', 'user.email=test@example.com', 'commit', '-qm', 'baseline'], check=True)
+            head = subprocess.check_output(['git', '-C', str(repo), 'rev-parse', 'HEAD'], text=True).strip()
+            binary = root / 'bin'
+            binary.mkdir()
+            gh = binary / 'gh'
+            gh.write_text('#!/usr/bin/env python3\nimport json, os, sys\nfrom pathlib import Path\nwith Path(os.environ["CALL_LOG"]).open("a") as f: f.write(" ".join(sys.argv[1:]) + "\\n")\nprint(json.dumps({"commit": os.environ["TEST_HEAD"], "status": os.environ["TEST_STATUS"]}))\n')
+            gh.chmod(0o755)
+            log = root / 'calls'
+            env = dict(os.environ, PATH=str(binary) + os.pathsep + os.environ['PATH'],
+                       CALL_LOG=str(log), TEST_HEAD=head, TEST_STATUS='built',
+                       GITHUB_REPOSITORY='test/repo')
+            subprocess.run(['bash', str(script), 'index.html'], cwd=repo, env=env, check=True, capture_output=True)
+            self.assertNotIn('--method POST', log.read_text())
+            env['TEST_STATUS'] = 'errored'
+            subprocess.run(['bash', str(script), 'index.html'], cwd=repo, env=env, check=True, capture_output=True)
+            self.assertIn('--method POST', log.read_text())
+            self.assertEqual(subprocess.check_output(['git', '-C', str(repo), 'rev-parse', 'HEAD'], text=True).strip(), head)
+
+    def test_error_html_rejected(self):
+        with self.assertRaises(ValueError):
+            sync.validate_html(b'<html>Access denied</html>')
+
+    def test_truncated_html_rejected(self):
+        with self.assertRaises(ValueError):
+            sync.validate_html(b'<title>Forge Master</title><script>' + b' ' * 10000)
+
+    def test_corrupt_image_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'image.png'
+            path.write_text('<html>error</html>')
+            with self.assertRaises(Exception):
+                sync.validate_image(path)
+
+    def test_late_download_failure_preserves_all_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'index.html').write_text('old planner')
+            def failed(stage, published_html):
+                (stage / 'index.html').write_text('new planner')
+                raise RuntimeError('last asset failed')
+            with patch.object(sync, 'stage_pages', failed):
+                with self.assertRaises(RuntimeError):
+                    sync.sync('pages', root)
+            self.assertEqual((root / 'index.html').read_text(), 'old planner')
+            self.assertEqual(len(list(root.iterdir())), 1)
+
+    def test_missing_newest_game_assets_do_not_fall_back(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            public = root / 'source/public'
+            for date in ['2026_09_08_08_08', '2026_10_08_09_03']:
+                (public / 'Texture2D' / date).mkdir(parents=True)
+            (public / 'parsed_configs').mkdir()
+            (public / 'parsed_configs/AutoItemMapping.json').write_text('{"a":{"SpriteName":"valid"}}')
+            Image.new('RGB', (2, 2)).save(public / 'Texture2D/2026_09_08_08_08/valid.png')
+            dest = root / 'published'
+            dest.mkdir()
+            (dest / 'index.html').write_text('old')
+            with self.assertRaises(FileNotFoundError):
+                sync.sync('game', dest, root / 'source')
+            self.assertEqual(list(dest.iterdir()), [dest / 'index.html'])
+
+    def test_identical_snapshot_is_git_noop_and_preserves_old_assets(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            stage = root / 'stage'
+            dest = root / 'repo'
+            stage.mkdir()
+            dest.mkdir()
+            (stage / 'index.html').write_text('validated')
+            (dest / 'old.png').write_bytes(b'keep')
+            subprocess.run(['git', 'init', '-q', str(dest)], check=True)
+            sync.apply(stage, dest)
+            subprocess.run(['git', '-C', str(dest), 'add', '.'], check=True)
+            subprocess.run(['git', '-C', str(dest), '-c', 'user.name=test', '-c', 'user.email=test@example.com', 'commit', '-qm', 'baseline'], check=True)
+            before = (dest / 'index.html').stat().st_mtime_ns
+            sync.apply(stage, dest)
+            self.assertEqual((dest / 'index.html').stat().st_mtime_ns, before)
+            self.assertEqual(subprocess.check_output(['git', '-C', str(dest), 'status', '--porcelain']), b'')
+            self.assertTrue((dest / 'old.png').exists())
+
+
+if __name__ == '__main__':
+    unittest.main()
