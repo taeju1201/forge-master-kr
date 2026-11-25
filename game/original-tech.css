@@ -1,0 +1,50 @@
+/* Original research nodes, isolated from the surrounding test-world controls. */
+.ot-tech{color:#111;font-family:inherit;font-weight:800;width:100%;min-width:0;text-align:center}
+.ot-player-tech{background:linear-gradient(#bceeff 0,#fff 280px);border-radius:0 0 12px 12px}
+.ot-tree-summary{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;padding:10px 8px 2px;font-size:14px}
+.ot-tree-summary b{font-size:18px;line-height:1.1}
+.ot-tree-summary small{flex-basis:100%;font-size:12px;font-weight:650;color:#404b59}
+.ot-graph{position:relative;width:100%;min-width:0;isolation:isolate}
+.ot-links{position:absolute;inset:0;overflow:visible;pointer-events:none;z-index:0}
+.ot-links path{fill:none;stroke:#111;stroke-width:3;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.ot-tier-title{position:absolute;left:0;right:0;z-index:1;height:24px;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.ot-tier-title span{font-size:14px;line-height:24px;min-width:76px;padding:0 14px;background:#fff;border:2px solid #111;border-radius:16px;color:#111}
+.ot-node{position:absolute;width:76px;transform:translateX(-50%);z-index:2;text-align:center;--ot-disc:76px}
+.ot-node.is-dense{width:64px;--ot-disc:64px}
+.ot-node:focus-within,.ot-node:has(.ot-info[open]){z-index:5}
+.ot-info{position:relative;margin:0;padding:0;border:0;background:transparent}
+.ot-info>summary.ot-disc{box-sizing:border-box;display:flex;align-items:center;justify-content:center;position:relative;width:var(--ot-disc);height:var(--ot-disc);margin:0;padding:9px;list-style:none;cursor:pointer;border:3px solid #101010;border-radius:50%;background:#f5f5f5;box-shadow:inset 0 0 0 7px #b4b4b4;color:#111;outline-offset:3px}
+.ot-info>summary.ot-disc::-webkit-details-marker{display:none}
+.ot-info>summary.ot-disc::marker{content:""}
+.ot-info>summary.ot-disc:focus-visible{outline:3px solid #00aef0}
+.ot-node.is-learned .ot-disc{background:#efab7f;box-shadow:inset 0 0 0 7px #bd835e}
+.ot-node.is-maxed .ot-disc{background:#ffd275;box-shadow:inset 0 0 0 7px #d59f43}
+.ot-icon{display:block;width:100%;height:100%;background-repeat:no-repeat;background-size:800% 800%;flex:none;pointer-events:none}
+.ot-symbol{font-size:28px;line-height:1}
+.ot-level{position:relative;display:flex;align-items:center;justify-content:center;width:max-content;max-width:120px;margin:-2px auto 0;font-family:inherit;font-size:23px;line-height:28px;font-weight:900;color:#fff;-webkit-text-stroke:3px #111;paint-order:stroke fill;text-shadow:none;white-space:nowrap;z-index:1}
+.ot-tech input.ot-level-input{box-sizing:border-box;display:block;flex:none;width:var(--ot-digits,2.25ch);min-width:24px;max-width:72px;height:31px;padding:0;margin:0;border:0;border-radius:5px;background:transparent;box-shadow:none;color:inherit;-webkit-text-stroke:inherit;paint-order:stroke fill;text-shadow:none;font:inherit;line-height:31px;text-align:center;appearance:textfield;-moz-appearance:textfield;outline-offset:1px}
+.ot-tech input.ot-level-input::-webkit-inner-spin-button,.ot-tech input.ot-level-input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.ot-tech input.ot-level-input:focus{outline:2px solid #00acee;background:#fff;color:#111;-webkit-text-stroke:0;text-shadow:none;min-width:42px;max-width:90px;width:4ch}
+.ot-tech input.ot-level-input:hover{background:#ffffffb3}
+.ot-level>span{pointer-events:none}
+.ot-tooltip{position:absolute;top:calc(var(--ot-disc) + 38px);left:50%;transform:translateX(-50%);width:180px;max-width:70vw;box-sizing:border-box;display:grid;gap:5px;padding:10px;border:2px solid #111;border-radius:9px;background:#fff;box-shadow:0 3px 0 #0003;font-size:13px;line-height:1.4;font-weight:700;text-align:center;color:#111;z-index:10}
+.ot-tooltip b{font-size:14px;font-weight:900}
+.ot-tooltip span,.ot-tooltip small{display:block;font-size:12px;color:#59606b}
+.ot-node.is-dense .ot-tooltip{width:140px;max-width:42vw}
+.ot-node.is-edge-left .ot-tooltip{left:0;transform:none}
+.ot-node.is-edge-right .ot-tooltip{left:auto;right:0;transform:none}
+.ot-guild-help{font-size:12px;font-weight:650;color:#59606b;margin:10px 0 18px}
+.ot-guild-category{margin:0 0 24px;padding:0;border:0;background:none}
+.ot-guild-category h3{font-size:16px;line-height:1.25;color:#111;margin:0 0 10px;font-weight:900}
+.ot-guild-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 4px;background:#f0f0f0;border-radius:12px;padding:18px 5px 14px;justify-items:center}
+.ot-guild-grid-small{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.ot-guild-node{position:relative;left:auto;top:auto;transform:none;width:64px;--ot-disc:64px}
+.ot-guild-node .ot-disc{background:#a5cdec;box-shadow:inset 0 0 0 6px #7299be}
+.ot-guild-node.is-learned .ot-disc{background:#a8df91;box-shadow:inset 0 0 0 6px #76ad60}
+.ot-guild-node .ot-level{font-size:19px;-webkit-text-stroke:2.5px #111;line-height:28px}
+.ot-guild-node .ot-tooltip{width:145px;max-width:45vw}
+.ot-guild-node:nth-child(4n+1) .ot-tooltip{left:0;transform:none}
+.ot-guild-node:nth-child(4n) .ot-tooltip{left:auto;right:0;transform:none}
+.ot-guild-grid-small .ot-guild-node .ot-tooltip{left:50%;right:auto;transform:translateX(-50%)}
+.ot-empty{margin:24px 8px;color:#555;font-size:14px}
+@media(max-width:360px){.ot-node.is-dense,.ot-guild-node{width:56px;--ot-disc:56px}.ot-guild-grid{gap:18px 2px}.ot-guild-grid-small{gap:12px}.ot-info>summary.ot-disc{padding:7px}.ot-node.is-dense .ot-level{font-size:20px}}

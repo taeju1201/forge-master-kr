@@ -1,0 +1,991 @@
+{
+  "sourceAPK": "Forge Master 2.11.1",
+  "sourceAPKSHA256": "aa9597960e1b8afa7fc93eb4eca844bcf1d46a12752959356d637f44c89ae66f",
+  "assets": {
+    "DungeonTabIcon.png": {
+      "originalName": "DungeonTabIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "1099e506b4dad954ebef18bb9a15e5f6",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "2e7b4b69b592a31c4e6fc149d0a4f7fc738e06fc7250d4702b7e984c7f66258b"
+    },
+    "TechTreeMeta.png": {
+      "originalName": "TechTreeMeta",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "19ad14c97d0694befb9d4fc79a49e689",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "0b58b8a133731007b2c4f5bb641137b5611cc66eca02c6b81355a798e835dee4"
+    },
+    "AutoForge.png": {
+      "originalName": "AutoForge",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "1ac2f5bd9b98abe4a9ac4e09b3cbf3f9",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "e6fb53fc53d8080b06233426bc008a48cdbdedef5d939f1695243969afac1098"
+    },
+    "AutoForgeState.png": {
+      "originalName": "AutoForgeState",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "21aa71e69aabb44959ec2428f2d26a53",
+      "pathID": 2,
+      "width": 512,
+      "height": 512,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 512.0,
+        "height": 512.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "c77ec3b5012a305ed2c8f603d6b739caec8ce70a98e07c2dd84cdeff0b6271c1"
+    },
+    "Anvil.png": {
+      "originalName": "Anvil",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "22d534be5b27a466e873d666e4c664a5",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "6d5e5d29e010d3b57d0eb3dfc1f48e93edf2143a23d5ba94b7877da27cd655e4"
+    },
+    "Hammer___.png": {
+      "originalName": "Hammer __",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "28f16983da4e24342bb53890acb28289",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "1bb36011b6b0984123e20e4aa9b203b44285474b347a3e98c288a45735dbad66"
+    },
+    "UnitIcon.png": {
+      "originalName": "UnitIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "33fb8eaa14ff44621945da5b2d5335ab",
+      "pathID": 2,
+      "width": 128,
+      "height": 128,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 128.0,
+        "height": 128.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "9c65f661c6ff9f96bbe216c4662d0121c0b890be7198c41c793b0d6e2b68aa31"
+    },
+    "Anvil____.png": {
+      "originalName": "Anvil ___",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "3a8736c76ca8345d8b964b7f531b4e3f",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "4172e2af600155cde118b2befac90b900d476c6fb52f080a19bc3faac72f52a6"
+    },
+    "Pet_Symbol.png": {
+      "originalName": "Pet Symbol",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "43197d133f4214a01837d22ff8bec01e",
+      "pathID": 2,
+      "width": 61,
+      "height": 54,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 61.0,
+        "height": 54.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "3b114a2510b0a4ddc7f5cb4a8cc1067a80a91a6d6f113027a2148bbb52c99a29"
+    },
+    "Anvil___.png": {
+      "originalName": "Anvil __",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "4fa87ffeb1cf5493fab8c0fdf45349c0",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "4ef3817acab0e927aa05e9a579baffe3b5182509e91ce7971b138328dc55d3ea"
+    },
+    "SmallRoundButton.png": {
+      "originalName": "SmallRoundButton",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "50529900f17916f48aec13d8582d973a",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "edbe15b58dbe99fedf412602b4f3cc8ac9535d30fadee385c85c75e44688064f"
+    },
+    "Hammer__.png": {
+      "originalName": "Hammer _",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "554ac83217a524304b6e7a15cfc88fae",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "8c13939e0d255038bd7857afe629b80042fe25d84492b026b3aa0df6a220f097"
+    },
+    "ShopTabIcon.png": {
+      "originalName": "ShopTabIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "6ba4dafbf0474cf418697924b5c43fae",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "64fab658a8991e53d8740549916e2fc05a4417215a3058a288fa3e3365413d73"
+    },
+    "TechTreeForge.png": {
+      "originalName": "TechTreeForge",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "70073931140f1a24c897f97668797c77",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "9c9cdeac8c99f6280b34e05f2d758ddee032c8f0278b3797456524b4081e085a"
+    },
+    "TechTreePower.png": {
+      "originalName": "TechTreePower",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "72253a7d78d6ad046aeb8d00a8b61b7e",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "62638097cb0716f7858b5f2fc447a41e77d73609beee7f7f5fb81e78f30ae308"
+    },
+    "AscensionStar.png": {
+      "originalName": "AscensionStar",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "8060e054982e64b17b2659a3bff9e397",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "c9ad5e049ea547fb733cf5af373dd94a2f6d9a55e524c891f37f93e4fbd1461a"
+    },
+    "EmblemShapes_0.png": {
+      "originalName": "EmblemShapes_0",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "8a8622ff23082de4c99b9f5f5422627e",
+      "pathID": 4,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 768.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "fb3147f5c40f66fb7db23577e39c33ed62bcd86a84d52b4124e51801c0fd06a0"
+    },
+    "FrameSmall.png": {
+      "originalName": "FrameSmall",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "8b02555211692d0428037609898b5837",
+      "pathID": 3,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "57c9479a1d786d444c5d8c2a3018695402760a540342c2654afd4e9b2eea2d3c"
+    },
+    "Thick_Frame.png": {
+      "originalName": "Thick Frame",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "8b02555211692d0428037609898b5837",
+      "pathID": 7,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 256.0,
+        "y": 256.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "6e9a36a1fc08c42a290354f8b90e1ef1fb7ce0a68961bac343c3d2187aad7382"
+    },
+    "FrameBig.png": {
+      "originalName": "FrameBig",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "8b02555211692d0428037609898b5837",
+      "pathID": 10,
+      "width": 572,
+      "height": 252,
+      "rect": {
+        "x": 450.0,
+        "y": 2.0,
+        "width": 572.0,
+        "height": 252.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 74.0,
+        "y": 78.0,
+        "z": 74.0,
+        "w": 78.0
+      },
+      "sha256": "17b9b7c102ee0db1c8398a6eafd07143bad1a408314b69181815070745718ce8"
+    },
+    "Rect_Rounded_Outline.png": {
+      "originalName": "Rect_Rounded_Outline",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "940fa9a1fc80ad4499b6d30f09d6103f",
+      "pathID": 2,
+      "width": 512,
+      "height": 512,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 512.0,
+        "height": 512.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 256.0,
+        "y": 256.0,
+        "z": 256.0,
+        "w": 256.0
+      },
+      "sha256": "a709ac2b345156b1789693bd96888abbeb1af2b2790992254e87c37a884fdda0"
+    },
+    "Hammer.png": {
+      "originalName": "Hammer",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "a1320272a59074c14a70a5963145551f",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "03720b5012f1013fa807df7b971abf03905500a5c9143d3d502308d181514b8b"
+    },
+    "EmblemIcons_0.png": {
+      "originalName": "EmblemIcons_0",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "a1b75f230d124934793b1c68b935995f",
+      "pathID": 16,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 1792.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "f6fadc12939a64a2b6a4b08b437a4b5a42f818be0f6de15f367168876b2af5a8"
+    },
+    "InfoIcon.png": {
+      "originalName": "InfoIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "a6e230e31702198418b44d5b6d04e435",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "2c960841a010a76f69fc25e7ef6927b22f4c73502350b0c32aad62c077b2df6c"
+    },
+    "EmblemHolder.png": {
+      "originalName": "EmblemHolder",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "aca0f6c8fafb5174d8ba867db383866b",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "d307651bb755f9da5223376722c3e3c0e77460b63ccc3c0a8b7dafff163bec88"
+    },
+    "Anvil__.png": {
+      "originalName": "Anvil _",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "bcc9eb7469bac4a22a14d9a088ddab18",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "524b4e0f59ccedaceb05f8047d50046bf3e2b0690a1e7d91f5069bfb088c8f3d"
+    },
+    "ArenaTabIcon.png": {
+      "originalName": "ArenaTabIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "bdea47819d41bc143bc29d74ae4036ad",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "584a8b5ca3bf98714afc9afdfb749f9e342ea51ea02b107f3fde4a0ab571069a"
+    },
+    "ChatIcon.png": {
+      "originalName": "ChatIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "c2e95b4da7d44c24694691717c5d3d37",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "ce257782318e91c89a7594cc97e0aed4a1bf37e1c37bc0547d2e9da7ec19d6f4"
+    },
+    "SettingsIcon.png": {
+      "originalName": "SettingsIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "c625677676b9048469c2cd8b82b808ef",
+      "pathID": 2,
+      "width": 128,
+      "height": 128,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 128.0,
+        "height": 128.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "f2bdff8ba0b6508b33a13d200d11fadfac94bcdc7c9253c51fc644b5a777169a"
+    },
+    "SkillTabIcon.png": {
+      "originalName": "SkillTabIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "c680916a3408d7b4b90574df04afe5ae",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "31b006f271bf696f3acdc0e2199ebc1a4f339ea65562405461c41d341bd07a7e"
+    },
+    "Mount_Icon.png": {
+      "originalName": "Mount Icon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "c8899baffb3fd45de844c64d52eea4ae",
+      "pathID": 2,
+      "width": 64,
+      "height": 56,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 56.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "fd1b8012f644b092aa4266dd066fbd2591a87b1d21e54a3bd2eb4d9215f49b73"
+    },
+    "Rect_Rounded_Filled.png": {
+      "originalName": "Rect_Rounded_Filled",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "d35e45993402e64438e41ac8e0d7b219",
+      "pathID": 2,
+      "width": 512,
+      "height": 512,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 512.0,
+        "height": 512.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 256.0,
+        "y": 256.0,
+        "z": 256.0,
+        "w": 256.0
+      },
+      "sha256": "081320d08930d0b181111da667ce37f0079e352fa6171fb6e21f6b0513a90b08"
+    },
+    "CoinIcon.png": {
+      "originalName": "CoinIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "d5f7e925a7ea0a24baab46107c28e613",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "09411d30002bc16afe8ea3802cd6d3ce2ed1b2e3173a44c8783ce2a63aec4a5f"
+    },
+    "Hammer____.png": {
+      "originalName": "Hammer ___",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "f39ec2839f17b49c5b74da5d34c35bd8",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "461da13001782fce14324349c6a5c2b2515f2903e31e797c724d1c434c0e1539"
+    },
+    "PlusIcon.png": {
+      "originalName": "PlusIcon",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "f4704ca0dcca84840909ea1c1919c869",
+      "pathID": 2,
+      "width": 256,
+      "height": 256,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "f0b67d97f5f22f46838f0a2fd12bbe6f09068157251205f41a766ed5bc92f2a0"
+    },
+    "fightPower.png": {
+      "originalName": "fightPower",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "sharedassets0.assets",
+      "pathID": 36,
+      "width": 256,
+      "height": 232,
+      "rect": {
+        "x": 1024.0,
+        "y": 1792.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "cd538b7eb53c0b060fe72e17107ba3666e88ed0f9f03c6f640cec9371dd7a6d6"
+    },
+    "Button.png": {
+      "originalName": "Button",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "sharedassets0.assets",
+      "pathID": 60,
+      "width": 512,
+      "height": 512,
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 512.0,
+        "height": 512.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 100.0,
+        "y": 370.0,
+        "z": 100.0,
+        "w": 100.0
+      },
+      "sha256": "09183f3ce900a1e577ccc4b57bb6cd684ea79f3289716cf7ffadf1eb07570331"
+    },
+    "gem.png": {
+      "originalName": "gem",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "sharedassets0.assets",
+      "pathID": 74,
+      "width": 246,
+      "height": 246,
+      "rect": {
+        "x": 1536.0,
+        "y": 1792.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "586b5749d49f3b09a85a3aa25685bfcdb0e89087d8be9aada2d818c3f4d5f35d"
+    },
+    "StatDamage.png": {
+      "sourceTexture": "TechTreeIcons.png",
+      "sourceVersion": "2026_11_16_09_55",
+      "sourceCommit": "8324dd087250f53fe97dd76b511c1da9b58a758d",
+      "cropTopLeftLTRB": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "width": 128,
+      "height": 128,
+      "sha256": "5d30869384f531b4bc9d81a22b06c5d0b6f213014be7b641479103461448abf8"
+    },
+    "StatHealth.png": {
+      "sourceTexture": "TechTreeIcons.png",
+      "sourceVersion": "2026_11_16_09_55",
+      "sourceCommit": "8324dd087250f53fe97dd76b511c1da9b58a758d",
+      "cropTopLeftLTRB": [
+        128,
+        0,
+        256,
+        128
+      ],
+      "width": 128,
+      "height": 128,
+      "sha256": "7936d285ce24c068c9df2791c8dee716d344ef6db63e091d17915874d2fadcf0"
+    },
+    "EggShells.png": {
+      "originalName": "Eggshells",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "sharedassets0.assets",
+      "pathID": 39,
+      "width": 128,
+      "height": 128,
+      "originalDecodedSize": [
+        235,
+        242
+      ],
+      "resize": "Lanczos to128×128",
+      "rect": {
+        "x": 256.0,
+        "y": 768.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "6e06c896d4d88dcbad9d549fb3cd1a93db0b8dde3fe810a98df0ce8c0a814810"
+    },
+    "SkillTicket.png": {
+      "originalName": "skillTicket",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "sharedassets0.assets",
+      "pathID": 42,
+      "width": 128,
+      "height": 128,
+      "originalDecodedSize": [
+        256,
+        256
+      ],
+      "resize": "Lanczos to128×128",
+      "rect": {
+        "x": 1792.0,
+        "y": 1792.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "bbee06a7f73ab99c641ca6996e996993c1cb5fda2144d8b70bb0a9de02041068"
+    },
+    "TechPotions.png": {
+      "originalName": "techPotions",
+      "apk": "com.hariwn.legendofcivilizations.apk",
+      "serializedFile": "sharedassets0.assets",
+      "pathID": 64,
+      "width": 128,
+      "height": 128,
+      "originalDecodedSize": [
+        181,
+        246
+      ],
+      "resize": "Lanczos to128×128",
+      "rect": {
+        "x": 0.0,
+        "y": 1536.0,
+        "width": 256.0,
+        "height": 256.0
+      },
+      "borderUnityLeftBottomRightTop": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "sha256": "85abf478a15a581c1f975bb207610f0cb43fcb15f420d34f45444754488aa17b"
+    }
+  },
+  "fonts": {
+    "Baloo-Regular.ttf": {
+      "originalName": "Baloo-Regular",
+      "source": "Font object in supplied APK",
+      "bytes": 629756,
+      "sha256": "119dd368dbfa6e79dcfdc3f84047e313cef8565846d9cff28354310ae7f29827",
+      "coverage": "Original Latin and numeric face; use Korean fallback for Hangul"
+    }
+  },
+  "palette": {
+    "inventoryBackground": "#f4f4f4",
+    "bottomNavigation": "#42495b",
+    "divider": "#000000",
+    "primaryButton": "#00a3ff",
+    "closeButton": "#f9595f",
+    "positiveButton": "#32f43d",
+    "modalInset": "#41485b",
+    "modalBackdrop": "#000000e6"
+  },
+  "layout": {
+    "source": "Unity RectTransform data from APK",
+    "inventoryHeight": 1030,
+    "bottomNavHeight": 213,
+    "equipmentWidth": 1000,
+    "equipmentHeight": 400,
+    "equipmentTop": 57,
+    "slotSize": 170,
+    "slotColumnCenters": [
+      -400,
+      -200,
+      0,
+      200,
+      400
+    ],
+    "slotRowCenters": [
+      117.5,
+      -82.5
+    ],
+    "mountSize": [
+      370,
+      170
+    ],
+    "anvilSize": [
+      350,
+      350
+    ],
+    "hammerSize": [
+      200,
+      200
+    ],
+    "hammerOffset": [
+      54,
+      123
+    ],
+    "profileSize": [
+      438,
+      185
+    ],
+    "profileOffsetLeft": 44,
+    "avatarSize": [
+      115,
+      115
+    ],
+    "skillRowHeight": 100,
+    "skillRowBottom": 32,
+    "navigationOrder": [
+      "Arena",
+      "Dungeons",
+      "Skills",
+      "Guild",
+      "Shop"
+    ],
+    "canvasReferenceResolution": [
+      1080,
+      2331
+    ],
+    "canvasScaleMode": "ScaleWithScreenSize",
+    "canvasMatchWidthOrHeight": 1,
+    "battlefieldReferenceHeight": 1301,
+    "inventoryExcludingNavHeight": 817
+  }
+}

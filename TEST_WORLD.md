@@ -32,3 +32,19 @@ Enemy stages exist only for age indices 0–10; equipment from ages 11–12 rema
 Run `npm test` and `python -m unittest discover -s tests -v`. The engine/state tests sweep every current catalog item and the configured battle entries, plus save safety, stat zeros, deterministic combat and cooldown behavior. Browser integration checks must also confirm that UI changes reach the actual battle state.
 
 Run `npm run dev` to serve the repository locally. GitHub Pages serves the root directly; no build or package installation is required.
+
+## Original mobile interface
+
+The desktop dashboard was replaced by a portrait game screen using the native MainCanvas proportions (1080 × 2331), white equipment and forge panel, five-plus-three equipment layout with a double-width mount slot, circular active skills, profile/currency HUD, and five original navigation icons. Pets/skills use five-column catalogs, equipped slots and a fixed growth-section switcher. Personal and clan technologies render original atlas icons and every configured dependency.
+
+The UI sprite and geometry source is the user-provided Forge Master 2.11.1 APK; active playable data remains the pinned 2.12.1 release. `assets/ui-original/manifest.json` records source hashes, original serialized object references, palette and geometry. `tech-icons.json` records the complete node-icon mapping. The original Baloo font is bundled unchanged with the Ek Type SIL Open Font License in `assets/ui-original/OFL.txt`; Korean uses the device font fallback. Exact Korean interface wording is adapted because the available full-screen references are English.
+
+Reference screens used for visual comparison:
+
+- Google Play publisher screenshot: https://play-lh.googleusercontent.com/6C4Vr3EfFmMyHXcDVUzXsRIykLhSFhg4RfOa7cIAIVX6aHLNTidI9D7bpF53fDllElHvUZRc_i6wMankQ9CFbtE=w1080
+- Original main-game and item captures: https://github.com/KarahanKARA/forge-master-auto-equip/tree/main/captures
+- Companion, item and research examples from the pinned upstream repository's `public/autosync/examples/` directory.
+
+Test controls remain accessible from the profile menu, stage header, item slots, forge and bottom navigation. Coins and gems display an unlimited symbol for the test world. The former chat strip opens the local combat controls/log; no server chat, purchases or multiplayer are simulated. Initial combat starts automatically; editing pauses it and closing the last editing sheet restores the prior running state. The battle-control sheet keeps its explicit pause/resume behavior. Existing save keys and historical profiles are unchanged.
+
+UI verification covered 390 × 844, 360 × 740 and 320 × 640 portrait layouts, growth-page close/navigation controls, equipment selection, pet levels, mount overrides, technology inputs, ascension-specific forge art, combat controls and persistence after reload. The existing JavaScript and Python test suites passed without engine or state-schema changes.
