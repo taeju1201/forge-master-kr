@@ -13,6 +13,55 @@ spec.loader.exec_module(sync)
 
 
 class SyncTests(unittest.TestCase):
+    @staticmethod
+    def planner(store='fmkr_rebuild_v1', marker=True):
+        style = '<style id="fmkr-inline"></style>' if marker else ''
+        return ('<html><head><title>Forge Master KR</title>' + style +
+                '</head><body><script>const STORE = "' + store +
+                '";</script>' + ' ' * 10000 + '</body></html>')
+
+    def test_legacy_pages_rejected_before_download_and_preserves_profiles_app(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            current = self.planner()
+            (root / 'index.html').write_text(current)
+            (root / 'existing.png').write_bytes(b'keep existing asset')
+            before = {p.name: p.read_bytes() for p in root.iterdir()}
+            def fetch_html(command, **kwargs):
+                Path(command[command.index('-o') + 1]).write_text(
+                    self.planner('fmkr_personal_stable', marker=False))
+            with patch.object(sync.subprocess, 'run', side_effect=fetch_html), \
+                    patch.object(sync, 'download') as download:
+                with self.assertRaisesRegex(ValueError, 'Incompatible Pages source'):
+                    sync.sync('pages', root)
+            download.assert_not_called()
+            self.assertEqual({p.name: p.read_bytes() for p in root.iterdir()}, before)
+
+    def test_profile_contract_and_app_structure_are_required(self):
+        current = self.planner()
+        sync.validate_pages_compatibility(current, current)
+        candidates = [
+            self.planner('fmkr_personal_stable'),
+            self.planner(marker=False),
+            current.replace('const STORE =', 'const UNRELATED ='),
+        ]
+        for candidate in candidates:
+            with self.subTest(candidate=candidate[:180]), self.assertRaises(ValueError):
+                sync.validate_pages_compatibility(candidate, current)
+
+    def test_check_only_validates_but_does_not_apply_snapshot(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'index.html').write_text('current planner')
+            def valid_snapshot(stage, source):
+                (stage / 'index.html').write_text('new planner')
+                (stage / 'new.png').write_bytes(b'new asset')
+            with patch.object(sync, 'stage_game', side_effect=valid_snapshot) as stage_game:
+                sync.sync('game', root, root / 'source', check_only=True)
+            stage_game.assert_called_once()
+            self.assertEqual((root / 'index.html').read_text(), 'current planner')
+            self.assertEqual(list(root.iterdir()), [root / 'index.html'])
+
     def test_publisher_noop_and_failed_build_retry(self):
         script = Path(__file__).parents[1] / 'scripts/publish_sync.sh'
         with tempfile.TemporaryDirectory() as tmp:
@@ -59,7 +108,7 @@ class SyncTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / 'index.html').write_text('old planner')
-            def failed(stage):
+            def failed(stage, published_html):
                 (stage / 'index.html').write_text('new planner')
                 raise RuntimeError('last asset failed')
             with patch.object(sync, 'stage_pages', failed):

@@ -28,6 +28,26 @@ def validate_html(data):
     return html
 
 
+def validate_pages_compatibility(html, published_html):
+    # A complete planner can still be a different app. Replacing the current
+    # profile app with the old V72 planner hides existing localStorage profiles.
+    pattern = r"\bconst\s+STORE\s*=\s*(['\"])([^'\"]+)\1"
+    def namespace(document):
+        keys = {match[1] for match in re.findall(pattern, document)}
+        if len(keys) != 1:
+            raise ValueError('Missing or ambiguous profile storage contract')
+        return keys.pop()
+    current = namespace(published_html)
+    incoming = namespace(html)
+    if current != incoming:
+        raise ValueError(
+            f'Incompatible Pages source: profile storage {incoming!r} does not '
+            f'match published app {current!r}; an explicit migration is required')
+    marker = r"\bid\s*=\s*['\"]fmkr-inline['\"]"
+    if re.search(marker, published_html) and not re.search(marker, html):
+        raise ValueError('Incompatible Pages source: current app structure is missing')
+
+
 def validate_image(path):
     with Image.open(path) as image:
         image.verify()
@@ -54,7 +74,7 @@ def download(url, dest, cookie_file):
             time.sleep(attempt + 1)
 
 
-def stage_pages(stage):
+def stage_pages(stage, published_html):
     cookies = stage.parent / 'cookies'
     # One cookie writer; concurrent asset requests only read the resulting jar.
     subprocess.run(['curl', '-fsSL', '--proto', '=https', '--proto-redir', '=https',
@@ -62,6 +82,8 @@ def stage_pages(stage):
                     '-A', 'Mozilla/5.0 (GitHub Pages sync)', '-c', str(cookies),
                     BASE + '/forge-master.html', '-o', str(stage / 'index.html')], check=True)
     html = validate_html((stage / 'index.html').read_bytes())
+    # Reject app/schema regressions before downloading hundreds of assets.
+    validate_pages_compatibility(html, published_html)
     paths = set(re.findall(r'embedded-images/[A-Za-z0-9._-]+', html))
     for kind, count in (('skills', 64), ('pets', 64), ('mounts', 16)):
         for asc in range(4):
@@ -118,22 +140,27 @@ def apply(stage, root):
             shutil.copyfile(src, dst)
 
 
-def sync(mode, root, source=None):
+def sync(mode, root, source=None, check_only=False):
     with tempfile.TemporaryDirectory(prefix='fm-sync-') as tmp:
         stage = Path(tmp) / 'snapshot'
         stage.mkdir()
         if mode == 'pages':
-            stage_pages(stage)
+            stage_pages(stage, (root / 'index.html').read_text(encoding='utf-8'))
         else:
             stage_game(stage, source)
-        apply(stage, root)
+        if check_only:
+            print('Snapshot validated; check-only mode left published files unchanged')
+        else:
+            apply(stage, root)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('mode', choices=['pages', 'game'])
     parser.add_argument('--source', type=Path)
+    parser.add_argument('--check-only', action='store_true',
+                        help='Validate a snapshot without changing published files')
     args = parser.parse_args()
     if args.mode == 'game' and args.source is None:
         parser.error('--source is required for game sync')
-    sync(args.mode, Path.cwd(), args.source)
+    sync(args.mode, Path.cwd(), args.source, check_only=args.check_only)
