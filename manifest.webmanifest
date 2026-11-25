@@ -1,8 +1,8 @@
 {
-  "name": "Forge Master KR",
-  "short_name": "FM KR",
-  "start_url": "./#/profile",
+  "name": "Forge Master KR · 테스트 월드",
+  "short_name": "FM 테스트",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#090d13",
-  "theme_color": "#0b0f16"
+  "background_color": "#101d25",
+  "theme_color": "#101d25"
 }

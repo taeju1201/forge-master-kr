@@ -1,0 +1,630 @@
+{
+  "release": "live_2_12_1",
+  "repository": "https://github.com/1vcian/fm",
+  "commit": "8324dd087250f53fe97dd76b511c1da9b58a758d",
+  "snapshot": "2026_11_16_09_55",
+  "tableCount": 78,
+  "tables": [
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/AchievementLibrary.json",
+      "sourceSha256": "45c573eda52c4bcc2147a6464feb65302adecdacd3b9ecaf3939df47d748188f",
+      "outputSha256": "45c573eda52c4bcc2147a6464feb65302adecdacd3b9ecaf3939df47d748188f",
+      "outputFilename": "AchievementLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ArenaLeagueLibrary.json",
+      "sourceSha256": "0f4104dd6f171080e008ae19cf49afdfe2dc552ce925276de481064e830c7e31",
+      "outputSha256": "0f4104dd6f171080e008ae19cf49afdfe2dc552ce925276de481064e830c7e31",
+      "outputFilename": "ArenaLeagueLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ArenaRewardLibrary.json",
+      "sourceSha256": "7492c302951bc797f97b54c7b2342d009d7a1786fec0e620f2e845d860535e2a",
+      "outputSha256": "7492c302951bc797f97b54c7b2342d009d7a1786fec0e620f2e845d860535e2a",
+      "outputFilename": "ArenaRewardLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/AscensionConfigsLibrary.json",
+      "sourceSha256": "62e2c99f36840e09c68cf12f334cdfaecd63209443c80c2ba6bbda3ac91a64d8",
+      "outputSha256": "62e2c99f36840e09c68cf12f334cdfaecd63209443c80c2ba6bbda3ac91a64d8",
+      "outputFilename": "AscensionConfigsLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/AscensionStarsBonusLibrary.json",
+      "sourceSha256": "3c33bba640d37e0f601875bcba4d6722cafe55444435253e31ccfd16e5d070cf",
+      "outputSha256": "3c33bba640d37e0f601875bcba4d6722cafe55444435253e31ccfd16e5d070cf",
+      "outputFilename": "AscensionStarsBonusLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/BaseConfig.json",
+      "sourceSha256": "2a7160bb22b6745c38190cf074e6dfa1b793bffbf9a231b8a1553848303954e7",
+      "outputSha256": "2a7160bb22b6745c38190cf074e6dfa1b793bffbf9a231b8a1553848303954e7",
+      "outputFilename": "BaseConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/DailyDealLibrary.json",
+      "sourceSha256": "d77dd06dafcb9ac4685ad61d654921b01c643ad37e52c9f36374d232ee3ab700",
+      "outputSha256": "d77dd06dafcb9ac4685ad61d654921b01c643ad37e52c9f36374d232ee3ab700",
+      "outputFilename": "DailyDealLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/DungeonBaseConfig.json",
+      "sourceSha256": "c617e65b4362f710a72e9d307f97b3dc8c1737f6cc53f03df1dc599025edb4ba",
+      "outputSha256": "c617e65b4362f710a72e9d307f97b3dc8c1737f6cc53f03df1dc599025edb4ba",
+      "outputFilename": "DungeonBaseConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/DungeonRewardLibrary.json",
+      "sourceSha256": "e23a225069b45251d47afe0d18919f7f1fd4eafcb13dddb563c3f62bf76a39bc",
+      "outputSha256": "e23a225069b45251d47afe0d18919f7f1fd4eafcb13dddb563c3f62bf76a39bc",
+      "outputFilename": "DungeonRewardLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/EggDungeonBattleLibrary.json",
+      "sourceSha256": "6433e27c58de62abad24ac19442d68ccfa98f78440c4a9822ef674e76a4d31e8",
+      "outputSha256": "6433e27c58de62abad24ac19442d68ccfa98f78440c4a9822ef674e76a4d31e8",
+      "outputFilename": "EggDungeonBattleLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/EggLibrary.json",
+      "sourceSha256": "01a782dde4ed3d14adc054a1ffb65d501e14018bf2b516414d5a10c03eea7459",
+      "outputSha256": "01a782dde4ed3d14adc054a1ffb65d501e14018bf2b516414d5a10c03eea7459",
+      "outputFilename": "EggLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/EggSummonConfig.json",
+      "sourceSha256": "1c60a6af52ec91321ac1a4c7cf997c539bbacfc945299a15ed623eaabc9008da",
+      "outputSha256": "1c60a6af52ec91321ac1a4c7cf997c539bbacfc945299a15ed623eaabc9008da",
+      "outputFilename": "EggSummonConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/EnemyAgeScalingLibrary.json",
+      "sourceSha256": "58b9dabf58754b869098c04e7fb43775a7e9105d5add272cf267004a7d00140c",
+      "outputSha256": "58b9dabf58754b869098c04e7fb43775a7e9105d5add272cf267004a7d00140c",
+      "outputFilename": "EnemyAgeScalingLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/EnemyLibrary.json",
+      "sourceSha256": "1f10ba6c284798771f1ab7eb9ed1cf4abae963c409c7c53cc1dc2b0c847111f2",
+      "outputSha256": "1f10ba6c284798771f1ab7eb9ed1cf4abae963c409c7c53cc1dc2b0c847111f2",
+      "outputFilename": "EnemyLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/FairyUpgradesLibrary.json",
+      "sourceSha256": "0052a94d299964860c042a18a1e98e1f428ab2ff45cf71ef9ae95812bfa809eb",
+      "outputSha256": "0052a94d299964860c042a18a1e98e1f428ab2ff45cf71ef9ae95812bfa809eb",
+      "outputFilename": "FairyUpgradesLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ForgeConfig.json",
+      "sourceSha256": "988a08b22ff69757d2447cf5c7459a978abf9ee8e33c10a89a875673d786b14f",
+      "outputSha256": "988a08b22ff69757d2447cf5c7459a978abf9ee8e33c10a89a875673d786b14f",
+      "outputFilename": "ForgeConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ForgeUpgradeLibrary.json",
+      "sourceSha256": "a6951fdc82181a28df96634fee2671af221526eba8ffcda76bca97bfbe2b550c",
+      "outputSha256": "a6951fdc82181a28df96634fee2671af221526eba8ffcda76bca97bfbe2b550c",
+      "outputFilename": "ForgeUpgradeLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GameTiers.json",
+      "sourceSha256": "510fd6f57c880afa241e9ea213534575610fe38062f571e2ef6ed6b171c94dc3",
+      "outputSha256": "510fd6f57c880afa241e9ea213534575610fe38062f571e2ef6ed6b171c94dc3",
+      "outputFilename": "GameTiers.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildBaseConfig.json",
+      "sourceSha256": "2cf709ca4f474b791ca3513b9f93686b308d307088489b82eb30ec8de8abd5a0",
+      "outputSha256": "2cf709ca4f474b791ca3513b9f93686b308d307088489b82eb30ec8de8abd5a0",
+      "outputFilename": "GuildBaseConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildEmblemColors.json",
+      "sourceSha256": "e05a529b109bbacd8f00bfa61e7111a67a0e89fe4730ef94441b2bdafa3ed616",
+      "outputSha256": "e05a529b109bbacd8f00bfa61e7111a67a0e89fe4730ef94441b2bdafa3ed616",
+      "outputFilename": "GuildEmblemColors.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildTechRaceEliminationLibrary.json",
+      "sourceSha256": "ccb00ab6c5b465838e483a505a605f590ca589147357a45a007c188dd9a3bf98",
+      "outputSha256": "ccb00ab6c5b465838e483a505a605f590ca589147357a45a007c188dd9a3bf98",
+      "outputFilename": "GuildTechRaceEliminationLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildTechRaceRewardLibrary.json",
+      "sourceSha256": "a10c24ca8faaf43547a54c6ba3c8d823a520b4eda31e99e885133f2209ff9bcc",
+      "outputSha256": "a10c24ca8faaf43547a54c6ba3c8d823a520b4eda31e99e885133f2209ff9bcc",
+      "outputFilename": "GuildTechRaceRewardLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildTechTreePositionLibrary.json",
+      "sourceSha256": "54a015c6ba48946b5d144c9a34e9d4f9ddba181254f7fcdf0e6fa8dafe42b4a5",
+      "outputSha256": "54a015c6ba48946b5d144c9a34e9d4f9ddba181254f7fcdf0e6fa8dafe42b4a5",
+      "outputFilename": "GuildTechTreePositionLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildTechTreeUpgradeLibrary.json",
+      "sourceSha256": "4389627f5ddc06e79229c30f721a40b29d7be5743c2508206c697911f683e06d",
+      "outputSha256": "4389627f5ddc06e79229c30f721a40b29d7be5743c2508206c697911f683e06d",
+      "outputFilename": "GuildTechTreeUpgradeLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildTierConfig.json",
+      "sourceSha256": "0c290243acee70f3f148e3bb8088dd8d2dc64f9c8238bd4a8166ea895870bbfb",
+      "outputSha256": "0c290243acee70f3f148e3bb8088dd8d2dc64f9c8238bd4a8166ea895870bbfb",
+      "outputFilename": "GuildTierConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildWarConfig.json",
+      "sourceSha256": "b0ce9f233c188ddfa18fa774f35dfd08939c5e99187c679efabf0066003b12fd",
+      "outputSha256": "b0ce9f233c188ddfa18fa774f35dfd08939c5e99187c679efabf0066003b12fd",
+      "outputFilename": "GuildWarConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildWarDayConfigLibrary.json",
+      "sourceSha256": "63afc13d51318bebcb48c63b375723ad5e0fdea342469f91c79ffeda75ddb9e7",
+      "outputSha256": "63afc13d51318bebcb48c63b375723ad5e0fdea342469f91c79ffeda75ddb9e7",
+      "outputFilename": "GuildWarDayConfigLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/GuildWarProgressPassLibrary.json",
+      "sourceSha256": "19e329cba893930aec73f70bb97fc1228c1bd3cc54039f44cf90a7aff0866047",
+      "outputSha256": "19e329cba893930aec73f70bb97fc1228c1bd3cc54039f44cf90a7aff0866047",
+      "outputFilename": "GuildWarProgressPassLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/HammerThiefDungeonBattleLibrary.json",
+      "sourceSha256": "8aee17ecf660b33d807ab443416ccc0432ae574028e2c98d89e8825cfa6e6038",
+      "outputSha256": "8aee17ecf660b33d807ab443416ccc0432ae574028e2c98d89e8825cfa6e6038",
+      "outputFilename": "HammerThiefDungeonBattleLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/IdleConfig.json",
+      "sourceSha256": "3c4a223e09f9b7791135e87914fe8d480df0dd8a8b348d907dfdd7d39441b52e",
+      "outputSha256": "3c4a223e09f9b7791135e87914fe8d480df0dd8a8b348d907dfdd7d39441b52e",
+      "outputFilename": "IdleConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/InAppProducts.json",
+      "sourceSha256": "6224986191076ae11abcc1289bc198027e050c2aebb2cdcbacc6ff506c77d2b0",
+      "outputSha256": "6224986191076ae11abcc1289bc198027e050c2aebb2cdcbacc6ff506c77d2b0",
+      "outputFilename": "InAppProducts.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ItemAgeDropChancesLibrary.json",
+      "sourceSha256": "bc8524cbfe5c2bc3247a072c479b46c4dc21891c54b2b4a051f9c5afcbcb6581",
+      "outputSha256": "bc8524cbfe5c2bc3247a072c479b46c4dc21891c54b2b4a051f9c5afcbcb6581",
+      "outputFilename": "ItemAgeDropChancesLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ItemBalancingConfig.json",
+      "sourceSha256": "1d1703f8a2f7d6d7ae9ecf2f86ea6085251219eeaea9cb8bf2a6bf10d0f95ec0",
+      "outputSha256": "1d1703f8a2f7d6d7ae9ecf2f86ea6085251219eeaea9cb8bf2a6bf10d0f95ec0",
+      "outputFilename": "ItemBalancingConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ItemBalancingLibrary.json",
+      "sourceSha256": "74243a69990ac7f22f4604cc6d8245dc0bfa01f4b7323d355eecbe97f6ff4b5d",
+      "outputSha256": "74243a69990ac7f22f4604cc6d8245dc0bfa01f4b7323d355eecbe97f6ff4b5d",
+      "outputFilename": "ItemBalancingLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ItemLevelBracketsLibrary.json",
+      "sourceSha256": "605b2db0c91a2eda9cc59fb50bd9687d2449c91defe89f2e1600223a48fb0295",
+      "outputSha256": "605b2db0c91a2eda9cc59fb50bd9687d2449c91defe89f2e1600223a48fb0295",
+      "outputFilename": "ItemLevelBracketsLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/LegacyDungeonsMigration.json",
+      "sourceSha256": "95a18f0c8e7b1852d6740c03798a54daee4d848a44d39410141054ea5408a008",
+      "outputSha256": "95a18f0c8e7b1852d6740c03798a54daee4d848a44d39410141054ea5408a008",
+      "outputFilename": "LegacyDungeonsMigration.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MainBattleConfig.json",
+      "sourceSha256": "b4f7478aa1d3e7a0d77144775a63a5dbea4b0c9fd98924f97e45a9f7ba8b11b4",
+      "outputSha256": "b4f7478aa1d3e7a0d77144775a63a5dbea4b0c9fd98924f97e45a9f7ba8b11b4",
+      "outputFilename": "MainBattleConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MainBattleLibrary.json",
+      "sourceSha256": "b3b434c4cfc3fcec6a71789879001e4230d0ad9e7d20f63892d2b4ec8e3890ed",
+      "outputSha256": "b3b434c4cfc3fcec6a71789879001e4230d0ad9e7d20f63892d2b4ec8e3890ed",
+      "outputFilename": "MainBattleLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MainGameProgressPassLibrary.json",
+      "sourceSha256": "656af7fed92f9dea261e78fc1baf2b0f0f74aab19360b541e5ba98fe94ee974c",
+      "outputSha256": "656af7fed92f9dea261e78fc1baf2b0f0f74aab19360b541e5ba98fe94ee974c",
+      "outputFilename": "MainGameProgressPassLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MissionAllMemberRewardLibrary.json",
+      "sourceSha256": "8f8651435c6806464b52e36f0ba906505f7d0b8f85a091a6202aa4100fbe91ae",
+      "outputSha256": "8f8651435c6806464b52e36f0ba906505f7d0b8f85a091a6202aa4100fbe91ae",
+      "outputFilename": "MissionAllMemberRewardLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MissionBaseConfig.json",
+      "sourceSha256": "e55e13fb4bb7c67f468afebc8d1c77cecdd1a6d42cc6d08c5be7c7044c06faba",
+      "outputSha256": "e55e13fb4bb7c67f468afebc8d1c77cecdd1a6d42cc6d08c5be7c7044c06faba",
+      "outputFilename": "MissionBaseConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MissionBattleLibrary.json",
+      "sourceSha256": "453b258e34241501e467587cd176fb96cb17704d59b4afb9e8736231b8afdc99",
+      "outputSha256": "453b258e34241501e467587cd176fb96cb17704d59b4afb9e8736231b8afdc99",
+      "outputFilename": "MissionBattleLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MissionDifficultyMultiplier.json",
+      "sourceSha256": "413da9548dc92160b8496acaff08df03a69696a2728276ec89850289675ad155",
+      "outputSha256": "413da9548dc92160b8496acaff08df03a69696a2728276ec89850289675ad155",
+      "outputFilename": "MissionDifficultyMultiplier.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MissionLevelLibrary.json",
+      "sourceSha256": "2d0d5fa82071c9c1b9c880e71a1742bdff440a3501ae9ef59b7a41a550a84a08",
+      "outputSha256": "2d0d5fa82071c9c1b9c880e71a1742bdff440a3501ae9ef59b7a41a550a84a08",
+      "outputFilename": "MissionLevelLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MissionRallyTimeLibrary.json",
+      "sourceSha256": "5ae55e3b5ecd524c59eb21ca4f7b178eaf813fbe32beacf3c9ced3a27a4f5e80",
+      "outputSha256": "5ae55e3b5ecd524c59eb21ca4f7b178eaf813fbe32beacf3c9ced3a27a4f5e80",
+      "outputFilename": "MissionRallyTimeLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MissionRewardLibrary.json",
+      "sourceSha256": "bd9517cce149c75f4e70758eb53b8ab7f6480ae9b65f95d783635f0f7738ea42",
+      "outputSha256": "bd9517cce149c75f4e70758eb53b8ab7f6480ae9b65f95d783635f0f7738ea42",
+      "outputFilename": "MissionRewardLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MountLibrary.json",
+      "sourceSha256": "bf7bb3c5d1208cda0ef70e69b3037f520fd90c6c3e12c939516dfa6f83150268",
+      "outputSha256": "bf7bb3c5d1208cda0ef70e69b3037f520fd90c6c3e12c939516dfa6f83150268",
+      "outputFilename": "MountLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MountSummonConfig.json",
+      "sourceSha256": "9ebb587b97dc9d8c5bdf76c7a579048bc955c7adef3235cd2bb8e789b9598b04",
+      "outputSha256": "9ebb587b97dc9d8c5bdf76c7a579048bc955c7adef3235cd2bb8e789b9598b04",
+      "outputFilename": "MountSummonConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/MountUpgradeLibrary.json",
+      "sourceSha256": "9f94c1179446fc59630d3aa0c4e67b882b393a95af5ff11ea247415d7ba48f77",
+      "outputSha256": "9f94c1179446fc59630d3aa0c4e67b882b393a95af5ff11ea247415d7ba48f77",
+      "outputFilename": "MountUpgradeLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PetBalancingLibrary.json",
+      "sourceSha256": "dbea6f96ca687dee85986c2d59733ddcbd62a9755249748741ccff923e0cc475",
+      "outputSha256": "dbea6f96ca687dee85986c2d59733ddcbd62a9755249748741ccff923e0cc475",
+      "outputFilename": "PetBalancingLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PetBaseConfig.json",
+      "sourceSha256": "e4eafd04b244cdda28ab32c09e9d381e64e8ba0883b5fa327283477fa75ac4e5",
+      "outputSha256": "e4eafd04b244cdda28ab32c09e9d381e64e8ba0883b5fa327283477fa75ac4e5",
+      "outputFilename": "PetBaseConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PetLibrary.json",
+      "sourceSha256": "5c13e7398a635e175ad4cc7e8bc50979852345bfccd3bc701acde4815e2ed1c7",
+      "outputSha256": "5c13e7398a635e175ad4cc7e8bc50979852345bfccd3bc701acde4815e2ed1c7",
+      "outputFilename": "PetLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PetUpgradeLibrary.json",
+      "sourceSha256": "9e98ce189c52f08b16879b0d0a4e82056ca4d3e8e725e9e63b813c814b256c3d",
+      "outputSha256": "9e98ce189c52f08b16879b0d0a4e82056ca4d3e8e725e9e63b813c814b256c3d",
+      "outputFilename": "PetUpgradeLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PlayerSegments.json",
+      "sourceSha256": "422bca36e40cd91de653b0e4c8834b57dd44d9bfc6e16e325eb637748f621ddf",
+      "outputSha256": "422bca36e40cd91de653b0e4c8834b57dd44d9bfc6e16e325eb637748f621ddf",
+      "outputFilename": "PlayerSegments.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PlayerTechTreeNodeValuesLibrary.json",
+      "sourceSha256": "b790cd9be9d26b6978ae3ae5a3f3ea6901c26ac0c29f6f143a48f54cb2ff044e",
+      "outputSha256": "b790cd9be9d26b6978ae3ae5a3f3ea6901c26ac0c29f6f143a48f54cb2ff044e",
+      "outputFilename": "PlayerTechTreeNodeValuesLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PlayerTechTreePositionLibrary.json",
+      "sourceSha256": "82e2b0d7338b35561ab2431d50daa21b3db8c28adaf5be3a2535f932324d3011",
+      "outputSha256": "82e2b0d7338b35561ab2431d50daa21b3db8c28adaf5be3a2535f932324d3011",
+      "outputFilename": "PlayerTechTreePositionLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PlayerTechTreeTierLibrary.json",
+      "sourceSha256": "ae15bd653c57fd70b6f64d013294de8c25f64e68ec7b4c96cfab0d039fd2e2c1",
+      "outputSha256": "ae15bd653c57fd70b6f64d013294de8c25f64e68ec7b4c96cfab0d039fd2e2c1",
+      "outputFilename": "PlayerTechTreeTierLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PotionDungeonBattleLibrary.json",
+      "sourceSha256": "0086622aa5e71170f49f2e6cea215b2a344cabe385a420d9c51d69a584e31c74",
+      "outputSha256": "0086622aa5e71170f49f2e6cea215b2a344cabe385a420d9c51d69a584e31c74",
+      "outputFilename": "PotionDungeonBattleLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ProfileBaseConfig.json",
+      "sourceSha256": "60dfd63224fd6e0314b7ae27a94074df2d1b43e8271f0a192c7b60271e90e347",
+      "outputSha256": "60dfd63224fd6e0314b7ae27a94074df2d1b43e8271f0a192c7b60271e90e347",
+      "outputFilename": "ProfileBaseConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ProjectilesLibrary.json",
+      "sourceSha256": "5474718d66cef17bc3987390e32593227db92d3408e9e9aa7e36a458a499eeb4",
+      "outputSha256": "5474718d66cef17bc3987390e32593227db92d3408e9e9aa7e36a458a499eeb4",
+      "outputFilename": "ProjectilesLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/PvpBaseConfig.json",
+      "sourceSha256": "2f1e0c1cdd7ac29051b790cd2fd8ec5f8b69e1af060e3a0af5ddc75419deea06",
+      "outputSha256": "2f1e0c1cdd7ac29051b790cd2fd8ec5f8b69e1af060e3a0af5ddc75419deea06",
+      "outputFilename": "PvpBaseConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SecondaryStatItemUnlockLibrary.json",
+      "sourceSha256": "896bba0ad258488f8cdeba77c8acccce4f2329fb093f9b183fee84ef65422ff4",
+      "outputSha256": "896bba0ad258488f8cdeba77c8acccce4f2329fb093f9b183fee84ef65422ff4",
+      "outputFilename": "SecondaryStatItemUnlockLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SecondaryStatLibrary.json",
+      "sourceSha256": "443e97f48e37c3ead15dbd9ab82b5794f92d526195133cd640afc8861817614f",
+      "outputSha256": "443e97f48e37c3ead15dbd9ab82b5794f92d526195133cd640afc8861817614f",
+      "outputFilename": "SecondaryStatLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SecondaryStatPetUnlockLibrary.json",
+      "sourceSha256": "6b831404899ad4822b94d2fe33d68b5f5e92b33d9ecabe3257e4f9773b1d62cb",
+      "outputSha256": "6b831404899ad4822b94d2fe33d68b5f5e92b33d9ecabe3257e4f9773b1d62cb",
+      "outputFilename": "SecondaryStatPetUnlockLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SetsLibrary.json",
+      "sourceSha256": "b3d50c0fb5a385248f98331c1d80db775b1530283715da3e27a3f0ac1bfc201e",
+      "outputSha256": "b3d50c0fb5a385248f98331c1d80db775b1530283715da3e27a3f0ac1bfc201e",
+      "outputFilename": "SetsLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/ShopResourcesLibrary.json",
+      "sourceSha256": "6800d375ddbcc12b3a71447ee7486c75b22fcea979fa58edbcb7c3fe2356e4df",
+      "outputSha256": "6800d375ddbcc12b3a71447ee7486c75b22fcea979fa58edbcb7c3fe2356e4df",
+      "outputFilename": "ShopResourcesLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SkillDungeonBattleLibrary.json",
+      "sourceSha256": "a8e0ddcaa4640df3f0e01162236fd8c217f63cb4641e746425ce17371ac8c48d",
+      "outputSha256": "a8e0ddcaa4640df3f0e01162236fd8c217f63cb4641e746425ce17371ac8c48d",
+      "outputFilename": "SkillDungeonBattleLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SkillLibrary.json",
+      "sourceSha256": "fae024e70da9ee8d55d4bfdb3318f5ca8ac4dac880f38b5781bcc1c7cf55fcb6",
+      "outputSha256": "fae024e70da9ee8d55d4bfdb3318f5ca8ac4dac880f38b5781bcc1c7cf55fcb6",
+      "outputFilename": "SkillLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SkillPassiveLibrary.json",
+      "sourceSha256": "6a449ef4d3ed53452c1e887dcdccea718bd10b0ecd4373f2dfc8bf1716c0b961",
+      "outputSha256": "6a449ef4d3ed53452c1e887dcdccea718bd10b0ecd4373f2dfc8bf1716c0b961",
+      "outputFilename": "SkillPassiveLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SkillSummonConfig.json",
+      "sourceSha256": "a0b1bbe44c368d0b436528233fe412efc81a5d045b69d46c0c8863474f55a4af",
+      "outputSha256": "a0b1bbe44c368d0b436528233fe412efc81a5d045b69d46c0c8863474f55a4af",
+      "outputFilename": "SkillSummonConfig.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SkillUpgradeLibrary.json",
+      "sourceSha256": "280412aac3e27a8115e1ba2875335a430eabe7a504c428ae7bb89c4ea9670619",
+      "outputSha256": "280412aac3e27a8115e1ba2875335a430eabe7a504c428ae7bb89c4ea9670619",
+      "outputFilename": "SkillUpgradeLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SkinUpgradeLibrary.json",
+      "sourceSha256": "9e92a2cc1a1eeb4d21c9c84d3a0718fa2e75c4c5863c04bafb8faa54178dd258",
+      "outputSha256": "9e92a2cc1a1eeb4d21c9c84d3a0718fa2e75c4c5863c04bafb8faa54178dd258",
+      "outputFilename": "SkinUpgradeLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/SkinsLibrary.json",
+      "sourceSha256": "4f62777c1d148869d05953e1a592b71cf6f225740906d5171776317f35c3d7ee",
+      "outputSha256": "4f62777c1d148869d05953e1a592b71cf6f225740906d5171776317f35c3d7ee",
+      "outputFilename": "SkinsLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/StatConfigLibrary.json",
+      "sourceSha256": "5d1db681c8a968edde28959b1a350cddbfa0a3e3397139be9ac6cd8d782e94c2",
+      "outputSha256": "5d1db681c8a968edde28959b1a350cddbfa0a3e3397139be9ac6cd8d782e94c2",
+      "outputFilename": "StatConfigLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/TechNodesLibrary.json",
+      "sourceSha256": "8190dee1ffa35a655e4a5bcf88f511e21620e139120795b1dc6662a286e7f053",
+      "outputSha256": "8190dee1ffa35a655e4a5bcf88f511e21620e139120795b1dc6662a286e7f053",
+      "outputFilename": "TechNodesLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/TrackingEventLibrary.json",
+      "sourceSha256": "f487baad9f6d4a87099ac856bac0f7a09a257a57d64362363da4f693e013bee8",
+      "outputSha256": "f487baad9f6d4a87099ac856bac0f7a09a257a57d64362363da4f693e013bee8",
+      "outputFilename": "TrackingEventLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/WeaponLibrary.json",
+      "sourceSha256": "b8fa91cbe82ddebd6eae00b3f4e97bc19957a0c7673e5386adab703e60173f15",
+      "outputSha256": "b8fa91cbe82ddebd6eae00b3f4e97bc19957a0c7673e5386adab703e60173f15",
+      "outputFilename": "WeaponLibrary.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/2026_11_16_09_55/WorldIndexConfigLibrary.json",
+      "sourceSha256": "0e8c7b7b631143cd18f3c7d4fe67b37321941c26b8e73b7123d5a7efa770db40",
+      "outputSha256": "0e8c7b7b631143cd18f3c7d4fe67b37321941c26b8e73b7123d5a7efa770db40",
+      "outputFilename": "WorldIndexConfigLibrary.json",
+      "unmodifiedBytes": true
+    }
+  ],
+  "mappings": [
+    {
+      "sourcePath": "public/parsed_configs/AutoItemMapping.json",
+      "sourceSha256": "f875d84e80f92f1ce88e9d3570a22232f5c7439fe765d31d8854b598c28b0ec1",
+      "outputSha256": "861427fab24387d5cbb6a639eb69c2444ff422312e8cd34d7b6940c2ce9f62f6",
+      "outputFilename": "AutoItemMapping.json",
+      "unmodifiedBytes": false
+    },
+    {
+      "sourcePath": "public/parsed_configs/ManualSpriteMapping.json",
+      "sourceSha256": "855852faee0fbde198c593b9f430e1ffcd60f70d5fde7ac54359c0783eea4f2e",
+      "outputSha256": "c24c4cb67424b6f132f07c72673df69526e7291e7198d34a5f0497256ac7e82f",
+      "outputFilename": "ManualSpriteMapping.json",
+      "unmodifiedBytes": false
+    },
+    {
+      "sourcePath": "public/parsed_configs/TechTreeMapping.json",
+      "sourceSha256": "2d8bbcd94dee5d6dae2e214c1453dd7ff5ab5e13cf0280486a49e3359eeb1ce5",
+      "outputSha256": "2d8bbcd94dee5d6dae2e214c1453dd7ff5ab5e13cf0280486a49e3359eeb1ce5",
+      "outputFilename": "TechTreeMapping.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/ClanTechTreeIconsMap.json",
+      "sourceSha256": "c73768359d00a7284a4869e2dc1218a7f3536492340836f05072815736ce7389",
+      "outputSha256": "c73768359d00a7284a4869e2dc1218a7f3536492340836f05072815736ce7389",
+      "outputFilename": "ClanTechTreeIconsMap.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/IconsMap.json",
+      "sourceSha256": "cb6d3afb691e7e70a8747979c8a37af4e574f98a5be5bfff33ee6ee786c87b27",
+      "outputSha256": "cb6d3afb691e7e70a8747979c8a37af4e574f98a5be5bfff33ee6ee786c87b27",
+      "outputFilename": "IconsMap.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/parsed_configs/Localization.json",
+      "sourceSha256": "48481680beecffb6dd84b2fdb530c9cc7aca03fc9b0dc9c47fcdd44ad92b956c",
+      "outputSha256": "48481680beecffb6dd84b2fdb530c9cc7aca03fc9b0dc9c47fcdd44ad92b956c",
+      "outputFilename": "Localization.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/SkinIcons.json",
+      "sourceSha256": "86f4505d0546c92714569fd080488215c92e7bb7562d781a1e274c07101bd8a0",
+      "outputSha256": "86f4505d0546c92714569fd080488215c92e7bb7562d781a1e274c07101bd8a0",
+      "outputFilename": "SkinIcons.json",
+      "unmodifiedBytes": true
+    },
+    {
+      "sourcePath": "public/Texture2D/2026_11_16_09_55/BattleVisuals.json",
+      "sourceSha256": "1fe23d4510ff1a65e0d09399129549bf3548eaa68aec05169254bd839b31f7f4",
+      "outputSha256": "1fe23d4510ff1a65e0d09399129549bf3548eaa68aec05169254bd839b31f7f4",
+      "outputFilename": "BattleVisuals.json",
+      "unmodifiedBytes": true
+    }
+  ],
+  "configurationValuesFromApk2111": false,
+  "configurationTransformation": "None; all 78 public snapshot JSON files retain exact source bytes.",
+  "mappingTransformation": "Add KoreanName/EnglishName using LocalizationId strings for equipment, rarity_id for pets/mounts, and skill ID for skills. No positional joins.",
+  "localizationProvenance": "Upstream src/utils/ocr/gameLocalization.ts documents Localization.json as generated from the game's Unity Localization tables.",
+  "skinIconProvenance": "SkinIcons.json contains exact asset rects; legacy ManualSpriteMapping.skins grid metadata is preserved for provenance and must not be used for rendering.",
+  "skinNameAvailability": "Localization.json contains no skin or set names. Upstream skinReader.ts explicitly documents that individual skin display names are absent. KoreanName remains null rather than borrowing an unrelated item translation.",
+  "versionEvidence": [
+    {
+      "url": "https://apps.apple.com/us/app/forge-master-idle-rpg/id6746636289",
+      "version": "2.12.1",
+      "description": "Developer release history associates the three new ages and new gear, skills, pets and mounts with 2.12.1, November 16."
+    },
+    {
+      "url": "https://github.com/1vcian/fm/commit/f58716e5da411e525013344d01082c24522b01d6",
+      "description": "Upstream commit explicitly identifies the new mount schema as 2.12.1."
+    }
+  ]
+}

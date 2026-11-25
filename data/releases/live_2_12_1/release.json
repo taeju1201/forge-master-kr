@@ -1,0 +1,33 @@
+{
+  "id": "live_2_12_1",
+  "gameVersion": "2.12.1",
+  "packageName": "com.hariwn.legendofcivilizations",
+  "scope": "Pinned public 2.12.1 configuration and game assets; not the uploaded 2.11.1 APK.",
+  "sourceRepository": "https://github.com/1vcian/fm",
+  "sourceCommit": "8324dd087250f53fe97dd76b511c1da9b58a758d",
+  "sourceSnapshot": "2026_11_16_09_55",
+  "configTableCount": 78,
+  "textureCount": 366,
+  "equipmentCount": 295,
+  "equipmentKoreanNameCount": 295,
+  "petCount": 34,
+  "mountCount": 21,
+  "skillCount": 27,
+  "skinCount": 114,
+  "skinIconCount": 114,
+  "skinKoreanNameCount": 0,
+  "ageCount": 13,
+  "rarityCount": 9,
+  "dataPath": "data/releases/live_2_12_1",
+  "assetPath": "assets/releases/live_2_12_1",
+  "catalogPath": "data/releases/live_2_12_1/game-data.json",
+  "configValuesFromApk": false,
+  "configBundlePath": "data/releases/live_2_12_1/game-configs.json",
+  "publicSchema": true,
+  "minimumAscensionForNewTiers": 3,
+  "versionEvidence": "https://apps.apple.com/us/app/forge-master-idle-rpg/id6746636289",
+  "limitations": [
+    "This is a pinned public game-data snapshot, not a live server connection.",
+    "ManualSpriteMapping.skins is legacy metadata; use SkinIcons.json for all 114 skin icons."
+  ]
+}

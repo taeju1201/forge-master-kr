@@ -1,0 +1,997 @@
+{
+  "mounts": {
+    "texture": "MountIcons.png",
+    "texture_size": {
+      "width": 1024,
+      "height": 1024
+    },
+    "sprite_size": {
+      "width": 256,
+      "height": 256
+    },
+    "grid": {
+      "columns": 4,
+      "rows": 4
+    },
+    "total_sprites": 21,
+    "mapping": {
+      "0": {
+        "name": "LilyPad",
+        "rarity": "Common",
+        "id": 0,
+        "KoreanName": "수련잎",
+        "EnglishName": "Lily Pad"
+      },
+      "1": {
+        "name": "BrownHorse",
+        "rarity": "Rare",
+        "id": 0,
+        "KoreanName": "갈색 말",
+        "EnglishName": "Brown Horse"
+      },
+      "2": {
+        "name": "Dino",
+        "rarity": "Rare",
+        "id": 1,
+        "KoreanName": "공룡",
+        "EnglishName": "Dino"
+      },
+      "3": {
+        "name": "LilyLeaf",
+        "rarity": "Common",
+        "id": 1,
+        "KoreanName": "백합잎",
+        "EnglishName": "Lily Leaf"
+      },
+      "4": {
+        "name": "BrownLeaf",
+        "rarity": "Common",
+        "id": 2,
+        "KoreanName": "갈색 잎",
+        "EnglishName": "Brown Leaf"
+      },
+      "5": {
+        "name": "Crab",
+        "rarity": "Rare",
+        "id": 2,
+        "KoreanName": "게",
+        "EnglishName": "Crab"
+      },
+      "6": {
+        "name": "Turtle",
+        "rarity": "Rare",
+        "id": 3,
+        "KoreanName": "거북이",
+        "EnglishName": "Turtle"
+      },
+      "7": {
+        "name": "Pig",
+        "rarity": "Epic",
+        "id": 0,
+        "KoreanName": "돼지",
+        "EnglishName": "Pig"
+      },
+      "8": {
+        "name": "Goat",
+        "rarity": "Epic",
+        "id": 1,
+        "KoreanName": "염소",
+        "EnglishName": "Goat"
+      },
+      "9": {
+        "name": "Bike",
+        "rarity": "Legendary",
+        "id": 0,
+        "KoreanName": "자전거",
+        "EnglishName": "Bike"
+      },
+      "10": {
+        "name": "GiantBee",
+        "rarity": "Legendary",
+        "id": 1,
+        "KoreanName": "거대 벌",
+        "EnglishName": "Giant Bee"
+      },
+      "11": {
+        "name": "OneWheelDroid",
+        "rarity": "Ultimate",
+        "id": 0,
+        "KoreanName": "드로이드",
+        "EnglishName": "Droid"
+      },
+      "12": {
+        "name": "MiniDragon",
+        "rarity": "Ultimate",
+        "id": 1,
+        "KoreanName": "미니 드래곤",
+        "EnglishName": "Mini Dragon"
+      },
+      "13": {
+        "name": "HoverDisk",
+        "rarity": "Mythic",
+        "id": 0,
+        "KoreanName": "호버 디스크",
+        "EnglishName": "Hover Disk"
+      },
+      "14": {
+        "name": "HoverBoard",
+        "rarity": "Mythic",
+        "id": 1,
+        "KoreanName": "호버보드",
+        "EnglishName": "Hover Board"
+      },
+      "16": {
+        "name": "WarElephant",
+        "rarity": "Heroic",
+        "id": 0,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfiniteMountIcons.png",
+            "cell": 0
+          }
+        ],
+        "KoreanName": "전투 코끼리",
+        "EnglishName": "War Elephant"
+      },
+      "17": {
+        "name": "IronRaptor",
+        "rarity": "Heroic",
+        "id": 1,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfiniteMountIcons.png",
+            "cell": 5
+          }
+        ],
+        "KoreanName": "강철 랩터",
+        "EnglishName": "Iron Raptor"
+      },
+      "18": {
+        "name": "CelestialThrone",
+        "rarity": "Infinite",
+        "id": 0,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfiniteMountIcons.png",
+            "cell": 3
+          }
+        ],
+        "KoreanName": "천상의 왕좌",
+        "EnglishName": "Celestial Throne"
+      },
+      "19": {
+        "name": "SkullBear",
+        "rarity": "Infinite",
+        "id": 1,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfiniteMountIcons.png",
+            "cell": 1
+          }
+        ],
+        "KoreanName": "해골 곰",
+        "EnglishName": "Skull Bear"
+      },
+      "20": {
+        "name": "SpectralSteed",
+        "rarity": "Eternal",
+        "id": 0,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfiniteMountIcons.png",
+            "cell": 4
+          }
+        ],
+        "KoreanName": "스펙트럴 군마",
+        "EnglishName": "Spectral Steed"
+      },
+      "21": {
+        "name": "JadeSerpent",
+        "rarity": "Eternal",
+        "id": 1,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfiniteMountIcons.png",
+            "cell": 2
+          }
+        ],
+        "KoreanName": "비취 뱀",
+        "EnglishName": "Jade Serpent"
+      }
+    },
+    "sheets": {
+      "HeroicEternalInfiniteMountIcons.png": {
+        "texture_size": {
+          "width": 1024,
+          "height": 1024
+        },
+        "sprite_size": {
+          "width": 256,
+          "height": 256
+        },
+        "grid": {
+          "columns": 4,
+          "rows": 4
+        }
+      }
+    }
+  },
+  "pets": {
+    "texture": "Pets.png",
+    "texture_size": {
+      "width": 2048,
+      "height": 2048
+    },
+    "sprite_size": {
+      "width": 256,
+      "height": 256
+    },
+    "grid": {
+      "columns": 8,
+      "rows": 8
+    },
+    "total_sprites": 34,
+    "mapping": {
+      "0": {
+        "name": "Panda",
+        "rarity": "Epic",
+        "id": 4,
+        "KoreanName": "판다",
+        "EnglishName": "Panda"
+      },
+      "1": {
+        "name": "Chicken",
+        "rarity": "Common",
+        "id": 0,
+        "KoreanName": "닭",
+        "EnglishName": "Chicken"
+      },
+      "2": {
+        "name": "Serpent",
+        "rarity": "Legendary",
+        "id": 0,
+        "KoreanName": "뱀",
+        "EnglishName": "Serpent"
+      },
+      "3": {
+        "name": "Cerberus",
+        "rarity": "Legendary",
+        "id": 1,
+        "KoreanName": "케르베로스",
+        "EnglishName": "Cerberus"
+      },
+      "4": {
+        "name": "Kitsune",
+        "rarity": "Legendary",
+        "id": 2,
+        "KoreanName": "키츠네",
+        "EnglishName": "Kitsune"
+      },
+      "5": {
+        "name": "Electry",
+        "rarity": "Ultimate",
+        "id": 0,
+        "KoreanName": "일렉트리",
+        "EnglishName": "Electry"
+      },
+      "6": {
+        "name": "Dog",
+        "rarity": "Common",
+        "id": 1,
+        "KoreanName": "개",
+        "EnglishName": "Dog"
+      },
+      "7": {
+        "name": "Cat",
+        "rarity": "Common",
+        "id": 2,
+        "KoreanName": "고양이",
+        "EnglishName": "Cat"
+      },
+      "8": {
+        "name": "Snail",
+        "rarity": "Common",
+        "id": 3,
+        "KoreanName": "달팽이",
+        "EnglishName": "Snail"
+      },
+      "9": {
+        "name": "Mouse",
+        "rarity": "Common",
+        "id": 4,
+        "KoreanName": "쥐",
+        "EnglishName": "Mouse"
+      },
+      "10": {
+        "name": "Turtle",
+        "rarity": "Common",
+        "id": 5,
+        "KoreanName": "거북이",
+        "EnglishName": "Turtle"
+      },
+      "11": {
+        "name": "Hedgehog",
+        "rarity": "Rare",
+        "id": 0,
+        "KoreanName": "고슴도치",
+        "EnglishName": "Hedgehog"
+      },
+      "12": {
+        "name": "Bear",
+        "rarity": "Rare",
+        "id": 1,
+        "KoreanName": "곰",
+        "EnglishName": "Bear"
+      },
+      "13": {
+        "name": "Ostrich",
+        "rarity": "Rare",
+        "id": 2,
+        "KoreanName": "타조",
+        "EnglishName": "Ostrich"
+      },
+      "14": {
+        "name": "Spider",
+        "rarity": "Rare",
+        "id": 3,
+        "KoreanName": "거미",
+        "EnglishName": "Spider"
+      },
+      "15": {
+        "name": "Scorpion",
+        "rarity": "Rare",
+        "id": 4,
+        "KoreanName": "전갈",
+        "EnglishName": "Scorpion"
+      },
+      "16": {
+        "name": "Griffin",
+        "rarity": "Epic",
+        "id": 0,
+        "KoreanName": "그리핀",
+        "EnglishName": "Griffin"
+      },
+      "17": {
+        "name": "SaberTooth",
+        "rarity": "Epic",
+        "id": 1,
+        "KoreanName": "검치호",
+        "EnglishName": "Saber Tooth"
+      },
+      "18": {
+        "name": "Unicorn",
+        "rarity": "Epic",
+        "id": 2,
+        "KoreanName": "유니콘",
+        "EnglishName": "Unicorn"
+      },
+      "19": {
+        "name": "Tiger",
+        "rarity": "Epic",
+        "id": 3,
+        "KoreanName": "호랑이",
+        "EnglishName": "Tiger"
+      },
+      "20": {
+        "name": "Treant",
+        "rarity": "Ultimate",
+        "id": 1,
+        "KoreanName": "트렌트",
+        "EnglishName": "Treant"
+      },
+      "21": {
+        "name": "EnchantedElk",
+        "rarity": "Ultimate",
+        "id": 2,
+        "KoreanName": "마법의 엘크",
+        "EnglishName": "Enchanted Elk"
+      },
+      "22": {
+        "name": "BabyDragon",
+        "rarity": "Mythic",
+        "id": 0,
+        "KoreanName": "아기 용",
+        "EnglishName": "Baby Dragon"
+      },
+      "23": {
+        "name": "Genie",
+        "rarity": "Mythic",
+        "id": 1,
+        "KoreanName": "지니",
+        "EnglishName": "Genie"
+      },
+      "24": {
+        "name": "SpectralTiger",
+        "rarity": "Mythic",
+        "id": 2,
+        "KoreanName": "스펙트럴 타이거",
+        "EnglishName": "Spectral Tiger"
+      },
+      "64": {
+        "name": "PrismCrane",
+        "rarity": "Eternal",
+        "id": 0,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 6
+          }
+        ],
+        "KoreanName": "프리즘 학",
+        "EnglishName": "Prism Crane"
+      },
+      "65": {
+        "name": "GoldenWisp",
+        "rarity": "Eternal",
+        "id": 1,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 0
+          }
+        ],
+        "KoreanName": "황금 위습",
+        "EnglishName": "Golden Wisp"
+      },
+      "66": {
+        "name": "CosmicJellyfish",
+        "rarity": "Eternal",
+        "id": 2,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 5
+          }
+        ],
+        "KoreanName": "우주 해파리",
+        "EnglishName": "Cosmic Jellyfish"
+      },
+      "67": {
+        "name": "HoverBot",
+        "rarity": "Heroic",
+        "id": 0,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 2
+          }
+        ],
+        "KoreanName": "호버 봇",
+        "EnglishName": "Hover Bot"
+      },
+      "68": {
+        "name": "CrystalGolem",
+        "rarity": "Heroic",
+        "id": 1,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 4
+          }
+        ],
+        "KoreanName": "크리스탈 골렘",
+        "EnglishName": "Crystal Golem"
+      },
+      "69": {
+        "name": "WhiteLionCub",
+        "rarity": "Heroic",
+        "id": 2,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 1
+          }
+        ],
+        "KoreanName": "아기 백사자",
+        "EnglishName": "White Lion Cub"
+      },
+      "70": {
+        "name": "EclipseMask",
+        "rarity": "Infinite",
+        "id": 0,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 8
+          }
+        ],
+        "KoreanName": "일식 가면",
+        "EnglishName": "Eclipse Mask"
+      },
+      "71": {
+        "name": "StarWhale",
+        "rarity": "Infinite",
+        "id": 1,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 3
+          }
+        ],
+        "KoreanName": "별고래",
+        "EnglishName": "Star Whale"
+      },
+      "72": {
+        "name": "InkStag",
+        "rarity": "Infinite",
+        "id": 2,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "HeroicEternalInfinitePets.png",
+            "cell": 7
+          }
+        ],
+        "KoreanName": "먹물 수사슴",
+        "EnglishName": "Ink Stag"
+      }
+    },
+    "sheets": {
+      "HeroicEternalInfinitePets.png": {
+        "texture_size": {
+          "width": 1024,
+          "height": 1024
+        },
+        "sprite_size": {
+          "width": 256,
+          "height": 256
+        },
+        "grid": {
+          "columns": 4,
+          "rows": 4
+        }
+      }
+    }
+  },
+  "skills": {
+    "texture": "SkillIcons.png",
+    "texture_size": {
+      "width": 2048,
+      "height": 2048
+    },
+    "sprite_size": {
+      "width": 256,
+      "height": 256
+    },
+    "grid": {
+      "columns": 8,
+      "rows": 8
+    },
+    "total_sprites": 27,
+    "mapping": {
+      "0": {
+        "name": "Meat",
+        "enum_value": 0,
+        "KoreanName": "고기",
+        "EnglishName": "Meat"
+      },
+      "1": {
+        "name": "Arrows",
+        "enum_value": 2,
+        "KoreanName": "화살",
+        "EnglishName": "Arrows"
+      },
+      "2": {
+        "name": "Shout",
+        "enum_value": 4,
+        "KoreanName": "외침",
+        "EnglishName": "Shout"
+      },
+      "3": {
+        "name": "Berserk",
+        "enum_value": 6,
+        "KoreanName": "광전사",
+        "EnglishName": "Berserk"
+      },
+      "4": {
+        "name": "Thorns",
+        "enum_value": 8,
+        "KoreanName": "가시",
+        "EnglishName": "Thorns"
+      },
+      "5": {
+        "name": "Worm",
+        "enum_value": 10,
+        "KoreanName": "벌레",
+        "EnglishName": "Worm"
+      },
+      "6": {
+        "name": "Buff",
+        "enum_value": 12,
+        "KoreanName": "버프",
+        "EnglishName": "Buff"
+      },
+      "7": {
+        "name": "RainOfArrows",
+        "enum_value": 14,
+        "KoreanName": "화살비",
+        "EnglishName": "Arrow Rain"
+      },
+      "8": {
+        "name": "CannonBarrage",
+        "enum_value": 16,
+        "KoreanName": "포격",
+        "EnglishName": "Cannon Barrage"
+      },
+      "9": {
+        "name": "Morale",
+        "enum_value": 1,
+        "KoreanName": "사기",
+        "EnglishName": "Morale"
+      },
+      "10": {
+        "name": "Shuriken",
+        "enum_value": 3,
+        "KoreanName": "수리검",
+        "EnglishName": "Shurikens"
+      },
+      "11": {
+        "name": "Meteorite",
+        "enum_value": 5,
+        "KoreanName": "운석",
+        "EnglishName": "Meteorite"
+      },
+      "12": {
+        "name": "Stampede",
+        "enum_value": 7,
+        "KoreanName": "쇄도",
+        "EnglishName": "Stampede"
+      },
+      "13": {
+        "name": "Bomb",
+        "enum_value": 9,
+        "KoreanName": "폭탄",
+        "EnglishName": "Bomb"
+      },
+      "14": {
+        "name": "Lightning",
+        "enum_value": 11,
+        "KoreanName": "번개",
+        "EnglishName": "Lightning"
+      },
+      "15": {
+        "name": "HigherMorale",
+        "enum_value": 13,
+        "KoreanName": "높은 사기",
+        "EnglishName": "Higher Morale"
+      },
+      "16": {
+        "name": "StrafeRun",
+        "enum_value": 15,
+        "KoreanName": "기총 소사",
+        "EnglishName": "Strafe Run"
+      },
+      "17": {
+        "name": "Drone",
+        "enum_value": 17,
+        "KoreanName": "드론",
+        "EnglishName": "Drone"
+      },
+      "18": {
+        "name": "DeathStar",
+        "enum_value": 18,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 18
+          }
+        ],
+        "KoreanName": "죽음의 레이저",
+        "EnglishName": "Death Laser"
+      },
+      "19": {
+        "name": "Stomp",
+        "enum_value": 19,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 19
+          }
+        ],
+        "KoreanName": "짓밟기",
+        "EnglishName": "Stomp"
+      },
+      "20": {
+        "name": "GhostRush",
+        "enum_value": 20,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 20
+          }
+        ],
+        "KoreanName": "유령 돌격",
+        "EnglishName": "Ghost Rush"
+      },
+      "21": {
+        "name": "RisingBlades",
+        "enum_value": 21,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 21
+          }
+        ],
+        "KoreanName": "떨어지는 칼날",
+        "EnglishName": "Falling Blades"
+      },
+      "22": {
+        "name": "GiantForge",
+        "enum_value": 22,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 22
+          }
+        ],
+        "KoreanName": "거대한 대장간",
+        "EnglishName": "Giant Forge"
+      },
+      "23": {
+        "name": "InfiniteRenewal",
+        "enum_value": 23,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 23
+          }
+        ],
+        "KoreanName": "무한한 재생",
+        "EnglishName": "Infinite Renewal"
+      },
+      "24": {
+        "name": "FiringSquad",
+        "enum_value": 24,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 24
+          }
+        ],
+        "KoreanName": "사격 부대",
+        "EnglishName": "Firing Squad"
+      },
+      "25": {
+        "name": "BarrelRoll",
+        "enum_value": 25,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 25
+          }
+        ],
+        "KoreanName": "구르는 나무통",
+        "EnglishName": "Barrel Roll"
+      },
+      "26": {
+        "name": "EternalLeaves",
+        "enum_value": 26,
+        "icons": [
+          null,
+          null,
+          null,
+          {
+            "texture": "SkillIcons.png",
+            "cell": 26
+          }
+        ],
+        "KoreanName": "영원한 잎사귀",
+        "EnglishName": "Eternal Leaves"
+      }
+    }
+  },
+  "skins": {
+    "texture": "SkinsUiIcons.png",
+    "texture_size": {
+      "width": 800,
+      "height": 800
+    },
+    "sprite_size": {
+      "width": 100,
+      "height": 100
+    },
+    "grid": {
+      "columns": 8,
+      "rows": 8
+    },
+    "mapping": {
+      "Helmet_0": 0,
+      "Armour_0": 1,
+      "Helmet_2": 2,
+      "Armour_2": 3,
+      "Helmet_1": 4,
+      "Armour_1": 5,
+      "Helmet_100": 6,
+      "Helmet_101": 7,
+      "Helmet_5": 8,
+      "Armour_5": 9,
+      "Helmet_3": 10,
+      "Armour_3": 11,
+      "Helmet_4": 12,
+      "Armour_4": 13,
+      "Helmet_102": 14,
+      "Helmet_103": 15,
+      "Weapon_5": 16,
+      "Weapon_3": 17,
+      "Weapon_4": 18,
+      "Helmet_8": 19,
+      "Armour_8": 20,
+      "Weapon_8": 31,
+      "Helmet_6": 21,
+      "Armour_6": 22,
+      "Weapon_6": 32,
+      "Helmet_7": 23,
+      "Armour_7": 24,
+      "Weapon_7": 33,
+      "Helmet_104": 25,
+      "Helmet_105": 26,
+      "Helmet_106": 27,
+      "Helmet_107": 28,
+      "Helmet_108": 29,
+      "Helmet_109": 30,
+      "Helmet_9": 34,
+      "Armour_9": 35,
+      "Weapon_9": 50,
+      "Helmet_10": 36,
+      "Armour_10": 37,
+      "Weapon_10": 51,
+      "Helmet_11": 38,
+      "Armour_11": 39,
+      "Weapon_11": 52,
+      "Helmet_12": 40,
+      "Armour_12": 41,
+      "Weapon_12": 53,
+      "Helmet_13": 42,
+      "Armour_13": 43,
+      "Weapon_13": 54,
+      "Helmet_14": 44,
+      "Armour_14": 45,
+      "Weapon_14": 55,
+      "Helmet_110": 47,
+      "Helmet_111": 49,
+      "Helmet_112": 46,
+      "Helmet_113": 48,
+      "Helmet_15": 56,
+      "Armour_15": 57,
+      "Helmet_16": 58,
+      "Armour_16": 59,
+      "Helmet_17": 60,
+      "Armour_17": 61,
+      "Helmet_18": 62,
+      "Armour_18": 63,
+      "Helmet_19": 64,
+      "Armour_19": 65,
+      "Helmet_20": 66,
+      "Armour_20": 67,
+      "Weapon_15": 70,
+      "Weapon_16": 71,
+      "Weapon_17": 72,
+      "Weapon_18": 73,
+      "Weapon_19": 74,
+      "Weapon_20": 75,
+      "Helmet_114": 68,
+      "Helmet_115": 69,
+      "Helmet_116": 76,
+      "Helmet_117": 77,
+      "Helmet_23": 82,
+      "Armour_23": 83,
+      "Weapon_23": 92,
+      "Helmet_21": 78,
+      "Armour_21": 79,
+      "Weapon_21": 90,
+      "Helmet_22": 80,
+      "Armour_22": 81,
+      "Weapon_22": 91,
+      "Helmet_25": 86,
+      "Armour_25": 87,
+      "Weapon_25": 94,
+      "Helmet_26": 88,
+      "Armour_26": 89,
+      "Weapon_26": 95,
+      "Helmet_24": 84,
+      "Armour_24": 85,
+      "Weapon_24": 93,
+      "Helmet_118": 96,
+      "Helmet_119": 97,
+      "Helmet_120": 98,
+      "Helmet_121": 99
+    }
+  },
+  "skinSets": {
+    "SantaSet": "SteppingStoneCharIcon0.png",
+    "SkiSet": "SteppingStoneCharIcon2.png",
+    "SnowmanSet": "SteppingStoneCharIcon1.png",
+    "LeprechaunSet": "SteppingStoneCharIcon4.png",
+    "FlowerSet": "SteppingStoneCharIcon5.png",
+    "DruidSet": "SteppingStoneCharIcon3.png",
+    "BunnySet": "SteppingStoneCharIcon7.png",
+    "ClownSet": "SteppingStoneCharIcon8.png",
+    "MillionaireSet": "SteppingStoneCharIcon6.png",
+    "FishbowlSet": "SteppingStoneCharIcon9.png",
+    "EagleSet": "SteppingStoneCharIcon10.png",
+    "SkaterSet": "SteppingStoneCharIcon11.png",
+    "CatSet": "SteppingStoneCharIcon12.png",
+    "SharkSet": "SteppingStoneCharIcon13.png",
+    "MushroomSet": "SteppingStoneCharIcon14.png",
+    "AnubisSet": "SteppingStoneCharIcon15.png",
+    "BoxerSet": "SteppingStoneCharIcon16.png",
+    "DarkPlanetWarriorSet": "SteppingStoneCharIcon17.png",
+    "CubeguySet": "SteppingStoneCharIcon18.png",
+    "LavamanSet": "SteppingStoneCharIcon19.png",
+    "ChefSet": "SteppingStoneCharIcon20.png",
+    "MummySet": "SteppingStoneCharIcon25.png",
+    "SkeletonSet": "SteppingStoneCharIcon24.png",
+    "ReaperSet": "SteppingStoneCharIcon26.png",
+    "DemonSet": "SteppingStoneCharIcon23.png",
+    "KnightSet": "SteppingStoneCharIcon22.png",
+    "KingSet": "SteppingStoneCharIcon21.png"
+  }
+}

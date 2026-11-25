@@ -6,6 +6,8 @@ on:
       - 'scripts/**'
       - 'index.html'
       - 'js/**'
+      - 'game/**'
+      - 'archive/**'
       - 'data/releases/**'
       - 'assets/releases/**'
       - 'tests/**'
@@ -16,6 +18,8 @@ on:
       - 'scripts/**'
       - 'index.html'
       - 'js/**'
+      - 'game/**'
+      - 'archive/**'
       - 'data/releases/**'
       - 'assets/releases/**'
       - 'tests/**'
@@ -38,4 +42,8 @@ jobs:
         run: node tests/test_profile_migration.cjs
       - name: Test game math
         run: node tests/test_game_math.cjs
+      - name: Test sandbox state and saves
+        run: node tests/test_sandbox_state.cjs
+      - name: Test sandbox combat and complete live catalog
+        run: node tests/test_sandbox_engine.cjs
       - run: bash -n scripts/publish_sync.sh

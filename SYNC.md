@@ -1,3 +1,5 @@
+> Main application update (2026-11-25): the root page is now TEST WORLD. The historical KR calculator is preserved under `archive/kr-2.11.1/`, with in-memory edits only. The game uses the immutable `live_2_12_1` release; the existing `assets/game` collector does not rewrite this release. See `TEST_WORLD.md`.
+
 # Automated synchronization
 
 The current app defaults to the verified `apk_2_11_1` release. Its configuration
