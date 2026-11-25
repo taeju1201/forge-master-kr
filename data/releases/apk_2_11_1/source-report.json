@@ -1,0 +1,1699 @@
+{
+  "game_version": "2.11.1",
+  "data_scope": "Embedded SharedGameConfig.mpa from the user-supplied APK",
+  "server_hot_update_equivalence_claimed": false,
+  "table_count": 77,
+  "all_tables_consumed_completely": true,
+  "all_tables_round_trip_byte_exact": true,
+  "numeric_values_source": "Decoded MPC payload, never the reference schema",
+  "field_and_enum_names_source": {
+    "repository": "1vcian/fm",
+    "ref": "8324dd087250f53fe97dd76b511c1da9b58a758d",
+    "path": "public/parsed_configs/2026_10_27_09_45"
+  },
+  "schema_limit": "Names and enum labels are correlated against the pinned reference; numeric and textual payloads are from APK bytes.",
+  "numeric_rules": {
+    "wire7": "Signed big-endian Q32.32 / 2^32",
+    "wire8": "Two signed big-endian Q32.32 coordinates",
+    "ordinary_wire2": "Signed zigzag integer; bool is 0 or -1",
+    "F1D": "EnemyAgeScalingConfig getters return F1D; F1D.Raw getter returns UInt64; recover unsigned varint and divide by metadata constant Multi=100",
+    "FD6": "Recover two UInt64 words from nested tagged structs, combine into the observed non-negative 128-bit value, divide by metadata Precision=1000000",
+    "MetaDuration": "Single tagged signed Milliseconds field"
+  },
+  "apk_metadata_evidence": {
+    "EnemyAgeScalingConfig.get_Damage": {
+      "method_index": 61992,
+      "return_type_index": 50658,
+      "type": "Metaplay.Core.Math.F1D"
+    },
+    "EnemyAgeScalingConfig.get_Health": {
+      "method_index": 61994,
+      "return_type_index": 50658,
+      "type": "Metaplay.Core.Math.F1D"
+    },
+    "F1D.get_Raw": {
+      "method_index": 17301,
+      "return_type_index": 66100,
+      "type": "System.UInt64"
+    },
+    "F1D.Multi": {
+      "field_index": 5232,
+      "constant_data_index": 92084,
+      "value": 100
+    },
+    "FD6.Precision": {
+      "field_index": 5250,
+      "constant_data_index": 92100,
+      "value": 1000000
+    }
+  },
+  "archive": {
+    "source": "assets/SharedGameConfig.mpa",
+    "source_sha256": "1415ce389e9771769f103eca03f02e10f71603f79f845303a3b0ae30d1a66c6c",
+    "archive_format": 5,
+    "archive_hash128": "fe6eebafcfffb4a6666e490bec7d3c40",
+    "archive_timestamp_ms": 1792496287060,
+    "archive_timestamp_utc": "2026-10-20T11:38:07.060000+00:00",
+    "entry_count": 77,
+    "directory_end": 3760,
+    "archive_bytes": 84215
+  },
+  "counts": {
+    "text_values_from_apk": 1010,
+    "numeric_values_from_apk": 34872,
+    "enum_labels_from_reference": 25356,
+    "null_values": 6107,
+    "polymorphic_labels_from_reference": 1822
+  },
+  "tables": [
+    {
+      "name": "AchievementLibrary",
+      "source_mpc_sha256": "59efe669129e908b6241f193200489f81a03215b4b29756a4ae91405744d5a42",
+      "source_mpc_bytes": 20922,
+      "output_filename": "AchievementLibrary.json",
+      "output_sha256": "a88a4e397979bea6b7bcb5713e7282bf55c4aa538d232280cc4aca063e6a0b19",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 154,
+      "reference_schema_file": "AchievementLibrary.json",
+      "reference_schema_sha256": "770b07a15cfbc248f1e46188651493db5de07d7e2c051fcb755bdc9cd250fb4f",
+      "value_differences_from_reference": [
+        {
+          "path": "AchievementLibrary[].Target",
+          "kind": "integer",
+          "apk": 20,
+          "upstream": 30
+        },
+        {
+          "path": "AchievementLibrary[].Target",
+          "kind": "integer",
+          "apk": 500,
+          "upstream": 1000
+        },
+        {
+          "path": "AchievementLibrary[].Target",
+          "kind": "integer",
+          "apk": 3000,
+          "upstream": 10000
+        },
+        {
+          "path": "AchievementLibrary[].Target",
+          "kind": "integer",
+          "apk": 50000,
+          "upstream": 100000
+        },
+        {
+          "path": "AchievementLibrary[].Target",
+          "kind": "integer",
+          "apk": 1000000,
+          "upstream": 2000000
+        },
+        {
+          "path": "AchievementLibrary[].Target",
+          "kind": "integer",
+          "apk": 50,
+          "upstream": 500
+        },
+        {
+          "path": "AchievementLibrary[].Target",
+          "kind": "integer",
+          "apk": 10,
+          "upstream": 20
+        }
+      ],
+      "null_strings_preserved_as_null": 92,
+      "counts": {
+        "text_values_from_apk": 524,
+        "numeric_values_from_apk": 924,
+        "enum_labels_from_reference": 924,
+        "null_values": 92,
+        "polymorphic_labels_from_reference": 154
+      }
+    },
+    {
+      "name": "ArenaLeagueLibrary",
+      "source_mpc_sha256": "1dfd40842fe810191008d8a5531f64440aa2fe1263106dc873bcf0987866a5cb",
+      "source_mpc_bytes": 96,
+      "output_filename": "ArenaLeagueLibrary.json",
+      "output_sha256": "e1b270fab6f62f083aaee3ba13fc96a71f61d8c262c72087f3613b95f437df4d",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 8,
+      "reference_schema_file": "ArenaLeagueLibrary.json",
+      "reference_schema_sha256": "0f4104dd6f171080e008ae19cf49afdfe2dc552ce925276de481064e830c7e31",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 24
+      }
+    },
+    {
+      "name": "ArenaRewardLibrary",
+      "source_mpc_sha256": "d39012907534c3e5e81d6905567c35b4e6c8226c0c765c3ec5b4c2027582b407",
+      "source_mpc_bytes": 4250,
+      "output_filename": "ArenaRewardLibrary.json",
+      "output_sha256": "6059deb17b2113696a870dfc9704956aa84bb903e80ce2c34419ba3b3b6dc3be",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 8,
+      "reference_schema_file": "ArenaRewardLibrary.json",
+      "reference_schema_sha256": "7492c302951bc797f97b54c7b2342d009d7a1786fec0e620f2e845d860535e2a",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 554,
+        "enum_labels_from_reference": 354,
+        "polymorphic_labels_from_reference": 354
+      }
+    },
+    {
+      "name": "AscensionConfigsLibrary",
+      "source_mpc_sha256": "6b9dd2f49d00c2bfadb68242a522c1daa84309be0f856cb64cdcd30b0c31a87b",
+      "source_mpc_bytes": 1557,
+      "output_filename": "AscensionConfigsLibrary.json",
+      "output_sha256": "9376891428585579a69dc6459de3f33bec6c22cefc657a7bd2026d4e9fa4242e",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 4,
+      "reference_schema_file": "AscensionConfigsLibrary.json",
+      "reference_schema_sha256": "3b07ed3501ba144632118e7b4303420341da70d9d52d9aa045189a50f58ffd70",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 157,
+        "numeric_values_from_apk": 33,
+        "null_values": 39
+      }
+    },
+    {
+      "name": "AscensionStarsBonusLibrary",
+      "source_mpc_sha256": "28befcf1a0249361781e36f9e504d1f9fcb53c40843c4d0bfbd101bf43fc4526",
+      "source_mpc_bytes": 807,
+      "output_filename": "AscensionStarsBonusLibrary.json",
+      "output_sha256": "3c8993082bae5950e534956b4faa1ce47f785618a0bba03de5fad16686732f3a",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 12,
+      "reference_schema_file": "AscensionStarsBonusLibrary.json",
+      "reference_schema_sha256": "d6a6ae8a99d9e530c649cdbc683b1d4c85b4d7632b5f2bd2ac0f99e6e512cc65",
+      "value_differences_from_reference": [
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        },
+        {
+          "path": "AscensionStarsBonusLibrary[].BonusStats.Stats[].Value",
+          "kind": "q32_32",
+          "apk": 0.10000000149011612,
+          "upstream": 0.05000000074505806
+        }
+      ],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 36,
+        "enum_labels_from_reference": 72,
+        "null_values": 12
+      }
+    },
+    {
+      "name": "BaseConfig",
+      "source_mpc_sha256": "fac11f0d83b15c61ae59bc054a16df6d7fe229d66a48d947292fb304e11a2646",
+      "source_mpc_bytes": 51,
+      "output_filename": "BaseConfig.json",
+      "output_sha256": "f81d2580620f0df491b70ff1a4ed0afd84330e8e2b791f7b8e19245ff17ab241",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "BaseConfig.json",
+      "reference_schema_sha256": "7f831bd3fd500066a160d313fad6f688e95e7913d4fe0466c441c91e8e642bd3",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 8
+      }
+    },
+    {
+      "name": "DailyDealLibrary",
+      "source_mpc_sha256": "38ecf6bd2ac9df4738bb53ba8ac0cd45fcd382c3819d06bffa04f6830f81245f",
+      "source_mpc_bytes": 1027,
+      "output_filename": "DailyDealLibrary.json",
+      "output_sha256": "0372b80c1cd518c39ab305c06534fcf5b4c8797a9d5b0f23b17a543623cc9e60",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 6,
+      "reference_schema_file": "DailyDealLibrary.json",
+      "reference_schema_sha256": "d77dd06dafcb9ac4685ad61d654921b01c643ad37e52c9f36374d232ee3ab700",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 93,
+        "numeric_values_from_apk": 110,
+        "polymorphic_labels_from_reference": 87
+      }
+    },
+    {
+      "name": "DungeonBaseConfig",
+      "source_mpc_sha256": "3e9e7fe99cbd04ade057dc48c693b270f8ef5a7d78d084d995bd001433869dc0",
+      "source_mpc_bytes": 10,
+      "output_filename": "DungeonBaseConfig.json",
+      "output_sha256": "9df99500e6ca6264d6beee29a652d790aed0c9810d65d7eb91d89fdff120ad8a",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "DungeonBaseConfig.json",
+      "reference_schema_sha256": "920b8a98df7852056905995dfd6e7b95c593186bb550f747661b42853159ab9b",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 2
+      }
+    },
+    {
+      "name": "DungeonRewardLibrary",
+      "source_mpc_sha256": "45a597a35c9b6b94293eaf6e741f0041cfc2238623e76993b1c1e7ed03442def",
+      "source_mpc_bytes": 156,
+      "output_filename": "DungeonRewardLibrary.json",
+      "output_sha256": "3e09b1873632eed657624b12ab7b0633b650dce02a8b84b96401490d0d9d6ceb",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 4,
+      "reference_schema_file": "DungeonRewardLibrary.json",
+      "reference_schema_sha256": "e23a225069b45251d47afe0d18919f7f1fd4eafcb13dddb563c3f62bf76a39bc",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 9,
+        "numeric_values_from_apk": 10
+      }
+    },
+    {
+      "name": "EggDungeonBattleLibrary",
+      "source_mpc_sha256": "8fe1df563b9c80e850947a0c48d24e43c1573b48a82a90e6ffbed4f0a0cfc6da",
+      "source_mpc_bytes": 14428,
+      "output_filename": "EggDungeonBattleLibrary.json",
+      "output_sha256": "77d9c4e356a3889a88fba7081041942f0fa75f368c818cc062670b8744841ddd",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 400,
+      "reference_schema_file": "EggDungeonBattleLibrary.json",
+      "reference_schema_sha256": "8d110c7f079aca7f8ea42ade3bcd237964d6bb601343cb010783c07224a3c2a4",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 3200
+      }
+    },
+    {
+      "name": "EggLibrary",
+      "source_mpc_sha256": "b128c33c430c37550d2eabd47c437ac20663b7b82b8dbe3e2bca3680404bde7a",
+      "source_mpc_bytes": 61,
+      "output_filename": "EggLibrary.json",
+      "output_sha256": "4d3bd603e455bacd5a78a7d69d438107e39083ff1f5cc7a6730efec74f04e840",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 6,
+      "reference_schema_file": "EggLibrary.json",
+      "reference_schema_sha256": "b0c6c065f34d4e304eb34189ed7bd99ad3427aa6e327e7f441b7839b55ad2829",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 6,
+        "numeric_values_from_apk": 6
+      }
+    },
+    {
+      "name": "EggSummonConfig",
+      "source_mpc_sha256": "a34397bc776acf9b3abbd3d663f7008a4d1fa80118b4ed30b16319c3351f498e",
+      "source_mpc_bytes": 6539,
+      "output_filename": "EggSummonConfig.json",
+      "output_sha256": "1e4d8cfd14d7cb625791a71d3f8852a928f21b33399491731c84c649ec6d06b5",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "EggSummonConfig.json",
+      "reference_schema_sha256": "fc7517eaf16df332c8047e4c96267b00f4db383c269941a97cd42505f295a530",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "text_values_from_apk": 1,
+        "numeric_values_from_apk": 706,
+        "enum_labels_from_reference": 1
+      }
+    },
+    {
+      "name": "EnemyAgeScalingLibrary",
+      "source_mpc_sha256": "b64552338a39f9420ee9a8050cdb9eb1d6cedf5e014a08c08421cdbb4388dcdb",
+      "source_mpc_bytes": 242,
+      "output_filename": "EnemyAgeScalingLibrary.json",
+      "output_sha256": "053c9b50c9a9e6d978365456cb2e1812fc00bfa1d13263a17c58cce47237802d",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 11,
+      "reference_schema_file": "EnemyAgeScalingLibrary.json",
+      "reference_schema_sha256": "58b9dabf58754b869098c04e7fb43775a7e9105d5add272cf267004a7d00140c",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 33
+      }
+    },
+    {
+      "name": "EnemyLibrary",
+      "source_mpc_sha256": "d3f24ae7ea0bfac7b68f1275734dfc8184896a9dceef14507b0c024ee0554a70",
+      "source_mpc_bytes": 2746,
+      "output_filename": "EnemyLibrary.json",
+      "output_sha256": "7692149573b8a4fc937e7aca207542d8308587df5c7461239fdf5daa30531530",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 72,
+      "reference_schema_file": "EnemyLibrary.json",
+      "reference_schema_sha256": "1f10ba6c284798771f1ab7eb9ed1cf4abae963c409c7c53cc1dc2b0c847111f2",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 410,
+        "enum_labels_from_reference": 169,
+        "null_values": 47
+      }
+    },
+    {
+      "name": "FairyUpgradesLibrary",
+      "source_mpc_sha256": "93c6aa0d72e7d0d79f53528b0c89b21dc7ee0d4d58f479b1b30ad68024b1df38",
+      "source_mpc_bytes": 1048,
+      "output_filename": "FairyUpgradesLibrary.json",
+      "output_sha256": "8bffcac63333614a1c63a9c408967cd5b5a67671dd0f31302d938c82f35d90d1",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 19,
+      "reference_schema_file": "FairyUpgradesLibrary.json",
+      "reference_schema_sha256": "0052a94d299964860c042a18a1e98e1f428ab2ff45cf71ef9ae95812bfa809eb",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 114,
+        "enum_labels_from_reference": 95
+      }
+    },
+    {
+      "name": "ForgeConfig",
+      "source_mpc_sha256": "181c2d74de5c271e791746c8babbf7c3dd32fbac79e6ce850a19feba58a6dee5",
+      "source_mpc_bytes": 39,
+      "output_filename": "ForgeConfig.json",
+      "output_sha256": "70fa17b9a7c4679a5214e88cc88277d2a06968711566fbf4e8ded6e201e96aa2",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "ForgeConfig.json",
+      "reference_schema_sha256": "988a08b22ff69757d2447cf5c7459a978abf9ee8e33c10a89a875673d786b14f",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 5
+      }
+    },
+    {
+      "name": "ForgeUpgradeLibrary",
+      "source_mpc_sha256": "60bc0a10df713fd5d18aa4d94df92d488058062b2c1ad12c030c14783e250939",
+      "source_mpc_bytes": 624,
+      "output_filename": "ForgeUpgradeLibrary.json",
+      "output_sha256": "c053e136c1b67d32bc8abb20b3b27c42157760ac865a42875c44311de3c2b741",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 34,
+      "reference_schema_file": "ForgeUpgradeLibrary.json",
+      "reference_schema_sha256": "31bcb2e10664d80005389e3143cacc8f7c2eac511521ee17aa9d46705626e2e7",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 136
+      }
+    },
+    {
+      "name": "GuildBaseConfig",
+      "source_mpc_sha256": "eae5eeea316727f127cf94d70ca23ac130174f590850e6d707113dc3ecfc78c6",
+      "source_mpc_bytes": 126,
+      "output_filename": "GuildBaseConfig.json",
+      "output_sha256": "7ee38fbe13ccda1a7694688c1078aa78d498cc109d58014a5db27e7639ba5af9",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "GuildBaseConfig.json",
+      "reference_schema_sha256": "2cf709ca4f474b791ca3513b9f93686b308d307088489b82eb30ec8de8abd5a0",
+      "value_differences_from_reference": [
+        {
+          "path": "GuildBaseConfig.GuildLeaveCooldownDurationMinutes",
+          "kind": "integer",
+          "apk": 1,
+          "upstream": 1440
+        }
+      ],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 22,
+        "enum_labels_from_reference": 3,
+        "text_values_from_apk": 2
+      }
+    },
+    {
+      "name": "GuildEmblemColors",
+      "source_mpc_sha256": "680d141feda63f64e4e8ee99795a7404dd78e7ce4f016b7678f89d41f26b480e",
+      "source_mpc_bytes": 165,
+      "output_filename": "GuildEmblemColors.json",
+      "output_sha256": "059d81e82307a8c62f2cc8a5ec7df2747750410e8d5ad2b65e8156a01f24fa2e",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 9,
+      "reference_schema_file": "GuildEmblemColors.json",
+      "reference_schema_sha256": "e05a529b109bbacd8f00bfa61e7111a67a0e89fe4730ef94441b2bdafa3ed616",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 9,
+        "enum_labels_from_reference": 9,
+        "text_values_from_apk": 9
+      }
+    },
+    {
+      "name": "GuildTechRaceEliminationLibrary",
+      "source_mpc_sha256": "d2a623c3fe9683a6a5921eeb048fc1a5f0bc7a20ef3ca37c244db6e775e7750c",
+      "source_mpc_bytes": 95,
+      "output_filename": "GuildTechRaceEliminationLibrary.json",
+      "output_sha256": "5c04b3e1d4e36b25c321195c99c31730e20217e5e564ce5d293df1af3ebc7f74",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 6,
+      "reference_schema_file": "GuildTechRaceEliminationLibrary.json",
+      "reference_schema_sha256": "ccb00ab6c5b465838e483a505a605f590ca589147357a45a007c188dd9a3bf98",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "text_values_from_apk": 6,
+        "numeric_values_from_apk": 6
+      }
+    },
+    {
+      "name": "GuildTechRaceRewardLibrary",
+      "source_mpc_sha256": "c4919d9cb609bb805355e87b2b4cd90ed1ac62c9d94e3a166000b845adec6abd",
+      "source_mpc_bytes": 124,
+      "output_filename": "GuildTechRaceRewardLibrary.json",
+      "output_sha256": "4c8e65a50323c675868dfc1db9fa0272ca1e2faeaf8d1c15209d1806c76cde2a",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 7,
+      "reference_schema_file": "GuildTechRaceRewardLibrary.json",
+      "reference_schema_sha256": "a10c24ca8faaf43547a54c6ba3c8d823a520b4eda31e99e885133f2209ff9bcc",
+      "value_differences_from_reference": [
+        {
+          "path": "GuildTechRaceRewardLibrary[].Rewards[]<CurrencyReward>.Amount",
+          "kind": "integer",
+          "apk": 400,
+          "upstream": 800
+        },
+        {
+          "path": "GuildTechRaceRewardLibrary[].Rewards[]<CurrencyReward>.Amount",
+          "kind": "integer",
+          "apk": 150,
+          "upstream": 300
+        },
+        {
+          "path": "GuildTechRaceRewardLibrary[].Rewards[]<CurrencyReward>.Amount",
+          "kind": "integer",
+          "apk": 50,
+          "upstream": 150
+        },
+        {
+          "path": "GuildTechRaceRewardLibrary[].Rewards[]<CurrencyReward>.Amount",
+          "kind": "integer",
+          "apk": 30,
+          "upstream": 80
+        },
+        {
+          "path": "GuildTechRaceRewardLibrary[].Rewards[]<CurrencyReward>.Amount",
+          "kind": "integer",
+          "apk": 20,
+          "upstream": 40
+        },
+        {
+          "path": "GuildTechRaceRewardLibrary[].Rewards[]<CurrencyReward>.Amount",
+          "kind": "integer",
+          "apk": 10,
+          "upstream": 20
+        },
+        {
+          "path": "GuildTechRaceRewardLibrary[].Rewards[]<CurrencyReward>.Amount",
+          "kind": "integer",
+          "apk": 5,
+          "upstream": 10
+        }
+      ],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 14,
+        "enum_labels_from_reference": 7,
+        "polymorphic_labels_from_reference": 7
+      }
+    },
+    {
+      "name": "GuildTechTreePositionLibrary",
+      "source_mpc_sha256": "84fc3d81a2c951c419fe8d3d4e988048662606183d175884db8ef35693b969a7",
+      "source_mpc_bytes": 231,
+      "output_filename": "GuildTechTreePositionLibrary.json",
+      "output_sha256": "3aeb804f1bd63f229050de706e033959f1bcd447e3bb9fe4404217086e3ec922",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 7,
+      "reference_schema_file": "GuildTechTreePositionLibrary.json",
+      "reference_schema_sha256": "54a015c6ba48946b5d144c9a34e9d4f9ddba181254f7fcdf0e6fa8dafe42b4a5",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "text_values_from_apk": 7,
+        "enum_labels_from_reference": 61
+      }
+    },
+    {
+      "name": "GuildTechTreeUpgradeLibrary",
+      "source_mpc_sha256": "abe0be1e32fc6c94701e472fdb7cc9afac0d735d7f88e7a98ac6d662d3d087eb",
+      "source_mpc_bytes": 2450,
+      "output_filename": "GuildTechTreeUpgradeLibrary.json",
+      "output_sha256": "249bb4f926b5840e22e85d1884e24e479d096e0f2121e9dc94c26bebdab5672f",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 61,
+      "reference_schema_file": "GuildTechTreeUpgradeLibrary.json",
+      "reference_schema_sha256": "4389627f5ddc06e79229c30f721a40b29d7be5743c2508206c697911f683e06d",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 61,
+        "numeric_values_from_apk": 217,
+        "null_values": 88
+      }
+    },
+    {
+      "name": "GuildTierConfig",
+      "source_mpc_sha256": "9a0ba274505f724fed1324b54c2aa2f3ed13af2b691b913637b501cbd75093b9",
+      "source_mpc_bytes": 1030,
+      "output_filename": "GuildTierConfig.json",
+      "output_sha256": "4810b0d050c95aeeaaed502f64b66981209320d8551a3f73edba4175d75b3b8f",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 8,
+      "reference_schema_file": "GuildTierConfig.json",
+      "reference_schema_sha256": "0c290243acee70f3f148e3bb8088dd8d2dc64f9c8238bd4a8166ea895870bbfb",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 104,
+        "numeric_values_from_apk": 120,
+        "polymorphic_labels_from_reference": 96
+      }
+    },
+    {
+      "name": "GuildWarConfig",
+      "source_mpc_sha256": "444384213dfad17423ba2da62d0251f00d8926010eead03df480c6cda7c0360b",
+      "source_mpc_bytes": 26,
+      "output_filename": "GuildWarConfig.json",
+      "output_sha256": "a47e569bf84130ad0cb7b3049d77419343562e30ed3522cc4b4b0b96f490f2ba",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "GuildWarConfig.json",
+      "reference_schema_sha256": "b0ce9f233c188ddfa18fa774f35dfd08939c5e99187c679efabf0066003b12fd",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 7
+      }
+    },
+    {
+      "name": "GuildWarDayConfigLibrary",
+      "source_mpc_sha256": "d60c779bbe0195da7f4b78930dc97ed7b2a3dd1c5a05e4b24b49c052f465544c",
+      "source_mpc_bytes": 2049,
+      "output_filename": "GuildWarDayConfigLibrary.json",
+      "output_sha256": "10857348c3e3602fe3509a9f441fb8ca3b0477c1894a275cf5adf5789e5b65ba",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 6,
+      "reference_schema_file": "GuildWarDayConfigLibrary.json",
+      "reference_schema_sha256": "50e155fe7d82d8f6bf596245fb4ef555a12b6c95c6692df5075180a942e2121b",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 136,
+        "enum_labels_from_reference": 124,
+        "polymorphic_labels_from_reference": 124
+      }
+    },
+    {
+      "name": "GuildWarProgressPassLibrary",
+      "source_mpc_sha256": "5ea6f67de9170bba64afa8333cf0a0444c9114211aee37d75d735b413df0f237",
+      "source_mpc_bytes": 898,
+      "output_filename": "GuildWarProgressPassLibrary.json",
+      "output_sha256": "221937b46d1b6dbab9e302a09f031656fd3d8ca83181153a7034dff40ded8b45",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 22,
+      "reference_schema_file": "GuildWarProgressPassLibrary.json",
+      "reference_schema_sha256": "19e329cba893930aec73f70bb97fc1228c1bd3cc54039f44cf90a7aff0866047",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 70,
+        "polymorphic_labels_from_reference": 70,
+        "enum_labels_from_reference": 48
+      }
+    },
+    {
+      "name": "HammerThiefDungeonBattleLibrary",
+      "source_mpc_sha256": "b8a5a1c0e4ed4c67a67bb15490d92970852282e18be50c89a8641c2c519f113c",
+      "source_mpc_bytes": 8061,
+      "output_filename": "HammerThiefDungeonBattleLibrary.json",
+      "output_sha256": "bd2f509280be2d89747f8bbe4002422f3072184dc16bbd75667ba1c7eb6963a1",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 400,
+      "reference_schema_file": "HammerThiefDungeonBattleLibrary.json",
+      "reference_schema_sha256": "5327ed448e8f33760974956ddf3741c57a541bec8a08aec64464ead02e6cbfc3",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 1200
+      }
+    },
+    {
+      "name": "IdleConfig",
+      "source_mpc_sha256": "668e00508301416a8966a33236ffca7377a14e8a5da2cd4ff99f05578c02144a",
+      "source_mpc_bytes": 43,
+      "output_filename": "IdleConfig.json",
+      "output_sha256": "0069e2804025bbc331cbe47f97ab13decf533d537c9d952a16624f98a5aa3bc6",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "IdleConfig.json",
+      "reference_schema_sha256": "3c4a223e09f9b7791135e87914fe8d480df0dd8a8b348d907dfdd7d39441b52e",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 4
+      }
+    },
+    {
+      "name": "InAppProducts",
+      "source_mpc_sha256": "377442b3436e965cc27158c03b8faf7a0a5b8bf95c53875587696f9b6ebb89ee",
+      "source_mpc_bytes": 2355,
+      "output_filename": "InAppProducts.json",
+      "output_sha256": "61ff21a440ca12d452a4704168df7a16e29d2924287c97de0cbddfcecac5f5bb",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 16,
+      "reference_schema_file": "InAppProducts.json",
+      "reference_schema_sha256": "6224986191076ae11abcc1289bc198027e050c2aebb2cdcbacc6ff506c77d2b0",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 32,
+      "counts": {
+        "numeric_values_from_apk": 73,
+        "enum_labels_from_reference": 46,
+        "polymorphic_labels_from_reference": 16,
+        "text_values_from_apk": 80,
+        "null_values": 48
+      }
+    },
+    {
+      "name": "ItemAgeDropChancesLibrary",
+      "source_mpc_sha256": "91b671849e01bfca58d162c81cb217e1442f38c7c118d9d0f0c80b0a616a543b",
+      "source_mpc_bytes": 3678,
+      "output_filename": "ItemAgeDropChancesLibrary.json",
+      "output_sha256": "24924fdf5862aba95d2c7c82e6ded95d9199e590d60cd6100a23c1c78a5a19bd",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 35,
+      "reference_schema_file": "ItemAgeDropChancesLibrary.json",
+      "reference_schema_sha256": "95a94b6e7cb0b6647312a0fc5761f741ca3f62e8c39817850a24162e011f9374",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 385
+      }
+    },
+    {
+      "name": "ItemBalancingConfig",
+      "source_mpc_sha256": "6f947802b62c6c47d858ae4126a8a98f40289dcfac5da021ab9db88b70c72545",
+      "source_mpc_bytes": 93,
+      "output_filename": "ItemBalancingConfig.json",
+      "output_sha256": "c0fd2f3131e3307a350aa4d76ef67150dc45fbbc69509cf9ab1c35dfe70430bd",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "ItemBalancingConfig.json",
+      "reference_schema_sha256": "1d1703f8a2f7d6d7ae9ecf2f86ea6085251219eeaea9cb8bf2a6bf10d0f95ec0",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 9
+      }
+    },
+    {
+      "name": "ItemBalancingLibrary",
+      "source_mpc_sha256": "b4ef6819d151eb40c918354d359aae6f81741e276515c59e841dd87a1a4f07d1",
+      "source_mpc_bytes": 15408,
+      "output_filename": "ItemBalancingLibrary.json",
+      "output_sha256": "9d4c2eb243f4eb3f3b384a50d9896c055191424763f1cf7dfe556e827ac43e0b",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 232,
+      "reference_schema_file": "ItemBalancingLibrary.json",
+      "reference_schema_sha256": "5b77cf2de1d0c71957c918eae932bca99155269d30a5cfd6b3357f9068c7af7d",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 703,
+        "enum_labels_from_reference": 1427,
+        "null_values": 239
+      }
+    },
+    {
+      "name": "ItemLevelBracketsLibrary",
+      "source_mpc_sha256": "0aebd5291b7f2d7ba3a3a9fe9fa45f6cdfb018ba3503d8bb7625917c4dbc4492",
+      "source_mpc_bytes": 356,
+      "output_filename": "ItemLevelBracketsLibrary.json",
+      "output_sha256": "762695ab83b85f7a5ee662dab62ad800b2a8021e8d8b146e9ec8a38d1838a03a",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 29,
+      "reference_schema_file": "ItemLevelBracketsLibrary.json",
+      "reference_schema_sha256": "605b2db0c91a2eda9cc59fb50bd9687d2449c91defe89f2e1600223a48fb0295",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 87
+      }
+    },
+    {
+      "name": "LegacyDungeonsMigration",
+      "source_mpc_sha256": "4f52688082e6993e0957b873406e65643ed7ec4c9ad44c952beeedda4229f3a1",
+      "source_mpc_bytes": 2231,
+      "output_filename": "LegacyDungeonsMigration.json",
+      "output_sha256": "8ed68f0466926d3058187c2f2ecd9e6b0079827ddff037e2ead5b273aa6782e3",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 140,
+      "reference_schema_file": "LegacyDungeonsMigration.json",
+      "reference_schema_sha256": "95a18f0c8e7b1852d6740c03798a54daee4d848a44d39410141054ea5408a008",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 420
+      }
+    },
+    {
+      "name": "MainBattleConfig",
+      "source_mpc_sha256": "0852fcfeadfe1518c605b8caa49f1ed7e56201be5bebb7650af0f33c65134912",
+      "source_mpc_bytes": 48,
+      "output_filename": "MainBattleConfig.json",
+      "output_sha256": "ec4c84179415fbd74816d88f68db2d935098f4ff68e6e950e1462e607bbf34e4",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "MainBattleConfig.json",
+      "reference_schema_sha256": "b4f7478aa1d3e7a0d77144775a63a5dbea4b0c9fd98924f97e45a9f7ba8b11b4",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 3
+      }
+    },
+    {
+      "name": "MainBattleLibrary",
+      "source_mpc_sha256": "f6babc3c0f15971a6957e17ea1f10719225b18e8b88b517c22325760ad89a19e",
+      "source_mpc_bytes": 14670,
+      "output_filename": "MainBattleLibrary.json",
+      "output_sha256": "96027948d43a744a292ee14ed1ee670dd82b40d779a44602ea39ab70cd28262a",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 210,
+      "reference_schema_file": "MainBattleLibrary.json",
+      "reference_schema_sha256": "b3b434c4cfc3fcec6a71789879001e4230d0ad9e7d20f63892d2b4ec8e3890ed",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 2474
+      }
+    },
+    {
+      "name": "MainGameProgressPassLibrary",
+      "source_mpc_sha256": "7ba8c10f1f559ec10f5c0a82bb48bb87357a4b86716f827efe78400ee80a5742",
+      "source_mpc_bytes": 3710,
+      "output_filename": "MainGameProgressPassLibrary.json",
+      "output_sha256": "2f04969a86f4c659a1e26b4dc945572528dd25996b505c617346ff4303921d43",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 53,
+      "reference_schema_file": "MainGameProgressPassLibrary.json",
+      "reference_schema_sha256": "656af7fed92f9dea261e78fc1baf2b0f0f74aab19360b541e5ba98fe94ee974c",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 371,
+        "polymorphic_labels_from_reference": 265,
+        "enum_labels_from_reference": 212
+      }
+    },
+    {
+      "name": "MissionAllMemberRewardLibrary",
+      "source_mpc_sha256": "899519798fd28b746aa039410745cd45123aa0b3ed17c97fe68fc6c1097a59b7",
+      "source_mpc_bytes": 903,
+      "output_filename": "MissionAllMemberRewardLibrary.json",
+      "output_sha256": "c721ce6d1f6a709743623852428385fa81497d4b74a3fbe7a6f853209c4e530d",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 60,
+      "reference_schema_file": "MissionAllMemberRewardLibrary.json",
+      "reference_schema_sha256": "039204f264b0de8f6bb3ce44a6dead264a091cddb65a57ebafb62662fb90cc82",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 120,
+        "enum_labels_from_reference": 60,
+        "polymorphic_labels_from_reference": 60
+      }
+    },
+    {
+      "name": "MissionBaseConfig",
+      "source_mpc_sha256": "ef912d83c5c2bbac741068f685b3eaac310c157cb62985efe8f7fa422d385ade",
+      "source_mpc_bytes": 35,
+      "output_filename": "MissionBaseConfig.json",
+      "output_sha256": "2b03e4893a14f98af95b2391c9c4f54c9e61479aea9560de59462d0621c3043b",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "MissionBaseConfig.json",
+      "reference_schema_sha256": "42643e1d294180e5dfa55c8fe2334d8277376c82cb7b6fd21aa4feeb81a06920",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 8
+      }
+    },
+    {
+      "name": "MissionBattleLibrary",
+      "source_mpc_sha256": "335fc0c59250d42c2f0be037ef14959e771e60fb6d6434084fd51ba65c19ad76",
+      "source_mpc_bytes": 2428,
+      "output_filename": "MissionBattleLibrary.json",
+      "output_sha256": "150ed585259378c2d634e2d8bf05a82a89a58f2458b856583cafcbf143cb042d",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 20,
+      "reference_schema_file": "MissionBattleLibrary.json",
+      "reference_schema_sha256": "7fe719ac9ae1c8a9cc1e32b632e8728ed410ead7f78fae0d52fcd86665c2e619",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 404,
+        "text_values_from_apk": 20,
+        "null_values": 1
+      }
+    },
+    {
+      "name": "MissionLevelLibrary",
+      "source_mpc_sha256": "8b03540d17039f95f28b9480d4c5b616f22faf234054d3fe8aff7cc5a8b56cd8",
+      "source_mpc_bytes": 889,
+      "output_filename": "MissionLevelLibrary.json",
+      "output_sha256": "d68e632ee8ec12ab89fd85ae1c7a917bb38f29e765bf3d17cb33f87fc8a4b67b",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 60,
+      "reference_schema_file": "MissionLevelLibrary.json",
+      "reference_schema_sha256": "fe70cd2150b6e44db3e8af261b93623ba775a6a0db5e4a84cc36040cf4cba5bb",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 240
+      }
+    },
+    {
+      "name": "MissionRallyTimeLibrary",
+      "source_mpc_sha256": "e9638d8a027ca691e0c3fc8c51533558d16c36663c37bdc77a3337592ea19aaf",
+      "source_mpc_bytes": 29,
+      "output_filename": "MissionRallyTimeLibrary.json",
+      "output_sha256": "8129390d8d83aea32e5e9d37ee26091070e6d3d59087dcab487953f4498857e7",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 3,
+      "reference_schema_file": "MissionRallyTimeLibrary.json",
+      "reference_schema_sha256": "5ae55e3b5ecd524c59eb21ca4f7b178eaf813fbe32beacf3c9ced3a27a4f5e80",
+      "value_differences_from_reference": [
+        {
+          "path": "MissionRallyTimeLibrary[].TimeInSeconds",
+          "kind": "integer",
+          "apk": 5,
+          "upstream": 60
+        }
+      ],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 6
+      }
+    },
+    {
+      "name": "MissionRewardLibrary",
+      "source_mpc_sha256": "cc62cf7eba242db34b3505b48fcc84fc7ecc199b76610da359dc01b507b299de",
+      "source_mpc_bytes": 3742,
+      "output_filename": "MissionRewardLibrary.json",
+      "output_sha256": "f1c8fde9f94ecf078c2ab2b2a9d5f357ff0a61bba98a06708f504be87b7f30c5",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 60,
+      "reference_schema_file": "MissionRewardLibrary.json",
+      "reference_schema_sha256": "f5a7274f04798b999d1698d2b77ee85b632f4ae1ea1a95633bce17ece32cb3fa",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 420,
+        "enum_labels_from_reference": 360,
+        "polymorphic_labels_from_reference": 360
+      }
+    },
+    {
+      "name": "MountLibrary",
+      "source_mpc_sha256": "410fb8ccb4ad1be52ba941340f10db91536007318822690631b814725892e27e",
+      "source_mpc_bytes": 873,
+      "output_filename": "MountLibrary.json",
+      "output_sha256": "c6ea1cbda141417d20618061840983869eac1a653333c4f2fb69cdce24cc2b53",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 15,
+      "reference_schema_file": "MountLibrary.json",
+      "reference_schema_sha256": "b7970b96ffcbee43f0417e73de697c09ef3fd28b41dad973dcb3f23190392757",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 15,
+        "numeric_values_from_apk": 90
+      }
+    },
+    {
+      "name": "MountSummonConfig",
+      "source_mpc_sha256": "785dc979a1d034760172f99c28df2135b32a1ebc2d186e0ea350f225603f875f",
+      "source_mpc_bytes": 6540,
+      "output_filename": "MountSummonConfig.json",
+      "output_sha256": "638c59c57865dd5fa2c210325d5f3b474f48f1dfe9ffcf0cde778509bae8c852",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "MountSummonConfig.json",
+      "reference_schema_sha256": "1fef68e84b6baa44ae5a18ad2f6a807f878f9c817426574107df5634b37d8734",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "text_values_from_apk": 1,
+        "numeric_values_from_apk": 706,
+        "enum_labels_from_reference": 1
+      }
+    },
+    {
+      "name": "MountUpgradeLibrary",
+      "source_mpc_sha256": "f25493119599fdb82151ae8dab31aa7ce67c0a756103acdc7d478c8d422695bd",
+      "source_mpc_bytes": 67774,
+      "output_filename": "MountUpgradeLibrary.json",
+      "output_sha256": "e6f516e0ee2f0fd19db88db345cb48d7f5fbac18d283538e2ef1948822847506",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 6,
+      "reference_schema_file": "MountUpgradeLibrary.json",
+      "reference_schema_sha256": "4769a1a21d30508e859a738434fcc83e4026695453575eaef6e237f9bd1f038f",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 6006,
+        "numeric_values_from_apk": 2400,
+        "null_values": 1800
+      }
+    },
+    {
+      "name": "PetBalancingLibrary",
+      "source_mpc_sha256": "e8e154b71dee3cd8766343c532a186b453f5c584a63bac2bd90550bf8e623d2c",
+      "source_mpc_bytes": 78,
+      "output_filename": "PetBalancingLibrary.json",
+      "output_sha256": "4cdbe5f461a0685bbf99cf1cf1598dbcdfb38d03069f07059032d9eb0f69ddf4",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 3,
+      "reference_schema_file": "PetBalancingLibrary.json",
+      "reference_schema_sha256": "dbea6f96ca687dee85986c2d59733ddcbd62a9755249748741ccff923e0cc475",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 3,
+        "numeric_values_from_apk": 6
+      }
+    },
+    {
+      "name": "PetBaseConfig",
+      "source_mpc_sha256": "a63e72c63405a8793e10d20496a4568df7f7d32941ddb548fbe98f84e3e4591e",
+      "source_mpc_bytes": 20,
+      "output_filename": "PetBaseConfig.json",
+      "output_sha256": "0cb7bfc07b2e1d074a28e59866d38db506d76bc3c7ca8a1827fae32db2111190",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "PetBaseConfig.json",
+      "reference_schema_sha256": "50b92a95f4ec9d097e93b7c7a0651810a6a4ce87553f664de4d9ec16beeef486",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 5
+      }
+    },
+    {
+      "name": "PetLibrary",
+      "source_mpc_sha256": "5695d0e035662e60c662669bb1414083a1b73f4708a24d99cbc2faade6a89450",
+      "source_mpc_bytes": 625,
+      "output_filename": "PetLibrary.json",
+      "output_sha256": "66b66f0ece103510df137dad64abc3a70c53623d652a4d1e6061944afec52314",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 25,
+      "reference_schema_file": "PetLibrary.json",
+      "reference_schema_sha256": "f6baf1ca1c732e2ca3f679be38777c55cf740ed229ad2721686416af3aecdf6d",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 50,
+        "numeric_values_from_apk": 25,
+        "text_values_from_apk": 25
+      }
+    },
+    {
+      "name": "PetUpgradeLibrary",
+      "source_mpc_sha256": "578dab631715e3c00951f4ffde6bb5a5dad74f1a9c98e23aacbd0135ca71eb9c",
+      "source_mpc_bytes": 68029,
+      "output_filename": "PetUpgradeLibrary.json",
+      "output_sha256": "00a800fef058950083be7bedec80f9ed9078c4182dd23194beac7eb20ca2b9f7",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 6,
+      "reference_schema_file": "PetUpgradeLibrary.json",
+      "reference_schema_sha256": "5fbfe3f413fd7a5eb1857bc74110251bedb0645dd2eda36b3c822c5e06550ba0",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 6006,
+        "numeric_values_from_apk": 2400,
+        "null_values": 1800
+      }
+    },
+    {
+      "name": "PlayerSegments",
+      "source_mpc_sha256": "2c0924bbcea8f3728394f2b795c1eca5e63c1ed060c35cc0263b0c9a32c52442",
+      "source_mpc_bytes": 4634,
+      "output_filename": "PlayerSegments.json",
+      "output_sha256": "fde2596a47e16616a15d089cd8e09c9c31f8fbc5d83567a02503ccaec9cc0b05",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 38,
+      "reference_schema_file": "PlayerSegments.json",
+      "reference_schema_sha256": "422bca36e40cd91de653b0e4c8834b57dd44d9bfc6e16e325eb637748f621ddf",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "text_values_from_apk": 115,
+        "polymorphic_labels_from_reference": 146,
+        "null_values": 116,
+        "numeric_values_from_apk": 82
+      }
+    },
+    {
+      "name": "PlayerTechTreeNodeValuesLibrary",
+      "source_mpc_sha256": "bd303f0854b2c97b5abbb3fc121f02df8204c03edf1ae230f5d8c9351a4ed92f",
+      "source_mpc_bytes": 19274,
+      "output_filename": "PlayerTechTreeNodeValuesLibrary.json",
+      "output_sha256": "a15dbee2839932bb772d1f47bfb1103bab7456db6809f7292d2fe61709b2db7e",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 47,
+      "reference_schema_file": "PlayerTechTreeNodeValuesLibrary.json",
+      "reference_schema_sha256": "e93a3514e3cd49c6c7ae0c4c57de9de240f2a058d376771e9097115b31ce4f87",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 47,
+        "numeric_values_from_apk": 1155
+      }
+    },
+    {
+      "name": "PlayerTechTreePositionLibrary",
+      "source_mpc_sha256": "7f8a09eb49fdb1878bf492dfc23d6e17e5b8c38f923c663cdbd3b565ad602a7e",
+      "source_mpc_bytes": 5505,
+      "output_filename": "PlayerTechTreePositionLibrary.json",
+      "output_sha256": "16004fefff95340e452d9ce578bb270b8cb0451573513ae5986d1d32e2a4f3a1",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 4,
+      "reference_schema_file": "PlayerTechTreePositionLibrary.json",
+      "reference_schema_sha256": "383e7c48da3464d1832add9cffb7cd2653e63045faded02d2f8cb2c5b5591222",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 286,
+        "numeric_values_from_apk": 1115
+      }
+    },
+    {
+      "name": "PlayerTechTreeTierLibrary",
+      "source_mpc_sha256": "dfc55b434afedbd6da114f4cfb1d3babe670cd78f28f8d906073fd645543e140",
+      "source_mpc_bytes": 688,
+      "output_filename": "PlayerTechTreeTierLibrary.json",
+      "output_sha256": "5811bcc2585fbd272808832eb28be452dc1d268c2d21d73a5c287f609c9ccb26",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 5,
+      "reference_schema_file": "PlayerTechTreeTierLibrary.json",
+      "reference_schema_sha256": "c5f4c439f07651b5a833a234e66ff56d3e17a175b5aa52a00bd1dc79a3072f7f",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 55
+      }
+    },
+    {
+      "name": "PotionDungeonBattleLibrary",
+      "source_mpc_sha256": "227fbdb7f0b753109dd3c02b10f3a0e0fc25b5bf611a30ae5503621e00d24935",
+      "source_mpc_bytes": 14371,
+      "output_filename": "PotionDungeonBattleLibrary.json",
+      "output_sha256": "15c9e534d9b588d694e45ac24423ef2afdaa5ab029c78b48bf04348a99d75507",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 400,
+      "reference_schema_file": "PotionDungeonBattleLibrary.json",
+      "reference_schema_sha256": "8918525d3ed9bef1bbe9aec59017b54cd8aba2ad0dae030103bdca4a01f4280f",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 3200
+      }
+    },
+    {
+      "name": "ProfileBaseConfig",
+      "source_mpc_sha256": "b1273e52211af72edf1949f83aff33abbf92d56e434e4f104f82034dda0b6b91",
+      "source_mpc_bytes": 11,
+      "output_filename": "ProfileBaseConfig.json",
+      "output_sha256": "7d71a8bff1a4840d5ba481c019715bf76670ebc913f8014b9decee34eab71ad6",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "ProfileBaseConfig.json",
+      "reference_schema_sha256": "60dfd63224fd6e0314b7ae27a94074df2d1b43e8271f0a192c7b60271e90e347",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 2
+      }
+    },
+    {
+      "name": "ProjectilesLibrary",
+      "source_mpc_sha256": "dc38c193da558999e06e4da6fb018e669367a85186894f44cb5e6dd3fef026e3",
+      "source_mpc_bytes": 451,
+      "output_filename": "ProjectilesLibrary.json",
+      "output_sha256": "7d8b9c523d6d0c38d70f60387aaf9ec7e59f4e06e7af35d4efb51d102beae4b9",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 16,
+      "reference_schema_file": "ProjectilesLibrary.json",
+      "reference_schema_sha256": "19f7ab4f6f19cd1d312e39e9b3698fcaddfc82772421f54fa2eb3d742d51c35d",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 48
+      }
+    },
+    {
+      "name": "PvpBaseConfig",
+      "source_mpc_sha256": "a7dd6dcbd1239b8261dbae2b801ba3a1cf5e4b10a0e7387d33a5897c6d2e617e",
+      "source_mpc_bytes": 63,
+      "output_filename": "PvpBaseConfig.json",
+      "output_sha256": "05930e041b4ff7ae2fb7a8c13de7a54390afb06dacb68504740f044647e61b6c",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "PvpBaseConfig.json",
+      "reference_schema_sha256": "2f1e0c1cdd7ac29051b790cd2fd8ec5f8b69e1af060e3a0af5ddc75419deea06",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 8
+      }
+    },
+    {
+      "name": "SecondaryStatItemUnlockLibrary",
+      "source_mpc_sha256": "b4e682b7793caed7ad219a279fc3f7897072739981395a0edf60b54ff5569f90",
+      "source_mpc_bytes": 83,
+      "output_filename": "SecondaryStatItemUnlockLibrary.json",
+      "output_sha256": "d55e9255019107ab796046413c28986ad55698c817567aa9b2805977c9c1149e",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 10,
+      "reference_schema_file": "SecondaryStatItemUnlockLibrary.json",
+      "reference_schema_sha256": "20e63c2855b748f1714748b3c8e9eeef544ff71f654e1add990806c8539ee383",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 20
+      }
+    },
+    {
+      "name": "SecondaryStatLibrary",
+      "source_mpc_sha256": "d4ff8ad4cc11095c5af1f3b6e43aeb1a09a33c96e37da1af133f171d5302d399",
+      "source_mpc_bytes": 1197,
+      "output_filename": "SecondaryStatLibrary.json",
+      "output_sha256": "467dba66f1dde399bee009996a0bcac9be9c02ce359442735ef6a03449147c63",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 18,
+      "reference_schema_file": "SecondaryStatLibrary.json",
+      "reference_schema_sha256": "443e97f48e37c3ead15dbd9ab82b5794f92d526195133cd640afc8861817614f",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 123,
+        "numeric_values_from_apk": 36,
+        "null_values": 21
+      }
+    },
+    {
+      "name": "SecondaryStatPetUnlockLibrary",
+      "source_mpc_sha256": "e20158ccec1fc4f9c3751d287552e4ee9c4571a224eff611548f1a3595fc1b3f",
+      "source_mpc_bytes": 51,
+      "output_filename": "SecondaryStatPetUnlockLibrary.json",
+      "output_sha256": "8d491b7bc6d30fae2d56594bbc0b351ecad995159ed9c2c2fb25804dff14e194",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 6,
+      "reference_schema_file": "SecondaryStatPetUnlockLibrary.json",
+      "reference_schema_sha256": "6a6c0263dde4c10eb0448db99493e28f3c94a787c86b9c8ccaaa86f5c2d3dfe7",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 6,
+        "numeric_values_from_apk": 6
+      }
+    },
+    {
+      "name": "SetsLibrary",
+      "source_mpc_sha256": "67820764a1a03508a1e60c95f12ef05f25c43b92fd0d3d5392af35e69614fd7d",
+      "source_mpc_bytes": 4003,
+      "output_filename": "SetsLibrary.json",
+      "output_sha256": "2a9492aebc4e4c81c902c18bd30900ce4b863c0c6512d01428d7ed9f4bb94a5a",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 30,
+      "reference_schema_file": "SetsLibrary.json",
+      "reference_schema_sha256": "44bebe1cfb454f0ab83ba0efe50bc579e94bde8117e019db32fb0f655e9a1e06",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "text_values_from_apk": 30,
+        "numeric_values_from_apk": 120,
+        "enum_labels_from_reference": 300,
+        "null_values": 60
+      }
+    },
+    {
+      "name": "ShopResourcesLibrary",
+      "source_mpc_sha256": "a7ce53a32b52bb22d328c347ce18ff97b6eba36d9f3362c5f22f3bbb410e5ffa",
+      "source_mpc_bytes": 44,
+      "output_filename": "ShopResourcesLibrary.json",
+      "output_sha256": "745a7745e56e8f0ad2d2c970672c9967f13a4349dc6906e018f6e40aea842077",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 1,
+      "reference_schema_file": "ShopResourcesLibrary.json",
+      "reference_schema_sha256": "6800d375ddbcc12b3a71447ee7486c75b22fcea979fa58edbcb7c3fe2356e4df",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "text_values_from_apk": 1,
+        "numeric_values_from_apk": 3,
+        "enum_labels_from_reference": 1,
+        "polymorphic_labels_from_reference": 1,
+        "null_values": 1
+      }
+    },
+    {
+      "name": "SkillBaseConfig",
+      "source_mpc_sha256": "1e04b0ff190271f1f5d16f09349fbbd2056b63309e78d2defa226f0ae18ee66b",
+      "source_mpc_bytes": 9,
+      "output_filename": "SkillBaseConfig.json",
+      "output_sha256": "52f677b82ee078c13e982b281461604a35cc56ebdca227aac0a3b3119614fa0b",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "SkillBaseConfig.json",
+      "reference_schema_sha256": "6d5af82a326bd816b09a5ad5e97bf2e843cebf0d8bed81d930a76335839239c0",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 2
+      }
+    },
+    {
+      "name": "SkillDungeonBattleLibrary",
+      "source_mpc_sha256": "e1ff77a3ec657a29ae457a1c250354fab90d252b6ce26fb31b7f4ed47e058c50",
+      "source_mpc_bytes": 14571,
+      "output_filename": "SkillDungeonBattleLibrary.json",
+      "output_sha256": "e49131b3d8fe07d15343683959e9d906071065c74a95cb90171960375fd169bf",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 400,
+      "reference_schema_file": "SkillDungeonBattleLibrary.json",
+      "reference_schema_sha256": "fa3050f0e4d6e74d0d45fe72e0b23e93cd508a156118a9f42b3d7b6b612b3926",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 3200
+      }
+    },
+    {
+      "name": "SkillLibrary",
+      "source_mpc_sha256": "e76e41acde6376bdac7e6bba13caab4be99dc4852e84fcb1d1d2d0c45516f725",
+      "source_mpc_bytes": 17472,
+      "output_filename": "SkillLibrary.json",
+      "output_sha256": "d397504304ba0927acc1541789d3e5d4fbac58d3c208991f9103a3ed2d17809f",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 18,
+      "reference_schema_file": "SkillLibrary.json",
+      "reference_schema_sha256": "ce35177fe509549b6c2649e4977db85c841c4601550b19acbfa217d354278205",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 36,
+        "numeric_values_from_apk": 2136
+      }
+    },
+    {
+      "name": "SkillPassiveLibrary",
+      "source_mpc_sha256": "4c9a29aa6105befe573ccfb58d43d285371d6ca14748c96f817dee7df9e38d54",
+      "source_mpc_bytes": 58863,
+      "output_filename": "SkillPassiveLibrary.json",
+      "output_sha256": "7593dc5b50ff5ff6bb488453c46947ba01f7faaece1d3dda26fd4e2b9ea4579e",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 6,
+      "reference_schema_file": "SkillPassiveLibrary.json",
+      "reference_schema_sha256": "5622fedef79151f7e09e47b7c1387be31469af636f47e685cf3c9359054bc00c",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 6006,
+        "null_values": 1200,
+        "numeric_values_from_apk": 1200
+      }
+    },
+    {
+      "name": "SkillSummonConfig",
+      "source_mpc_sha256": "13a47608d937c03ea8db432c0aa156c2798a8c00588e21f5807501d2f32194b4",
+      "source_mpc_bytes": 6628,
+      "output_filename": "SkillSummonConfig.json",
+      "output_sha256": "818b513a5505f59bdc97629001501e5a313e9acd495982925b1dcc08d77c0292",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": null,
+      "reference_schema_file": "SkillSummonConfig.json",
+      "reference_schema_sha256": "f50f7b7cd0cfec89707ca9a8af00d1f79b680d4916d58556d43c71f169b797a8",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "text_values_from_apk": 1,
+        "numeric_values_from_apk": 706,
+        "enum_labels_from_reference": 1
+      }
+    },
+    {
+      "name": "SkillUpgradeLibrary",
+      "source_mpc_sha256": "a9092b4f1c0a42ddc88710573a82ee8b86c55f1412248300639ad5aeec22a8d2",
+      "source_mpc_bytes": 832,
+      "output_filename": "SkillUpgradeLibrary.json",
+      "output_sha256": "101d48cca352810df2b73cb5086d9fbd4d6240b5de4a731f89e9e0437ad71e49",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 99,
+      "reference_schema_file": "SkillUpgradeLibrary.json",
+      "reference_schema_sha256": "280412aac3e27a8115e1ba2875335a430eabe7a504c428ae7bb89c4ea9670619",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 198
+      }
+    },
+    {
+      "name": "SkinUpgradeLibrary",
+      "source_mpc_sha256": "8685a2163dd1cd16738890af00c14186c157abf745f110e8b9c0a5d225fc68ee",
+      "source_mpc_bytes": 128,
+      "output_filename": "SkinUpgradeLibrary.json",
+      "output_sha256": "fe013cf9bc9b461ad709564b2a0e8de118b32bec7308f7f971c0c93c78d5ad07",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 3,
+      "reference_schema_file": "SkinUpgradeLibrary.json",
+      "reference_schema_sha256": "9e92a2cc1a1eeb4d21c9c84d3a0718fa2e75c4c5863c04bafb8faa54178dd258",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 3,
+        "numeric_values_from_apk": 21
+      }
+    },
+    {
+      "name": "SkinsLibrary",
+      "source_mpc_sha256": "8b813555e7194f81fb9005125c39aa3dc8d4e422641f0e9943538f3d972c524d",
+      "source_mpc_bytes": 16144,
+      "output_filename": "SkinsLibrary.json",
+      "output_sha256": "51a800fca38dabc2df6b2026fe2b41187af108f70f96fa63cae3d6f0bb839d78",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 114,
+      "reference_schema_file": "SkinsLibrary.json",
+      "reference_schema_sha256": "4f62777c1d148869d05953e1a592b71cf6f225740906d5171776317f35c3d7ee",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 24,
+      "counts": {
+        "enum_labels_from_reference": 1254,
+        "numeric_values_from_apk": 684,
+        "null_values": 252,
+        "text_values_from_apk": 90
+      }
+    },
+    {
+      "name": "StatConfigLibrary",
+      "source_mpc_sha256": "edd77c187a43e8e5bafdb733761006b686bee84394f827ec3111f5e86487561e",
+      "source_mpc_bytes": 531,
+      "output_filename": "StatConfigLibrary.json",
+      "output_sha256": "f19e8ab6eba242d533b09e7058f3a6dbfff95ce415abb88166182e92dcd3bdc3",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 24,
+      "reference_schema_file": "StatConfigLibrary.json",
+      "reference_schema_sha256": "5d1db681c8a968edde28959b1a350cddbfa0a3e3397139be9ac6cd8d782e94c2",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 48,
+        "numeric_values_from_apk": 24
+      }
+    },
+    {
+      "name": "TechNodesLibrary",
+      "source_mpc_sha256": "7620f93c9631e4471626b09592201f092af7c1a99dbfa4853bb1b9682919f903",
+      "source_mpc_bytes": 4473,
+      "output_filename": "TechNodesLibrary.json",
+      "output_sha256": "f5a2e001e972b7a8f4cc08c336b183f19ce9c534ca571e84aad191de0b9006cf",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 90,
+      "reference_schema_file": "TechNodesLibrary.json",
+      "reference_schema_sha256": "93389d8e212aeab8e1049bb6a280abeac62ae1eeb3b206c691cf529eb7c458d2",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "enum_labels_from_reference": 639,
+        "null_values": 97,
+        "numeric_values_from_apk": 64
+      }
+    },
+    {
+      "name": "TrackingEventLibrary",
+      "source_mpc_sha256": "d889147ffd4738b91f7b238fbbdcf435ab35ca444e0584d28389db375b09bffd",
+      "source_mpc_bytes": 3125,
+      "output_filename": "TrackingEventLibrary.json",
+      "output_sha256": "d394bd2671d0c6b3969c607cfcd263364aa7163a9e184e149474df5f0fa16788",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 55,
+      "reference_schema_file": "TrackingEventLibrary.json",
+      "reference_schema_sha256": "f487baad9f6d4a87099ac856bac0f7a09a257a57d64362363da4f693e013bee8",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 48,
+      "counts": {
+        "text_values_from_apk": 92,
+        "null_values": 194,
+        "polymorphic_labels_from_reference": 82,
+        "numeric_values_from_apk": 80
+      }
+    },
+    {
+      "name": "WeaponLibrary",
+      "source_mpc_sha256": "e335b1759594ac4c84b96bb10c2690bd0b80e6dfaf99de20aa94eac75a63d1fd",
+      "source_mpc_bytes": 11136,
+      "output_filename": "WeaponLibrary.json",
+      "output_sha256": "c2b40ce53c3c08fec0a9f1560a6a98f71a91d9926f758d6b5a85886c35184bd0",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 123,
+      "reference_schema_file": "WeaponLibrary.json",
+      "reference_schema_sha256": "7ef35134b216d35f134a866571f7825f3efc1178c25064c0a6eedc3cbb9383e0",
+      "value_differences_from_reference": [],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 1230,
+        "enum_labels_from_reference": 123
+      }
+    },
+    {
+      "name": "WorldIndexConfigLibrary",
+      "source_mpc_sha256": "8661dfea4cf2d1cd38f237254ab196dfb8bb32e4bb7a74eeb14d8370f1abb532",
+      "source_mpc_bytes": 156,
+      "output_filename": "WorldIndexConfigLibrary.json",
+      "output_sha256": "c21e0a2a50b20fc4718db81070569af702c96e4e0989ec753014b9dbd7ab23ba",
+      "complete_consumption": true,
+      "byte_exact_round_trip": true,
+      "row_count": 3,
+      "reference_schema_file": "WorldIndexConfigLibrary.json",
+      "reference_schema_sha256": "59616a5303a7cb239fd03b83d0053b0e433f50c54a476efc975b91f08c891146",
+      "value_differences_from_reference": [
+        {
+          "path": "WorldIndexConfigLibrary[].WorldIndex",
+          "kind": "integer",
+          "apk": 44,
+          "upstream": 61
+        },
+        {
+          "path": "WorldIndexConfigLibrary[].WorldIndex",
+          "kind": "integer",
+          "apk": 44,
+          "upstream": 62
+        },
+        {
+          "path": "WorldIndexConfigLibrary[].WorldIndex",
+          "kind": "integer",
+          "apk": 44,
+          "upstream": 63
+        }
+      ],
+      "null_strings_preserved_as_null": 0,
+      "counts": {
+        "numeric_values_from_apk": 6,
+        "text_values_from_apk": 6
+      }
+    }
+  ],
+  "mapping_sources": {
+    "ManualSpriteMapping.json": {
+      "repository": "1vcian/fm",
+      "ref": "287668429b462612d42281ab47750038e6cca79e",
+      "blob": "399ff4dfdf3d98f4abefe2db736588b9fe56747b",
+      "path": "public/parsed_configs/ManualSpriteMapping.json"
+    },
+    "TechTreeMapping.json": {
+      "repository": "1vcian/fm",
+      "ref": "d6af7e2e0b998b47a5616c13515b4c6454012fcc",
+      "blob": "bff79aeccfa2c7169952a7d69f2ff0189c4c2110",
+      "path": "public/parsed_configs/TechTreeMapping.json"
+    },
+    "ClanTechTreeIconsMap.json": {
+      "repository": "1vcian/fm",
+      "ref": "93906cd82e4ca9898b2798420f0c10c67962d7a8",
+      "blob": "ddd89a5661fdc13c6ac167c84b25c9c4b27de7c0",
+      "path": "public/parsed_configs/ClanTechTreeIconsMap.json"
+    },
+    "AutoItemMapping.json": {
+      "repository": "1vcian/fm",
+      "ref": "d6af7e2e0b998b47a5616c13515b4c6454012fcc",
+      "blob": "cc2fcc0d0215e016211a819e4c8cd3525f396e44",
+      "path": "public/parsed_configs/AutoItemMapping.json"
+    }
+  },
+  "mapping_transformations": {
+    "AutoItemMapping.json": [
+      "Keep only Age >= 0 and keys in APK ItemBalancingLibrary (231 equipment rows)",
+      "Add KoreanName by exact integer LocalizationId from APK Items_ko table (231/231 matched)"
+    ]
+  },
+  "localization_source": {
+    "apk_asset_table": "Items_ko",
+    "extraction_sha256": "f0ec483a02ce309b78d22aee0d9de88b109d022b7dc137a844fdb6a95c965807",
+    "rows_used": 231
+  }
+}
